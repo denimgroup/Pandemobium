@@ -1,0 +1,16 @@
+--- Pandemobium ---
+
+Pandemobium is a collection of open source intentionally-flawed mobile
+applications that are intended to be used by developers and security analysts
+to explore mobile application security topics.
+
+Current Projects:
+* PandemobiumStockTrader/ - Pandemobium Stock Trader is an application for
+    tracking and sharing stock tips as well as trading stocks. It is available
+    for both Android and iOS and comes with associated Java-based back-end
+    web services
+
+Copyright (c) 2011 Denim Group, Ltd.
+http://www.denimgroup.com/
+http://blog.denimgroup.com/
+Please send any comments or questions to Dan Cornell (dan _at_ denimgroup.com)
