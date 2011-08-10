@@ -1,1633 +1,0 @@
-TPandemobium
-v7
-r0
-t330445199.184285
-cCheck dependencies
-cProcessInfoPlistFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Info.plist Pandemobium/Pandemobium-Info.plist
-cProcessPCH /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch.gch Pandemobium/Pandemobium-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/main.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PandemobiumAppDelegate.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/RootViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/BuyViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/TipViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PreferencesViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/HistoryViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ManageTipsViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataCompressor.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataDecompressor.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDownloadCache.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIFormDataRequest.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIHTTPRequest.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIInputStream.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASINetworkQueue.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/Reachability.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/NSObject+JSON.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonParser.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParser.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAdapter.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserState.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriter.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterState.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonTokeniser.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonWriter.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBUTF8Stream.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetails.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbol.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFTwoValueObject.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFCurrencyConversion.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetailsLoader.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbolSearch.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/StockDatabase.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCopyStringsFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/InfoPlist.strings Pandemobium/en.lproj/InfoPlist.strings
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/MainWindow.xib
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyView.xib
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/Preferences.xib
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryView.xib
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipView.xib
-cCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/WebView.xib
-cCopyPlistFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/StockExchangeCurrency.plist Pandemobium/Yahoo/StockExchangeCurrency.plist
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
-c000000004C13F3980000000000000110
-t1276375960
-s272
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
-c000000004B9F1D6800000000001255B0
-t1268718952
-s1201584
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
-c000000004B9F1D3B00000000000004CF
-t1268718907
-s1231
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
-c000000004B9F1CC30000000000000A99
-t1268718787
-s2713
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004BA03AB3000000000026F020
-t1268791987
-s2551840
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004B9F1DE40000000000289C20
-t1268719076
-s2661408
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B9F1DD60000000000001355
-t1268719062
-s4949
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/MobileCoreServices.h
-c000000004B9F255600000000000000EB
-t1268720982
-s235
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c000000004B9F2556000000000005AF90
-t1268720982
-s372624
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004B9F26A3000000000000007D
-t1268721315
-s125
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
-c000000004B9F1CFF0000000000001A78
-t1268718847
-s6776
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c000000004B9F1D0B0000000000055570
-t1268718859
-s349552
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004BA6CAEC000000000000098F
-t1269222124
-s2447
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004BA6CB31000000000214E400
-t1269222193
-s34923520
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/Availability.h
-c000000004B9F1E7D0000000000001A1A
-t1268719229
-s6682
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/CommonCrypto/CommonHMAC.h
-c000000004748A1090000000000000DE2
-t1195942153
-s3554
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/arpa/inet.h
-c00000000464386D70000000000001533
-t1178830551
-s5427
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/ifaddrs.h
-c00000000464386E00000000000000782
-t1178830560
-s1922
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/limits.h
-c000000004748A131000000000000145A
-t1195942193
-s5210
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/netdb.h
-c00000000464386E20000000000002F2B
-t1178830562
-s12075
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/netinet/in.h
-c00000000476344B700000000000052AA
-t1197687991
-s21162
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/netinet6/in6.h
-c00000000476344BA0000000000004970
-t1197687994
-s18800
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/stdio.h
-c000000004748A1330000000000003D1D
-t1195942195
-s15645
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/sys/socket.h
-c00000000476344C000000000000055F1
-t1197688000
-s22001
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/zlib.h
-c000000004748ECC900000000000102A5
-t1195961545
-s66213
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/lib/libsqlite3.dylib
-c000000004B9F1ABC00000000000E1D70
-t1268718268
-s925040
-
-N/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/lib/libz.1.2.3.dylib
-c00000000476CCCD10000000000006EE8
-t1198312657
-s28392
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.h
-c000000004DCFB2660000000000001D0E
-t1305457254
-s7438
-i<Foundation/Foundation.h>
-i<SystemConfiguration/SystemConfiguration.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m
-c000000004DCFB2660000000000005E0C
-t1305457254
-s24076
-i<sys/socket.h>
-i<netinet/in.h>
-i<netinet6/in6.h>
-i<arpa/inet.h>
-i<ifaddrs.h>
-i<netdb.h>
-i<CoreFoundation/CoreFoundation.h>
-i"Reachability.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.h
-c000000004DCFB2660000000000000453
-t1305457254
-s1107
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m
-c000000004DCFB2660000000000003DED
-t1305457254
-s15853
-i"ASIAuthenticationDialog.h"
-i"ASIHTTPRequest.h"
-i<QuartzCore/QuartzCore.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASICacheDelegate.h
-c000000004DCFB266000000000000141F
-t1305457254
-s5151
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.h
-c000000004DCFB266000000000000072C
-t1305457254
-s1836
-i<Foundation/Foundation.h>
-i<zlib.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m
-c000000004DCFB2660000000000001A4A
-t1305457254
-s6730
-i"ASIDataCompressor.h"
-i"ASIHTTPRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.h
-c000000004DCFB26600000000000006A3
-t1305457254
-s1699
-i<Foundation/Foundation.h>
-i<zlib.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m
-c000000004DCFB2660000000000001906
-t1305457254
-s6406
-i"ASIDataDecompressor.h"
-i"ASIHTTPRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.h
-c000000004DCFB26600000000000006CD
-t1305457254
-s1741
-i<Foundation/Foundation.h>
-i"ASICacheDelegate.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m
-c000000004DCFB26600000000000042B8
-t1305457254
-s17080
-i"ASIDownloadCache.h"
-i"ASIHTTPRequest.h"
-i<CommonCrypto/CommonHMAC.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.h
-c000000004DCFB2660000000000000A6D
-t1305457254
-s2669
-i<Foundation/Foundation.h>
-i"ASIHTTPRequest.h"
-i"ASIHTTPRequestConfig.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m
-c000000004DCFB2660000000000002B6A
-t1305457254
-s11114
-i"ASIFormDataRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.h
-c000000004DCFB266000000000000AD05
-t1305457254
-s44293
-i<Foundation/Foundation.h>
-i<CFNetwork/CFNetwork.h>
-i<UIKit/UIKit.h>
-i<stdio.h>
-i"ASIHTTPRequestConfig.h"
-i"ASIHTTPRequestDelegate.h"
-i"ASIProgressDelegate.h"
-i"ASICacheDelegate.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m
-c000000004DCFB266000000000002C248
-t1305457254
-s180808
-i"ASIHTTPRequest.h"
-i"Reachability.h"
-i"ASIAuthenticationDialog.h"
-i<MobileCoreServices/MobileCoreServices.h>
-i<SystemConfiguration/SystemConfiguration.h>
-i"ASIInputStream.h"
-i"ASIDataDecompressor.h"
-i"ASIDataCompressor.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequestConfig.h
-c000000004DCFB2660000000000000478
-t1305457254
-s1144
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequestDelegate.h
-c000000004DCFB266000000000000063E
-t1305457254
-s1598
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.h
-c000000004DCFB26600000000000003C9
-t1305457254
-s969
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m
-c000000004DCFB2660000000000000C14
-t1305457254
-s3092
-i"ASIInputStream.h"
-i"ASIHTTPRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.h
-c000000004DCFB266000000000000120D
-t1305457254
-s4621
-i<Foundation/Foundation.h>
-i"ASIHTTPRequestDelegate.h"
-i"ASIProgressDelegate.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m
-c000000004DCFB2660000000000002C8D
-t1305457254
-s11405
-i"ASINetworkQueue.h"
-i"ASIHTTPRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIProgressDelegate.h
-c000000004DCFB2660000000000000678
-t1305457254
-s1656
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyView.xib
-c000000004DE6C9200000000000006449
-t1306970400
-s25673
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.h
-c000000004DE85D6A0000000000000366
-t1307073898
-s870
-i<UIKit/UIKit.h>
-i"BSYahooFinance.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m
-c000000004DE85DDD0000000000001C82
-t1307074013
-s7298
-i"BuyViewController.h"
-i"StockDatabase.h"
-i"/usr/include/sqlite3.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryView.xib
-c000000004DE6CDE50000000000003C44
-t1306971621
-s15428
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.h
-c000000004DE6CDD80000000000000151
-t1306971608
-s337
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m
-c000000004DE6CE950000000000001358
-t1306971797
-s4952
-i"HistoryViewController.h"
-i"StockDatabase.h"
-i"/usr/include/sqlite3.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/JSON.h
-c000000004DDAE554000000000000001A
-t1306191188
-s26
-i"SBJsonIncludes.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.h
-c000000004DDAE55400000000000007DB
-t1306191188
-s2011
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m
-c000000004DDAE55400000000000008C2
-t1306191188
-s2242
-i"NSObject+JSON.h"
-i"SBJsonWriter.h"
-i"SBJsonParser.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonIncludes.h
-c000000004DDAE5540000000000000BE2
-t1306191188
-s3042
-i<JSON/SBJsonParser.h>
-i<JSON/SBJsonWriter.h>
-i<JSON/SBJsonStreamParser.h>
-i<JSON/SBJsonStreamParserAdapter.h>
-i<JSON/SBJsonStreamWriter.h>
-i<JSON/NSObject+JSON.h>
-i"SBJsonParser.h"
-i"SBJsonWriter.h"
-i"SBJsonStreamWriter.h"
-i"SBJsonStreamParser.h"
-i"SBJsonStreamParserAdapter.h"
-i"NSObject+JSON.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.h
-c000000004DDAE5540000000000000FC1
-t1306191188
-s4033
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m
-c000000004DDAE5540000000000000CBF
-t1306191188
-s3263
-i"SBJsonParser.h"
-i"SBJsonStreamParser.h"
-i"SBJsonStreamParserAdapter.h"
-i"SBJsonStreamParserAccumulator.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.h
-c000000004DDAE554000000000000116E
-t1306191188
-s4462
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m
-c000000004DDAE5540000000000001A0C
-t1306191188
-s6668
-i"SBJsonStreamParser.h"
-i"SBJsonTokeniser.h"
-i"SBJsonStreamParserState.h"
-i<limits.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.h
-c000000004DDAE55400000000000006D7
-t1306191188
-s1751
-i<Foundation/Foundation.h>
-i"SBJsonStreamParserAdapter.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m
-c000000004DDAE554000000000000079B
-t1306191188
-s1947
-i"SBJsonStreamParserAccumulator.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.h
-c000000004DDAE5540000000000000C3B
-t1306191188
-s3131
-i<Foundation/Foundation.h>
-i"SBJsonStreamParser.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m
-c000000004DDAE55400000000000011A1
-t1306191188
-s4513
-i"SBJsonStreamParserAdapter.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.h
-c000000004DDAE5540000000000000B10
-t1306191188
-s2832
-i<Foundation/Foundation.h>
-i"SBJsonTokeniser.h"
-i"SBJsonStreamParser.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m
-c000000004DDAE5540000000000001F5A
-t1306191188
-s8026
-i"SBJsonStreamParserState.h"
-i"SBJsonStreamParser.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.h
-c000000004DDAE55400000000000016A9
-t1306191188
-s5801
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m
-c000000004DDAE55400000000000028B8
-t1306191188
-s10424
-i"SBJsonStreamWriter.h"
-i"SBJsonStreamWriterState.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.h
-c000000004DDAE55400000000000006B2
-t1306191188
-s1714
-i"SBJsonStreamWriter.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m
-c000000004DDAE55400000000000007E6
-t1306191188
-s2022
-i"SBJsonStreamWriterAccumulator.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.h
-c000000004DDAE55400000000000009EC
-t1306191188
-s2540
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m
-c000000004DDAE5540000000000000F61
-t1306191188
-s3937
-i"SBJsonStreamWriterState.h"
-i"SBJsonStreamWriter.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.h
-c000000004DDAE5540000000000000894
-t1306191188
-s2196
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m
-c000000004DDAE5540000000000003298
-t1306191188
-s12952
-i"SBJsonTokeniser.h"
-i"SBUTF8Stream.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.h
-c000000004DDAE5540000000000001305
-t1306191188
-s4869
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m
-c000000004DDAE5540000000000000DBE
-t1306191188
-s3518
-i"SBJsonWriter.h"
-i"SBJsonStreamWriter.h"
-i"SBJsonStreamWriterAccumulator.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.h
-c000000004DDAE5540000000000000839
-t1306191188
-s2105
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m
-c000000004DDAE5540000000000000F98
-t1306191188
-s3992
-i"SBUTF8Stream.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.h
-c000000004DE841E00000000000000119
-t1307066848
-s281
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m
-c000000004DE8C00900000000000006BB
-t1307099145
-s1723
-i"ManageTipsViewController.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Pandemobium-Prefix.pch
-c000000004DDB34D90000000000000148
-t1306211545
-s328
-i<Availability.h>
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.h
-c000000004DE7DA01000000000000020B
-t1307040257
-s523
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m
-c000000004DE7DA190000000000000A95
-t1307040281
-s2709
-i"PandemobiumAppDelegate.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Preferences.xib
-c000000004DE8320D0000000000004E7E
-t1307062797
-s20094
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.h
-c000000004DE85EA40000000000000232
-t1307074212
-s562
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m
-c000000004DE85ED30000000000001429
-t1307074259
-s5161
-i"PreferencesViewController.h"
-i"ASIHTTPRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.h
-c000000004DE7D00F00000000000004FC
-t1307037711
-s1276
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m
-c000000004DE85E32000000000000114E
-t1307074098
-s4430
-i"RootViewController.h"
-i"BuyViewController.h"
-i"TipViewController.h"
-i"PreferencesViewController.h"
-i"HistoryViewController.h"
-i"ManageTipsViewController.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.h
-c000000004DE3E60A000000000000013F
-t1306781194
-s319
-i<Foundation/Foundation.h>
-i"/usr/include/sqlite3.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m
-c000000004DE3F61300000000000004F3
-t1306785299
-s1267
-i"StockDatabase.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipView.xib
-c000000004DE6CF350000000000006A8A
-t1306971957
-s27274
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.h
-c000000004DE85E4200000000000002BB
-t1307074114
-s699
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m
-c000000004E01F949000000000000243E
-t1308752201
-s9278
-i"TipViewController.h"
-i"StockDatabase.h"
-i"/usr/include/sqlite3.h"
-i"ASIHTTPRequest.h"
-i"ASIFormDataRequest.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/WebView.xib
-c000000004DE841F5000000000000211D
-t1307066869
-s8477
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/BSYahooFinance.h
-c000000004DB53E1200000000000001E2
-t1303723538
-s482
-i<Foundation/Foundation.h>
-i"YFStockSymbolSearch.h"
-i"YFStockDetailsLoader.h"
-i"YFStockSymbol.h"
-i"YFStockDetails.h"
-i"YFCurrencyConversion.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.h
-c000000004DB53E120000000000001530
-t1303723538
-s5424
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m
-c000000004DB53E12000000000000240C
-t1303723538
-s9228
-i"YFStockDetails.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.h
-c000000004DB53E12000000000000024C
-t1303723538
-s588
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m
-c000000004DB53E1200000000000001F9
-t1303723538
-s505
-i"YFStockSymbol.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.h
-c000000004DB53E1200000000000002A2
-t1303723538
-s674
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m
-c000000004DB53E120000000000000347
-t1303723538
-s839
-i"YFTwoValueObject.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/StockExchangeCurrency.plist
-c000000004DB53E120000000000000743
-t1303723538
-s1859
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.h
-c000000004DB53E120000000000000679
-t1303723538
-s1657
-i<Foundation/Foundation.h>
-i"ASIHTTPRequest.h"
-i"ASINetworkQueue.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m
-c000000004DB53E120000000000002938
-t1303723538
-s10552
-i"YFCurrencyConversion.h"
-i"YFTwoValueObject.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.h
-c000000004DB53E120000000000000536
-t1303723538
-s1334
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m
-c000000004DB53E120000000000001275
-t1303723538
-s4725
-i"YFStockDetailsLoader.h"
-i"ASIHTTPRequest.h"
-i"JSON.h"
-i"YFStockDetails.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.h
-c000000004DB53E1200000000000004E0
-t1303723538
-s1248
-i<Foundation/Foundation.h>
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m
-c000000004DB53E120000000000001288
-t1303723538
-s4744
-i"YFStockSymbolSearch.h"
-i"ASIHTTPRequest.h"
-i"JSON.h"
-i"YFStockSymbol.h"
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/InfoPlist.strings
-c000000004DDB34D9000000000000002D
-t1306211545
-s45
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/MainWindow.xib
-c000000004DE7DA260000000000004286
-t1307040294
-s17030
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib
-c000000004DDC6702000000000000405E
-t1306289922
-s16478
-
-N/Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m
-c000000004DDB34D90000000000000165
-t1306211545
-s357
-i<UIKit/UIKit.h>
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app
-t2
-s0
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app.dSYM
-t2
-s0
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/BuyView.nib
-t1308752397
-s4652
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/HistoryView.nib
-t1308752398
-s2906
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Info.plist
-t1308752390
-s1228
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Pandemobium
-t2
-s0
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/PkgInfo
-t1308752390
-s8
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Preferences.nib
-t1308752398
-s3971
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/StockExchangeCurrency.plist
-t1308752398
-s516
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/TipView.nib
-t1308752398
-s5091
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/WebView.nib
-t1308752399
-s1343
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/InfoPlist.strings
-t1308752397
-s42
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/MainWindow.nib
-t1308752397
-s2255
-
-N/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/RootViewController.nib
-t1308752397
-s3529
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIAuthenticationDialog.o
-t1308752394
-s102316
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataCompressor.o
-t1308752394
-s27396
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataDecompressor.o
-t1308752394
-s27356
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDownloadCache.o
-t1308752395
-s64008
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIFormDataRequest.o
-t1308752394
-s48636
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIHTTPRequest.o
-t1308752396
-s468784
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIInputStream.o
-t1308752395
-s28164
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASINetworkQueue.o
-t1308752395
-s60440
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/BuyViewController.o
-t1308752394
-s71296
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/HistoryViewController.o
-t1308752394
-s49308
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ManageTipsViewController.o
-t1308752394
-s39224
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/NSObject+JSON.o
-t1308752395
-s7852
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/Pandemobium.LinkFileList
-c000000004E01FA0600000000000013CC
-t1308752390
-s5068
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PandemobiumAppDelegate.o
-t2
-s0
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PreferencesViewController.o
-t1308752394
-s59052
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/Reachability.o
-t1308752395
-s42892
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/RootViewController.o
-t1308752394
-s67756
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonParser.o
-t1308752395
-s16216
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParser.o
-t1308752395
-s25988
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
-t1308752395
-s9336
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
-t1308752396
-s22092
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserState.o
-t1308752396
-s41896
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriter.o
-t2
-s0
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
-t1308752396
-s9760
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterState.o
-t1308752396
-s24104
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonTokeniser.o
-t1308752396
-s29500
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonWriter.o
-t1308752396
-s18420
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBUTF8Stream.o
-t1308752396
-s14820
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/StockDatabase.o
-t1308752397
-s5396
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/TipViewController.o
-t1308752394
-s76236
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFCurrencyConversion.o
-t2
-s0
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetails.o
-t1308752396
-s64956
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetailsLoader.o
-t1308752397
-s33144
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbol.o
-t1308752396
-s7444
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbolSearch.o
-t1308752397
-s34020
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFTwoValueObject.o
-t1308752396
-s8300
-
-N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/main.o
-t1308752393
-s3168
-
-N/usr/include/sqlite3.h
-c000000004B90CDD1000000000003D86F
-t1267781073
-s252015
-
-N/var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch.gch
-t1308752393
-s10672080
-
-NPandemobium/Pandemobium-Info.plist
-c000000004DE8BFC00000000000000713
-t1307099072
-s1811
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies330445190#330445190#0(0"0(0#1#0"31244212048494624#0"0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.488799
-e330445194.854319
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIAuthenticationDialog.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@85"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m330445194#330445194#0(0"0(0#0#77"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m4300911832#2112"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIAuthenticationDialog.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIAuthenticationDialog.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataCompressor.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.500114
-e330445194.657634
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataCompressor.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@79"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m330445194#330445194#0(0"0(0#0#71"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m4300911832#2100"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataCompressor.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataCompressor.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataDecompressor.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.657729
-e330445194.767975
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataDecompressor.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@81"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m330445194#330445194#0(0"0(0#0#73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m4300911832#2104"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDataDecompressor.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDataDecompressor.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDownloadCache.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.768083
-e330445195.064104
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDownloadCache.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@78"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m330445194#330445195#0(0"0(0#0#70"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m4300911832#2098"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIDownloadCache.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIDownloadCache.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIFormDataRequest.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.854417
-e330445194.992012
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIFormDataRequest.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@80"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m330445194#330445195#0(0"0(0#0#72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m4300911832#2102"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIFormDataRequest.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIFormDataRequest.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIHTTPRequest.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.992109
-e330445196.664940
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIHTTPRequest.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@76"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m330445194#330445196#0(0"0(0#0#68"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m4300911832#2094"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIHTTPRequest.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIHTTPRequest.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIInputStream.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.064210
-e330445195.192636
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIInputStream.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@76"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m330445195#330445195#0(0"0(0#0#68"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m4300911832#2094"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASIInputStream.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASIInputStream.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASINetworkQueue.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.192844
-e330445195.441820
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASINetworkQueue.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@77"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m330445195#330445195#0(0"0(0#0#69"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m4300911832#2096"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ASI/ASINetworkQueue.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ASINetworkQueue.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/BuyViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445193.847086
-e330445194.087085
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/BuyViewController.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m: In function '-[BuyViewController buyStocks]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m:155: warning: unused variable 'success'
-lSLF07#2@75"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m330445193#330445194#0(223"/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m: In function '-[BuyViewController buyStocks]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m:155: warning: unused variable 'success'1(22@25"Unused variable 'success'330445193#115#108#0(6@67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m328766813#155#0#155#0#19"unused variable '*'0(0#0#67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m4300911832#2096"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyViewController.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/BuyViewController.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/HistoryViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.289544
-e330445194.500010
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/HistoryViewController.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@79"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m330445194#330445194#0(0"0(0#0#71"/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m4300911832#2104"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryViewController.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/HistoryViewController.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ManageTipsViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.365665
-e330445194.488686
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ManageTipsViewController.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@82"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m330445194#330445194#0(0"0(0#0#74"/Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m4300911832#2110"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/ManageTipsViewController.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/ManageTipsViewController.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/NSObject+JSON.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.616749
-e330445195.677247
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/NSObject+JSON.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@76"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m330445195#330445195#0(0"0(0#0#68"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m4300911832#2093"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/NSObject+JSON.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/NSObject+JSON.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PandemobiumAppDelegate.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445193.594885
-e330445193.842915
-r0
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PandemobiumAppDelegate.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:14: warning: ivar name '_window' specified on the synthesized property 'window' not found
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:14: error: synthesized property 'window' must either be named the same as a compatible ivar or must explicitly name an ivar
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:16: warning: ivar name '_navigationController' specified on the synthesized property 'navigationController' not found
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:16: error: synthesized property 'navigationController' must either be named the same as a compatible ivar or must explicitly name an ivar
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m: In function '-[PandemobiumAppDelegate application:didFinishLaunchingWithOptions:]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:23: error: request for member 'rootViewController' in something not a structure or union
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m: In function '-[PandemobiumAppDelegate application:handleOpenURL:]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: 'UIViewController' may not respond to '-application:handleOpenURL:'
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: (Messages without a matching method signature
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: will be assumed to return 'id' and accept
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: '...' as arguments.)
-lSLF07#2@80"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m330445193#330445193#0(1745"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:14: warning: ivar name '_window' specified on the synthesized property 'window' not found/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:14: error: synthesized property 'window' must either be named the same as a compatible ivar or must explicitly name an ivar/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:16: warning: ivar name '_navigationController' specified on the synthesized property 'navigationController' not found/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:16: error: synthesized property 'navigationController' must either be named the same as a compatible ivar or must explicitly name an ivar/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m: In function '-[PandemobiumAppDelegate application:didFinishLaunchingWithOptions:]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:23: error: request for member 'rootViewController' in something not a structure or union/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m: In function '-[PandemobiumAppDelegate application:handleOpenURL:]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: 'UIViewController' may not respond to '-application:handleOpenURL:'/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: (Messages without a matching method signature/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: will be assumed to return 'id' and accept/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m:34: warning: '...' as arguments.)7(22@76"Ivar name '_window' specified on the synthesized property 'window' not found330445193#0#163#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#14#0#14#0#0"0(4@112"Synthesized property 'window' must either be named the same as a compatible ivar or must explicitly name an ivar330445193#163#197#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#14#0#14#0#0"0(22@104"Ivar name '_navigationController' specified on the synthesized property 'navigationController' not found330445193#360#191#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#16#0#16#0#0"0(4@126"Synthesized property 'navigationController' must either be named the same as a compatible ivar or must explicitly name an ivar330445193#551#211#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#16#0#16#0#0"0(4@77"Request for member 'rootViewController' in something not a structure or union330445193#920#162#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#23#0#23#0#0"0(22@67"'UIViewController' may not respond to '-application:handleOpenURL:'330445193#1224#154#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#34#0#34#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)330445193#1378#132#0(6@72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m328733081#34#0#34#0#0"0(0#0#72"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m4300911832#2106"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/PandemobiumAppDelegate.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PandemobiumAppDelegate.o1#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PreferencesViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.099670
-e330445194.289427
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PreferencesViewController.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@83"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m330445194#330445194#0(0"0(0#0#75"/Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m4300911832#2112"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/PreferencesViewController.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/PreferencesViewController.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/Reachability.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.441911
-e330445195.616650
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/Reachability.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@76"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m330445195#330445195#0(0"0(0#0#68"/Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m4300911832#2092"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/APPLE/Reachability.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/Reachability.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/RootViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445193.843009
-e330445194.099578
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/RootViewController.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@76"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m330445193#330445194#0(0"0(0#0#68"/Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m4300911832#2098"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/RootViewController.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/RootViewController.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonParser.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.677351
-e330445195.764435
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonParser.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@75"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m330445195#330445195#0(0"0(0#0#67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m4300911832#2091"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonParser.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonParser.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParser.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.764532
-e330445195.856418
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParser.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@81"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m330445195#330445195#0(0"0(0#0#73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m4300911832#2103"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParser.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParser.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.856521
-e330445195.945931
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@92"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m330445195#330445195#0(0"0(0#0#84"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m4300911832#2125"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAccumulator.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAdapter.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445195.946029
-e330445196.029371
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@88"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m330445195#330445196#0(0"0(0#0#80"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m4300911832#2117"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserAdapter.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserAdapter.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserState.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.029467
-e330445196.157226
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserState.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@86"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m330445196#330445196#0(0"0(0#0#78"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m4300911832#2113"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamParserState.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamParserState.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriter.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.157328
-e330445196.221510
-r0
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriter.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:37: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m: In function '+[SBJsonStreamWriter initialize]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: 'kStaticStringCache' undeclared (first use in this function)
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: (Each undeclared identifier is reported only once
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: for each function it appears in.)
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: 'NSCache' undeclared (first use in this function)
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m: In function '-[SBJsonStreamWriter writeString:]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:279: error: 'kStaticStringCache' undeclared (first use in this function)
-lSLF07#2@81"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m330445196#330445196#0(1081"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:37: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m: In function '+[SBJsonStreamWriter initialize]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: 'kStaticStringCache' undeclared (first use in this function)/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: (Each undeclared identifier is reported only once/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: for each function it appears in.)/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:51: error: 'NSCache' undeclared (first use in this function)/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m: In function '-[SBJsonStreamWriter writeString:]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m:279: error: 'kStaticStringCache' undeclared (first use in this function)4(4@65"Expected '=', ',', ';', 'asm' or '__attribute__' before '*' token330445196#0#151#0(6@73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m327883988#37#0#37#0#19"expected * before *0(4@60"'kStaticStringCache' undeclared (first use in this function)330445196#274#146#0(6@73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m327883988#51#0#51#0#43"'*' undeclared (first use in this function)0(4@49"'NSCache' undeclared (first use in this function)330445196#674#135#0(6@73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m327883988#51#0#51#0#43"'*' undeclared (first use in this function)0(4@60"'kStaticStringCache' undeclared (first use in this function)330445196#934#147#0(6@73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m327883988#279#0#279#0#43"'*' undeclared (first use in this function)0(0#0#73"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m4300911832#2103"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriter.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriter.o1#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.221606
-e330445196.288509
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@92"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m330445196#330445196#0(0"0(0#0#84"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m4300911832#2125"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterAccumulator.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterState.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.288598
-e330445196.466774
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterState.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@86"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m330445196#330445196#0(0"0(0#0#78"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m4300911832#2113"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonStreamWriterState.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonStreamWriterState.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonTokeniser.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.466874
-e330445196.575534
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonTokeniser.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m: In function '-[SBJsonTokeniser getStringToken:]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m:194: warning: implicit declaration of function 'CFStringIsSurrogateHighCharacter'
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m:207: warning: implicit declaration of function 'CFStringIsSurrogateLowCharacter'
-lSLF07#2@78"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m330445196#330445196#0(427"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m: In function '-[SBJsonTokeniser getStringToken:]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m:194: warning: implicit declaration of function 'CFStringIsSurrogateHighCharacter'/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m:207: warning: implicit declaration of function 'CFStringIsSurrogateLowCharacter'2(22@67"Implicit declaration of function 'CFStringIsSurrogateHighCharacter'330445196#122#153#0(6@70"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m327883988#194#0#194#0#36"implicit declaration of function '*'0(22@66"Implicit declaration of function 'CFStringIsSurrogateLowCharacter'330445196#275#152#0(6@70"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m327883988#207#0#207#0#36"implicit declaration of function '*'0(0#0#70"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m4300911832#2097"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonTokeniser.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonTokeniser.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonWriter.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.575629
-e330445196.668821
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonWriter.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@75"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m330445196#330445196#0(0"0(0#0#67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m4300911832#2091"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBJsonWriter.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBJsonWriter.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBUTF8Stream.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.665037
-e330445196.753692
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBUTF8Stream.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@75"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m330445196#330445196#0(0"0(0#0#67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m4300911832#2091"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/JSON/SBUTF8Stream.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/SBUTF8Stream.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/StockDatabase.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445197.062242
-e330445197.127706
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/StockDatabase.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@71"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m330445197#330445197#0(0"0(0#0#63"/Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m4300911832#2088"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/StockDatabase.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/StockDatabase.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/TipViewController.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445194.087188
-e330445194.365571
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/TipViewController.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m: In function '-[TipViewController saveTip]':
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m:318: warning: unused variable 'success'
-lSLF07#2@75"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m330445194#330445194#0(221"/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m: In function '-[TipViewController saveTip]':/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m:318: warning: unused variable 'success'1(22@25"Unused variable 'success'330445194#113#108#0(6@67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m330445001#318#0#318#0#19"unused variable '*'0(0#0#67"/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m4300911832#2096"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipViewController.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/TipViewController.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFCurrencyConversion.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.845006
-e330445196.949538
-r0
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFCurrencyConversion.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m:27: error: synthesized property 'delegate' must either be named the same as a compatible ivar or must explicitly name an ivar
-lSLF07#2@84"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m330445196#330445196#0(203"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m:27: error: synthesized property 'delegate' must either be named the same as a compatible ivar or must explicitly name an ivar1(4@114"Synthesized property 'delegate' must either be named the same as a compatible ivar or must explicitly name an ivar330445196#0#203#0(6@76"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m325416338#27#0#27#0#0"0(0#0#76"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m4300911832#2108"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFCurrencyConversion.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFCurrencyConversion.o1#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetails.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.668920
-e330445196.844908
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetails.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@87"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m330445196#330445196#0(0"0(0#0#79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m4300911832#2105"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockDetails.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetails.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetailsLoader.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.908292
-e330445197.062138
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetailsLoader.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@84"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m330445196#330445197#0(0"0(0#0#76"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m4300911832#2108"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockDetailsLoader.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockDetailsLoader.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbol.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.753890
-e330445196.823085
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbol.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@86"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m330445196#330445196#0(0"0(0#0#78"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m4300911832#2103"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFStockSymbol.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbol.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbolSearch.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.949632
-e330445197.097049
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbolSearch.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@83"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m330445196#330445197#0(0"0(0#0#75"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m4300911832#2106"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/YFStockSymbolSearch.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFStockSymbolSearch.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFTwoValueObject.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445196.823180
-e330445196.908197
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFTwoValueObject.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@89"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m330445196#330445196#0(0"0(0#0#81"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m4300911832#2109"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/Entities/YFTwoValueObject.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/YFTwoValueObject.o0#
-
-CCompileC build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/main.o /Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445193.593887
-e330445193.846987
-r1
-xCompileC
-xbuild/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/main.o
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@62"Compile /Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m330445193#330445193#0(0"0(0#0#54"/Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m4300911832#2070"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -include /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/main.m -o /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyView.xib
-s330445197.567294
-e330445198.056334
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyView.xib
-lSLF07#2@34"CompileXIB Pandemobium/BuyView.xib330445197#330445198#0(0"0(0#0#59"/Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyView.xib4300911832#520"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/BuyView.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/BuyView.xib0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryView.xib
-s330445198.056420
-e330445198.649064
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryView.xib
-lSLF07#2@38"CompileXIB Pandemobium/HistoryView.xib330445198#330445198#0(0"0(0#0#63"/Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryView.xib4300911832#528"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/HistoryView.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/HistoryView.xib0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/Preferences.xib
-s330445197.942697
-e330445198.296078
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/Preferences.xib
-lSLF07#2@38"CompileXIB Pandemobium/Preferences.xib330445197#330445198#0(0"0(0#0#63"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Preferences.xib4300911832#528"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Preferences.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/Preferences.xib0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipView.xib
-s330445198.296270
-e330445198.784584
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipView.xib
-lSLF07#2@34"CompileXIB Pandemobium/TipView.xib330445198#330445198#0(0"0(0#0#59"/Users/dcornell/Desktop/Pandemobium/Pandemobium/TipView.xib4300911832#520"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/TipView.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/TipView.xib0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/WebView.xib
-s330445198.649151
-e330445199.184189
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/WebView.xib
-lSLF07#2@34"CompileXIB Pandemobium/WebView.xib330445198#330445199#0(0"0(0#0#59"/Users/dcornell/Desktop/Pandemobium/Pandemobium/WebView.xib4300911832#520"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/WebView.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/WebView.xib0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/MainWindow.xib
-s330445197.128706
-e330445197.556822
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/MainWindow.xib
-lSLF07#2@46"CompileXIB Pandemobium/en.lproj/MainWindow.xib330445197#330445197#0(0"0(0#0#71"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/MainWindow.xib4300911832#544"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/MainWindow.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/MainWindow.xib0#
-
-CCompileXIB /Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib
-s330445197.556916
-e330445197.942606
-r1
-xCompileXIB
-x/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib
-o/* com.apple.ibtool.document.warnings */
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:10: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Preferences)' is connected to the 'prefPressed:' selector of 'File's Owner', but 'prefPressed:' is no longer defined on 'RootViewController'.
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:9: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Tips)' is connected to the 'tipPressed:' selector of 'File's Owner', but 'tipPressed:' is no longer defined on 'RootViewController'.
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:12: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Manage my Tips)' is connected to the 'managePressed:' selector of 'File's Owner', but 'managePressed:' is no longer defined on 'RootViewController'.
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on RootViewController.
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:7: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Trade)' is connected to the 'tradePressed:' selector of 'File's Owner', but 'tradePressed:' is no longer defined on 'RootViewController'.
-o/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:11: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (History)' is connected to the 'historyPressed:' selector of 'File's Owner', but 'historyPressed:' is no longer defined on 'RootViewController'.
-lSLF07#2@54"CompileXIB Pandemobium/en.lproj/RootViewController.xib330445197#330445197#0(1682"/* com.apple.ibtool.document.warnings *//Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:10: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Preferences)' is connected to the 'prefPressed:' selector of 'File's Owner', but 'prefPressed:' is no longer defined on 'RootViewController'./Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:9: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Tips)' is connected to the 'tipPressed:' selector of 'File's Owner', but 'tipPressed:' is no longer defined on 'RootViewController'./Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:12: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Manage my Tips)' is connected to the 'managePressed:' selector of 'File's Owner', but 'managePressed:' is no longer defined on 'RootViewController'./Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on RootViewController./Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:7: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (Trade)' is connected to the 'tradePressed:' selector of 'File's Owner', but 'tradePressed:' is no longer defined on 'RootViewController'./Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib:11: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (History)' is connected to the 'historyPressed:' selector of 'File's Owner', but 'historyPressed:' is no longer defined on 'RootViewController'.6(22@194"The 'Touch Up Inside' event of 'Rounded Rect Button (Preferences)' is connected to the 'prefPressed:' selector of 'File's Owner', but 'prefPressed:' is no longer defined on 'RootViewController'.330445197#18446744073709551615#0#0(6@79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib327982722#10#0#10#0#0"0(22@185"The 'Touch Up Inside' event of 'Rounded Rect Button (Tips)' is connected to the 'tipPressed:' selector of 'File's Owner', but 'tipPressed:' is no longer defined on 'RootViewController'.330445197#18446744073709551615#0#0(6@79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib327982722#9#0#9#0#0"0(22@201"The 'Touch Up Inside' event of 'Rounded Rect Button (Manage my Tips)' is connected to the 'managePressed:' selector of 'File's Owner', but 'managePressed:' is no longer defined on 'RootViewController'.330445197#18446744073709551615#0#0(6@79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib327982722#12#0#12#0#0"0(22@113"The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on RootViewController.330445197#18446744073709551615#0#0(6@79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib327982722#18446744073709551615#0#18446744073709551615#0#0"0(22@190"The 'Touch Up Inside' event of 'Rounded Rect Button (Trade)' is connected to the 'tradePressed:' selector of 'File's Owner', but 'tradePressed:' is no longer defined on 'RootViewController'.330445197#18446744073709551615#0#0(6@79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib327982722#7#0#7#0#0"0(22@196"The 'Touch Up Inside' event of 'Rounded Rect Button (History)' is connected to the 'historyPressed:' selector of 'File's Owner', but 'historyPressed:' is no longer defined on 'RootViewController'.330445197#18446744073709551615#0#0(6@79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib327982722#11#0#11#0#0"0(0#0#79"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib4300911832#560"    cd /Users/dcornell/Desktop/Pandemobium    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/RootViewController.nib /Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/RootViewController.xib0#
-
-CCopyPlistFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/StockExchangeCurrency.plist Pandemobium/Yahoo/StockExchangeCurrency.plist
-s330445198.784677
-e330445198.845754
-r1
-xCopyPlistFile
-x/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/StockExchangeCurrency.plist
-xPandemobium/Yahoo/StockExchangeCurrency.plist
-lSLF07#2@50"Copy Pandemobium/Yahoo/StockExchangeCurrency.plist330445198#330445198#0(0"0(0#0#81"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Yahoo/StockExchangeCurrency.plist4300911832#457"    cd /Users/dcornell/Desktop/Pandemobium    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist --convert binary1 Pandemobium/Yahoo/StockExchangeCurrency.plist --outdir /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app0#
-
-CCopyStringsFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/InfoPlist.strings Pandemobium/en.lproj/InfoPlist.strings
-s330445197.127802
-e330445197.567204
-r1
-xCopyStringsFile
-x/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj/InfoPlist.strings
-xPandemobium/en.lproj/InfoPlist.strings
-lSLF07#2@43"Copy Pandemobium/en.lproj/InfoPlist.strings330445197#330445197#0(0"0(0#0#74"/Users/dcornell/Desktop/Pandemobium/Pandemobium/en.lproj/InfoPlist.strings4300911832#532"    cd /Users/dcornell/Desktop/Pandemobium    setenv ICONV /usr/bin/iconv    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary Pandemobium/en.lproj/InfoPlist.strings --outdir /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/en.lproj0#
-
-CGenerateDSYMFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app.dSYM /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Pandemobium
-r0
-
-CLd /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Pandemobium normal i386
-r0
-
-CProcessInfoPlistFile /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Info.plist Pandemobium/Pandemobium-Info.plist
-s330445190.767903
-e330445190.807503
-r1
-xProcessInfoPlistFile
-x/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Info.plist
-xPandemobium/Pandemobium-Info.plist
-lSLF07#2@42"Process Pandemobium/Pandemobium-Info.plist330445190#330445190#0(0"0(0#0#70"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Pandemobium-Info.plist29273878621126700#520"    cd /Users/dcornell/Desktop/Pandemobium    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Pandemobium/Pandemobium-Info.plist -genpkginfo /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app/Info.plist0#
-
-CProcessPCH /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch.gch Pandemobium/Pandemobium-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
-s330445190.808933
-e330445193.593674
-r1
-xProcessPCH
-x/var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch.gch
-xPandemobium/Pandemobium-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvmgcc42
-lSLF07#2@45"Precompile Pandemobium/Pandemobium-Prefix.pch330445190#330445193#0(0"0(0#0#70"/Users/dcornell/Desktop/Pandemobium/Pandemobium/Pandemobium-Prefix.pch4300911832#1961"    cd /Users/dcornell/Desktop/Pandemobium    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-generated-files.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-own-target-headers.hmap -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-all-target-headers.hmap -iquote /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/Pandemobium-project-headers.hmap -F/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator -I/Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/include -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources/i386 -I/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug-iphonesimulator/Pandemobium.build/DerivedSources -isysroot /Applications/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -c /Users/dcornell/Desktop/Pandemobium/Pandemobium/Pandemobium-Prefix.pch -o /var/folders/f1/f1cbX6SpFtGYu2Qi-cM+cU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pandemobium-Prefix-borrounafeuzyyfgjsksubbgmcxq/Pandemobium-Prefix.pch.gch0#
-
-CTouch /Users/dcornell/Desktop/Pandemobium/build/Debug-iphonesimulator/Pandemobium.app
-r0
-
