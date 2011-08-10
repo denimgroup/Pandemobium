@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <TableLayout 	android:layout_width="fill_parent"
+  				android:layout_height="fill_parent">
+  	<TableRow android:layout_width="fill_parent">
+    	<TextView  
+	   	 	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content" 
+	    	android:id="@+id/tv_trade_history"
+	    	android:text="I'm the trade history"/>
+	</TableRow>
+	<TableRow android:layout_width="fill_parent">
+		<TextView  
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content" 
+	    	android:id="@+id/tv_tip_history"
+	    	android:text="I'm the tip history"/>
+	</TableRow>
+  </TableLayout>
+</LinearLayout>

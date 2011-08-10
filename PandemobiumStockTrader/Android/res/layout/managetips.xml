@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <TableLayout 	android:layout_width="match_parent"
+  				android:layout_height="match_parent"
+  				android:stretchColumns="1">
+  	<TableRow 	android:layout_width="match_parent">
+  		<TextView android:text="Symbol" />
+  		<EditText 	android:layout_width="match_parent"
+  					android:id="@+id/et_symbol" />
+  	</TableRow>
+  	<TableRow android:layout_width="match_parent">
+  		<TextView android:text="Target Price" />
+  		<EditText 	android:layout_width="match_parent"
+  					android:id="@+id/et_target_price" />
+  	</TableRow>
+    <TableRow android:layout_width="match_parent">
+  		<TextView android:text="Reason" />
+  		<EditText 	android:layout_width="match_parent"
+  					android:id="@+id/et_reason" />
+  	</TableRow>
+  	<TableRow android:layout_width="match_parent">
+  		<Button android:layout_span="2"
+  				android:text="Save Tip"
+  				android:id="@+id/btn_save_tip" />
+  	</TableRow>
+   	<TableRow android:layout_width="match_parent">
+  		<TextView 	android:layout_span="2"
+  					android:text="Enter your tip"
+  					android:id="@+id/tv_tip_status" />
+  	</TableRow>
+  </TableLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content" 
+  android:orientation="vertical">
+  <ImageView 
+    android:id="@+id/dg_logo"
+    android:src="@drawable/dglogo"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"/>
+  <TextView
+	android:id="@+id/about_info"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Pandemobium Stock Trader is a mobile app for Android and iPhone with vulnerabilities included for security testing purposes.
+\n\nCopyright (c) 2011 Denim Group, Ltd. All rights reserved worldwide.
+\n\nThis program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it under certain conditions; view license for details."/>
+</LinearLayout>
+

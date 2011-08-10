@@ -1,0 +1,55 @@
+TPandemobiumTests
+v7
+r1
+
+N/Users/dcornell/Desktop/Pandemobium/PandemobiumTests/PandemobiumTests.h
+c000000004DDB34D90000000000000103
+t1306211545
+s259
+
+N/Users/dcornell/Desktop/Pandemobium/PandemobiumTests/en.lproj/InfoPlist.strings
+c000000004DDB34D9000000000000002D
+t1306211545
+s45
+
+N/Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest
+t2
+s0
+
+N/Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest/Contents/Info.plist
+t2
+s0
+
+N/Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest/Contents/Resources/PandemobiumTests.h
+t2
+s0
+
+N/Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug/PandemobiumTests.build/Script-C76B2773138B6C590073FD80.sh
+c00000000000000000000000000000000
+t2
+s0
+
+NPandemobiumTests/PandemobiumTests-Info.plist
+c000000004DDB34D900000000000002B6
+t1306211545
+s694
+
+CCopyStringsFile /Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest/Contents/Resources/en.lproj/InfoPlist.strings PandemobiumTests/en.lproj/InfoPlist.strings
+r0
+
+CCpResource build/Debug/PandemobiumTests.octest/Contents/Resources/PandemobiumTests.h PandemobiumTests/PandemobiumTests.h
+r0
+
+CPhaseScriptExecution "Run Script" /Users/dcornell/Desktop/Pandemobium/build/Pandemobium.build/Debug/PandemobiumTests.build/Script-C76B2773138B6C590073FD80.sh
+r0
+
+CProcessInfoPlistFile /Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest/Contents/Info.plist PandemobiumTests/PandemobiumTests-Info.plist
+r0
+
+CTouch /Users/dcornell/Desktop/Pandemobium/build/Debug/PandemobiumTests.octest
+r0
+

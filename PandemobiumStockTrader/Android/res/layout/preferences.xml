@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+	    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:stretchColumns="1">
+	    <TableRow>
+	    	<TextView  
+				android:layout_width="fill_parent" 
+	    		android:layout_height="wrap_content" 
+	    		android:text="User Name"/>
+	    	<EditText android:layout_width="fill_parent" 
+	    		android:layout_height="wrap_content"
+	    		android:id="@+id/et_username" />
+	    </TableRow>
+	    <TableRow>
+	    	<TextView  
+				android:layout_width="fill_parent" 
+	    		android:layout_height="wrap_content" 
+	    		android:text="Password"/>
+	    	<EditText android:layout_width="fill_parent" 
+	    		android:layout_height="wrap_content"
+	    		android:id="@+id/et_password" android:password="true" android:inputType="textPassword"/>
+	    </TableRow>
+		<TableRow>
+	    	<Button android:id="@+id/btn_retrieve_prefs"
+	    			android:layout_width="fill_parent"
+            		android:layout_span="2"
+					android:text="Retrieve Preferences" />
+	    </TableRow>
+	    <TableRow>
+	    	<TextView android:id="@+id/tv_status"
+	    			android:layout_width="fill_parent"
+            		android:layout_span="2"
+					android:text="Please enter your username and password to retrieve your account information" />
+	    </TableRow>
+	</TableLayout>
+</LinearLayout>
