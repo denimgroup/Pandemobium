@@ -20,34 +20,27 @@
  * <http://www.gnu.org/licenses/>.
 --%>
 
-<%@ page language="java" import="java.util.*" 
-	contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="UTF-8"%>
-<%@page import="java.sql.*"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
-<%@ page import="java.net.URLEncoder, java.net.URL, java.net.URLConnection, java.sql.Connection, java.sql.DriverManager, java.sql.SQLException, java.sql.Statement, java.sql.ResultSet" %>
-<%@page import="org.w3c.dom.*, javax.xml.parsers.*" %>
-
+<%@ page	language="java"
+			contentType="text/html; charset=ISO-8859-1"
+    		pageEncoding="UTF-8"%>
 
 <%@ page import="java.io.*" %>
-
 <%@ page import="java.net.*" %>
-
+<%@ page import="java.sql.*" %>
+<%@ page import="java.text.SimpleDateFormat"%>
+<%@ page import="java.util.*" %>
+<%@ page import="javax.xml.parsers.*" %>
+<%@ page import="org.w3c.dom.*, javax.xml.parsers.*" %>
 <%@ page import="org.w3c.dom.*" %>
-
 <%@ page import="org.xml.sax.*" %>
 
-<%@ page import="javax.xml.parsers.SAXParserFactory" %>
-
-<%@ page import="javax.xml.parsers.SAXParser" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>I'm the local tips page'</title>
+<title>I'm the local tips page</title>
 </head>
 <body>
 	<p>
@@ -56,6 +49,7 @@
 	</p>
 	
 	<% 
+	Class.forName("org.hsqldb.jdbcDriver").newInstance();
 	Connection c = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "sa", "");
     Statement s = c.createStatement();
     
