@@ -48,8 +48,7 @@
 	This is where you can see sweet stock tips.  
 	</p>
 	
-	<% 
-	See t
+	<%
 	Connection c = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "sa", "");
     Statement s = c.createStatement();
     
