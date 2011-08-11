@@ -45,11 +45,11 @@
 <body>
 	<p>
 	I'm the the tips page.
-	This is where you can see sweet stock tips.
+	This is where you can see sweet stock tips.  
 	</p>
 	
 	<% 
-	Class.forName("org.hsqldb.jdbcDriver").newInstance();
+	See t
 	Connection c = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "sa", "");
     Statement s = c.createStatement();
     
