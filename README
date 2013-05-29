@@ -1,3 +1,13 @@
+**************************************************************************
+* WE ARE CURRENTLY IN THE PROCESS OF MOVING PANDEMOBIUM FROM GOOGLE CODE *
+* TO GITHUB. AT THE MOMENT, PLEASE DOWNLOAD PANDEMOBIUM FROM THE GOOGLE  *
+* CODE DOWNLOAD SITE:                                                    *
+* https://code.google.com/p/pandemobium/downloads/list                   *
+*                                                                        *
+* LOOK FOR SIGNIFICANT UPDATES HERE DURING THE SUMMER OF 2013            *
+**************************************************************************
+
+
 --- Pandemobium ---
 
 Pandemobium is a collection of open source intentionally-flawed mobile
@@ -10,7 +20,7 @@ Current Projects:
     for both Android and iOS and comes with associated Java-based back-end
     web services
 
-Copyright (c) 2011 Denim Group, Ltd.
+Copyright (c) 2011-2013 Denim Group, Ltd.
 http://www.denimgroup.com/
 http://blog.denimgroup.com/
 Please send any comments or questions to Dan Cornell (dan _at_ denimgroup.com)
