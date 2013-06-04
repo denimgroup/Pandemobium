@@ -22,7 +22,7 @@
 
 #import "BuyViewController.h"
 #import "StockDatabase.h"
-#import "/usr/include/sqlite3.h"
+#import "sqlite3.h"
 
 
 @implementation BuyViewController

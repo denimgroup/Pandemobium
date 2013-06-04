@@ -22,7 +22,7 @@
 
 #import "TipViewController.h"
 #import "StockDatabase.h"
-#import "/usr/include/sqlite3.h"
+#import "sqlite3.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
