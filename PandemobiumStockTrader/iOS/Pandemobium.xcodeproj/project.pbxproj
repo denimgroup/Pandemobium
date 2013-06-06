@@ -66,6 +66,7 @@
 		C7AAF6E6138CD01000818B4A /* YFCurrencyConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AAF6DD138CD01000818B4A /* YFCurrencyConversion.m */; };
 		C7AAF6E7138CD01000818B4A /* YFStockDetailsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AAF6DF138CD01000818B4A /* YFStockDetailsLoader.m */; };
 		C7AAF6E8138CD01000818B4A /* YFStockSymbolSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AAF6E1138CD01000818B4A /* YFStockSymbolSearch.m */; };
+		DB92CF6A1760EE520035C25D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB92CF681760EE080035C25D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		C7AAF6DF138CD01000818B4A /* YFStockDetailsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFStockDetailsLoader.m; sourceTree = "<group>"; };
 		C7AAF6E0138CD01000818B4A /* YFStockSymbolSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFStockSymbolSearch.h; sourceTree = "<group>"; };
 		C7AAF6E1138CD01000818B4A /* YFStockSymbolSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFStockSymbolSearch.m; sourceTree = "<group>"; };
+		DB92CF681760EE080035C25D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		C76B2746138B6C580073FD80 = {
 			isa = PBXGroup;
 			children = (
+				DB92CF681760EE080035C25D /* Default-568h@2x.png */,
 				C7A24DF313942D280001BE23 /* libsqlite3.dylib */,
 				C76B275B138B6C590073FD80 /* Pandemobium */,
 				C76B277B138B6C590073FD80 /* PandemobiumTests */,
@@ -481,6 +484,7 @@
 		C76B2748138B6C580073FD80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Denim Group";
 			};
 			buildConfigurationList = C76B274B138B6C580073FD80 /* Build configuration list for PBXProject "Pandemobium" */;
@@ -515,6 +519,7 @@
 				C76B2795138B747F0073FD80 /* TipView.xib in Resources */,
 				C76B2797138B756D0073FD80 /* WebView.xib in Resources */,
 				C7AAF6E5138CD01000818B4A /* StockExchangeCurrency.plist in Resources */,
+				DB92CF6A1760EE520035C25D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +688,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pandemobium/Pandemobium-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Pandemobium/Pandemobium-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -696,6 +702,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pandemobium/Pandemobium-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Pandemobium/Pandemobium-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -714,6 +721,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PandemobiumTests/PandemobiumTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PandemobiumTests/PandemobiumTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -736,6 +744,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PandemobiumTests/PandemobiumTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PandemobiumTests/PandemobiumTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
