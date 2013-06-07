@@ -1,0 +1,21 @@
+# Eclipse project files
+.project
+.metadata
+local.properties
+.classpath
+.settings/
+.loadpath
+# External tool builders
+.externalToolBuilders/
+# Locally stored "Eclipse launch configurations"
+*.launch
+# CDT-specific
+.cproject
+# PDT-specific
+.buildpath
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+.idea/
