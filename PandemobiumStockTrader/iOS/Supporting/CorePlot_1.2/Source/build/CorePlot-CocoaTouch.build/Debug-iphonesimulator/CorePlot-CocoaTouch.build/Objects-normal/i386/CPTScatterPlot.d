@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTScatterPlot.m \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTScatterPlot.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTDefinitions.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlot.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAnnotationHostLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTResponder.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/iPhoneOnly/CPTPlatformSpecificDefines.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTNumericDataType.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTExceptions.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTFill.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLegend.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTBorderedLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLineStyle.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTMutableNumericData.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTNumericData.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPathExtensions.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotArea.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTGraph.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotRange.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotSpace.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotSpaceAnnotation.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAnnotation.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotSymbol.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTUtilities.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTXYPlotSpace.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/NSCoderExtensions.h

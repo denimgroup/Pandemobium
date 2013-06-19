@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAxis.m \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAxis.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTDefinitions.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTResponder.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/iPhoneOnly/CPTPlatformSpecificDefines.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTTextStyle.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAxisLabel.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAxisLabelGroup.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAxisSet.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAxisTitle.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTColor.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTExceptions.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTFill.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTGradient.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTGridLineGroup.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTGridLines.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTImage.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLimitBand.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLineCap.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTLineStyle.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTMutablePlotRange.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotRange.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotArea.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTAnnotationHostLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTGraph.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTBorderedLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTPlotSpace.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTShadow.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTTextLayer.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/CPTUtilities.h \
+  /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/framework/Source/NSCoderExtensions.h

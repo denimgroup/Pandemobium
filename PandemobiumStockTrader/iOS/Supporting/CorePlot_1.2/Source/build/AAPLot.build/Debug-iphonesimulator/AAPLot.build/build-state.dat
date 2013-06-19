@@ -1,0 +1,840 @@
+TAAPLot
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Info.plist Info.plist
+cCompileXIB /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib
+cCompileXIB /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xib
+cCompileXIB /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib
+cCopyPlistFile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPL.plist AAPL.plist
+cCpResource Default-568h@2x.png ../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png
+cProcessPCH /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.pth AAPLot_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot normal i386
+cGenerateDSYMFile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot
+cTouch /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000051ACDE890000000000228FE0
+t1370283657
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000051ACDE8A00000000003DDFA0
+t1370283658
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000051ACDE8A00000000000015F7
+t1370283658
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c0000000051ACDE8C00000000001D5750
+t1370283660
+s1922896
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c0000000051ACDE8C0000000000000E8D
+t1370283660
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c0000000051ACDE8E0000000000AB6230
+t1370283662
+s11231792
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/build/Debug-iphonesimulator/libCorePlot-CocoaTouch.a
+c0000000051BB5D560000000000362778
+t1371233622
+s3549048
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLot.LinkFileList
+c0000000051BB5D5600000000000005DA
+t1371233622
+s1498
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.o
+t1371233623
+s86656
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.o
+t1371233623
+s9084
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.o
+t1371233624
+s62700
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.o
+t1371233623
+s68068
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.o
+t1371233623
+s68660
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.o
+t1371233624
+s147444
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.o
+t1371233624
+s5740
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.o
+t1371233623
+s96748
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.o
+t1371233623
+s3904
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app
+t1371233624
+s340
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM
+t1371233624
+s102
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPL.plist
+t1371233622
+s6741
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot
+t1371233624
+s1370592
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png
+t1371233622
+s18594
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/FlipsideView.nib
+t1371233623
+s944
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Info.plist
+t1371233622
+s662
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/MainView.nib
+t1371233623
+s1144
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/MainWindow.nib
+t1371233622
+s2124
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/PkgInfo
+t1371233622
+s8
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/CorePlot-CocoaTouch.h
+c0000000051B774C60000000000000724
+t1370977478
+s1828
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAnimation.h
+c0000000051B774C60000000000001313
+t1370977478
+s4883
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAnimationOperation.h
+c0000000051B774C6000000000000031E
+t1370977478
+s798
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAnimationPeriod.h
+c0000000051B774C60000000000001B34
+t1370977478
+s6964
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAnnotation.h
+c0000000051B774C600000000000003A5
+t1370977478
+s933
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAnnotationHostLayer.h
+c0000000051B774C60000000000000181
+t1370977478
+s385
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAxis.h
+c0000000051B774C600000000000023F7
+t1370977478
+s9207
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAxisLabel.h
+c0000000051B774C60000000000000409
+t1370977478
+s1033
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAxisSet.h
+c0000000051B774C6000000000000020A
+t1370977478
+s522
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTAxisTitle.h
+c0000000051B774C6000000000000004B
+t1370977478
+s75
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTBarPlot.h
+c0000000051B774C6000000000000169F
+t1370977478
+s5791
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTBorderedLayer.h
+c0000000051B774C60000000000000230
+t1370977478
+s560
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTCalendarFormatter.h
+c0000000051B774C6000000000000025A
+t1370977478
+s602
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTColor.h
+c0000000051B774C6000000000000040A
+t1370977478
+s1034
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTColorSpace.h
+c0000000051B774C60000000000000159
+t1370977478
+s345
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTConstraints.h
+c0000000051B774C60000000000000370
+t1370977478
+s880
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTDefinitions.h
+c0000000051B774C60000000000001657
+t1370977478
+s5719
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTExceptions.h
+c0000000051B774C600000000000000BE
+t1370977478
+s190
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTFill.h
+c0000000051B774C60000000000000305
+t1370977478
+s773
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTGradient.h
+c0000000051B774C60000000000000D3E
+t1370977478
+s3390
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTGraph.h
+c0000000051B774C60000000000000EC0
+t1370977478
+s3776
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTImage.h
+c0000000051B774C60000000000000395
+t1370977478
+s917
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLayer.h
+c0000000051B774C60000000000000B91
+t1370977478
+s2961
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLayerAnnotation.h
+c0000000051B774C600000000000001E7
+t1370977478
+s487
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLegend.h
+c0000000051B774C60000000000001026
+t1370977478
+s4134
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLegendEntry.h
+c0000000051B774C60000000000000360
+t1370977478
+s864
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLimitBand.h
+c0000000051B774C60000000000000204
+t1370977478
+s516
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLineCap.h
+c0000000051B774C60000000000000851
+t1370977478
+s2129
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTLineStyle.h
+c0000000051B774C600000000000004C2
+t1370977478
+s1218
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTMutableLineStyle.h
+c0000000051B774C60000000000000250
+t1370977478
+s592
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTMutableNumericData+TypeConversion.h
+c0000000051B774C6000000000000029C
+t1370977478
+s668
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTMutableNumericData.h
+c0000000051B774C60000000000000115
+t1370977478
+s277
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTMutablePlotRange.h
+c0000000051B774C60000000000000277
+t1370977478
+s631
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTMutableShadow.h
+c0000000051B774C6000000000000011D
+t1370977478
+s285
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTMutableTextStyle.h
+c0000000051B774C6000000000000015C
+t1370977478
+s348
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTNumericData+TypeConversion.h
+c0000000051B774C6000000000000030C
+t1370977478
+s780
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTNumericData.h
+c0000000051B774C60000000000000D3A
+t1370977478
+s3386
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTNumericDataType.h
+c0000000051B774C600000000000006A8
+t1370977478
+s1704
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPathExtensions.h
+c0000000051B774C600000000000000E0
+t1370977478
+s224
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPieChart.h
+c0000000051B774C600000000000015E9
+t1370977478
+s5609
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlot.h
+c0000000051B774C60000000000002AAA
+t1370977478
+s10922
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlotArea.h
+c0000000051B774C60000000000000661
+t1370977478
+s1633
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlotAreaFrame.h
+c0000000051B774C6000000000000017C
+t1370977478
+s380
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlotRange.h
+c0000000051B774C600000000000007DB
+t1370977478
+s2011
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlotSpace.h
+c0000000051B774C600000000000017E1
+t1370977478
+s6113
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlotSpaceAnnotation.h
+c0000000051B774C6000000000000018C
+t1370977478
+s396
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTPlotSymbol.h
+c0000000051B774C600000000000009B6
+t1370977478
+s2486
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTRangePlot.h
+c0000000051B774C60000000000000DFF
+t1370977478
+s3583
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTResponder.h
+c0000000051B774C600000000000006D5
+t1370977478
+s1749
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTScatterPlot.h
+c0000000051B774C60000000000001110
+t1370977478
+s4368
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTShadow.h
+c0000000051B774C60000000000000209
+t1370977478
+s521
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTTextLayer.h
+c0000000051B774C60000000000000260
+t1370977478
+s608
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTTextStyle.h
+c0000000051B774C60000000000000492
+t1370977478
+s1170
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTTheme.h
+c0000000051B774C600000000000005DD
+t1370977478
+s1501
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTTimeFormatter.h
+c0000000051B774C6000000000000017F
+t1370977478
+s383
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTTradingRangePlot.h
+c0000000051B774C60000000000002533
+t1370977478
+s9523
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTUtilities.h
+c0000000051B774C60000000000000EFA
+t1370977478
+s3834
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTXYAxis.h
+c0000000051B774C6000000000000016A
+t1370977478
+s362
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTXYAxisSet.h
+c0000000051B774C600000000000000CF
+t1370977478
+s207
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTXYGraph.h
+c0000000051B774C6000000000000013E
+t1370977478
+s318
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/Source/CPTXYPlotSpace.h
+c0000000051B774C600000000000002EE
+t1370977478
+s750
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/iPhoneOnly/CPTGraphHostingView.h
+c0000000051B774C600000000000001A9
+t1370977478
+s425
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/iPhoneOnly/CPTPlatformSpecificCategories.h
+c0000000051B774C60000000000000398
+t1370977478
+s920
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/iPhoneOnly/CPTPlatformSpecificDefines.h
+c0000000051B774C60000000000000082
+t1370977478
+s130
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../framework/iPhoneOnly/CPTPlatformSpecificFunctions.h
+c0000000051B774C6000000000000011C
+t1370977478
+s284
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/AAPL.plist
+c0000000051B774C50000000000004F13
+t1370977477
+s20243
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/AAPLot_Prefix.pch
+c0000000051B774C500000000000000C8
+t1370977477
+s200
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.h
+c0000000051B774C50000000000000083
+t1370977477
+s131
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m
+c0000000051B774C50000000000000697
+t1370977477
+s1687
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.h
+c0000000051B774C50000000000000606
+t1370977477
+s1542
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m
+c0000000051B774C50000000000003229
+t1370977477
+s12841
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib
+c0000000051B774C50000000000003FEB
+t1370977477
+s16363
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.h
+c0000000051B774C500000000000001DC
+t1370977477
+s476
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m
+c0000000051B774C500000000000002E3
+t1370977477
+s739
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.h
+c0000000051B774C500000000000000D2
+t1370977477
+s210
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m
+c0000000051B774C500000000000001B6
+t1370977477
+s438
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.h
+c0000000051B774C500000000000000F0
+t1370977477
+s240
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m
+c0000000051B774C5000000000000037B
+t1370977477
+s891
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.h
+c0000000051B774C500000000000001BE
+t1370977477
+s446
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m
+c0000000051B774C50000000000007296
+t1370977477
+s29334
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.h
+c0000000051B774C500000000000002F9
+t1370977477
+s761
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m
+c0000000051B774C50000000000001033
+t1370977477
+s4147
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Default-568h@2x.png
+c0000000051B774C500000000000048A2
+t1370977477
+s18594
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xib
+c0000000051B774C5000000000000190C
+t1370977477
+s6412
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib
+c0000000051B774C50000000000001FDA
+t1370977477
+s8154
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.h
+c0000000051B774C50000000000000079
+t1370977477
+s121
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m
+c0000000051B774C50000000000000129
+t1370977477
+s297
+
+N/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m
+c0000000051B774C500000000000000ED
+t1370977477
+s237
+
+N/var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.pth
+t1371233623
+s4669792
+
+NInfo.plist
+c0000000051B774C500000000000003F5
+t1370977477
+s1013
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m
+r0
+
+CBuild AST from /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies53246724956bb741^906b6724956bb741^---0#1#0#--18"Check dependencies36"B16C9334-2CCB-4ABA-899E-03814FE5FE51-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.813677
+e392926423.905911
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.maa7fd0d7946bb741^c5e6e7d7946bb741^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m0000000000000000^3855"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.o Classes/AAPLotAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/AAPLotAppDelegate.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLotAppDelegate.o36"17785C2B-94E9-431B-A436-B63E1C8C2FA4-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.954021
+e392926423.990354
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m8864f4d7946bb741^1898fdd7946bb741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m0000000000000000^3827"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.o APFinancialData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APFinancialData.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APFinancialData.o36"823C7BA0-558D-41B0-AA41-B2F09A36F180-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.929754
+e392926424.018614
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.me02feed7946bb741^4fca04d8946bb741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m0000000000000000^3839"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.o APYahooDataPuller.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/APYahooDataPuller.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/APYahooDataPuller.o36"A8F5A67D-4735-4E2B-B9E3-48290FBD2A74-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.907216
+e392926423.982241
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.mbe6be8d7946bb741^6d73fbd7946bb741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m0000000000000000^3825"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.o Classes/FlipsideView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideView.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideView.o36"E18DE01C-5677-425C-B450-AC21029C37FB-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.813604
+e392926423.893044
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.mfa80d0d7946bb741^f19de4d7946bb741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m0000000000000000^3885"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.o Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/FlipsideViewController.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/FlipsideViewController.o36"27D0153B-C725-4F97-8363-763E27A7AD0F-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.813718
+e392926424.018412
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m6f81d0d7946bb741^a0c304d8946bb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m0000000000000000^3861"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.o Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/MainViewController.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/MainViewController.o36"0CF2EAC2-FEF4-4D13-83B3-779C5D598E83-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.984021
+e392926424.025023
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.mc614fcd7946bb741^b66706d8946bb741^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m0000000000000000^3887"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.o NSDateFormatterExtensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/NSDateFormatterExtensions.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/NSDateFormatterExtensions.o36"3C3DB812-D40A-4474-B667-C31B9A24DE2F-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.813724
+e392926423.952585
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m5280d0d7946bb741^f5dbf3d7946bb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m0000000000000000^3861"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.o Classes/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/RootViewController.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/RootViewController.o36"1BBC2757-F04D-45E7-8A7E-47F19F0599C4-
+
+CCompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.894455
+e392926423.928402
+r1
+xCompileC
+x../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.o
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m3525e5d7946bb741^f8aaedd7946bb741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m0000000000000000^3761"CompileC ../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.o main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -include /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch -MMD -MT dependencies -MF /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/main.m -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/main.o36"E82CD38B-9932-460D-AE16-827BEA2BAD96-
+
+CCompileXIB /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib
+s392926422.741172
+e392926422.783538
+r1
+xCompileXIB
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compiling /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib16debdd6946bb741^8e95c8d6946bb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib0000000000000000^970"CompileXIB Classes/../MainWindow.xib    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/MainWindow.nib /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Classes/../MainWindow.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"49FD7EC2-EED4-4465-8542-6E1E5BD462CF-
+
+CCompileXIB /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xib
+s392926422.741165
+e392926423.513452
+r1
+xCompileXIB
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xib
+o2013-06-14 13:13:43.466 Interface Builder Cocoa Touch Tool[1827:f07] CFPreferences: user home directory at file://localhost/Users/denimgroup/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compiling /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xibb9dfbdd6946bb741^001b84d7946bb741^-242"2013-06-14 13:13:43.466 Interface Builder Cocoa Touch Tool[1827:f07] CFPreferences: user home directory at file://localhost/Users/denimgroup/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xib0000000000000000^954"CompileXIB FlipsideView.xib    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/FlipsideView.nib /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/FlipsideView.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"E60AEB2F-A8AF-463D-AB9A-738B0C7BF01C-
+
+CCompileXIB /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib
+s392926422.741164
+e392926423.483767
+r1
+xCompileXIB
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib
+o2013-06-14 13:13:43.449 Interface Builder Cocoa Touch Tool[1826:f07] CFPreferences: user home directory at file://localhost/Users/denimgroup/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compiling /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib9be2bdd6946bb741^7bd87bd7946bb741^-242"2013-06-14 13:13:43.449 Interface Builder Cocoa Touch Tool[1826:f07] CFPreferences: user home directory at file://localhost/Users/denimgroup/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib0000000000000000^942"CompileXIB MainView.xib    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/MainView.nib /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/MainView.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"7A275C0C-AEE6-4DD6-AD37-06EDA420EF27-
+
+CCopyPlistFile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPL.plist AAPL.plist
+s392926422.741407
+e392926422.751086
+r1
+xCopyPlistFile
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPL.plist
+xAAPL.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection15"Copy AAPL.plist82e4bdd6946bb741^3d47c0d6946bb741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/AAPL.plist0000000000000000^525"CopyPlistFile ../../build/Debug-iphonesimulator/AAPLot.app/AAPL.plist AAPL.plist    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app -- AAPL.plist36"1FD4DDFF-E876-43AC-B86B-FC478672E46A-
+
+CCpResource Default-568h@2x.png ../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png
+s392926422.752445
+e392926422.754980
+r1
+xCpResource
+xDefault-568h@2x.png
+x../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy ../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png0fbac0d6946bb741^e352c1d6946bb741^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png000000000080d041^682"CpResource "Default-568h@2x.png" "../../build/Debug-iphonesimulator/AAPLot.app/Default-568h@2x.png"    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Default-568h@2x.png" /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app36"1E653F11-0912-4719-B98C-564206516FA8-
+
+CGenerateDSYMFile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot
+s392926424.209753
+e392926424.305133
+r1
+xGenerateDSYMFile
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Generate /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM1ec535d8946bb741^ce1c4ed8946bb741^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM000000000080d041^727"GenerateDSYMFile ../../build/Debug-iphonesimulator/AAPLot.app.dSYM ../../build/Debug-iphonesimulator/AAPLot.app/AAPLot    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app.dSYM36"0FF0DB26-DC84-4ED2-8970-7672ED35D23A-
+
+CLd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot normal i386
+s392926424.031757
+e392926424.202769
+r1
+xLd
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Link /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot7a3908d8946bb741^9be833d8946bb741^---0#0#0#--1441"Ld ../../build/Debug-iphonesimulator/AAPLot.app/AAPLot normal i386    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv IPHONEOS_DEPLOYMENT_TARGET 3.2    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator -filelist /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/Objects-normal/i386/AAPLot.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -all_load -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=3.2 -framework Foundation -framework UIKit -framework CoreGraphics /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/build/Debug-iphonesimulator/libCorePlot-CocoaTouch.a -framework QuartzCore -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/AAPLot36"25F170D9-DE52-4422-BFFB-71D1B71E3B27-
+
+CProcessInfoPlistFile /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Info.plist Info.plist
+s392926422.729797
+e392926422.733017
+r1
+xProcessInfoPlistFile
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Info.plist
+xInfo.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plista3e7bad6946bb741^44a7bbd6946bb741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/Info.plist0000000000000000^717"ProcessInfoPlistFile ../../build/Debug-iphonesimulator/AAPLot.app/Info.plist Info.plist    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Info.plist -genpkginfo /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app/Info.plist36"FF79B22D-5B46-4399-AE9F-FBDE36089879-
+
+CProcessPCH /Users/denimgroup/Library/Developer/Xcode/DerivedData/AAPLot-cnhulcbnurtiiygupqpvpzkxeuhp/Index/PrecompiledHeaders/AAPLot_Prefix-etbllpesusuwixejjsxgazodxmtq_ast/AAPLot_Prefix.pch.pth AAPLot_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.pth AAPLot_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s392926423.521418
+e392926423.806489
+r1
+xProcessPCH
+x/var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.pth
+xAAPLot_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Precompile AAPLot_Prefix.pch6ea785d7946bb741^2575ced7946bb741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/AAPLot_Prefix.pch0000000000000000^3711"ProcessPCH /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.pth AAPLot_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=3.2 -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-generated-files.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-own-target-headers.hmap -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-all-target-headers.hmap -iquote /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/AAPLot-project-headers.hmap -iquote../../framework -iquote../../framework/.idea -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -iquote../../framework/.idea/inspectionProfiles -iquote../../framework/.idea/scopes -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/include -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources/i386 -I/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/AAPLot.build/Debug-iphonesimulator/AAPLot.build/DerivedSources -F/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator --serialize-diagnostics /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.dia -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/AAPLot_Prefix.pch -o /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/k4/6wkwyg0n1379b1hp_4jz9k1h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AAPLot_Prefix-gsjxstpsinqyfybavhfjzovcqnpn/AAPLot_Prefix.pch.d36"46B451A8-B72C-4D97-8BEE-350E66C44864-
+
+CTouch /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app
+s392926424.313345
+e392926424.319345
+r1
+xTouch
+x/Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Touch /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app134950d8946bb741^bac051d8946bb741^---0#0#0#--454"Touch ../../build/Debug-iphonesimulator/AAPLot.app    cd /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/denimgroup/iOSTutorials/CorePlot_1.2/Source/examples/AAPLot/../../build/Debug-iphonesimulator/AAPLot.app36"880F7583-5EBD-47ED-8D8A-7633ECA2FBD3-
+
