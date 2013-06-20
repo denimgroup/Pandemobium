@@ -14,6 +14,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+
+@property (strong, nonatomic) NSNumber *currentImageIndex;
+
 - (NSURL *) applicationDocumentsDirectory;
 
 @end

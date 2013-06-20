@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Stock.h"
+#import "QuotesViewController.h"
 
 @implementation AppDelegate
 
@@ -17,7 +18,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+   
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults objectForKey:@"firstRun"])
+    {
+        [defaults setObject:[NSDate date] forKey:@"firstRun"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        [self loadDataFromPropertyList];
+        
+    }
+
+    self.currentImageIndex = [[NSNumber alloc]initWithInt:0];
     
+//    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+//    QuotesViewController *controller = [[QuotesViewController alloc]init];
+//    self.window.rootViewController = controller;
+//    self.window.backgroundColor = [UIColor whiteColor];
+//  
     //[self managedObjectContext];
   
 //    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -34,6 +51,27 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+-(void)loadDataFromPropertyList
+{
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"defaultStocks" ofType:@"plist"]   ;
+    NSArray *items = [NSArray arrayWithContentsOfFile:path];
+    
+    NSManagedObjectContext *ctx = self.managedObjectContext;
+    for(NSDictionary *dict in items)
+    {
+        NSManagedObject *m = [NSEntityDescription insertNewObjectForEntityForName:@"Stock" inManagedObjectContext:ctx];
+        [m setValuesForKeysWithDictionary:dict];
+    }
+    NSError *err = nil;
+    [ctx save:&err];
+    if(err != nil)
+    {
+        NSLog(@"Error savign manageed object context: %@", err);
+    }
+    
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

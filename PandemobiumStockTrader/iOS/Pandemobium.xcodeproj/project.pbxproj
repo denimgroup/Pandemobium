@@ -41,6 +41,7 @@
 		BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F21771007B00B82A5B /* NewsViewController.m */; };
 		BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F51771009900B82A5B /* SignInViewController.m */; };
 		BEF610F9177100B300B82A5B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F8177100B300B82A5B /* SettingsViewController.m */; };
+		BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF93FB617738C9C003A6810 /* StockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +173,8 @@
 		BEF610F51771009900B82A5B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		BEF610F7177100B300B82A5B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BEF610F8177100B300B82A5B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BEF93FB517738C9C003A6810 /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockViewController.h; sourceTree = "<group>"; };
+		BEF93FB617738C9C003A6810 /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +388,8 @@
 				BEF610F51771009900B82A5B /* SignInViewController.m */,
 				BEF610F7177100B300B82A5B /* SettingsViewController.h */,
 				BEF610F8177100B300B82A5B /* SettingsViewController.m */,
+				BEF93FB517738C9C003A6810 /* StockViewController.h */,
+				BEF93FB617738C9C003A6810 /* StockViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -488,6 +493,7 @@
 				BEF610F9177100B300B82A5B /* SettingsViewController.m in Sources */,
 				BE0F91B71771FF0D00A01190 /* ClientStocks.xcdatamodeld in Sources */,
 				BE0F91BC17721BAE00A01190 /* Stock.m in Sources */,
+				BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
