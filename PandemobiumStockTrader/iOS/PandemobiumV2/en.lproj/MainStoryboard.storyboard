@@ -245,11 +245,14 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <webView contentMode="scaleToFill" id="rwU-QM-RqN">
                                 <rect key="frame" x="0.0" y="44" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+=======
+>>>>>>> 21c9b828ea267c44fcecf977341dd433251ecc57
                             <navigationBar contentMode="scaleToFill" id="Wpb-ck-dmE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -263,9 +266,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <webView contentMode="scaleToFill" id="rwU-QM-RqN">
+                                <rect key="frame" x="0.0" y="44" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="rwU-QM-RqN" id="hwM-E2-dcl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayq-1P-lXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -529,6 +540,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="PortfolioViewController" superclassName="UIViewController">
