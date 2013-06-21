@@ -1,20 +1,20 @@
 //
-//  Stock.m
+//  User.m
 //  Pandemobium
 //
 //  Created by Adrian Salazar on 6/21/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
-#import "Stock.h"
 #import "User.h"
+#import "Stock.h"
 
 
-@implementation Stock
+@implementation User
 
-@dynamic name;
-@dynamic share;
-@dynamic symbol;
-@dynamic user;
+@dynamic firstName;
+@dynamic lastName;
+@dynamic userName;
+@dynamic stocks;
 
 @end
