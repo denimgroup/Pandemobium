@@ -16,6 +16,7 @@
 		BE0F91BC17721BAE00A01190 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91BB17721BAE00A01190 /* Stock.m */; };
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
 		BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */; };
+		BEE6B9721774D64700FFF686 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
 		BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */; };
@@ -25,7 +26,6 @@
 		BEEF7021176F74DA00D63EB8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7020176F74DA00D63EB8 /* Default.png */; };
 		BEEF7023176F74DA00D63EB8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7022176F74DA00D63EB8 /* Default@2x.png */; };
 		BEEF7025176F74DA00D63EB8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */; };
-		BEEF7028176F74DA00D63EB8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7026176F74DA00D63EB8 /* MainStoryboard.storyboard */; };
 		BEEF703A176F756100D63EB8 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */; };
 		BEEF703B176F756100D63EB8 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7039176F756100D63EB8 /* UIImage+ImageWithUIView.m */; };
 		BEEF703D176F767600D63EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF703C176F767600D63EB8 /* QuartzCore.framework */; };
@@ -132,6 +132,7 @@
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pandemobium-Info.plist"; sourceTree = "<group>"; };
 		BE0F91C217725B3200A01190 /* StockTrader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StockTrader-Info.plist"; sourceTree = "<group>"; };
+		BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEEF7010176F74DA00D63EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,7 +145,6 @@
 		BEEF7020176F74DA00D63EB8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BEEF7022176F74DA00D63EB8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BEEF7027176F74DA00D63EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BEEF7036176F756100D63EB8 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
 		BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
 		BEEF7038176F756100D63EB8 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
@@ -339,9 +339,9 @@
 		BEEF7014176F74DA00D63EB8 /* PandemobiumV2 */ = {
 			isa = PBXGroup;
 			children = (
+				BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */,
 				BEEF701D176F74DA00D63EB8 /* AppDelegate.h */,
 				BEEF701E176F74DA00D63EB8 /* AppDelegate.m */,
-				BEEF7026176F74DA00D63EB8 /* MainStoryboard.storyboard */,
 				BEEF7015176F74DA00D63EB8 /* Supporting Files */,
 			);
 			path = PandemobiumV2;
@@ -460,10 +460,10 @@
 				BEEF7021176F74DA00D63EB8 /* Default.png in Resources */,
 				BEEF7023176F74DA00D63EB8 /* Default@2x.png in Resources */,
 				BEEF7025176F74DA00D63EB8 /* Default-568h@2x.png in Resources */,
-				BEEF7028176F74DA00D63EB8 /* MainStoryboard.storyboard in Resources */,
 				BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */,
 				BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */,
 				BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */,
+				BEE6B9721774D64700FFF686 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,14 +504,6 @@
 				BEEF7018176F74DA00D63EB8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BEEF7026176F74DA00D63EB8 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEEF7027176F74DA00D63EB8 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
