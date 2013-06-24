@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
     
-    [self loadSwipeGesture];
     [self initImage];
   
     
@@ -61,6 +60,7 @@
 */
         //    UIApplication *app = [UIApplication sharedApplication];
 //    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:app];
+    
 }
 
 
@@ -152,67 +152,8 @@
 }
 
 
-- (void) loadSwipeGesture
-{
-    
-    swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognizer:)];
-    swipeUp.numberOfTouchesRequired = 1;
-    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
-    swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognizer:)];
-    swipeDown.numberOfTouchesRequired = 1;
-    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
-    
-    [self.view addGestureRecognizer:swipeDown];
-    [self.view addGestureRecognizer:swipeUp];
-    
-    
-    
-}
-
-- (void)swipeRecognizer:(UISwipeGestureRecognizer *) recognizer
-{
-    
-    
-    CGPoint point = [recognizer locationOfTouch:0 inView:self.view];
-    
-    // If the swipe occurs over the topImage then swipe the top image.
-    if(point.x <= self.topImage.bounds.size.width + self.topImage.bounds.origin.x && point.y <= self.topImage.bounds.size.height + self.topImage.bounds.origin.y)
-    {
-        
-        [self swipeTopImage:recognizer];
-    }
-    
-    
-}
-
-- (void)swipeTopImage:(UISwipeGestureRecognizer *)recognizer
-{
-    
-    if(recognizer.direction == UISwipeGestureRecognizerDirectionUp)
-    {
-        
-        NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=GOOG"];
-        NSData *imageData = [[NSData alloc]initWithContentsOfURL:imageurl];
-        
-        UIImage *image = [UIImage imageWithData:imageData];
-        [self.topImage setImage:image ];
-        
-    }
-    else if(recognizer.direction == UISwipeGestureRecognizerDirectionDown)
-    {
-        NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=AAPL"];
-        NSData *imageData = [[NSData alloc]initWithContentsOfURL:imageurl];
-        
-        UIImage *image = [UIImage imageWithData:imageData];
-        [self.topImage setImage:image ];
-        
-    }
-    
-    
-}
-- (IBAction)leftButtonClicked:(id)sender
-{
-    
+- (IBAction)leftButtonClicked:(id)sender {
+    NSLog(@"Left is clicked\n");
     [self changeImage:@"left"];
     
 }
@@ -229,6 +170,7 @@
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
     
+    
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request error:&error];
     if(objects == nil)
@@ -236,7 +178,32 @@
         NSLog(@"There was an error");
     }
     
-    NSManagedObject * firstObject = [objects objectAtIndex:0];
+    if([direction isEqualToString:@"left"])
+    {
+        if(appDelegate.currentImageIndex.intValue == 0)
+        {
+            appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:[objects count] - 1];
+        }
+        else
+        {
+            NSNumber *sum = [NSNumber numberWithInt:(appDelegate.currentImageIndex.intValue - 1)];
+            appDelegate.currentImageIndex = sum;
+        }
+    }
+    else
+    {
+        if(appDelegate.currentImageIndex.intValue == [objects count] - 1)
+        {
+            appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:0];
+        }
+        else
+        {
+            NSNumber *sum = [NSNumber numberWithInt:(appDelegate.currentImageIndex.intValue + 1)];
+            appDelegate.currentImageIndex = sum;
+        }
+    }
+    
+    NSManagedObject * firstObject = [objects objectAtIndex:appDelegate.currentImageIndex.intValue ];
     NSString *symbol = [firstObject valueForKey:@"symbol"];
     
     NSLog(@"%@\n", symbol);
@@ -250,24 +217,7 @@
     UIImage *image = [UIImage imageWithData:imageData];
     // image.size = [CGSizeMake(self.topImage.bounds.size.width, self.topImage.bounds.size.height)];
     
-
-    
-    
-    
-    if([direction isEqualToString:@"left"])
-    {
-        
-        
-        
-        
-    }
-    else
-    {
-        
-    }
-    
-    
-    
+    [self.topImage setImage:image];
 }
 
 
@@ -296,7 +246,7 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)quoteTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"StockCell";
     
     UITableViewCell *cell = [quoteTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     // Set the data for this cell:
@@ -354,29 +304,24 @@
     
     NSString *identifier = [NSString stringWithFormat:@"%@", [stockSymbols objectAtIndex:indexPath.row]];
     
-    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Stock"];
-                            
+    StockViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StockView"];
+    newTopViewController.symbol = identifier;
+    NSLog(@"%@", [[NSString alloc]initWithString:newTopViewController.symbol]);
+
+        
 }
 
-/*
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UIViewController *destination = segue.destinationViewController;
-    if([destination respondsToSelector:@selector(setDelegate:)])
+    if ([[segue identifier]isEqualToString:@"StockView"])
     {
-        [destination setValue:self forKey:@"delegate"];
+        StockViewController *destination = [segue destinationViewController];
+        NSLog(@"Everyday I'm segueing\n");
     }
-    if([destination respondsToSelector:@selector(setSelection:)])
-    {
-        NSIndexPath *indexPath = [self.quoteTableView indexPathForCell:sender];
-        id object; // = [sender ]
-        NSDictionary *selection = @{@"indexPath" : indexPath, @"object" :object};
-        [destination setValue:selection forKey:@"selection"];
-    }
-       
     
 }
 
- */
+
 
 @end

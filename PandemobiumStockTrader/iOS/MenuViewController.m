@@ -18,6 +18,14 @@
 
 - (void)awakeFromNib
 {
+    
+    //Arrays: @[@"one", @"two"]
+    //Dictionary: @{ @"key1" : @"value1", @"key2" : @"value2" }
+    //NSNumber: @123 @YES
+    //Expressions: @( )  NSIntger i = 0  @( i++ )
+    
+
+    
     self.menuItems = [NSArray arrayWithObjects:@"Sign In",@"Settings",@"Quotes", @"Trade", @"History", @"Portfolio", @"Tips", @"News", nil];
 }
 
@@ -34,9 +42,10 @@
     return self.menuItems.count;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"MenuItemCell";
+    static NSString *cellIdentifier = @"MenuItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];

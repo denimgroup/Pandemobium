@@ -12,4 +12,5 @@
 @property (copy, nonatomic) NSDictionary *selection;
 @property (weak, nonatomic) id delegate;
 
+@property (strong, nonatomic) NSString *symbol;
 @end

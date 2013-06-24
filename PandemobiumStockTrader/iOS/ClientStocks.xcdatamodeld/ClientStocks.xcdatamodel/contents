@@ -4,15 +4,16 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="share" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="stocks" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" syncable="YES"/>
+        <relationship name="stocks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stock" inverseName="user" inverseEntity="Stock" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Stock" positionX="160" positionY="192" width="128" height="88"/>
-        <element name="User" positionX="178" positionY="-162" width="128" height="103"/>
+        <element name="Stock" positionX="342" positionY="-297" width="128" height="103"/>
+        <element name="User" positionX="115" positionY="-198" width="128" height="103"/>
     </elements>
 </model>
