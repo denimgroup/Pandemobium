@@ -77,7 +77,7 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <button contentMode="scaleToFill" restorationIdentifier="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pre-8Q-xPH">
+                                    <button hidden="YES" contentMode="scaleToFill" restorationIdentifier="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pre-8Q-xPH">
                                         <rect key="frame" x="0.0" y="44" width="157" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -90,7 +90,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button contentMode="scaleToFill" restorationIdentifier="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Byt-F4-KhV">
+                                    <button hidden="YES" contentMode="scaleToFill" restorationIdentifier="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Byt-F4-KhV">
                                         <rect key="frame" x="155" y="44" width="165" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -120,9 +120,6 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <connections>
-                                                    <segue destination="MAD-b2-xH3" kind="push" id="XSB-Zs-yNd"/>
-                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -594,10 +591,8 @@
         <class className="QuotesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QuotesViewController.h"/>
             <relationships>
-                <relationship kind="action" name="leftButtonClicked:"/>
                 <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="revealUnderRight:"/>
-                <relationship kind="action" name="rightButtonclicked:"/>
                 <relationship kind="outlet" name="leftButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="quoteTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="rightButton" candidateClass="UIButton"/>
