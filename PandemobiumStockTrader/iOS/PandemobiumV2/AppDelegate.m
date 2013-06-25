@@ -54,7 +54,7 @@
 
 -(void)loadDataFromPropertyList
 {
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"defaultStocks" ofType:@"plist"]   ;
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"fullStockList" ofType:@"plist"]   ;
     NSArray *items = [NSArray arrayWithContentsOfFile:path];
     
     NSManagedObjectContext *ctx = self.managedObjectContext;

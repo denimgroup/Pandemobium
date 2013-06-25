@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Stock" representedClassName="Stock" syncable="YES">
+        <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="share" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,7 +14,7 @@
         <relationship name="stocks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stock" inverseName="user" inverseEntity="Stock" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Stock" positionX="342" positionY="-297" width="128" height="103"/>
-        <element name="User" positionX="115" positionY="-198" width="128" height="103"/>
+        <element name="Stock" positionX="-27414" positionY="-6246" width="128" height="118"/>
+        <element name="User" positionX="-27641" positionY="-6147" width="128" height="103"/>
     </elements>
 </model>

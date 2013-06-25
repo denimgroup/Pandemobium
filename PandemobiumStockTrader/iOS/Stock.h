@@ -2,7 +2,7 @@
 //  Stock.h
 //  Pandemobium
 //
-//  Created by Adrian Salazar on 6/21/13.
+//  Created by Adrian Salazar on 6/25/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * share;
 @property (nonatomic, retain) NSString * symbol;
+@property (nonatomic, retain) NSNumber * favorite;
 @property (nonatomic, retain) NSSet *user;
 @end
 

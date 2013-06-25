@@ -16,66 +16,68 @@
 
 @implementation QuotesViewController;
 
-@synthesize swipeUp;
-@synthesize swipeDown;
-
-
-
 //@synthesize managedObjectContext;
+@synthesize favoriteStocks;
+
+-(void)loadFavoriteStocks
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+    
+    NSError *error;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"favorite == %@", @"1"];
+    [request setPredicate:predicate];
+    
+    self.favoriteStocks = [context executeFetchRequest:request error:&error];
+    NSLog(@"The number of favorite stocks = %d", [self.favoriteStocks count]);
+    
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"symbol" ascending:YES];
+    self.favoriteStocks = [self.favoriteStocks sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    
+}
+
+-(void)setDefaultFavorites
+{
+        [self addFavorite:@"GOOG"];
+        [self addFavorite:@"MSFT"];
+        [self addFavorite:@"AAPL"];
+}
+
+-(void)addFavorite:(NSString *)symbol
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+    
+    NSError *error;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", symbol];
+    [request setPredicate:predicate];
+    
+    Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
+    stock.favorite = [[NSNumber alloc]initWithBool:YES];
+    
+    [context save:&error];
+}
+
+-(BOOL)isLoggedIn
+{
+    return FALSE;
+}
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    if([self isLoggedIn] == FALSE){
+        [self setDefaultFavorites];
+    }
     
+    
+    [self loadFavoriteStocks];
     [self initImage];
-  
     
-    
-    
-
-    /*
-    if(self.managedObjectContext == nil)
-    {
-        self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication]delegate]managedObjectContext];
-        NSLog(@"After _managedObjectContext: %@", self.managedObjectContext);
-    }
-    
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
-    if(objects == nil)
-    {
-        NSLog(@"There was an error");
-    }
-
-    if(objects.count == 0)
-    {
-        NSLog(@"EmptyDB\n");
-    }
-    else{
-        NSLog(@"Number of Items: %i\n", objects.count);
-    }
-*/
-        //    UIApplication *app = [UIApplication sharedApplication];
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:app];
-    
-}
-
-
-
-
-
-- (void)applicationWillResignActive:(NSNotification *)notification
-{
-//    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-//    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-//    NSError *error;
-//    for(int i = 0; i < 4; i++)
-//    {
-//        
-//    }
 }
 
 
@@ -116,47 +118,25 @@
 {
 
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
-    
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
-    if(objects == nil)
-    {
-        NSLog(@"There was an error");
-    }
-    
-    appDelegate.currentImageIndex = appDelegate.currentImageIndex;
-   // NSManagedObject * firstObject = [objects objectAtIndex:(NSUInteger)appDelegate.currentImageIndex];
-    NSManagedObject * firstObject = [objects objectAtIndex:0];
-    
-    
-    
-    NSString *symbol = [firstObject valueForKey:@"symbol"];
-    
-    NSLog(@"%@\n", symbol);
+    NSString *symbol = [[self.favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
     
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
-   // NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=GOOG"];
     NSURL *imageurl = [NSURL URLWithString:path];
     NSData *imageData = [[NSData alloc]initWithContentsOfURL:imageurl];
     
     UIImage *image = [UIImage imageWithData:imageData];
-    // image.size = [CGSizeMake(self.topImage.bounds.size.width, self.topImage.bounds.size.height)];
- 
-   
+    
     [self.topImage setImage:image ];
-    //[self.topImage sizeThatFits:image.size];
     
 }
 
 
 - (IBAction)leftButtonClicked:(id)sender {
-    NSLog(@"Left is clicked\n");
     [self changeImage:@"left"];
     
 }
+
 - (IBAction)rightButtonclicked:(id)sender
 {
     [self changeImage:@"right"];
@@ -167,22 +147,12 @@
 {
     
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
-    
-    
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
-    if(objects == nil)
-    {
-        NSLog(@"There was an error");
-    }
     
     if([direction isEqualToString:@"left"])
     {
         if(appDelegate.currentImageIndex.intValue == 0)
         {
-            appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:[objects count] - 1];
+            appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:[self.favoriteStocks count] - 1];
         }
         else
         {
@@ -192,7 +162,7 @@
     }
     else
     {
-        if(appDelegate.currentImageIndex.intValue == [objects count] - 1)
+        if(appDelegate.currentImageIndex.intValue == [self.favoriteStocks count] - 1)
         {
             appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:0];
         }
@@ -203,11 +173,7 @@
         }
     }
     
-    NSManagedObject * firstObject = [objects objectAtIndex:appDelegate.currentImageIndex.intValue ];
-    NSString *symbol = [firstObject valueForKey:@"symbol"];
-    
-    NSLog(@"%@\n", symbol);
-    
+    NSString *symbol = [[self.favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     // NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=GOOG"];
@@ -232,15 +198,7 @@
     // Return the number of rows in the section.
     // If you're serving data from an array, return the length of the array:
     
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
-    
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
-
-    
-    return [objects count];
+    return [self.favoriteStocks count];
     //return 1;
 }
 
@@ -255,25 +213,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
-    
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
-
-    NSMutableArray *stockSymbols = [[NSMutableArray alloc]init];
-    NSMutableArray *companyNames = [[NSMutableArray alloc]init];
-    NSLog(@"Number of items %i\n", [objects count]);
-    for(int i = 0; i < [objects count]; i++)
-    {
-        NSManagedObject *obj = [objects objectAtIndex:i];
-        [stockSymbols addObject:[obj valueForKey:@"symbol"]];
-        [companyNames addObject:[obj valueForKey:@"name"]];
-    }
-    
-    cell.textLabel.text = [stockSymbols objectAtIndexedSubscript:indexPath.row];
-    cell.detailTextLabel.text = [companyNames objectAtIndexedSubscript:indexPath.row];
+    cell.textLabel.text = [[self.favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+    cell.detailTextLabel.text = [[self.favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
     
      // set the accessory view:
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
@@ -284,31 +225,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
     
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
-    
-    NSMutableArray *stockSymbols = [[NSMutableArray alloc]init];
-    NSMutableArray *companyNames = [[NSMutableArray alloc]init];
-    NSLog(@"Number of items %i\n", [objects count]);
-    for(int i = 0; i < [objects count]; i++)
-    {
-        NSManagedObject *obj = [objects objectAtIndex:i];
-        [stockSymbols addObject:[obj valueForKey:@"symbol"]];
-        [companyNames addObject:[obj valueForKey:@"name"]];
-    }
-
-    
-    NSString *identifier = [NSString stringWithFormat:@"%@", [stockSymbols objectAtIndex:indexPath.row]];
+    NSString *identifier = [NSString stringWithFormat:@"%@", [[self.favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"]];
     
     StockViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StockView"];
     newTopViewController.symbol = identifier;
     NSLog(@"%@", [[NSString alloc]initWithString:newTopViewController.symbol]);
-
-        
 }
 
 
@@ -321,7 +243,5 @@
     }
     
 }
-
-
 
 @end
