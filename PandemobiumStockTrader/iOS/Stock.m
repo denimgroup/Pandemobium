@@ -2,7 +2,7 @@
 //  Stock.m
 //  Pandemobium
 //
-//  Created by Adrian Salazar on 6/25/13.
+//  Created by Thomas Salazar on 6/25/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -12,10 +12,10 @@
 
 @implementation Stock
 
+@dynamic favorite;
 @dynamic name;
 @dynamic share;
 @dynamic symbol;
-@dynamic favorite;
 @dynamic user;
 
 @end
