@@ -12,4 +12,6 @@
 
 @interface HistoryViewController : UIViewController
 - (IBAction)revealMenu:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *tradingHistory;
+@property (strong, nonatomic) IBOutlet UITextField *tipHistory;
 @end

@@ -10,6 +10,16 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface SignInViewController : UIViewController
+@interface SignInViewController : UIViewController <UITextFieldDelegate>
+
 - (IBAction)revealMenu:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *passwordText;
+@property (strong, nonatomic) IBOutlet UITextField *usernameText;
+@property (strong, nonatomic) IBOutlet UISwitch *rememberloginSwitch;
+@property (strong, nonatomic) IBOutlet UIButton *signinButton;
+
+//managing text and keyboard behavior
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
+- (void)textFieldDidEndEditing:(UITextField *)textField;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
 @end

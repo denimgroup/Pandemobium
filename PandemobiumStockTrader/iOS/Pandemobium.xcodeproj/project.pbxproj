@@ -18,7 +18,7 @@
 		BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91B81772008A00A01190 /* defaultStocks.plist */; };
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
 		BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */; };
-		BE816EC9177A2DF1002F0055 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BE816EC8177A2DF1002F0055 /* Stock.m */; };
+		BEB00482177A4980002323F1 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB00481177A4980002323F1 /* Stock.m */; };
 		BEE6B9721774D64700FFF686 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
@@ -138,8 +138,8 @@
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pandemobium-Info.plist"; sourceTree = "<group>"; };
 		BE0F91C217725B3200A01190 /* StockTrader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StockTrader-Info.plist"; sourceTree = "<group>"; };
-		BE816EC7177A2DF1002F0055 /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
-		BE816EC8177A2DF1002F0055 /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
+		BEB00480177A4980002323F1 /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
+		BEB00481177A4980002323F1 /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
 		BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -214,8 +214,8 @@
 				BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */,
 				BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */,
 				BE010DC11778D93800105CA6 /* fullStockList.plist */,
-				BE816EC7177A2DF1002F0055 /* Stock.h */,
-				BE816EC8177A2DF1002F0055 /* Stock.m */,
+				BEB00480177A4980002323F1 /* Stock.h */,
+				BEB00481177A4980002323F1 /* Stock.m */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -507,7 +507,7 @@
 				BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */,
 				BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */,
 				BE073C801774E9B0004B72AA /* User.m in Sources */,
-				BE816EC9177A2DF1002F0055 /* Stock.m in Sources */,
+				BEB00482177A4980002323F1 /* Stock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

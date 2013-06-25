@@ -13,4 +13,6 @@
 @property (weak, nonatomic) id delegate;
 
 @property (strong, nonatomic) NSString *symbol;
+@property (strong, nonatomic) IBOutlet UIButton *tradingButton;
+@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
 @end
