@@ -163,7 +163,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    
+    NSLog(@"Preparing to segue");
     [self performSegueWithIdentifier:@"StockView" sender:tableView];
     
 }
@@ -174,19 +174,25 @@
 {
     if([[segue identifier]isEqualToString:@"StockView"])
     {
-        UIViewController *stockViewController = [segue destinationViewController];
+        StockViewController *stockViewController = [segue destinationViewController];
+        
+        //UIViewController *stockViewController = [segue destinationViewController];
         if(sender == self.searchDisplayController.searchResultsTableView)
         {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             NSString *destinationTitle = [[self.filteredStockArray objectAtIndex:[indexPath row]]symbol];
+            stockViewController.symbol = destinationTitle;
             [stockViewController setTitle:destinationTitle];
         }
         else
         {
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
             NSString *destinationTitle = [[self.stockArray objectAtIndex:[indexPath row]] symbol];
+            stockViewController.symbol = destinationTitle;
             [stockViewController setTitle:destinationTitle];
         }
+        
+        stockViewController.originateFrom = @"SearchView";
     }
 }
 

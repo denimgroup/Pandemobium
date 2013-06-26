@@ -29,12 +29,12 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"favorite == %@", @"1"];
     [request setPredicate:predicate];
     
-    self.favoriteStocks = [context executeFetchRequest:request error:&error];
-    NSLog(@"The number of favorite stocks = %d", [self.favoriteStocks count]);
+    favoriteStocks = [context executeFetchRequest:request error:&error];
+    NSLog(@"The number of favorite stocks = %d", [favoriteStocks count]);
     
     
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"symbol" ascending:YES];
-    self.favoriteStocks = [self.favoriteStocks sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    favoriteStocks = [favoriteStocks sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     
 }
@@ -98,8 +98,20 @@
     if (![self.slidingViewController.underRightViewController isKindOfClass:[RightViewController class]]) {
         self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UnderRight"];
     }
+    if(self.slidingViewController == nil)
+    {
+        NSLog(@"NIL");
+        
+    }
+    
+    if(self.slidingViewController.panGesture == nil)
+    {
+        NSLog(@"pan gesture NIL");
+        
+    }
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    NSLog(@"JERE");
     
     
 }
@@ -118,8 +130,8 @@
 {
 
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSString *symbol = [[self.favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
-    
+    NSString *symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
+    NSLog(@"%@", symbol);
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     NSURL *imageurl = [NSURL URLWithString:path];
@@ -152,7 +164,7 @@
     {
         if(appDelegate.currentImageIndex.intValue == 0)
         {
-            appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:[self.favoriteStocks count] - 1];
+            appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:[favoriteStocks count] - 1];
         }
         else
         {
@@ -162,7 +174,7 @@
     }
     else
     {
-        if(appDelegate.currentImageIndex.intValue == [self.favoriteStocks count] - 1)
+        if(appDelegate.currentImageIndex.intValue == [favoriteStocks count] - 1)
         {
             appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:0];
         }
@@ -173,7 +185,7 @@
         }
     }
     
-    NSString *symbol = [[self.favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
+    NSString *symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     // NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=GOOG"];
@@ -198,7 +210,7 @@
     // Return the number of rows in the section.
     // If you're serving data from an array, return the length of the array:
     
-    return [self.favoriteStocks count];
+    return [favoriteStocks count];
     //return 1;
 }
 
@@ -213,8 +225,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    cell.textLabel.text = [[self.favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
-    cell.detailTextLabel.text = [[self.favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
+    cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+    cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
     
      // set the accessory view:
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
@@ -225,12 +237,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    [self performSegueWithIdentifier:@"StockView" sender:tableView];
     
-    NSString *identifier = [NSString stringWithFormat:@"%@", [[self.favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"]];
-    
-    StockViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StockView"];
-    newTopViewController.symbol = identifier;
-    NSLog(@"%@", [[NSString alloc]initWithString:newTopViewController.symbol]);
 }
 
 
@@ -238,8 +247,14 @@
 {
     if ([[segue identifier]isEqualToString:@"StockView"])
     {
-        StockViewController *destination = [segue destinationViewController];
-        NSLog(@"Everyday I'm segueing\n");
+        StockViewController *stockViewController = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.quoteTableView indexPathForSelectedRow];
+        NSString *destinationTitle = [[favoriteStocks objectAtIndex:[indexPath row]]symbol];
+        stockViewController.symbol = destinationTitle;
+        stockViewController.originateFrom = @"QuoteView";
+        [stockViewController setTitle:destinationTitle];
+        //StockViewController *destination = [segue destinationViewController];
+        //NSLog(@"Everyday I'm segueing\n");
     }
     
 }
