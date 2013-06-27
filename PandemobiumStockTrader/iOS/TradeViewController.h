@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *shares;
 @property (strong, nonatomic) IBOutlet UITextField *symbol;
 @property (strong, nonatomic) IBOutlet UIButton *tradebutton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 //managing text and keybaord behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField;

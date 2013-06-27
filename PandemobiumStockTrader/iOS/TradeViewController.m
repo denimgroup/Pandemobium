@@ -48,6 +48,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
+- (IBAction)menuButtonClicked:(id)sender {
+    
+    [self performSegueWithIdentifier:@"notTrading" sender:sender];
+    
+}
+
 //for automatically moving the view up so the keyboard doesnt cover the textfield
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {

@@ -9,11 +9,11 @@
             <objects>
                 <viewController storyboardIdentifier="Menu" id="LTP-3n-Cu4" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4il-DC-wys">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0Rl-MC-U6k">
-                                <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -52,7 +52,7 @@
             <objects>
                 <viewController storyboardIdentifier="Quotes" id="mSN-jo-zYT" customClass="QuotesViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iNc-xX-j3V">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="yWV-4U-5l7">
@@ -176,7 +176,7 @@
             <objects>
                 <viewController id="XGC-ny-Fs2" customClass="InitialViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WYf-xn-td2">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -268,7 +268,7 @@
             <objects>
                 <viewController storyboardIdentifier="News" id="cYB-xn-y1N" customClass="NewsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTC-GK-p3L">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" id="Wpb-ck-dmE">
@@ -285,7 +285,7 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" id="rwU-QM-RqN">
-                                <rect key="frame" x="0.0" y="44" width="320" height="499"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -305,7 +305,7 @@
             <objects>
                 <viewController storyboardIdentifier="Tips" id="WaR-Xh-fUl" customClass="TipsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kdj-7R-m7d">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" id="vIE-Mp-Ohe">
@@ -322,7 +322,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" id="BZj-HP-L8S">
-                                <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -339,7 +339,7 @@
             <objects>
                 <viewController storyboardIdentifier="Portfolio" id="RQj-CG-SmL" customClass="PortfolioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Wd-ot-ZRK">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" id="NIU-eb-ihx">
@@ -368,7 +368,7 @@
             <objects>
                 <viewController storyboardIdentifier="History" id="NcT-rV-uls" customClass="HistoryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4AW-Fq-wdI">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" id="x8I-qg-ECh">
@@ -436,9 +436,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Stocks" id="EBF-IH-gfQ">
-                                        <barButtonItem key="leftBarButtonItem" title="Search" id="9KA-xM-KvJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="9KA-xM-KvJ">
                                             <connections>
-                                                <segue destination="agY-HM-QYY" kind="modal" id="jK1-Gt-NeD"/>
+                                                <action selector="backButtonClicked:" destination="MAD-b2-xH3" id="FyQ-mr-yUG"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -455,6 +455,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="favoriteButtonClicked:" destination="MAD-b2-xH3" eventType="touchUpInside" id="LcK-7V-muo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b03-Bz-DUv">
                                 <rect key="frame" x="160" y="44" width="160" height="44"/>
@@ -467,26 +470,33 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tradingButtonClicked:" destination="MAD-b2-xH3" eventType="touchUpInside" id="Bmo-Vr-Bbf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="imageview" id="gdc-Dw-Xoi">
                                 <rect key="frame" x="0.0" y="90" width="320" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableview" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YBm-xJ-8u2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableview" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YBm-xJ-8u2">
                                 <rect key="frame" x="0.0" y="218" width="320" height="330"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="tablecell" selectionStyle="blue" indentationWidth="10" id="p7B-qP-IOU">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MAD-b2-xH3" id="iaI-KH-ko1"/>
+                                    <outlet property="delegate" destination="MAD-b2-xH3" id="msw-pZ-Gib"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -494,7 +504,11 @@
                     <navigationItem key="navigationItem" id="c3Z-0R-6Fz"/>
                     <connections>
                         <outlet property="favoriteButton" destination="dfk-Lj-toS" id="Ux0-d0-Anh"/>
+                        <outlet property="imageView" destination="gdc-Dw-Xoi" id="4Tl-um-RbI"/>
                         <outlet property="tradingButton" destination="b03-Bz-DUv" id="PgO-at-akm"/>
+                        <segue destination="XGC-ny-Fs2" kind="modal" identifier="QuoteView" id="JAp-Tl-bGE"/>
+                        <segue destination="agY-HM-QYY" kind="modal" identifier="SearchView" id="m0h-4z-Qy2"/>
+                        <segue destination="yUy-n5-ZIo" kind="modal" identifier="Trading" id="FOk-nv-yVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Stj-K1-edC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -505,8 +519,8 @@
         <scene sceneID="cB6-4Z-hPK">
             <objects>
                 <tableViewController storyboardIdentifier="Settings" id="leH-rm-kcY" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Wlo-6m-xNQ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Wlo-6m-xNQ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ox3-hF-PtU">
@@ -671,7 +685,7 @@
             <objects>
                 <viewController storyboardIdentifier="Sign In" id="e8t-Sy-fIB" customClass="SignInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="" id="fuk-fn-0HP">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pandemobium Stock Trader" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9nz-aU-69n">
@@ -780,7 +794,7 @@
                                     <navigationItem title="Trade" id="WiE-dh-yCb">
                                         <barButtonItem key="leftBarButtonItem" title="Menu" id="c0S-af-2xx">
                                             <connections>
-                                                <action selector="revealMenu:" destination="yUy-n5-ZIo" id="O0U-Gm-Y1I"/>
+                                                <action selector="revealMenu:" destination="yUy-n5-ZIo" id="xQB-WI-zxh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -842,9 +856,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="WZK-tL-Fjm"/>
                     <connections>
+                        <outlet property="menuButton" destination="c0S-af-2xx" id="eQy-6A-UMC"/>
                         <outlet property="shares" destination="Uly-rD-TgB" id="bpt-n8-6Gw"/>
                         <outlet property="symbol" destination="oDz-MZ-OYe" id="QE8-i1-en9"/>
                         <outlet property="tradebutton" destination="vPB-LP-afw" id="7yu-h5-6u4"/>
+                        <segue destination="XGC-ny-Fs2" kind="modal" identifier="notTrading" id="ApI-b0-3Ui"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fm-UE-DLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -886,8 +902,10 @@
         <class className="QuotesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QuotesViewController.h"/>
             <relationships>
+                <relationship kind="action" name="leftButtonClicked:"/>
                 <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="revealUnderRight:"/>
+                <relationship kind="action" name="rightButtonclicked:"/>
                 <relationship kind="outlet" name="leftButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="quoteTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="rightButton" candidateClass="UIButton"/>
@@ -921,7 +939,12 @@
         <class className="StockViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StockViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backButtonClicked:"/>
+                <relationship kind="action" name="favoriteButtonClicked:"/>
+                <relationship kind="action" name="tradingButtonClicked:"/>
                 <relationship kind="outlet" name="favoriteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="tradingButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -934,7 +957,9 @@
         <class className="TradeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TradeViewController.h"/>
             <relationships>
+                <relationship kind="action" name="menuButtonClicked:"/>
                 <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="menuButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="shares" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="symbol" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="tradebutton" candidateClass="UIButton"/>
@@ -944,9 +969,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="t1z-o4-6xS"/>
+        <segue reference="Whn-AD-b5k"/>
+        <segue reference="JAp-Tl-bGE"/>
     </inferredMetricsTieBreakers>
 </document>
