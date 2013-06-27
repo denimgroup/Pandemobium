@@ -1,8 +1,8 @@
 //
 //  SettingsViewController.m
-//  PandemobiumV2
+//  Pandemobium
 //
-//  Created by Thomas Salazar on 6/18/13.
+//  Created by Thomas Salazar on 6/26/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -14,34 +14,50 @@
 
 @implementation SettingsViewController
 
-- (void)viewWillAppear:(BOOL)animated
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    [super viewWillAppear:animated];
-    
-    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
-        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
     }
-    self.slidingViewController.underRightViewController = nil;
-    
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    return self;
 }
-
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewTo:ECRight];
-}
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    // Uncomment the following line to preserve selection between presentations.
+     self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+}
+
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
 @end

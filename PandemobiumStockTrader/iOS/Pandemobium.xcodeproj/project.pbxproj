@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE010DC11778D93800105CA6 /* fullStockList.plist */; };
+		BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE061B16177B95DF001D4166 /* SettingsViewController.m */; };
 		BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */; };
 		BE073C801774E9B0004B72AA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073C7F1774E9B0004B72AA /* User.m */; };
 		BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */; };
@@ -42,12 +43,13 @@
 		BEF610F01771006C00B82A5B /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610EF1771006C00B82A5B /* TipsViewController.m */; };
 		BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F21771007B00B82A5B /* NewsViewController.m */; };
 		BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F51771009900B82A5B /* SignInViewController.m */; };
-		BEF610F9177100B300B82A5B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F8177100B300B82A5B /* SettingsViewController.m */; };
 		BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF93FB617738C9C003A6810 /* StockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE010DC11778D93800105CA6 /* fullStockList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fullStockList.plist; sourceTree = "<group>"; };
+		BE061B15177B95DF001D4166 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BE061B16177B95DF001D4166 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInterface.h; sourceTree = "<group>"; };
 		BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInterface.m; sourceTree = "<group>"; };
 		BE073C7E1774E9B0004B72AA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -178,8 +180,6 @@
 		BEF610F21771007B00B82A5B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		BEF610F41771009900B82A5B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		BEF610F51771009900B82A5B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		BEF610F7177100B300B82A5B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		BEF610F8177100B300B82A5B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BEF93FB517738C9C003A6810 /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockViewController.h; sourceTree = "<group>"; };
 		BEF93FB617738C9C003A6810 /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -398,8 +398,8 @@
 				BEF610F21771007B00B82A5B /* NewsViewController.m */,
 				BEF610F41771009900B82A5B /* SignInViewController.h */,
 				BEF610F51771009900B82A5B /* SignInViewController.m */,
-				BEF610F7177100B300B82A5B /* SettingsViewController.h */,
-				BEF610F8177100B300B82A5B /* SettingsViewController.m */,
+				BE061B15177B95DF001D4166 /* SettingsViewController.h */,
+				BE061B16177B95DF001D4166 /* SettingsViewController.m */,
 				BEF93FB517738C9C003A6810 /* StockViewController.h */,
 				BEF93FB617738C9C003A6810 /* StockViewController.m */,
 			);
@@ -502,12 +502,12 @@
 				BEF610F01771006C00B82A5B /* TipsViewController.m in Sources */,
 				BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */,
 				BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */,
-				BEF610F9177100B300B82A5B /* SettingsViewController.m in Sources */,
 				BE0F91B71771FF0D00A01190 /* ClientStocks.xcdatamodeld in Sources */,
 				BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */,
 				BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */,
 				BE073C801774E9B0004B72AA /* User.m in Sources */,
 				BEB00482177A4980002323F1 /* Stock.m in Sources */,
+				BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

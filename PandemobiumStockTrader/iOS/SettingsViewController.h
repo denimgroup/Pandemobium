@@ -1,8 +1,8 @@
 //
 //  SettingsViewController.h
-//  PandemobiumV2
+//  Pandemobium
 //
-//  Created by Thomas Salazar on 6/18/13.
+//  Created by Thomas Salazar on 6/26/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface SettingsViewController : UIViewController
+
+@interface SettingsViewController : UITableViewController
 - (IBAction)revealMenu:(id)sender;
 @end
