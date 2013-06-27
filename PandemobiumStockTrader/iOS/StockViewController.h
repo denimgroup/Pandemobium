@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StockViewController : UIViewController
+@interface StockViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
 @property (copy, nonatomic) NSDictionary *selection;
 @property (weak, nonatomic) id delegate;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSString *symbol;
+@property (strong, nonatomic) NSString *originateFrom;
 @property (strong, nonatomic) IBOutlet UIButton *tradingButton;
 @property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong, nonatomic) NSDictionary *stockInfo;
 @end

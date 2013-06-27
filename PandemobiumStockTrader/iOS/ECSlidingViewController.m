@@ -57,7 +57,7 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
 - (ECSlidingViewController *)slidingViewController
 {
   UIViewController *viewController = self.parentViewController;
-  while (!(viewController == nil || [viewController isKindOfClass:[ECSlidingViewController class]])) {
+    while (!(viewController == nil || [viewController isKindOfClass:[ECSlidingViewController class]])) {
     viewController = viewController.parentViewController;
   }
   
@@ -284,6 +284,11 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
 
 - (UIPanGestureRecognizer *)panGesture
 {
+    if(!_panGesture)
+    {
+        _panGesture          = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(updateTopViewHorizontalCenterWithRecognizer:)];
+    }
+    
   return _panGesture;
 }
 
