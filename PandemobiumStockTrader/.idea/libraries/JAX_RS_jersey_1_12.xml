@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="JAX-RS-jersey-1.12" type="JAX-RS">
+    <properties version="jersey-1.12" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/asm-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/comresrcgen-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/FastInfoset-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/grizzly-servlet-webserver-1.9.45.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jackson-core-asl-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jackson-jaxrs-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jackson-xc-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jackson-mapper-asl-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jaxb-api-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jaxb-impl-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jaxb-xjc-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jdom-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jersey-bundle-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jersey-client-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jersey-core-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jersey-grizzly-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jersey-multipart-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/jettison-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/localizer-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/mail-1.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/mimepull-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/persistence-api-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/rome-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/stax-api-1.0-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/wadl-cmdline-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebService/web/lib/wadl-core-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
