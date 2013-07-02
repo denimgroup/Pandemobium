@@ -10,6 +10,7 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface TipsViewController : UIViewController
+@interface TipsViewController : UIViewController <UIWebViewDelegate>
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 - (IBAction)revealMenu:(id)sender;
 @end

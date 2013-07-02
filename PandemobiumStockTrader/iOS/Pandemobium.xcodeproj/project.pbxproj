@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE010DC11778D93800105CA6 /* fullStockList.plist */; };
+		BE03009B177DDF62005418C7 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03009A177DDF62005418C7 /* HistoryViewController.m */; };
 		BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE061B16177B95DF001D4166 /* SettingsViewController.m */; };
 		BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */; };
 		BE073C801774E9B0004B72AA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073C7F1774E9B0004B72AA /* User.m */; };
+		BE0C53FD177CC74B00C9346C /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0C53FC177CC74B00C9346C /* TradeViewController.m */; };
 		BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */; };
 		BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */; };
 		BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AFB1771F5F200A01190 /* libz.dylib */; };
@@ -19,8 +21,12 @@
 		BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91B81772008A00A01190 /* defaultStocks.plist */; };
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
 		BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */; };
+		BE8B3F1C1781ED9A00DFC630 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F1B1781ED9A00DFC630 /* MainStoryboard.storyboard */; };
+		BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */; };
+		BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2017821A5B00DFC630 /* car.jpg */; };
+		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
 		BEB00482177A4980002323F1 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB00481177A4980002323F1 /* Stock.m */; };
-		BEE6B9721774D64700FFF686 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */; };
+		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
 		BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */; };
@@ -37,9 +43,6 @@
 		BEF610DE1770B33600B82A5B /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610DD1770B33600B82A5B /* InitialViewController.m */; };
 		BEF610E11770B65900B82A5B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610E01770B65900B82A5B /* MenuViewController.m */; };
 		BEF610E41770C9CA00B82A5B /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610E31770C9CA00B82A5B /* RightViewController.m */; };
-		BEF610E71770DDBA00B82A5B /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610E61770DDBA00B82A5B /* TradeViewController.m */; };
-		BEF610EA1771004700B82A5B /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610E91771004700B82A5B /* HistoryViewController.m */; };
-		BEF610ED1771005C00B82A5B /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610EC1771005C00B82A5B /* PortfolioViewController.m */; };
 		BEF610F01771006C00B82A5B /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610EF1771006C00B82A5B /* TipsViewController.m */; };
 		BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F21771007B00B82A5B /* NewsViewController.m */; };
 		BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F51771009900B82A5B /* SignInViewController.m */; };
@@ -48,12 +51,16 @@
 
 /* Begin PBXFileReference section */
 		BE010DC11778D93800105CA6 /* fullStockList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fullStockList.plist; sourceTree = "<group>"; };
+		BE030099177DDF62005418C7 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		BE03009A177DDF62005418C7 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		BE061B15177B95DF001D4166 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BE061B16177B95DF001D4166 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInterface.h; sourceTree = "<group>"; };
 		BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInterface.m; sourceTree = "<group>"; };
 		BE073C7E1774E9B0004B72AA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BE073C7F1774E9B0004B72AA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BE0C53FB177CC74B00C9346C /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = PandemobiumV2/TradeViewController.h; sourceTree = "<group>"; };
+		BE0C53FC177CC74B00C9346C /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TradeViewController.m; path = PandemobiumV2/TradeViewController.m; sourceTree = "<group>"; };
 		BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompanySymbols.sqlite; sourceTree = "<group>"; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -140,9 +147,14 @@
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pandemobium-Info.plist"; sourceTree = "<group>"; };
 		BE0F91C217725B3200A01190 /* StockTrader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StockTrader-Info.plist"; sourceTree = "<group>"; };
+		BE8B3F1B1781ED9A00DFC630 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioViewController.h; sourceTree = "<group>"; };
+		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
+		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
+		BE8B3F2217821E5A00DFC630 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
 		BEB00480177A4980002323F1 /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
 		BEB00481177A4980002323F1 /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
-		BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BED8B4661783362F00A19187 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burg.jpg; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEEF7010176F74DA00D63EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,12 +180,6 @@
 		BEF610E01770B65900B82A5B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		BEF610E21770C9CA00B82A5B /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		BEF610E31770C9CA00B82A5B /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		BEF610E51770DDBA00B82A5B /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
-		BEF610E61770DDBA00B82A5B /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
-		BEF610E81771004700B82A5B /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
-		BEF610E91771004700B82A5B /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
-		BEF610EB1771005B00B82A5B /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioViewController.h; sourceTree = "<group>"; };
-		BEF610EC1771005C00B82A5B /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
 		BEF610EE1771006C00B82A5B /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		BEF610EF1771006C00B82A5B /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		BEF610F11771007B00B82A5B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
@@ -352,7 +358,7 @@
 		BEEF7014176F74DA00D63EB8 /* PandemobiumV2 */ = {
 			isa = PBXGroup;
 			children = (
-				BEE6B9711774D64700FFF686 /* MainStoryboard.storyboard */,
+				BE8B3F1B1781ED9A00DFC630 /* MainStoryboard.storyboard */,
 				BEEF701D176F74DA00D63EB8 /* AppDelegate.h */,
 				BEEF701E176F74DA00D63EB8 /* AppDelegate.m */,
 				BEEF7015176F74DA00D63EB8 /* Supporting Files */,
@@ -363,6 +369,9 @@
 		BEEF7015176F74DA00D63EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BED8B4661783362F00A19187 /* burg.jpg */,
+				BE8B3F2217821E5A00DFC630 /* images.jpg */,
+				BE8B3F2017821A5B00DFC630 /* car.jpg */,
 				BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */,
 				BE0F91C217725B3200A01190 /* StockTrader-Info.plist */,
 				BEEF7017176F74DA00D63EB8 /* InfoPlist.strings */,
@@ -384,14 +393,14 @@
 				BEF610DD1770B33600B82A5B /* InitialViewController.m */,
 				BEF610DF1770B65900B82A5B /* MenuViewController.h */,
 				BEF610E01770B65900B82A5B /* MenuViewController.m */,
+				BE0C53FB177CC74B00C9346C /* TradeViewController.h */,
+				BE0C53FC177CC74B00C9346C /* TradeViewController.m */,
+				BE030099177DDF62005418C7 /* HistoryViewController.h */,
+				BE03009A177DDF62005418C7 /* HistoryViewController.m */,
+				BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */,
+				BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */,
 				BEF610E21770C9CA00B82A5B /* RightViewController.h */,
 				BEF610E31770C9CA00B82A5B /* RightViewController.m */,
-				BEF610E51770DDBA00B82A5B /* TradeViewController.h */,
-				BEF610E61770DDBA00B82A5B /* TradeViewController.m */,
-				BEF610E81771004700B82A5B /* HistoryViewController.h */,
-				BEF610E91771004700B82A5B /* HistoryViewController.m */,
-				BEF610EB1771005B00B82A5B /* PortfolioViewController.h */,
-				BEF610EC1771005C00B82A5B /* PortfolioViewController.m */,
 				BEF610EE1771006C00B82A5B /* TipsViewController.h */,
 				BEF610EF1771006C00B82A5B /* TipsViewController.m */,
 				BEF610F11771007B00B82A5B /* NewsViewController.h */,
@@ -476,8 +485,11 @@
 				BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */,
 				BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */,
 				BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */,
-				BEE6B9721774D64700FFF686 /* MainStoryboard.storyboard in Resources */,
 				BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */,
+				BE8B3F1C1781ED9A00DFC630 /* MainStoryboard.storyboard in Resources */,
+				BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */,
+				BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */,
+				BED8B4671783362F00A19187 /* burg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,9 +508,6 @@
 				BEF610DE1770B33600B82A5B /* InitialViewController.m in Sources */,
 				BEF610E11770B65900B82A5B /* MenuViewController.m in Sources */,
 				BEF610E41770C9CA00B82A5B /* RightViewController.m in Sources */,
-				BEF610E71770DDBA00B82A5B /* TradeViewController.m in Sources */,
-				BEF610EA1771004700B82A5B /* HistoryViewController.m in Sources */,
-				BEF610ED1771005C00B82A5B /* PortfolioViewController.m in Sources */,
 				BEF610F01771006C00B82A5B /* TipsViewController.m in Sources */,
 				BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */,
 				BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */,
@@ -508,6 +517,9 @@
 				BE073C801774E9B0004B72AA /* User.m in Sources */,
 				BEB00482177A4980002323F1 /* Stock.m in Sources */,
 				BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */,
+				BE0C53FD177CC74B00C9346C /* TradeViewController.m in Sources */,
+				BE03009B177DDF62005418C7 /* HistoryViewController.m in Sources */,
+				BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

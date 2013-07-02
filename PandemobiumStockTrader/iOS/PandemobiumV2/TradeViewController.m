@@ -1,8 +1,8 @@
 //
 //  TradeViewController.m
-//  PandemobiumV2
+//  Pandemobium
 //
-//  Created by Thomas Salazar on 6/18/13.
+//  Created by Thomas Salazar on 6/27/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -14,33 +14,50 @@
 
 @implementation TradeViewController
 
-//for animating keyboard
+@synthesize amountofShares;
+@synthesize companyCode;
+@synthesize accountAmount;
+@synthesize accountNumber;
+@synthesize canInvest;
+
+
 CGFloat animatedDistance;
+
+//for animating keyboard
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
-@synthesize symbol = _symbol;
-@synthesize shares = _shares;
-@synthesize tradebutton = _tradebutton;
-
-
-- (void)viewWillAppear:(BOOL)animated
+/////////////////////////////
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    [super viewWillAppear:animated];
-   
-    /*  Does not work well with pages that require input text, causes a major bug
-    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
-        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
     }
-    self.slidingViewController.underRightViewController = nil;
-    
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-
-    */
+    return self;
 }
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 - (IBAction)revealMenu:(id)sender
 {
@@ -48,13 +65,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
-- (IBAction)menuButtonClicked:(id)sender {
-    
-    [self performSegueWithIdentifier:@"notTrading" sender:sender];
-    
-}
 
-//for automatically moving the view up so the keyboard doesnt cover the textfield
+//for handling input text and keybaord behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
@@ -121,7 +133,5 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     return YES;
 }
 
-//
 
 @end
-
