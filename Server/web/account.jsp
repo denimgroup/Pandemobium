@@ -1,25 +1,10 @@
 <%--
- * Pandemobium Stock Trader is a mobile app for Android and iPhone with
- * vulnerabilities included for security testing purposes.
- * Copyright (c) 2011 Denim Group, Ltd. All rights reserved worldwide.
- *
- * This file is part of Pandemobium Stock Trader.
- *
- * Pandemobium Stock Trader is free software: you can redistribute it
- * and/or modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 3
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Pandemobium Stock Trader.  If not, see
- * <http://www.gnu.org/licenses/>.
+  Created by IntelliJ IDEA.
+  User: denimgroup
+  Date: 7/3/13
+  Time: 9:33 AM
+  To change this template use File | Settings | File Templates.
 --%>
-
 <%@ page        language="java"
                 contentType="text/html; charset=ISO-8859-1"
                 pageEncoding="ISO-8859-1"%>
@@ -27,71 +12,32 @@
 <%@ page import="services.accountService" %>
 <%@ page import="JSON.JSONObject" %>
 <%@ page import="JSON.JSONArray" %>
+<%@ page import="java.net.URL" %>
+
 
 <%
-    response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
-    response.setHeader("Pragma", "no-cache"); //HTTP 1.0
-    response.setDateHeader("Expires", 0); //prevent caching at the proxy server
-%>
-
-<%
-
-    String method = request.getParameter("method");
     accountService service = new accountService();
     JSONObject json = new JSONObject();
-    JSONArray results = new JSONArray();
-    JSONObject result;
 
-    if(method.equals("logIn"))
+    String query = request.getParameter("query");
+    query = query.replace("%20", " ");
+    query = query.toUpperCase();
+
+    if(query.contains("INSERT INTO"))
     {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        int info = service.logIn(username, password);
-
-        result = new JSONObject();
-        result.put("userID", info);
-        result.put("userName", username);
-        result.put("password", password);
-
-        results.put(result);
-        json.put("Results", results);
+        String results = service.executeInsert(query);
+        json = new JSONObject(results);
 
     }
-    else if(method.equals("addUser"))
+    else if(query.contains("SELECT"))
     {
-
-        String [] column = {"firstName", "lastName", "email", "phone", "userName", "password"};
-        String [] input = new String[column.length];
-        result = new JSONObject();
-        for(int i = 0; i < column.length; i++)
-        {
-            String info = request.getParameter(column[i]);
-            if(info != null)
-            {
-                result.put(column[i], info);
-                input[i] = info;
-            }
-            else
-            {   result.put(column[i], info);
-                input[i] = "NULL";
-            }
-        }
-        int id = service.addUser(input);
-        result.put("userID", id);
-        results.put(result);
-        json.put("Results", results);
+        String results = service.executeSelect(query);
+        json = new JSONObject(results);
     }
-    else if(method.equals("getUserInfo"))
+    else
     {
-        String [] column = {"userID", "firstName", "lastName", "email", "phone", "userName", "password"};
-        String id = request.getParameter("userID");
-        String [] info = service.getUserInfo(id);
+        json = new JSONObject("{\"Results\":\"Invalid Query\"}");
 
-        result = new JSONObject();
-        for(int i = 0; i < info.length; i++)
-            result.put(column[i], info[i]);
-        results.put(result);
-        json.put("Results", results);
     }
     response.setContentType("application/json");
     response.getWriter().write(json.toString());

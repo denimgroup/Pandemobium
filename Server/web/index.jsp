@@ -12,15 +12,34 @@
     <title></title>
   </head>
   <body>
-        <p>
-            <a href="http://localhost:8080/account.jsp?method=logIn&username=user&password=password"> Login with username and password</a>
-        </p>
-        <p>
-            <a href="http://localhost:8080/account.jsp?method=addUser&firstName=first&lastName=last&email=NULL&phone=NULL&userName=user&password=password"> Add User </a>
-        </p>
-        <p>
-            <a href="http://localhost:8080/account.jsp?method=getUserInfo&userID=1"> Get user Information</a>
-        </p>
+        <table border="1">
+            <tr><th> User Service</th> <th> Account Service</th> <th> Tips </th> <th> History </th></tr>
+            <tr>
+                <td>
+                    <a href="http://localhost:8080/user.jsp?method=logIn&username=user&password=password"> Login with username and password</a>
+                </td>
+                <td>
+                    <a href="http://localhost:8080/account.jsp?query=select%20*%20from%20account;"> Select * from account</a>
+                </td>
+                <td>
+                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20tips%20(symbol,%20reason,%20userID)%20values%20(%22GOOG%22,%20%22tesing%20this%20bitch%22,%201);"> Insert Tip</a>
+                </td>
+                <td>
+                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20history%20(log,%20userID)%20values%20(%22GOOG%22,%201);"> Insert History </a>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://localhost:8080/user.jsp?method=addUser&firstName=first&lastName=last&email=NULL&phone=NULL&userName=user&password=password"> Add User </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://localhost:8080/user.jsp?method=getUserInfo&userID=1"> Get user Information</a>
+                </td>
+            </tr>
+        </table>
 
   </body>
 </html>
