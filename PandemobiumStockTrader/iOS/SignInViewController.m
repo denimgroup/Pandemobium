@@ -16,10 +16,10 @@
 
 CGFloat animatedDistance;
 
-@synthesize usernameText = _usernameText;
-@synthesize passwordText = _passwordText;
-@synthesize signinButton = _signinButton;
-@synthesize rememberloginSwitch = _rememberloginSwitch;
+@synthesize usernameText;
+@synthesize passwordText;
+@synthesize signinButton;
+@synthesize rememberloginSwitch;
 
 //for animating keyboard
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
@@ -32,14 +32,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewWillAppear:animated];
     
-/*  Does not work well with pages that require input text, causes a bug
-    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
-        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
-    }
-    self.slidingViewController.underRightViewController = nil;
     
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-*/
 }
 
 - (IBAction)revealMenu:(id)sender
@@ -55,6 +48,18 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
 }
 
+- (IBAction)loginButtonPressed:(UIButton *)sender
+{
+    NSLog(@"loginwas pressed");
+    //do stuff
+    
+    if(self.rememberloginSwitch.on){
+        NSLog(@"SET TO REMEMBER LOGIN");
+    }else{
+        NSLog(@"not set to remmember your login");
+    }
+    
+}
 
 //for handling input text and keybaord behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField

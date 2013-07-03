@@ -1,8 +1,8 @@
 //
 //  HistoryViewController.h
-//  PandemobiumV2
+//  Pandemobium
 //
-//  Created by Thomas Salazar on 6/18/13.
+//  Created by Thomas Salazar on 6/28/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface HistoryViewController : UIViewController
+@interface HistoryViewController : UITableViewController < UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic)IBOutlet NSMutableArray *history;
 - (IBAction)revealMenu:(id)sender;
-@property (strong, nonatomic) IBOutlet UITextField *tradingHistory;
-@property (strong, nonatomic) IBOutlet UITextField *tipHistory;
 @end

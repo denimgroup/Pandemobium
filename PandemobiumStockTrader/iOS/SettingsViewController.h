@@ -12,5 +12,10 @@
 
 
 @interface SettingsViewController : UITableViewController
+
+@property (strong, nonatomic) IBOutlet UISlider *slider;
+@property (strong, nonatomic) IBOutlet UILabel *sliderLabel;
+
+- (IBAction)sliderChanged:(id)sender;
 - (IBAction)revealMenu:(id)sender;
 @end
