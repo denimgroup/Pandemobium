@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSString *symbol;
 @property (strong, nonatomic) NSString *originateFrom;
-@property (strong, nonatomic) IBOutlet UIButton *tradingButton;
-@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *favoriteButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *tradingButton;
 @property (strong, nonatomic) NSDictionary *stockInfo;
 @end

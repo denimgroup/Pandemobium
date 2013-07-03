@@ -14,8 +14,11 @@
 
 @implementation TradeViewController
 
+//for querying data to send out a request to trade
 @synthesize amountofShares;
 @synthesize companyCode;
+
+//for displaying data from account
 @synthesize accountAmount;
 @synthesize accountNumber;
 @synthesize canInvest;
@@ -43,12 +46,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+ 
+    //use accountAmount, accountNumber, and canInvest to display user data
+    //query user database and yahoo to get info
     
 }
 
@@ -131,6 +131,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+- (IBAction)tradebuttonPressed:(id)sender
+{
+    //NSInteger *tradeAmount = [[NSInteger32AttributeType alloc]];
+    //check data is input into textfields
+    
+    //send out data to be traded after checking how much is allowed to be invested
 }
 
 

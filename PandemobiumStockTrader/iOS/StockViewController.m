@@ -126,16 +126,21 @@
 
 - (IBAction)favoriteButtonClicked:(id)sender
 {
-    if([self.favoriteButton.currentTitle isEqualToString:@"Favorite"])
+    [self.favoriteButton titleTextAttributesForState:UIControlStateNormal];
+//    if([self.favoriteButton.currentTitle isEqualToString:@"Favorite"])
+    if([self.favoriteButton.title isEqualToString:@"Favorite"])
     {
         [self addFavorite:symbol];
-        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
+//        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
+        //[self.favoriteButton.title = @"Remove"];
+        [self.favoriteButton setTitle:@"Remove"];
     }
     else
     {
         [self removeFavorite:symbol];
-        [self.favoriteButton setTitle:@"Favorite" forState:UIControlStateNormal];
-        
+//        [self.favoriteButton setTitle:@"Favorite" forState:UIControlStateNormal];
+        //[self.favoriteButton.title = @"Favorite"];
+        [self.favoriteButton setTitle:@"Favorite"];
     }
     
 }
@@ -194,7 +199,9 @@
   
     if([stock.favorite isEqualToNumber:[[NSNumber alloc]initWithBool:YES]])
     {
-        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
+//        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
+        //[self.favoriteButton.title = @"Remove"];
+        [self.favoriteButton setTitle:@"Remove"];
     }
     
     

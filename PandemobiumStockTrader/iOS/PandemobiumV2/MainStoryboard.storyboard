@@ -685,11 +685,11 @@
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="VZX-xp-2On">
-                                        <rect key="frame" x="0.0" y="330" width="320" height="71"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="69" id="VZX-xp-2On">
+                                        <rect key="frame" x="0.0" y="330" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="69"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Company Code:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="klL-MU-HtF">
@@ -705,6 +705,36 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="2mv-BD-Aow">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="vog-Ci-eNY">
+                                        <rect key="frame" x="0.0" y="420" width="320" height="42"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z1o-cq-Vhd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Trade">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -754,46 +784,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dfk-Lj-toS">
-                                <rect key="frame" x="0.0" y="44" width="161" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Favorite">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="favoriteButtonClicked:" destination="MAD-b2-xH3" eventType="touchUpInside" id="LcK-7V-muo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b03-Bz-DUv">
-                                <rect key="frame" x="160" y="44" width="160" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Trading">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tradingButtonClicked:" destination="MAD-b2-xH3" eventType="touchUpInside" id="Bmo-Vr-Bbf"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="imageview" id="gdc-Dw-Xoi">
-                                <rect key="frame" x="0.0" y="90" width="320" height="153"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableview" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YBm-xJ-8u2">
-                                <rect key="frame" x="0.0" y="218" width="320" height="242"/>
+                                <rect key="frame" x="0.0" y="197" width="320" height="225"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="tablecell" selectionStyle="blue" indentationWidth="10" id="p7B-qP-IOU">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="tablecell" selectionStyle="blue" indentationWidth="10" id="Fj0-sE-0jr">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -808,14 +808,30 @@
                                     <outlet property="delegate" destination="MAD-b2-xH3" id="msw-pZ-Gib"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Afy-U8-Us7">
+                                <rect key="frame" x="0.0" y="422" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Trading" width="151" id="Avq-iW-Ma3">
+                                        <connections>
+                                            <action selector="tradingButtonClicked:" destination="MAD-b2-xH3" id="5Ta-lJ-OlP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Favorite" width="147" id="dd6-RT-NL1">
+                                        <connections>
+                                            <action selector="favoriteButtonClicked:" destination="MAD-b2-xH3" id="CjK-vJ-gOh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="c3Z-0R-6Fz"/>
                     <connections>
-                        <outlet property="favoriteButton" destination="dfk-Lj-toS" id="Ux0-d0-Anh"/>
+                        <outlet property="favoriteButton" destination="dd6-RT-NL1" id="eOQ-qY-fz4"/>
                         <outlet property="imageView" destination="gdc-Dw-Xoi" id="4Tl-um-RbI"/>
-                        <outlet property="tradingButton" destination="b03-Bz-DUv" id="PgO-at-akm"/>
+                        <outlet property="tradingButton" destination="Avq-iW-Ma3" id="FAV-Ae-Gcg"/>
                         <segue destination="XGC-ny-Fs2" kind="modal" identifier="QuoteView" id="JAp-Tl-bGE"/>
                         <segue destination="agY-HM-QYY" kind="modal" identifier="SearchView" id="m0h-4z-Qy2"/>
                         <segue destination="9hL-6b-zJl" kind="modal" identifier="Trading" id="mzK-vn-a3P"/>
@@ -1100,13 +1116,123 @@
             <point key="canvasLocation" x="1268" y="1936"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="HistoryViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HistoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="history" candidateClass="NSMutableArray"/>
+            </relationships>
+        </class>
+        <class className="InitialViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
+        </class>
+        <class className="NewsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="PortfolioViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PortfolioViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="accntImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="accountNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="netWorth" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberShares" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="QuotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuotesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="leftButtonClicked:"/>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="revealUnderRight:"/>
+                <relationship kind="action" name="rightButtonclicked:"/>
+                <relationship kind="outlet" name="leftButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="quoteTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="rightButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="topImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="RightViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RightViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="sliderChanged:"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SignInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignInViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="passwordText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="rememberloginSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="signinButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="usernameText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="StockViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StockViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backButtonClicked:"/>
+                <relationship kind="action" name="favoriteButtonClicked:"/>
+                <relationship kind="action" name="tradingButtonClicked:"/>
+                <relationship kind="outlet" name="favoriteButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="tradingButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="TipsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TipsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="TradeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TradeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="tradebuttonPressed:"/>
+                <relationship kind="outlet" name="accountAmount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="accountNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="amountofShares" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="canInvest" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="companyCode" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4bV-oS-hXi"/>
         <segue reference="t1z-o4-6xS"/>
+        <segue reference="JAp-Tl-bGE"/>
     </inferredMetricsTieBreakers>
 </document>
