@@ -16,6 +16,7 @@
 
 
 @property (strong, nonatomic) NSNumber *currentImageIndex;
+@property (strong, nonatomic) User * user;
 
 - (NSURL *) applicationDocumentsDirectory;
 

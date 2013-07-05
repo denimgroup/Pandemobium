@@ -9,6 +9,8 @@
 #import "QuotesViewController.h"
 #import "Stock.h"
 #import "AppDelegate.h"
+#import "DBHelper.h"
+
 
 @interface QuotesViewController ()
 
@@ -19,7 +21,7 @@
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
 
--(void)loadFavoriteStocks
+-(void)loadDefaultFavoriteStocks
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -38,7 +40,15 @@
     
     
 }
-
+-(void) loadFavoriteStocks
+{
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    DBHelper *helper = [[DBHelper alloc] init];
+    
+     favoriteStocks = [helper getFavoriteStocks:app.user.accountID];
+    
+                      
+}
 -(void)setDefaultFavorites
 {
         [self addFavorite:@"GOOG"];
@@ -64,17 +74,29 @@
 
 -(BOOL)isLoggedIn
 {
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    if(app.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    {
+        return TRUE;
+    }
     return FALSE;
+    
 }
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    if([self isLoggedIn] == FALSE){
+    /*if([self isLoggedIn] == FALSE){
         [self setDefaultFavorites];
+        [self loadDefaultFavoriteStocks];
     }
-    
-    
+    else
+    {
+        [self loadFavoriteStocks];
+        
+        
+    }
+     */
     [self loadFavoriteStocks];
     [self initImage];
     
@@ -198,7 +220,27 @@
     [self.topImage setImage:image];
 }
 
-
+-(NSString *)fetchData:(NSString *)symbol
+{
+    
+    
+        NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
+        
+        NSError *error;
+        NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+        
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        NSDictionary *query = [jsonData objectForKey:@"query"];
+        NSDictionary *results = [query objectForKey:@"results"];
+        NSDictionary *stockInfo = [results objectForKey:@"quote"];
+    
+        NSString *temp = [[NSString alloc] initWithFormat:@"%@ Change, %@ Range, %@",
+                            [stockInfo valueForKey:@"Change"],
+                            [stockInfo valueForKey:@"DaysRange"],
+                            [stockInfo valueForKey:@"Name"]];
+    return temp;
+    
+}
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)quoteTableView {
@@ -226,7 +268,14 @@
     }
 
     cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
-    cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
+    NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
+    for(int i = 0; i < [favoriteStocks count]; i++)
+    {
+        [subtext addObject:[self fetchData:[[favoriteStocks objectAtIndex:i] valueForKey:@"symbol"]]];
+        
+    }
+    //cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
+    cell.detailTextLabel.text = [subtext objectAtIndex:indexPath.row] ;
     
      // set the accessory view:
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
@@ -249,7 +298,8 @@
     {
         StockViewController *stockViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.quoteTableView indexPathForSelectedRow];
-        NSString *destinationTitle = [[favoriteStocks objectAtIndex:[indexPath row]]symbol];
+        NSString *destinationTitle = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+        
         stockViewController.symbol = destinationTitle;
         stockViewController.originateFrom = @"QuoteView";
         [stockViewController setTitle:destinationTitle];

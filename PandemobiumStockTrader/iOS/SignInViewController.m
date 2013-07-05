@@ -7,6 +7,8 @@
 //
 
 #import "SignInViewController.h"
+#import "AppDelegate.h"
+#import "DBHelper.h"
 
 
 @interface SignInViewController () <UITextFieldDelegate>
@@ -51,18 +53,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
     NSLog(@"loginwas pressed");
-    NSError *error;
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/user.jsp?method=logIn&username=%@&password=%@", usernameText.text, passwordText.text];
-    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    NSArray *secondParse = [firstParse objectForKey:@"Results"];
-    NSDictionary *results = [secondParse objectAtIndex:0];
+    DBHelper * dbhelper = [[DBHelper alloc] init];
+    
+    NSDictionary *results = [dbhelper logIn: usernameText.text forPassword: passwordText.text];
     NSInteger userID = [[results valueForKey:@"userID"] intValue];
     
-    usernameText.text = @"";
-    passwordText.text = @"";
     UIAlertView *alert;
     if(userID >= 1)
     {
@@ -73,6 +69,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
         [alert show];
+        
+        AppDelegate * app = [UIApplication sharedApplication].delegate;
+        app.user.password = [results objectForKey:@"password"];
+        app.user.userID = [results objectForKey:@"userID"];
+        app.user.userName = [results objectForKey:@"userName"];
+        app.user.loggedIn = [[NSNumber alloc]initWithInt:1];
+        app.user.accountID = [dbhelper getAccountID:[results objectForKey:@"userID"]];
+        
         if(self.rememberloginSwitch.on)
         {
             //TO DO: Write to local file
@@ -94,8 +98,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
         
     }
-   
-    
+    usernameText.text = @"";
+    passwordText.text = @"";
     //To Do: Take to Quotes from here. 
     
     
