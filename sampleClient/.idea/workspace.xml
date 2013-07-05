@@ -7,16 +7,16 @@
     <file path="/fragment.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372708385814" ignored="false" />
     <file path="$PROJECT_DIR$/web/WEB-INF/web.xml" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372702541547" ignored="false" />
     <file path="/HelloWorldClient.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372703018406" ignored="false" />
-    <file path="$PROJECT_DIR$/../Server/.idea/workspace.xml" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372791562796" ignored="false" />
-    <file path="/accountService.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372790754352" ignored="false" />
-    <file path="$PROJECT_DIR$/../Server/web/WEB-INF/server-config.wsdd" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372706288765" ignored="false" />
-    <file path="$PROJECT_DIR$/../Server/src/services/accountService.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372790843667" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/.idea/workspace.xml" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372878466811" ignored="false" />
+    <file path="/accountService.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372870971860" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/WEB-INF/server-config.wsdd" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372861967781" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/src/services/accountService.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372871074316" ignored="false" />
     <file path="/accountServiceClient.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372708593871" ignored="false" />
     <file path="$PROJECT_DIR$/../Server/.idea/misc.xml" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372710218839" ignored="false" />
-    <file path="/index.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372787386288" ignored="false" />
-    <file path="$PROJECT_DIR$/../Server/web/index.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372787386288" ignored="false" />
-    <file path="$PROJECT_DIR$/../Server/web/account.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372790180449" ignored="false" />
-    <file path="/account.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372790176241" ignored="false" />
+    <file path="/index.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372877439999" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/index.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372877439999" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/account.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372875599232" ignored="false" />
+    <file path="/account.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372872524989" ignored="false" />
     <file path="$PROJECT_DIR$/../Server/src/JSON/JSON/zip/Decompressor.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372717380567" ignored="false" />
     <file path="$PROJECT_DIR$/../Server/src/JSON/JSON/zip/Keep.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372717380567" ignored="false" />
     <file path="$PROJECT_DIR$/../Server/src/JSON/JSON/zip/BitInputStream.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372717380567" ignored="false" />
@@ -78,6 +78,15 @@
     <file path="$PROJECT_DIR$/../Server/src/JSON/zip/Keep.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372717462581" ignored="false" />
     <file path="$PROJECT_DIR$/../Server/src/JSON/zip/Huff.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372778678186" ignored="false" />
     <file path="/Decompressor.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372778499753" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/src/services/accountService.wsdl" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372861140388" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/src/services/userService.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372861140388" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/user.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372861368345" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/WEB-INF/account.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372862039865" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/src/JSON/ResultSetConverter.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372869535880" ignored="false" />
+    <file path="/ResultSetConverter.java" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372869531131" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/tips.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372876345226" ignored="false" />
+    <file path="/tips.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372875472080" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server/web/history.jsp" changelist="e31a3157-c5f1-41ea-805b-6ec34467f92c" time="1372876373987" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +166,7 @@
       <file leaf-file-name="accountServiceClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/services/accountServiceClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="53" selection-start="969" selection-end="969" vertical-scroll-proportion="0.60178304">
+            <state line="27" column="1" selection-start="969" selection-end="969" vertical-scroll-proportion="0.60178304">
               <folding />
             </state>
           </provider>
@@ -166,7 +175,7 @@
       <file leaf-file-name="accountService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/accountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="57" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+            <state line="34" column="9" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,7 +204,7 @@
       <file leaf-file-name="HelloWorld.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="29" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -615,7 +624,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.6703704" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -724,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/example/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -740,7 +749,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/accountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="57" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+        <state line="34" column="9" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -749,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/accountServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="53" selection-start="969" selection-end="969" vertical-scroll-proportion="0.60178304">
+        <state line="27" column="1" selection-start="969" selection-end="969" vertical-scroll-proportion="0.60178304">
           <folding />
         </state>
       </provider>

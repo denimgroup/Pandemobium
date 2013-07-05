@@ -320,9 +320,17 @@
 			path = Supporting/CorePlot_1.2/Binaries/iOS/CorePlotHeaders;
 			sourceTree = "<group>";
 		};
+		BE110017178727B50087EB3F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
+				BE110017178727B50087EB3F /* Helper */,
 				BE0F91BD17721BEF00A01190 /* CoreData.framework */,
 				BE0F6AFD1771F69900A01190 /* CorePlot */,
 				BE0F6AFB1771F5F200A01190 /* libz.dylib */,
