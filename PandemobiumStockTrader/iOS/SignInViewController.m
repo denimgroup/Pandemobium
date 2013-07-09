@@ -49,6 +49,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 	// Do any additional setup after loading the view.
     
 }
+-(NSString*) saveFilePath{
+    
+    //NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist"];
+    NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/accounts.plist";
+    NSLog(@"%@", path);
+    
+    return path;
+}
+
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
@@ -76,13 +85,24 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         app.user.userName = [results objectForKey:@"userName"];
         app.user.loggedIn = [[NSNumber alloc]initWithInt:1];
         app.user.accountID = [dbhelper getAccountID:[results objectForKey:@"userID"]];
+        [self performSegueWithIdentifier:@"afterLogin" sender:sender];
         
         if(self.rememberloginSwitch.on)
         {
             //TO DO: Write to local file
             NSLog(@"SET TO REMEMBER LOGIN");
-        }else
-        {
+            //for writing to a local file using keychain, need to import .h+m files in order to work
+            //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+            
+            NSMutableArray* myArray = [[NSMutableArray alloc]init];
+                [myArray addObject: usernameText.text];
+                [myArray addObject: passwordText.text];
+                [myArray writeToFile:[self saveFilePath] atomically:YES];
+            NSLog(@"after saving account info data to the file");
+            
+            //to get data back from file use
+            //NSMutableArray* myArray = [NSMutableArray arrayWithContentsOfFile:[self saveFilePath]retain];
+        }else{
             NSLog(@"not set to remmember your login");
         }
     }
@@ -96,13 +116,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                  otherButtonTitles:nil];
         [alert show];
 
-        
     }
     usernameText.text = @"";
     passwordText.text = @"";
     //To Do: Take to Quotes from here. 
-    
-    
+     
+   
     
 }
 

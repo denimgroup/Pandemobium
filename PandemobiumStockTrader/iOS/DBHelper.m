@@ -43,7 +43,7 @@
 -(NSArray *) getFavoriteStocks:(NSNumber *)accountID
 {
     NSError *error;
- //   NSString *query = [[NSString alloc]initWithFormat:@"Select symbol from stock where favorite=1 AND accountID=%i;", [accountID intValue]];
+    //NSString *query = [[NSString alloc]initWithFormat:@"Select symbol from stock where favorite=1 AND accountID=%i;", [accountID intValue]];
     NSString *query = [[NSString alloc]initWithFormat:@"Select symbol from stock where favorite=1 AND accountID=1;"];
     
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];

@@ -27,6 +27,7 @@
 		BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */; };
 		BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2017821A5B00DFC630 /* car.jpg */; };
 		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
+		BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BECEFDB9178C71E300BC1351 /* accounts.plist */; };
 		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
@@ -157,6 +158,7 @@
 		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
 		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		BE8B3F2217821E5A00DFC630 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
+		BECEFDB9178C71E300BC1351 /* accounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accounts.plist; sourceTree = "<group>"; };
 		BED8B4661783362F00A19187 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burg.jpg; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -393,6 +395,7 @@
 				BEEF7020176F74DA00D63EB8 /* Default.png */,
 				BEEF7022176F74DA00D63EB8 /* Default@2x.png */,
 				BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */,
+				BECEFDB9178C71E300BC1351 /* accounts.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */,
 				BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */,
 				BEEF7021176F74DA00D63EB8 /* Default.png in Resources */,
 				BEEF7023176F74DA00D63EB8 /* Default@2x.png in Resources */,
