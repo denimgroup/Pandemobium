@@ -37,7 +37,7 @@
     }
     else {
         int i = statement.getUpdateCount();
-        if(i <= 0)
+        if(i < 0)
         {
             json = new JSONObject("{\"Results\":\"Invalid \"}");
         }

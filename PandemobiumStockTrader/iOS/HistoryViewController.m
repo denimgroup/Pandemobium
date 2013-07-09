@@ -7,6 +7,8 @@
 //
 
 #import "HistoryViewController.h"
+#import "AppDelegate.h"
+#import "DBHelper.h"
 
 @interface HistoryViewController ()
 
@@ -15,6 +17,7 @@
 
 @implementation HistoryViewController
 @synthesize history;
+@synthesize tips;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,6 +31,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    DBHelper * helper = [[DBHelper alloc]init];
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    UIAlertView * alert;
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -35,7 +42,23 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    history = [[NSMutableArray alloc] initWithObjects:@"history1",@"hisotry2", @"history3",@"history4", nil] ;
+    if([app.user.loggedIn intValue] == 1)
+    {
+        history = [[NSArray alloc]initWithArray:[helper getHistory:app.user.userID]];
+        tips = [[NSArray alloc]initWithArray:[helper getTips]];
+        
+    }
+    else
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                           message:@"Log-in to view History / Tips"
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,10 +93,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *MyIdentifier = @"historyCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    NSLog(@"trying to set up history view");
     if (cell == nil) {
-       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"historyCell"];
+       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"historyCell"];
     }
-    cell.textLabel.text = [[history objectAtIndex:[indexPath row]] objectAtIndex:0];
+    NSInteger section = [indexPath section];
+    if(section == 0)
+    {
+        cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"time"];
+        cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row]valueForKey:@"log"];
+        
+    }
+    else
+    {
+        cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+        cell.detailTextLabel.text = [[tips objectAtIndex:indexPath.row]valueForKey:@"reason"];
+        
+    }
+    
     return cell;
 }
 

@@ -9,6 +9,7 @@
 #import "StockViewController.h"
 #import "AppDelegate.h"
 #import "QuotesViewController.h"
+#import "TradeViewController.h"
 
 #define queue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 
@@ -209,11 +210,9 @@
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if([[segue identifier]isEqualToString:@"Quoteview"])
-//    {
-//       // QuotesViewController *viewController = [segue destinationViewController];
-//        
-//    }
+    TradeViewController *tradeViewController = [segue destinationViewController];
+    tradeViewController.symbol = symbol;
+    
 }
 
 

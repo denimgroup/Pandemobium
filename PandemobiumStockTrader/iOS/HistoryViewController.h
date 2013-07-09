@@ -12,6 +12,8 @@
 
 @interface HistoryViewController : UITableViewController < UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic)IBOutlet NSMutableArray *history;
+@property (strong, nonatomic) NSArray *history;
+@property (strong, nonatomic) NSArray *tips;
+
 - (IBAction)revealMenu:(id)sender;
 @end

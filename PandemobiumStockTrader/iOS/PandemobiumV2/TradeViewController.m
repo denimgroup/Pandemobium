@@ -22,6 +22,7 @@
 @synthesize accountAmount;
 @synthesize accountNumber;
 @synthesize canInvest;
+@synthesize symbol;
 
 
 CGFloat animatedDistance;
@@ -47,9 +48,47 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewDidLoad];
  
+    if(![symbol isEqual:NULL])
+    {
+        companyCode.text = symbol;
+        
+    }
+    
+    [self fetchData];
     //use accountAmount, accountNumber, and canInvest to display user data
     //query user database and yahoo to get info
     
+}
+
+-(void)fetchData
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSDictionary *results;
+    NSArray *stocks;
+    DBHelper * helper = [[DBHelper alloc]init];
+    
+    if(appDelegate.user.loggedIn.intValue == 1)
+    {
+        accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
+        
+        results = [helper getAccountInfo:appDelegate.user.accountID];
+        canInvest.text = [[NSString alloc] initWithFormat:@"$%.2f", [[results objectForKey:@"balance"] floatValue]];
+        
+        stocks = [helper getPurchasedStocks:appDelegate.user.accountID];
+
+        if([stocks count] > 0)
+        {
+            
+            NSNumber *balance = [helper getAccountValue:appDelegate.user.accountID];
+            accountAmount.text = [[NSString alloc]initWithFormat:@"$%.2f", [balance doubleValue]];
+        }
+        else
+        {
+            accountAmount.text = [[NSString alloc]initWithFormat:@"$%.2f", 0.0];
+            
+        }
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,10 +174,115 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)tradebuttonPressed:(id)sender
 {
-    //NSInteger *tradeAmount = [[NSInteger32AttributeType alloc]];
-    //check data is input into textfields
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    UIAlertView * alert;
     
-    //send out data to be traded after checking how much is allowed to be invested
+    NSString * stockSymbol = companyCode.text;
+    NSNumber * shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+    NSDictionary * yahooQuery;
+
+    
+    
+    if([appDelegate.user.loggedIn intValue] == 1) //User logged in
+    {
+        DBHelper *helper = [[DBHelper alloc]init];
+        yahooQuery = [helper fetchYahooData:stockSymbol];
+        if(![[yahooQuery objectForKey:@"Symbol"] isEqual:nil]) //Stock Exists
+        {
+            NSNumber * cost = [[NSNumber alloc] initWithDouble:[[yahooQuery objectForKey:@"LastTradePriceOnly"] doubleValue ]];
+            cost = [[NSNumber alloc] initWithDouble:([cost doubleValue] * [shares doubleValue])];
+            
+            NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
+            NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
+                                     ([[accountInfo objectForKey:@"balance"] doubleValue] - [cost doubleValue])];
+            
+            if([newBalance doubleValue] >= 0.0) // Has enough money to buy stocks
+            {
+                
+                NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
+                if([[balanceResults objectForKey:@"Result"]intValue] == 1)
+                {
+                
+                    NSDictionary * buyResults = [helper buyStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
+                    
+                
+                    if([[buyResults objectForKey:@"Result"]intValue] == 1)
+                    {
+                        alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                           message:@"Stock Purchase Succesfully"
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles: nil];
+                        [alert show];
+                        [self viewDidLoad];
+                        
+                    }
+                    else
+                    {
+                        alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                                           message:@"Something went wrong with Purchasing stock."
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"Try Again"
+                                                 otherButtonTitles: nil];
+                        [alert show];
+                        
+
+                        
+                    }
+                }
+                else
+                {
+                    alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                                       message:@"Something went wrong with Account Balance."
+                                                      delegate:nil
+                                             cancelButtonTitle:@"Try Again"
+                                             otherButtonTitles: nil];
+                    [alert show];
+                    
+                    
+                    
+                }
+
+            }
+            else
+            {
+                alert = [[UIAlertView alloc] initWithTitle:@"Insufficient Funds"
+                                                   message:@"Not enough funds in you account"
+                                                  delegate:nil
+                                         cancelButtonTitle:@"Try Again"
+                                         otherButtonTitles: nil];
+                [alert show];
+                
+                
+            }
+            
+        }
+        else
+        {
+            alert = [[UIAlertView alloc] initWithTitle:@"Invalid Stock"
+                                               message:@"Stock does not exist"
+                                              delegate:nil
+                                     cancelButtonTitle:@"Try Again"
+                                     otherButtonTitles: nil];
+            [alert show];
+
+            
+        }
+        
+    }
+    else
+    {
+        //User is not logged in, show an alert
+        alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
+                                           message:@"Must be logged in to 'Trade'"
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles: nil];
+        [alert show];
+    }
+    
+    
+    
 }
 
 

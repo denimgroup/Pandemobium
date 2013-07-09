@@ -15,7 +15,7 @@
     <file path="$PROJECT_DIR$/../sampleClient/src/services/accountServiceClient.java" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372709011723" ignored="false" />
     <file path="/accountServiceClient.java" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372708593871" ignored="false" />
     <file path="/index.jsp" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372877439999" ignored="false" />
-    <file path="/account.jsp" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372872524989" ignored="false" />
+    <file path="/account.jsp" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1373307546911" ignored="false" />
     <file path="/Decompressor.java" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372778499753" ignored="false" />
     <file path="/ResultSetConverter.java" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372869531131" ignored="false" />
     <file path="/tips.jsp" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372875472080" ignored="false" />
@@ -110,19 +110,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tips.jsp" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="tips.jsp" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/tips.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="65" selection-start="0" selection-end="1545" vertical-scroll-proportion="0.0">
+                <state line="46" column="41" selection-start="1410" selection-end="1410" vertical-scroll-proportion="1.1311475">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="history.jsp" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="history.jsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/history.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="39" selection-start="475" selection-end="488" vertical-scroll-proportion="0.3537736">
+                <state line="18" column="67" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -157,10 +157,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="account.jsp" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="account.jsp" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/account.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="44" column="3" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
+                <state line="37" column="66" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.87677723">
                   <folding />
                 </state>
               </provider>
@@ -169,16 +169,16 @@
           <file leaf-file-name="accountService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/services/accountService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="15" selection-start="453" selection-end="623" vertical-scroll-proportion="0.0">
+                <state line="75" column="3" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/index.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="23" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.70561457">
+                <state line="31" column="23" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -208,10 +208,10 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/account.jsp" />
         <option value="$PROJECT_DIR$/src/JSON/ResultSetConverter.java" />
         <option value="$PROJECT_DIR$/src/services/accountService.java" />
-        <option value="$PROJECT_DIR$/web/account.jsp" />
-        <option value="$PROJECT_DIR$/web/tips.jsp" />
         <option value="$PROJECT_DIR$/web/history.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/account.jsp" />
+        <option value="$PROJECT_DIR$/web/tips.jsp" />
       </list>
     </option>
   </component>
@@ -223,9 +223,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1600" />
+    <option name="y" value="22" />
     <option name="width" value="1600" />
-    <option name="height" value="1200" />
+    <option name="height" value="1174" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -255,10 +255,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -343,6 +339,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -641,7 +641,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="0" width="1600" height="1200" extended-state="1" />
+    <frame x="0" y="22" width="1600" height="1174" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -663,8 +663,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17245817" sideWeight="0.6703704" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17245817" sideWeight="0.6622391" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33776093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -796,9 +796,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/userService.java">
+    <entry file="file://$PROJECT_DIR$/src/JSON/README">
+      <provider editor-type-id="text-editor">
+        <state line="47" column="74" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+        <state line="31" column="23" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/history.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="67" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -812,45 +829,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/accountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="15" selection-start="453" selection-end="623" vertical-scroll-proportion="0.0">
+        <state line="75" column="3" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
+        <state line="37" column="66" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.87677723">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JSON/README">
-      <provider editor-type-id="text-editor">
-        <state line="47" column="74" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0">
+    <entry file="file://$PROJECT_DIR$/src/services/userService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/tips.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="65" selection-start="0" selection-end="1545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/history.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="475" selection-end="488" vertical-scroll-proportion="0.3537736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.70561457">
+        <state line="46" column="41" selection-start="1410" selection-end="1410" vertical-scroll-proportion="1.1311475">
           <folding />
         </state>
       </provider>
