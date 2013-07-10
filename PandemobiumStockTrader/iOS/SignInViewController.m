@@ -77,6 +77,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         app.user.loggedIn = [[NSNumber alloc]initWithInt:1];
         app.user.accountID = [dbhelper getAccountID:[results objectForKey:@"userID"]];
         
+        [self performSegueWithIdentifier:@"afterLogin" sender:sender];
+        
         if(self.rememberloginSwitch.on)
         {
             //TO DO: Write to local file
