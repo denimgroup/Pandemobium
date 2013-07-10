@@ -171,6 +171,37 @@
     
 }
 
+-(NSDictionary *) sellStock:(NSNumber *)shares forSymbol:(NSString *)symbol fromAccountID:(NSNumber *)accountID
+{
+    NSDictionary * stock = [self getIndividualStock:accountID forStock:symbol];
+    NSError *error;
+    NSString *query; // = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
+    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary *firstParse;
+   
+    if([[stock objectForKey:@"shares"]intValue] < [shares intValue])
+    { //update the stock
+        NSNumber * newShareTotal = [[NSNumber alloc]initWithInt:([[stock objectForKey:@"shares"]intValue] - [shares intValue])];
+        query = [[NSString alloc]initWithFormat:@"update stock set shares=%i where accountID=%i AND symbol=\"%@\";",
+                 [newShareTotal intValue],[accountID intValue], symbol];
+        
+    }
+    else if ([[stock objectForKey:@"shares"]intValue] == [shares intValue])
+    {
+        //delete stock
+        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol=\"%@\" AND accountID=%i;", symbol, [accountID intValue]];
+    }
+    
+    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    return firstParse;
+    
+}
+
+
 
 -(NSDictionary *) updateAccountBalance:(NSNumber *) accountID newBalance:(NSNumber *)balance
 {
@@ -291,7 +322,7 @@
     NSDictionary *stock = [self getIndividualStock:accountID forStock:symbol];
     if([[stock objectForKey:@"shares"]intValue] == 0)
     {
-        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol=\"%@\" AND accountID=%i;);", symbol, [accountID intValue]];
+        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol=\"%@\" AND accountID=%i;", symbol, [accountID intValue]];
         url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
         url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];

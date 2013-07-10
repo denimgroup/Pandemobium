@@ -1,6 +1,8 @@
 
 *.storyboard
 
+*.xcodeproj
+
 .idea/.name
 
 .idea/.name
