@@ -9,6 +9,8 @@
 #import "StockViewController.h"
 #import "AppDelegate.h"
 #import "QuotesViewController.h"
+#import "TradeViewController.h"
+#import "DBHelper.h"
 
 #define queue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 
@@ -78,6 +80,51 @@
     
 }
 
+-(void)stockStatus:(NSString *)stockSymbol
+{
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    DBHelper *helper = [[DBHelper alloc]init] ;
+    
+    
+    
+    if([appDelegate.user.loggedIn intValue] == 1)
+    {
+        NSArray *dbStockInfo = [helper getAllUserStocks:appDelegate.user.accountID];
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", stockSymbol];
+        NSArray * matched = [dbStockInfo filteredArrayUsingPredicate:p];
+        if([matched count] >= 1)
+        {
+            if([[[matched objectAtIndex:0] objectForKey:@"favorite"]intValue] == 1)
+            {
+                [self.favoriteButton setTitle:@"Remove"];
+            }
+        }
+        
+
+    }
+    else
+    {
+        
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+        NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+        
+        NSError *error;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", stockSymbol];
+        [request setPredicate:predicate];
+        
+        Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
+        
+        if([stock.favorite isEqualToNumber:[[NSNumber alloc]initWithBool:YES]])
+        {
+            //        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
+            //[self.favoriteButton.title = @"Remove"];
+            [self.favoriteButton setTitle:@"Remove"];
+        }
+        
+    }
+    
+}
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -127,19 +174,14 @@
 - (IBAction)favoriteButtonClicked:(id)sender
 {
     [self.favoriteButton titleTextAttributesForState:UIControlStateNormal];
-//    if([self.favoriteButton.currentTitle isEqualToString:@"Favorite"])
     if([self.favoriteButton.title isEqualToString:@"Favorite"])
     {
         [self addFavorite:symbol];
-//        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
-        //[self.favoriteButton.title = @"Remove"];
         [self.favoriteButton setTitle:@"Remove"];
     }
     else
     {
         [self removeFavorite:symbol];
-//        [self.favoriteButton setTitle:@"Favorite" forState:UIControlStateNormal];
-        //[self.favoriteButton.title = @"Favorite"];
         [self.favoriteButton setTitle:@"Favorite"];
     }
     
@@ -154,66 +196,124 @@
 -(void)addFavorite:(NSString *)stockSymbol
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+    DBHelper *helper = [[DBHelper alloc]init] ;
+    UIAlertView *alert;
+    NSString *alertTitle;
+    NSString *alertMessage;
+    NSString *buttonTitle;
     
-    NSError *error;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", stockSymbol];
-    [request setPredicate:predicate];
-    
-    Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
-    stock.favorite = [[NSNumber alloc]initWithBool:YES];
-    
-    [context save:&error];
-    
+    if([appDelegate.user.loggedIn intValue] == 1)
+    {
+        NSDictionary *results = [helper addFavoriteStock:appDelegate.user.accountID stockSymbol:stockSymbol];
+        if([[results objectForKey:@"Result"]intValue]==1)
+        { //Great success
+            alertTitle = @"Success";
+            alertMessage=@"Added Stock to Favorites";
+            buttonTitle=@"OK";
+                   }
+        else
+        { //DB Error
+            alertTitle = @"ERROR";
+            alertMessage=@"Could not add Stock to Favorites";
+            buttonTitle=@"Try Again";
+        }
+        
+    }
+    else
+    {
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+        NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+        
+        NSError *error;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", stockSymbol];
+        [request setPredicate:predicate];
+        
+        Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
+        stock.favorite = [[NSNumber alloc]initWithBool:YES];
+        
+        [context save:&error];
+        
+        alertTitle = @"Success";
+        alertMessage=@"Added Stock to Favorites. Please log-in to maintain favorites";
+        buttonTitle=@"OK";
+
+        
+    }
+    alert = [[UIAlertView alloc] initWithTitle:alertTitle
+                                       message:alertMessage
+                                      delegate:nil
+                             cancelButtonTitle:buttonTitle
+                             otherButtonTitles: nil];
+    [alert show];
+   
 }
 
 
 -(void)removeFavorite:(NSString *)stockSymbol
 {
+    
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+    DBHelper *helper = [[DBHelper alloc]init] ;
+    UIAlertView *alert;
+    NSString *alertTitle;
+    NSString *alertMessage;
+    NSString *buttonTitle;
     
-    NSError *error;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", stockSymbol];
-    [request setPredicate:predicate];
-    
-    Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
-    stock.favorite = [[NSNumber alloc]initWithBool:NO];
-    
-    [context save:&error];
-    
-}
--(void)stockStatus:(NSString *)stockSymbol
-{
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
-    
-    NSError *error;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", stockSymbol];
-    [request setPredicate:predicate];
-    
-    Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
-  
-    if([stock.favorite isEqualToNumber:[[NSNumber alloc]initWithBool:YES]])
+    if([appDelegate.user.loggedIn intValue] == 1)
     {
-//        [self.favoriteButton setTitle:@"Remove" forState:UIControlStateNormal];
-        //[self.favoriteButton.title = @"Remove"];
-        [self.favoriteButton setTitle:@"Remove"];
+        NSDictionary *results = [helper removeFavoriteStock:appDelegate.user.accountID stockSymbol:stockSymbol];
+        if([[results objectForKey:@"Result"]intValue]==1)
+        { //Great success
+            alertTitle = @"Success";
+            alertMessage=@"Removed Stock from Favorites";
+            buttonTitle=@"OK";
+        }
+        else
+        { //DB Error
+            alertTitle = @"ERROR";
+            alertMessage=@"Could not remove stock. Can only remove non-purchased stock.";
+            buttonTitle=@"Try Again";
+        }
+        
     }
+    else
+    {
+        
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+        NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+        
+        NSError *error;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol == %@", stockSymbol];
+        [request setPredicate:predicate];
+        
+        Stock *stock = [[context executeFetchRequest:request error:&error]objectAtIndex:0];
+        stock.favorite = [[NSNumber alloc]initWithBool:NO];
+        
+        [context save:&error];
+        alertTitle = @"Success";
+        alertMessage=@"Removed Stock from Favorites. Please log-in to maintain favorites";
+        buttonTitle=@"OK";
+    }
+    alert = [[UIAlertView alloc] initWithTitle:alertTitle
+                                       message:alertMessage
+                                      delegate:nil
+                             cancelButtonTitle:buttonTitle
+                             otherButtonTitles: nil];
+    [alert show];
     
     
 }
+
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if([[segue identifier]isEqualToString:@"Quoteview"])
-//    {
-//       // QuotesViewController *viewController = [segue destinationViewController];
-//        
-//    }
+    if ([[segue identifier]isEqualToString:@"Trading"])
+    {
+        
+        TradeViewController *tradeViewController = [segue destinationViewController];
+        tradeViewController.symbol = symbol;
+    }
+    
 }
 
 

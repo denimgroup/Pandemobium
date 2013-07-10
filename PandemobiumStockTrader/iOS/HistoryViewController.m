@@ -7,6 +7,8 @@
 //
 
 #import "HistoryViewController.h"
+#import "AppDelegate.h"
+#import "DBHelper.h"
 
 @interface HistoryViewController ()
 
@@ -15,6 +17,7 @@
 
 @implementation HistoryViewController
 @synthesize history;
+@synthesize tips;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,14 +31,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    DBHelper * helper = [[DBHelper alloc]init];
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    UIAlertView * alert;
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    history = [[NSArray alloc]init];
     
-    history = [[NSMutableArray alloc] initWithObjects:@"history1",@"hisotry2", @"history3",@"history4", nil] ;
+    if([app.user.loggedIn intValue] == 1)
+    {
+        history = [[NSArray alloc]initWithArray:[helper getHistory:app.user.userID]];
+        tips = [[NSArray alloc]initWithArray:[helper getTips]];
+        
+    }
+    else
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                           message:@"Log-in to view History / Tips"
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,33 +73,49 @@
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //Here you must return the number of sectiosn you want
-    return 2;
+#pragma mark - Table View
+#pragma mark - Table View
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)quoteTableView {
+    // Return the number of sections.
+    return 1;
 }
 
-- (NSInteger)numberOfRowsInSection:(NSInteger)section {
-    //Here, for each section, you must return the number of rows it will contain
-    return 10;
+- (NSInteger)tableView:(UITableView *)quoteTableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    // If you're serving data from an array, return the length of the array:
+    
+    return [history count];
+    //return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    //For each section, you must return here it's label
-    if(section == 0) return @"Trade History";
-    else
-        return @"Tips History";
-}
-
-
+// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *MyIdentifier = @"historyCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    if (cell == nil) {
-       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"historyCell"];
+    static NSString *CellIdentifier = @"historyCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // Set the data for this cell:
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[history objectAtIndex:[indexPath row]] objectAtIndex:0];
+    
+    cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"time"];
+    cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"log"];
+    
+    // set the accessory view:
+    //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
+
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    [self performSegueWithIdentifier:@"StockView" sender:tableView];
+//    
+//}
 
 
 @end

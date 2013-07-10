@@ -23,7 +23,7 @@
     query = query.replace("%20", " ");
     query = query.toUpperCase();
 
-    if(query.contains("INSERT INTO"))
+    if(query.contains("INSERT INTO") || query.contains("UPDATE") || query.contains("DELETE"))
     {
         String results = service.executeInsert(query);
         json = new JSONObject(results);

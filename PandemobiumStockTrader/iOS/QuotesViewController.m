@@ -20,7 +20,7 @@
 
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
-
+@synthesize activityIndicator;
 -(void)loadDefaultFavoriteStocks
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
@@ -86,7 +86,12 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    /*if([self isLoggedIn] == FALSE){
+    
+    [activityIndicator startAnimating];
+    
+    
+    
+    if([self isLoggedIn] == FALSE){
         [self setDefaultFavorites];
         [self loadDefaultFavoriteStocks];
     }
@@ -96,11 +101,12 @@
         
         
     }
-     */
-    [self loadFavoriteStocks];
+    
+   // [self loadFavoriteStocks];
     [self initImage];
     
 }
+
 
 
 - (void)viewWillAppear:(BOOL)animated
@@ -269,14 +275,16 @@
 
     cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
     NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
-    for(int i = 0; i < [favoriteStocks count]; i++)
+    if([favoriteStocks count] > 0 )
     {
-        [subtext addObject:[self fetchData:[[favoriteStocks objectAtIndex:i] valueForKey:@"symbol"]]];
-        
+        for(int i = 0; i < [favoriteStocks count]; i++)
+        {
+            [subtext addObject:[self fetchData:[[favoriteStocks objectAtIndex:i] valueForKey:@"symbol"]]];
+            
+        }
+        //cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
+        cell.detailTextLabel.text = [subtext objectAtIndex:indexPath.row] ;
     }
-    //cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
-    cell.detailTextLabel.text = [subtext objectAtIndex:indexPath.row] ;
-    
      // set the accessory view:
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     

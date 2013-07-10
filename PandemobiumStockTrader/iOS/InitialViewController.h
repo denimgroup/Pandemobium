@@ -9,5 +9,6 @@
 #import "ECSlidingViewController.h"
 
 @interface InitialViewController : ECSlidingViewController
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

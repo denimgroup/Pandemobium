@@ -43,7 +43,7 @@
     self.stockArray = [self.stockArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
                                         
     
-    filteredStockArray = [self.stockArray mutableCopy];
+    self.filteredStockArray = [self.stockArray mutableCopy];
     
     [searchBar setShowsCancelButton:YES];
     [searchBar setShowsScopeBar:YES];
@@ -56,7 +56,7 @@
     
 }
 
-/*
+
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
     NSLog(@"Begin Editing Search\n");
@@ -88,7 +88,6 @@
     NSLog(@"End Editing Search\n");
 }
 
-*/
 
 
 #pragma mark - Table View
@@ -132,8 +131,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    NSMutableArray *name;
-    NSMutableArray *symbol;
+    NSMutableArray *name = [[NSMutableArray alloc]init];
+    NSMutableArray *symbol = [[NSMutableArray alloc]init];;
     
     if(tableView == self.searchDisplayController.searchResultsTableView)
     {
@@ -180,14 +179,14 @@
         if(sender == self.searchDisplayController.searchResultsTableView)
         {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[self.filteredStockArray objectAtIndex:[indexPath row]]symbol];
+            NSString *destinationTitle = [[self.filteredStockArray objectAtIndex:[indexPath row]] valueForKey:@"symbol"];
             stockViewController.symbol = destinationTitle;
             [stockViewController setTitle:destinationTitle];
         }
         else
         {
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[self.stockArray objectAtIndex:[indexPath row]] symbol];
+            NSString *destinationTitle = [[self.stockArray objectAtIndex:[indexPath row]] valueForKey:@"symbol"];
             stockViewController.symbol = destinationTitle;
             [stockViewController setTitle:destinationTitle];
         }
