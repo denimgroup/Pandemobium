@@ -20,7 +20,7 @@
 
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
-@synthesize activityIndicator;
+
 -(void)loadDefaultFavoriteStocks
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
@@ -86,11 +86,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [activityIndicator startAnimating];
-    
-    
-    
     if([self isLoggedIn] == FALSE){
         [self setDefaultFavorites];
         [self loadDefaultFavoriteStocks];
@@ -102,11 +97,10 @@
         
     }
     
-   // [self loadFavoriteStocks];
+    [self loadFavoriteStocks];
     [self initImage];
     
 }
-
 
 
 - (void)viewWillAppear:(BOOL)animated

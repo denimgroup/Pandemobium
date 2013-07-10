@@ -23,10 +23,10 @@
 		BE110023178743380087EB3F /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BE110022178743380087EB3F /* Stock.m */; };
 		BE110027178743FE0087EB3F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE110026178743FE0087EB3F /* User.m */; };
 		BE11002B178753610087EB3F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11002A178753610087EB3F /* DBHelper.m */; };
+		BE8B3F1C1781ED9A00DFC630 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F1B1781ED9A00DFC630 /* MainStoryboard.storyboard */; };
 		BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */; };
 		BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2017821A5B00DFC630 /* car.jpg */; };
 		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
-		BEA2D771178CA718009588FA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA2D770178CA718009588FA /* MainStoryboard.storyboard */; };
 		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
@@ -152,11 +152,11 @@
 		BE1100281787440D0087EB3F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BE110029178753610087EB3F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
 		BE11002A178753610087EB3F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		BE8B3F1B1781ED9A00DFC630 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioViewController.h; sourceTree = "<group>"; };
 		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
 		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		BE8B3F2217821E5A00DFC630 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
-		BEA2D770178CA718009588FA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BED8B4661783362F00A19187 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burg.jpg; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -371,7 +371,7 @@
 		BEEF7014176F74DA00D63EB8 /* PandemobiumV2 */ = {
 			isa = PBXGroup;
 			children = (
-				BEA2D770178CA718009588FA /* MainStoryboard.storyboard */,
+				BE8B3F1B1781ED9A00DFC630 /* MainStoryboard.storyboard */,
 				BEEF701D176F74DA00D63EB8 /* AppDelegate.h */,
 				BEEF701E176F74DA00D63EB8 /* AppDelegate.m */,
 				BEEF7015176F74DA00D63EB8 /* Supporting Files */,
@@ -499,10 +499,10 @@
 				BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */,
 				BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */,
 				BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */,
+				BE8B3F1C1781ED9A00DFC630 /* MainStoryboard.storyboard in Resources */,
 				BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */,
 				BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */,
 				BED8B4671783362F00A19187 /* burg.jpg in Resources */,
-				BEA2D771178CA718009588FA /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

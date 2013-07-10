@@ -23,10 +23,6 @@
 -(NSNumber *) getShareTotal:(NSNumber *) accountID;
 -(NSArray *) getTips;
 -(NSArray *) getHistory:(NSNumber *)userID;
--(NSDictionary *) getIndividualStock:(NSNumber *) accountID forStock:(NSString *)symbol;
--(NSDictionary *) addFavoriteStock:(NSNumber *) accountID stockSymbol:(NSString *)symbol;
--(NSDictionary *) removeFavoriteStock:(NSNumber *) accountID stockSymbol:(NSString *)symbol;
--(NSArray *) getAllUserStocks:(NSNumber *)accountID;
 
 
 

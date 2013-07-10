@@ -41,7 +41,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    history = [[NSArray alloc]init];
     
     if([app.user.loggedIn intValue] == 1)
     {
@@ -73,49 +72,48 @@
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
-#pragma mark - Table View
-#pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)quoteTableView {
-    // Return the number of sections.
-    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //Here you must return the number of sectiosn you want
+    return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)quoteTableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    // If you're serving data from an array, return the length of the array:
-    
-    return [history count];
-    //return 1;
+- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+    //Here, for each section, you must return the number of rows it will contain
+    return 10;
 }
 
-// Customize the appearance of table view cells.
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    //For each section, you must return here it's label
+    if(section == 0) return @"Trade History";
+    else
+        return @"Tips History";
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"historyCell";
+    static NSString *MyIdentifier = @"historyCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    // Set the data for this cell:
-    if(!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    NSLog(@"trying to set up history view");
+    if (cell == nil) {
+       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"historyCell"];
     }
-    
-    cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"time"];
-    cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"log"];
-    
-    // set the accessory view:
-    //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+    NSInteger section = [indexPath section];
+    if(section == 0)
+    {
+        cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"time"];
+        cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row]valueForKey:@"log"];
+        
+    }
+    else
+    {
+        cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+        cell.detailTextLabel.text = [[tips objectAtIndex:indexPath.row]valueForKey:@"reason"];
+        
+    }
     
     return cell;
 }
-
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    [self performSegueWithIdentifier:@"StockView" sender:tableView];
-//    
-//}
 
 
 @end

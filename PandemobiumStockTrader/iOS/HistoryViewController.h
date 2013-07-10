@@ -11,7 +11,6 @@
 #import "MenuViewController.h"
 
 @interface HistoryViewController : UITableViewController < UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *history;
 @property (strong, nonatomic) NSArray *tips;

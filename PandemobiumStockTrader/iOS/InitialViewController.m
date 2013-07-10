@@ -9,10 +9,9 @@
 #import "InitialViewController.h"
 
 @implementation InitialViewController
-@synthesize activityIndicator;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [activityIndicator startAnimating];
     
     UIStoryboard *storyboard;
     
@@ -23,8 +22,6 @@
     }
     
     self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"Quotes"];
-    [activityIndicator stopAnimating];
-    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
