@@ -299,5 +299,163 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
 }
 
+- (IBAction)sellButtonPressed:(id)sender {
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    UIAlertView * alert;
+    
+    NSString * stockSymbol = companyCode.text;
+    NSNumber * shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+    NSDictionary * yahooQuery;
+    
+    if((![stockSymbol isEqualToString:@""]) && [shares intValue] > 0)
+    {
+        
+        if([appDelegate.user.loggedIn intValue] == 1) //User logged in
+        {
+            DBHelper *helper = [[DBHelper alloc]init];
+            yahooQuery = [helper fetchYahooData:stockSymbol];
+            if(![[yahooQuery objectForKey:@"Symbol"] isEqual:nil]) //Stock Exists
+            {
+                NSNumber * cost = [[NSNumber alloc] initWithDouble:[[yahooQuery objectForKey:@"LastTradePriceOnly"] doubleValue ]];
+                cost = [[NSNumber alloc] initWithDouble:([cost doubleValue] * [shares doubleValue])];
+                
+                NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
+                NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
+                                         ([[accountInfo objectForKey:@"balance"] doubleValue] + [cost doubleValue])];
+                
+                
+                NSArray * listOfStocks = [helper getPurchasedStocks:appDelegate.user.accountID];
+                NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", stockSymbol];
+                NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
+                
+                if([matched count] >= 1)
+                { //Stock Exists
+                    
+                    if([[[matched objectAtIndex:0] valueForKey:@"shares"]intValue] <= [shares intValue])
+                    { //Has sufficient stock
+                        
+                        NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
+                        if([[balanceResults objectForKey:@"Result"]intValue] == 1)
+                        { //Updated Balance
+                            
+                            NSDictionary * sellResults = [helper sellStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
+                            
+                            
+                            if([[sellResults objectForKey:@"Result"]intValue] == 1)
+                            { //Sold the stock
+                                alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                                   message:@"Stock Sold Succesfully"
+                                                                  delegate:nil
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles: nil];
+                                [alert show];
+                                companyCode.text = @"";
+                                amountofShares.text =@"";
+                                
+                                [self viewDidLoad];
+                                
+                            }
+                            else
+                            {
+                                alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                                                   message:@"Something went wrong with Selling Stock."
+                                                                  delegate:nil
+                                                         cancelButtonTitle:@"Try Again"
+                                                         otherButtonTitles: nil];
+                                [alert show];
+                                
+                                
+                                
+                            }
+                        }
+                        else
+                        {
+                            alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                                               message:@"Something went wrong with updating Account Balance"
+                                                              delegate:nil
+                                                     cancelButtonTitle:@"Try Again"
+                                                     otherButtonTitles: nil];
+                            [alert show];
+                            
+                            
+                            
+                        }
+                        
+                        
+                    }
+                    else
+                    {
+                        //Insufficient shares of the stock
+                        alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                                           message:@"Shares cannot exceed what you own"
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"Try Again"
+                                                 otherButtonTitles: nil];
+                        [alert show];
+                        
+                    }
+                    
+                    
+                }
+                else
+                {
+                    //stock does not exist
+                    alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                                       message:@"You do not own this stock."
+                                                      delegate:nil
+                                             cancelButtonTitle:@"Try Again"
+                                             otherButtonTitles: nil];
+                    [alert show];
+                    
+                    
+                }
+                    
+                    
+                
+                
+                
+
+            }
+            else
+            {
+                alert = [[UIAlertView alloc] initWithTitle:@"Invalid Stock"
+                                                   message:@"Stock does not exist"
+                                                  delegate:nil
+                                         cancelButtonTitle:@"Try Again"
+                                         otherButtonTitles: nil];
+                [alert show];
+                
+                
+            }
+            
+        }
+        else
+        {
+            //User is not logged in, show an alert
+            alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
+                                               message:@"Must be logged in to 'Trade'"
+                                              delegate:nil
+                                     cancelButtonTitle:@"OK"
+                                     otherButtonTitles: nil];
+            [alert show];
+        }
+    }
+    else
+    {
+        
+        alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                           message:@"Shares or Company Symbol cannot be empty and must sell at least 1 share!"
+                                          delegate:nil
+                                 cancelButtonTitle:@"Try Again"
+                                 otherButtonTitles: nil];
+        [alert show];
+        
+        
+        
+    }
+    
+}
+
 
 @end
