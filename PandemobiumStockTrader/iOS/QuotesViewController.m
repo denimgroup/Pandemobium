@@ -86,6 +86,8 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+     
     if([self isLoggedIn] == FALSE){
         [self setDefaultFavorites];
         [self loadDefaultFavoriteStocks];
@@ -97,10 +99,10 @@
         
     }
     
-    [self loadFavoriteStocks];
-    [self initImage];
+   [self initImage];
     
 }
+
 
 
 - (void)viewWillAppear:(BOOL)animated
