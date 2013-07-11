@@ -50,6 +50,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
 }
 
+- (NSString*) saveFilePath
+{
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist"];
+    //NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/accounts.plist";
+    return path;
+}
+
+
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
     NSLog(@"loginwas pressed");
@@ -83,6 +91,19 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         {
             //TO DO: Write to local file
             NSLog(@"SET TO REMEMBER LOGIN");
+            //for writing to a local file using keychain, need to import .h+m files in order to work
+            //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+            
+            NSMutableArray* myArray = [[NSMutableArray alloc]init];
+            [myArray addObject: usernameText.text];
+            [myArray addObject: passwordText.text];
+            [myArray writeToFile:[self saveFilePath] atomically:YES];
+            NSLog(@"after saving account info data to the file");
+            
+            //to get data back from file use
+            //NSMutableArray* myArray = [NSMutableArray arrayWithContentsOfFile:[self saveFilePath]retain];
+
+            
         }else
         {
             NSLog(@"not set to remmember your login");

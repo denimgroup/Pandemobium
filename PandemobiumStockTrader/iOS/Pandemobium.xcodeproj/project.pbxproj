@@ -10,6 +10,8 @@
 		BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE010DC11778D93800105CA6 /* fullStockList.plist */; };
 		BE03009B177DDF62005418C7 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03009A177DDF62005418C7 /* HistoryViewController.m */; };
 		BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE061B16177B95DF001D4166 /* SettingsViewController.m */; };
+		BE06784E178DD2100046E666 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE06784D178DD2100046E666 /* MainStoryboard.storyboard */; };
+		BE067850178DD2270046E666 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE06784F178DD2270046E666 /* MainStoryboard.storyboard */; };
 		BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */; };
 		BE0C53FD177CC74B00C9346C /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0C53FC177CC74B00C9346C /* TradeViewController.m */; };
 		BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */; };
@@ -26,7 +28,9 @@
 		BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */; };
 		BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2017821A5B00DFC630 /* car.jpg */; };
 		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
+		BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BECEFDB9178C71E300BC1351 /* accounts.plist */; };
 		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
+
 		BEE62C47178DCE6500440AE3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE62C46178DCE6400440AE3 /* MainStoryboard.storyboard */; };
 		BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
@@ -57,6 +61,8 @@
 		BE03009A177DDF62005418C7 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		BE061B15177B95DF001D4166 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BE061B16177B95DF001D4166 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BE06784D178DD2100046E666 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BE06784F178DD2270046E666 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInterface.h; sourceTree = "<group>"; };
 		BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInterface.m; sourceTree = "<group>"; };
 		BE0C53FB177CC74B00C9346C /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = PandemobiumV2/TradeViewController.h; sourceTree = "<group>"; };
@@ -157,8 +163,8 @@
 		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
 		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		BE8B3F2217821E5A00DFC630 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
+		BECEFDB9178C71E300BC1351 /* accounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accounts.plist; sourceTree = "<group>"; };
 		BED8B4661783362F00A19187 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burg.jpg; sourceTree = "<group>"; };
-		BEE62C46178DCE6400440AE3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEEF7010176F74DA00D63EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -372,7 +378,8 @@
 		BEEF7014176F74DA00D63EB8 /* PandemobiumV2 */ = {
 			isa = PBXGroup;
 			children = (
-				BEE62C46178DCE6400440AE3 /* MainStoryboard.storyboard */,
+				BE06784D178DD2100046E666 /* MainStoryboard.storyboard */,
+				BE06784F178DD2270046E666 /* MainStoryboard.storyboard */,
 				BEEF701D176F74DA00D63EB8 /* AppDelegate.h */,
 				BEEF701E176F74DA00D63EB8 /* AppDelegate.m */,
 				BEEF7015176F74DA00D63EB8 /* Supporting Files */,
@@ -394,6 +401,7 @@
 				BEEF7020176F74DA00D63EB8 /* Default.png */,
 				BEEF7022176F74DA00D63EB8 /* Default@2x.png */,
 				BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */,
+				BECEFDB9178C71E300BC1351 /* accounts.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -492,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */,
 				BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */,
 				BEEF7021176F74DA00D63EB8 /* Default.png in Resources */,
 				BEEF7023176F74DA00D63EB8 /* Default@2x.png in Resources */,
@@ -503,7 +512,8 @@
 				BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */,
 				BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */,
 				BED8B4671783362F00A19187 /* burg.jpg in Resources */,
-				BEE62C47178DCE6500440AE3 /* MainStoryboard.storyboard in Resources */,
+				BE06784E178DD2100046E666 /* MainStoryboard.storyboard in Resources */,
+				BE067850178DD2270046E666 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
