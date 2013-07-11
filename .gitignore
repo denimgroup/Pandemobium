@@ -1,4 +1,6 @@
 
+#
+#
 *.storyboard
 
 *.xcodeproj
@@ -8,6 +10,8 @@
 .idea/.name
 
 Server/.idea
+
+Server/out/
 
 # Compiled source #
 ###################

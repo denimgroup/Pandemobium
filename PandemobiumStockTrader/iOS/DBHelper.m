@@ -115,6 +115,34 @@
     
 }
 
+- (NSArray *) getStockValue:(NSNumber *) accountID
+{
+    
+    NSArray * listStocks = [self getPurchasedStocks:accountID];
+    NSMutableArray * stockValue = [[NSMutableArray alloc]initWithCapacity:[listStocks count]];
+    
+    
+    NSDictionary * stockInfo;
+    
+    for (int i = 0; i < [listStocks count]; i++)
+    {
+        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"symbol"]];
+        NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
+        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
+        NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
+        
+        NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:3];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"symbol"] forKey:@"symbol"];
+        [temp setObject:value forKey:@"value"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"shares"] forKey:@"shares"];
+        [stockValue addObject:temp];
+    }
+    
+    return [[NSArray alloc]initWithArray:stockValue];
+    
+    
+}
+
 -(NSDictionary *)fetchYahooData:(NSString *)symbol
 {
     

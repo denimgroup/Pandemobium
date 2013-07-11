@@ -28,6 +28,7 @@
 -(NSDictionary *) removeFavoriteStock:(NSNumber *) accountID stockSymbol:(NSString *)symbol;
 -(NSArray *) getAllUserStocks:(NSNumber *)accountID;
 -(NSDictionary *) sellStock:(NSNumber *)shares forSymbol:(NSString *)symbol fromAccountID:(NSNumber *)accountID;
+-(NSArray *) getStockValue:(NSNumber *) accountID;
 
 
 @end
