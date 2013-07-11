@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *numberShares;
 @property (strong, nonatomic) IBOutlet UILabel *accountNumber;
 @property (strong, nonatomic) IBOutlet UIImageView *accntImage;
+@property (strong, nonatomic) IBOutlet UITableViewCell *barImage;
 - (IBAction)revealMenu:(id)sender;
 @end

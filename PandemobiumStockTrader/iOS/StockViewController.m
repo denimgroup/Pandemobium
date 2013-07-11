@@ -167,8 +167,12 @@
 
 - (IBAction)backButtonClicked:(id)sender
 {
+    NSLog(@"backbutton presses");
+    NSLog(@"%@",self.originateFrom);
     
+    self.originateFrom = @"QuoteView";
     [self performSegueWithIdentifier:originateFrom sender:sender];
+    NSLog(@"%@", self.originateFrom);
 }
 
 - (IBAction)favoriteButtonClicked:(id)sender
