@@ -1,4 +1,6 @@
 
+#
+#
 *.storyboard
 
 .idea/.name
@@ -6,3 +8,7 @@
 .idea/.name
 
 Server/.idea
+
+Server/out/
+
+*.pbxproj
