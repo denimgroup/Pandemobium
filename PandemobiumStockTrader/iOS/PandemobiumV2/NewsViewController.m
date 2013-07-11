@@ -2,7 +2,7 @@
 //  NewsViewController.m
 //  PandemobiumV2
 //
-//  Created by Thomas Salazar on 6/17/13.
+//  Created by Thomas Salazar on 6/18/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
@@ -13,15 +13,39 @@
 @end
 
 @implementation NewsViewController
+@synthesize webView = _webView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    [super viewWillAppear:animated];
+    
+  
+    
+    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
+        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
-    return self;
+    self.slidingViewController.underRightViewController = nil;
+    
+    
+    /////////////////////webview container running, simple and not vulnerabilities implemented yet june 20th
+    self.webView.delegate = self;
+    NSURL *url = [NSURL URLWithString:@"http://www.finance.yahoo.com"];
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:requestURL];
+    
+    /////////////////////
+    
+    
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
 }
+
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+
 
 - (void)viewDidLoad
 {
