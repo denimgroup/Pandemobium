@@ -28,6 +28,7 @@
 		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
 		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
 		BEE62C47178DCE6500440AE3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE62C46178DCE6400440AE3 /* MainStoryboard.storyboard */; };
+		BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
 		BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */; };
@@ -513,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */,
 				BEEF701B176F74DA00D63EB8 /* main.m in Sources */,
 				BEEF701F176F74DA00D63EB8 /* AppDelegate.m in Sources */,
 				BEEF703A176F756100D63EB8 /* ECSlidingViewController.m in Sources */,
@@ -622,6 +624,10 @@
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Binaries/iOS\"",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Source/build/Debug-iphonesimulator\"",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = Pandemobium;
 				WRAPPER_EXTENSION = app;
 			};
@@ -641,6 +647,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Binaries/iOS\"",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Source/build/Debug-iphonesimulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = Pandemobium;
 				WRAPPER_EXTENSION = app;
