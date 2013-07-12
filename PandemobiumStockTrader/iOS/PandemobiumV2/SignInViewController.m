@@ -86,6 +86,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         app.user.loggedIn = [[NSNumber alloc]initWithInt:1];
         app.user.accountID = [dbhelper getAccountID:[results objectForKey:@"userID"]];
         
+        [dbhelper addHistory:app.user.userID forLog:
+         [[NSString alloc]initWithFormat:@"Logged in"]];
+        
         [self performSegueWithIdentifier:@"afterLogin" sender:sender];
         
         if(self.rememberloginSwitch.on)
@@ -130,21 +133,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     //To Do: Take to Quotes from here. 
     
 }
-
-//-(void) fetchData
-//{
-//    
-//    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/user.jsp?method=logIn&username=user&password=password"];
-//    
-//    NSError *error;
-//    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-//    
-//    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-//    NSDictionary *query = [jsonData objectForKey:@"query"];
-//    NSDictionary *results = [query objectForKey:@"results"];
-//    stockInfo = [results objectForKey:@"quote"];
-//    
-//}
 
 //for handling input text and keybaord behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField

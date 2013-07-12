@@ -7,7 +7,7 @@
 //
 
 #import "DBHelper.h"
-
+#import "SVProgressHUD.h"
 @implementation DBHelper
 
 
@@ -131,17 +131,63 @@
         NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
         NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
         
-        NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:3];
+        
+        NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
+        [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
         [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"symbol"] forKey:@"symbol"];
         [temp setObject:value forKey:@"value"];
         [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"shares"] forKey:@"shares"];
+        
+        NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
+                             [stockInfo valueForKey:@"Change"],
+                             [[[listStocks objectAtIndex:i] valueForKey:@"shares"]intValue],
+                             [value doubleValue]];
+        [temp setObject:summary forKey:@"summary"];
+        
         [stockValue addObject:temp];
     }
     
     return [[NSArray alloc]initWithArray:stockValue];
-    
-    
 }
+
+- (NSArray *) getAllStockValue:(NSNumber *) accountID
+{
+    
+    
+    NSArray * listStocks = [self getAllUserStocks:accountID];
+    NSMutableArray * stockValue = [[NSMutableArray alloc]initWithCapacity:[listStocks count]];
+    
+    
+    NSDictionary * stockInfo;
+    
+    for (int i = 0; i < [listStocks count]; i++)
+    {
+        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"symbol"]];
+        NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
+        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
+        NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
+        
+        
+        NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
+        [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"symbol"] forKey:@"symbol"];
+        [temp setObject:value forKey:@"value"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"shares"] forKey:@"shares"];
+        
+        NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
+                             [stockInfo valueForKey:@"Change"],
+                             [[[listStocks objectAtIndex:i] valueForKey:@"shares"]intValue],
+                             [value doubleValue]];
+        [temp setObject:summary forKey:@"summary"];
+        
+        [stockValue addObject:temp];
+    }
+    
+    return [[NSArray alloc]initWithArray:stockValue];
+}
+
+
+
 
 -(NSDictionary *)fetchYahooData:(NSString *)symbol
 {
@@ -363,5 +409,20 @@
     return [[NSDictionary alloc]init];
 
 }
+
+
+-(NSDictionary *) addHistory:(NSNumber *) userID forLog:(NSString *)log
+{
+    
+    NSError *error;
+    NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, \"%@\");", [userID intValue], log];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/history.jsp?query=%@", query];
+    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    return firstParse;
+    
+}
+
 
 @end
