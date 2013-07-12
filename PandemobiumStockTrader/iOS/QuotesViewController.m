@@ -20,6 +20,7 @@
 
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
+@synthesize activityIndicator;
 
 -(void)loadDefaultFavoriteStocks
 {
@@ -45,7 +46,7 @@
     AppDelegate *app = [UIApplication sharedApplication].delegate;
     DBHelper *helper = [[DBHelper alloc] init];
     
-     favoriteStocks = [helper getFavoriteStocks:app.user.accountID];
+    favoriteStocks = [helper getAllStockValue:app.user.accountID];
     
                       
 }
@@ -87,20 +88,20 @@
 {
     [super viewDidLoad];
     
-     
-    if([self isLoggedIn] == FALSE){
+    if([self isLoggedIn] == FALSE)
+    {
         [self setDefaultFavorites];
         [self loadDefaultFavoriteStocks];
     }
     else
     {
         [self loadFavoriteStocks];
-        
-        
+           
     }
     
-   [self initImage];
-    
+    [self initImage];
+    [SVProgressHUD dismiss];
+  
 }
 
 
@@ -169,14 +170,19 @@
 
 
 - (IBAction)leftButtonClicked:(id)sender {
+   
+    [SVProgressHUD show];
     [self changeImage:@"left"];
+    [SVProgressHUD dismiss];
     
 }
 
 - (IBAction)rightButtonclicked:(id)sender
 {
-    [self changeImage:@"right"];
+     [SVProgressHUD show];
     
+        [self changeImage:@"right"];
+    [SVProgressHUD dismiss];
 }
 
 -(void)changeImage:(NSString *)direction
@@ -236,10 +242,15 @@
         NSDictionary *results = [query objectForKey:@"results"];
         NSDictionary *stockInfo = [results objectForKey:@"quote"];
     
-        NSString *temp = [[NSString alloc] initWithFormat:@"%@ Change, %@ Range, %@",
+    
+    NSString *temp = [[NSString alloc] initWithFormat:@"%@ Change, %@, %@",
                             [stockInfo valueForKey:@"Change"],
                             [stockInfo valueForKey:@"DaysRange"],
                             [stockInfo valueForKey:@"Name"]];
+    
+    
+    
+    
     return temp;
     
 }
@@ -270,18 +281,26 @@
     }
 
     cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
-    NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
-    if([favoriteStocks count] > 0 )
+    if([self isLoggedIn])
     {
-        for(int i = 0; i < [favoriteStocks count]; i++)
-        {
-            [subtext addObject:[self fetchData:[[favoriteStocks objectAtIndex:i] valueForKey:@"symbol"]]];
-            
-        }
-        //cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
-        cell.detailTextLabel.text = [subtext objectAtIndex:indexPath.row] ;
+        cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row]valueForKey:@"summary"];
+        
     }
-     // set the accessory view:
+    else
+    {
+        NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
+        if([favoriteStocks count] > 0 )
+        {
+            for(int i = 0; i < [favoriteStocks count]; i++)
+            {
+                [subtext addObject:[self fetchData:[[favoriteStocks objectAtIndex:i] valueForKey:@"symbol"]]];
+                
+            }
+            //cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
+            cell.detailTextLabel.text = [subtext objectAtIndex:indexPath.row] ;
+        }
+         // set the accessory view:
+    }
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

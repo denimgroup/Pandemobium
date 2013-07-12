@@ -219,6 +219,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                                               delegate:nil
                                                      cancelButtonTitle:@"OK"
                                                      otherButtonTitles: nil];
+                            [helper addHistory:appDelegate.user.userID forLog:
+                                [[NSString alloc]initWithFormat:@"Purchased %i shares of %@ in Account %i",
+                                 [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
+                            
                             [alert show];
                             [self viewDidLoad];
                             
@@ -296,10 +300,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                  cancelButtonTitle:@"Try Again"
                                  otherButtonTitles: nil];
         [alert show];
-        
-
-        
-    }
+     }
     
     
 }
@@ -354,6 +355,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                                                   delegate:nil
                                                          cancelButtonTitle:@"OK"
                                                          otherButtonTitles: nil];
+                                
+                                [helper addHistory:appDelegate.user.userID forLog:
+                                 [[NSString alloc]initWithFormat:@"Sold %i shares of %@ in Account %i",
+                                  [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
                                 [alert show];
                                 companyCode.text = @"";
                                 amountofShares.text =@"";
@@ -416,12 +421,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                     
                 }
                     
-                    
-                
-                
-                
-
-            }
+           }
             else
             {
                 alert = [[UIAlertView alloc] initWithTitle:@"Invalid Stock"

@@ -29,6 +29,8 @@
 -(NSArray *) getAllUserStocks:(NSNumber *)accountID;
 -(NSDictionary *) sellStock:(NSNumber *)shares forSymbol:(NSString *)symbol fromAccountID:(NSNumber *)accountID;
 -(NSArray *) getStockValue:(NSNumber *) accountID;
+- (NSArray *) getAllStockValue:(NSNumber *) accountID;
+-(NSDictionary *) addHistory:(NSNumber *) userID forLog:(NSString *)log;
 
 
 @end

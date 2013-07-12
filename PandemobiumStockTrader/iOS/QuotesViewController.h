@@ -14,6 +14,7 @@
 #import "sqlite3.h"
 #import "Stock.h"
 #import "StockViewController.h"
+#import "SVProgressHUD.h"
 
 @interface QuotesViewController : UIViewController <UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -31,6 +32,7 @@
 - (IBAction)revealMenu:(id)sender;
 - (IBAction)revealUnderRight:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (void) initImage;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)quoteTableView;

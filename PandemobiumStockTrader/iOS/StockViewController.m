@@ -11,6 +11,7 @@
 #import "QuotesViewController.h"
 #import "TradeViewController.h"
 #import "DBHelper.h"
+#import "SVProgressHUD.h"
 
 #define queue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 
@@ -23,6 +24,7 @@
 @synthesize symbol;
 @synthesize stockInfo;
 @synthesize originateFrom;
+@synthesize activityIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -167,16 +169,16 @@
 
 - (IBAction)backButtonClicked:(id)sender
 {
-    NSLog(@"backbutton presses");
-    NSLog(@"%@",self.originateFrom);
-    
+    [SVProgressHUD show];
     self.originateFrom = @"QuoteView";
+    
     [self performSegueWithIdentifier:originateFrom sender:sender];
-    NSLog(@"%@", self.originateFrom);
+    
 }
 
 - (IBAction)favoriteButtonClicked:(id)sender
 {
+
     [self.favoriteButton titleTextAttributesForState:UIControlStateNormal];
     if([self.favoriteButton.title isEqualToString:@"Favorite"])
     {
@@ -214,7 +216,11 @@
             alertTitle = @"Success";
             alertMessage=@"Added Stock to Favorites";
             buttonTitle=@"OK";
-                   }
+            
+            [helper addHistory:appDelegate.user.userID forLog:[[NSString alloc]initWithFormat:@"Added %@ to Favorites in Account %i",
+                                                               stockSymbol, [appDelegate.user.accountID intValue]]];
+            
+        }
         else
         { //DB Error
             alertTitle = @"ERROR";
@@ -271,6 +277,9 @@
             alertTitle = @"Success";
             alertMessage=@"Removed Stock from Favorites";
             buttonTitle=@"OK";
+            
+            [helper addHistory:appDelegate.user.userID forLog:[[NSString alloc]initWithFormat:@"Removed %@ from Favorites in Account %i",
+                                                               stockSymbol, [appDelegate.user.accountID intValue]]];
         }
         else
         { //DB Error

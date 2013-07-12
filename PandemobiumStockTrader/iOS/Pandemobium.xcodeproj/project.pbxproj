@@ -24,13 +24,13 @@
 		BE110027178743FE0087EB3F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE110026178743FE0087EB3F /* User.m */; };
 		BE11002B178753610087EB3F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11002A178753610087EB3F /* DBHelper.m */; };
 		BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */; };
+		BE5754AC179079440029E9A6 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE5754A9179079440029E9A6 /* SVProgressHUD.bundle */; };
+		BE5754AD179079440029E9A6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5754AB179079440029E9A6 /* SVProgressHUD.m */; };
 		BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */; };
 		BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2017821A5B00DFC630 /* car.jpg */; };
 		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
 		BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BECEFDB9178C71E300BC1351 /* accounts.plist */; };
 		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
-
-		BEE62C47178DCE6500440AE3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE62C46178DCE6400440AE3 /* MainStoryboard.storyboard */; };
 		BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
@@ -157,6 +157,9 @@
 		BE110029178753610087EB3F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
 		BE11002A178753610087EB3F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 		BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BE5754A9179079440029E9A6 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		BE5754AA179079440029E9A6 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		BE5754AB179079440029E9A6 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioViewController.h; sourceTree = "<group>"; };
 		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
 		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
@@ -337,9 +340,20 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
+		BE5754A8179079440029E9A6 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BE5754A9179079440029E9A6 /* SVProgressHUD.bundle */,
+				BE5754AA179079440029E9A6 /* SVProgressHUD.h */,
+				BE5754AB179079440029E9A6 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
+				BE5754A8179079440029E9A6 /* SVProgressHUD */,
 				BE110017178727B50087EB3F /* Helper */,
 				BE0F91BD17721BEF00A01190 /* CoreData.framework */,
 				BE0F6AFD1771F69900A01190 /* CorePlot */,
@@ -510,6 +524,7 @@
 				BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */,
 				BED8B4671783362F00A19187 /* burg.jpg in Resources */,
 				BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */,
+				BE5754AC179079440029E9A6 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +557,7 @@
 				BE110023178743380087EB3F /* Stock.m in Sources */,
 				BE110027178743FE0087EB3F /* User.m in Sources */,
 				BE11002B178753610087EB3F /* DBHelper.m in Sources */,
+				BE5754AD179079440029E9A6 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
