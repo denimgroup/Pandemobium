@@ -29,8 +29,6 @@
 		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
 		BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BECEFDB9178C71E300BC1351 /* accounts.plist */; };
 		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
-
-		BEE62C47178DCE6500440AE3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE62C46178DCE6400440AE3 /* MainStoryboard.storyboard */; };
 		BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
@@ -55,16 +53,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE010DC11778D93800105CA6 /* fullStockList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fullStockList.plist; sourceTree = "<group>"; };
-		BE030099177DDF62005418C7 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
-		BE03009A177DDF62005418C7 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
-		BE061B15177B95DF001D4166 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		BE061B16177B95DF001D4166 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInterface.h; sourceTree = "<group>"; };
-		BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInterface.m; sourceTree = "<group>"; };
+		BE010DC11778D93800105CA6 /* fullStockList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fullStockList.plist; path = PandemobiumV2/fullStockList.plist; sourceTree = "<group>"; };
+		BE030099177DDF62005418C7 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = PandemobiumV2/HistoryViewController.h; sourceTree = "<group>"; };
+		BE03009A177DDF62005418C7 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = PandemobiumV2/HistoryViewController.m; sourceTree = "<group>"; };
+		BE061B15177B95DF001D4166 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = PandemobiumV2/SettingsViewController.h; sourceTree = "<group>"; };
+		BE061B16177B95DF001D4166 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = PandemobiumV2/SettingsViewController.m; sourceTree = "<group>"; };
+		BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataInterface.h; path = PandemobiumV2/CoreDataInterface.h; sourceTree = "<group>"; };
+		BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataInterface.m; path = PandemobiumV2/CoreDataInterface.m; sourceTree = "<group>"; };
 		BE0C53FB177CC74B00C9346C /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = PandemobiumV2/TradeViewController.h; sourceTree = "<group>"; };
 		BE0C53FC177CC74B00C9346C /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TradeViewController.m; path = PandemobiumV2/TradeViewController.m; sourceTree = "<group>"; };
-		BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompanySymbols.sqlite; sourceTree = "<group>"; };
+		BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = CompanySymbols.sqlite; path = PandemobiumV2/CompanySymbols.sqlite; sourceTree = "<group>"; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -146,19 +144,19 @@
 		BE0F91B21771F72400A01190 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "Supporting/CorePlot_1.2/Binaries/iOS/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		BE0F91B61771FF0D00A01190 /* ClientStocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientStocks.xcdatamodel; sourceTree = "<group>"; };
-		BE0F91B81772008A00A01190 /* defaultStocks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaultStocks.plist; sourceTree = "<group>"; };
+		BE0F91B81772008A00A01190 /* defaultStocks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultStocks.plist; path = PandemobiumV2/defaultStocks.plist; sourceTree = "<group>"; };
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pandemobium-Info.plist"; sourceTree = "<group>"; };
 		BE0F91C217725B3200A01190 /* StockTrader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StockTrader-Info.plist"; sourceTree = "<group>"; };
-		BE110021178743380087EB3F /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
-		BE110022178743380087EB3F /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
-		BE110026178743FE0087EB3F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		BE1100281787440D0087EB3F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		BE110029178753610087EB3F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
-		BE11002A178753610087EB3F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		BE110021178743380087EB3F /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = PandemobiumV2/Stock.h; sourceTree = "<group>"; };
+		BE110022178743380087EB3F /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = PandemobiumV2/Stock.m; sourceTree = "<group>"; };
+		BE110026178743FE0087EB3F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = PandemobiumV2/User.m; sourceTree = "<group>"; };
+		BE1100281787440D0087EB3F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = PandemobiumV2/User.h; sourceTree = "<group>"; };
+		BE110029178753610087EB3F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBHelper.h; path = PandemobiumV2/DBHelper.h; sourceTree = "<group>"; };
+		BE11002A178753610087EB3F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBHelper.m; path = PandemobiumV2/DBHelper.m; sourceTree = "<group>"; };
 		BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioViewController.h; sourceTree = "<group>"; };
-		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
+		BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortfolioViewController.h; path = PandemobiumV2/PortfolioViewController.h; sourceTree = "<group>"; };
+		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortfolioViewController.m; path = PandemobiumV2/PortfolioViewController.m; sourceTree = "<group>"; };
 		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		BE8B3F2217821E5A00DFC630 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
 		BECEFDB9178C71E300BC1351 /* accounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accounts.plist; sourceTree = "<group>"; };
@@ -175,27 +173,27 @@
 		BEEF7020176F74DA00D63EB8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BEEF7022176F74DA00D63EB8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BEEF7036176F756100D63EB8 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
-		BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
-		BEEF7038176F756100D63EB8 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
-		BEEF7039176F756100D63EB8 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		BEEF7036176F756100D63EB8 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = PandemobiumV2/ECSlidingViewController.h; sourceTree = "<group>"; };
+		BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = PandemobiumV2/ECSlidingViewController.m; sourceTree = "<group>"; };
+		BEEF7038176F756100D63EB8 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageWithUIView.h"; path = "PandemobiumV2/UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		BEEF7039176F756100D63EB8 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageWithUIView.m"; path = "PandemobiumV2/UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		BEEF703C176F767600D63EB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BEEF706F176FBE4100D63EB8 /* QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesViewController.h; sourceTree = "<group>"; };
-		BEEF7070176FBE4100D63EB8 /* QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesViewController.m; sourceTree = "<group>"; };
-		BEF610DC1770B33600B82A5B /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
-		BEF610DD1770B33600B82A5B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
-		BEF610DF1770B65900B82A5B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		BEF610E01770B65900B82A5B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		BEF610E21770C9CA00B82A5B /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
-		BEF610E31770C9CA00B82A5B /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		BEF610EE1771006C00B82A5B /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
-		BEF610EF1771006C00B82A5B /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
-		BEF610F11771007B00B82A5B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		BEF610F21771007B00B82A5B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		BEF610F41771009900B82A5B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		BEF610F51771009900B82A5B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		BEF93FB517738C9C003A6810 /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockViewController.h; sourceTree = "<group>"; };
-		BEF93FB617738C9C003A6810 /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockViewController.m; sourceTree = "<group>"; };
+		BEEF706F176FBE4100D63EB8 /* QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesViewController.h; path = PandemobiumV2/QuotesViewController.h; sourceTree = "<group>"; };
+		BEEF7070176FBE4100D63EB8 /* QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesViewController.m; path = PandemobiumV2/QuotesViewController.m; sourceTree = "<group>"; };
+		BEF610DC1770B33600B82A5B /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = PandemobiumV2/InitialViewController.h; sourceTree = "<group>"; };
+		BEF610DD1770B33600B82A5B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = PandemobiumV2/InitialViewController.m; sourceTree = "<group>"; };
+		BEF610DF1770B65900B82A5B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = PandemobiumV2/MenuViewController.h; sourceTree = "<group>"; };
+		BEF610E01770B65900B82A5B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = PandemobiumV2/MenuViewController.m; sourceTree = "<group>"; };
+		BEF610E21770C9CA00B82A5B /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = PandemobiumV2/RightViewController.h; sourceTree = "<group>"; };
+		BEF610E31770C9CA00B82A5B /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = PandemobiumV2/RightViewController.m; sourceTree = "<group>"; };
+		BEF610EE1771006C00B82A5B /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TipsViewController.h; path = PandemobiumV2/TipsViewController.h; sourceTree = "<group>"; };
+		BEF610EF1771006C00B82A5B /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TipsViewController.m; path = PandemobiumV2/TipsViewController.m; sourceTree = "<group>"; };
+		BEF610F11771007B00B82A5B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = PandemobiumV2/NewsViewController.h; sourceTree = "<group>"; };
+		BEF610F21771007B00B82A5B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = PandemobiumV2/NewsViewController.m; sourceTree = "<group>"; };
+		BEF610F41771009900B82A5B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = PandemobiumV2/SignInViewController.h; sourceTree = "<group>"; };
+		BEF610F51771009900B82A5B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = PandemobiumV2/SignInViewController.m; sourceTree = "<group>"; };
+		BEF93FB517738C9C003A6810 /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockViewController.h; path = PandemobiumV2/StockViewController.h; sourceTree = "<group>"; };
+		BEF93FB617738C9C003A6810 /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockViewController.m; path = PandemobiumV2/StockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
