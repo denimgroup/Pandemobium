@@ -20,6 +20,7 @@
 
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
+@synthesize activityIndicator;
 
 -(void)loadDefaultFavoriteStocks
 {

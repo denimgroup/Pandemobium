@@ -22,6 +22,7 @@ CGFloat animatedDistance;
 @synthesize passwordText;
 @synthesize signinButton;
 @synthesize rememberloginSwitch;
+@synthesize activityIndicator;
 
 //for animating keyboard
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;

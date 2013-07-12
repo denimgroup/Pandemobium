@@ -18,6 +18,7 @@
 @implementation HistoryViewController
 @synthesize history;
 @synthesize tips;
+@synthesize activityIndicator;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSArray *history;
 @property (strong, nonatomic) NSArray *tips;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)revealMenu:(id)sender;
 @end

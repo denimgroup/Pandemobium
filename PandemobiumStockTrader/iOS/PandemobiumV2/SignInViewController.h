@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *usernameText;
 @property (strong, nonatomic) IBOutlet UISwitch *rememberloginSwitch;
 @property (strong, nonatomic) IBOutlet UIButton *signinButton;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 //managing text and keyboard behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField;

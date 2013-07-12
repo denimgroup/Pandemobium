@@ -23,6 +23,7 @@
 @synthesize symbol;
 @synthesize stockInfo;
 @synthesize originateFrom;
+@synthesize activityIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

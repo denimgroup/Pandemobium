@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *accountNumber;
 @property (strong, nonatomic) IBOutlet UILabel *accountAmount;
 @property (strong, nonatomic) IBOutlet UILabel *canInvest;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (strong, nonatomic) NSString *symbol;
 

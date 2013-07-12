@@ -27,6 +27,7 @@
 @property (nonatomic, strong) CPTGraphHostingView *barHostView;
 @property (nonatomic, strong) NSNumber *shares;
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *stockAnnotation;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)revealMenu:(id)sender;
 @end

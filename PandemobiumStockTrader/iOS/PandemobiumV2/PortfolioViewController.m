@@ -33,6 +33,7 @@ CGFloat const CPDBarInitialX = 0.5f;
 @synthesize portfolioSum;
 @synthesize shares;
 @synthesize stockAnnotation = stockAnnotation_;
+@synthesize activityIndicator;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
