@@ -33,7 +33,6 @@
 - (IBAction)revealMenu:(id)sender;
 - (IBAction)revealUnderRight:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (void) initImage;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)quoteTableView;

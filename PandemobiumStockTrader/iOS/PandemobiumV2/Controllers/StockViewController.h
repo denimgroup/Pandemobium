@@ -21,5 +21,4 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *tradingButton;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) NSDictionary *stockInfo;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @end
