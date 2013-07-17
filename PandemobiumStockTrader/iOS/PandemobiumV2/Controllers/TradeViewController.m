@@ -7,6 +7,7 @@
 //
 
 #import "TradeViewController.h"
+#import "SVProgressHUD.h"
 
 @interface TradeViewController () <UITextFieldDelegate>
 
@@ -101,12 +102,23 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)revealMenu:(id)sender
 {
-    NSLog(@"Reveal Menu Button has been pressed");
-
-    //[self.slidingViewController anchorTopViewTo:ECRight];
-
-    [self performSegueWithIdentifier:@"notTrading" sender:sender];
     
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    
+    if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )
+    {
+        [SVProgressHUD show];
+        // favoriteStocks = app.user.oldFavorites;
+        DBHTTPClient *client = [DBHTTPClient sharedClient];
+        client.delegate = self;
+        [client getAllStockValue:app.user.accountID];
+        //favoriteStocks = [helper getAllStockValue:app.user.accountID];
+        //app.user.favoriteStocks = self.favoriteStocks;
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"notTrading" sender:sender];
+    }
 }
 
 
@@ -220,7 +232,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                                               delegate:nil
                                                      cancelButtonTitle:@"OK"
                                                      otherButtonTitles: nil];
-                            [helper addHistory:appDelegate.user.userID forLog:
+                            appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
+                            DBHTTPClient *client = [DBHTTPClient sharedClient];
+                            client.delegate = self;
+                            
+                            
+                            [client addHistory:appDelegate.user.userID forLog:
                                 [[NSString alloc]initWithFormat:@"Purchased %i shares of %@ in Account %i",
                                  [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
                             
@@ -351,13 +368,17 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                             
                             if([[sellResults objectForKey:@"Result"]intValue] == 1)
                             { //Sold the stock
+                                appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
                                 alert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                                    message:@"Stock Sold Succesfully"
                                                                   delegate:nil
                                                          cancelButtonTitle:@"OK"
                                                          otherButtonTitles: nil];
                                 
-                                [helper addHistory:appDelegate.user.userID forLog:
+                                DBHTTPClient *client = [DBHTTPClient sharedClient];
+                                client.delegate = self;
+                                
+                                [client addHistory:appDelegate.user.userID forLog:
                                  [[NSString alloc]initWithFormat:@"Sold %i shares of %@ in Account %i",
                                   [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
                                 [alert show];
@@ -462,6 +483,21 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     
 }
+
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate.user.favoriteStocks = results;
+    appDelegate.user.oldFavorites = results;
+    appDelegate.user.accountValue = totalValue;
+    appDelegate.user.totalShares = totalShares;
+    appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:0];
+    
+    [self performSegueWithIdentifier:@"notTrading" sender:self];
+    [SVProgressHUD dismiss];
+    
+}
+
 
 
 @end

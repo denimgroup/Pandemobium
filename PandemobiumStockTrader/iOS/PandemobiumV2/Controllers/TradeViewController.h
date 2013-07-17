@@ -11,8 +11,9 @@
 #import "MenuViewController.h"
 #import "AppDelegate.h"
 #import "DBHelper.h"
+#import "DBHTTPClient.h"
 
-@interface TradeViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface TradeViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, DBHTTPClientDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *amountofShares;
 @property (strong, nonatomic) IBOutlet UITextField *companyCode;

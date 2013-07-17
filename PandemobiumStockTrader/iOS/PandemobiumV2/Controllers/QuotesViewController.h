@@ -15,8 +15,9 @@
 #import "Stock.h"
 #import "StockViewController.h"
 #import "SVProgressHUD.h"
+#import "DBHTTPClient.h"
 
-@interface QuotesViewController : UIViewController <UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface QuotesViewController : UIViewController <UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, DBHTTPClientDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *topImage;
@@ -29,6 +30,7 @@
 
 @property (nonatomic, retain) NSArray *favoriteStocks;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) NSNumber * reload;
 
 - (IBAction)revealMenu:(id)sender;
 - (IBAction)revealUnderRight:(id)sender;

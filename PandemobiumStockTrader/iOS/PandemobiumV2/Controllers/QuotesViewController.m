@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "DBHelper.h"
 #import "SVProgressHUD.h"
-
+#import "DBHTTPClient.h"
 
 @interface QuotesViewController ()
 
@@ -22,6 +22,72 @@
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
 @synthesize activityIndicator;
+@synthesize reload;
+
+-(void)viewDidLoad
+{
+    [SVProgressHUD dismiss];
+    [super viewDidLoad];
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    
+    favoriteStocks = app.user.oldFavorites;
+    
+    
+    NSLog(@"%i items in list", [favoriteStocks count]);
+    NSDate *start = [NSDate date];
+    if([self isLoggedIn] == FALSE)
+    {
+        [self setDefaultFavorites];
+        [self loadDefaultFavoriteStocks];
+    }
+    else
+    {
+        [self loadFavoriteStocks];
+        
+    }
+    
+    [self initImage];
+    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
+    NSLog(@"View Did Load: %0.2f", timeInterval);
+    
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSDate *start = [NSDate date];
+    
+    // shadowPath, shadowOffset, and rotation is handled by ECSlidingViewController.
+    // You just need to set the opacity, radius, and color.
+    self.view.layer.shadowOpacity = 0.75f;
+    self.view.layer.shadowRadius = 10.0f;
+    self.view.layer.shadowColor = [UIColor blackColor].CGColor;
+    
+    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
+        self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    }
+    
+    if (![self.slidingViewController.underRightViewController isKindOfClass:[RightViewController class]]) {
+        self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UnderRight"];
+    }
+    if(self.slidingViewController == nil)
+    {
+        NSLog(@"NIL");
+        
+    }
+    
+    if(self.slidingViewController.panGesture == nil)
+    {
+        NSLog(@"pan gesture NIL");
+        
+    }
+    
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
+    NSLog(@"View Will Appear %0.2f", timeInterval);
+}
 
 -(void)loadDefaultFavoriteStocks
 {
@@ -47,10 +113,16 @@
     AppDelegate *app = [UIApplication sharedApplication].delegate;
     DBHelper *helper = [[DBHelper alloc] init];
     
-    if(!([favoriteStocks isEqualToArray:app.user.oldFavorites]))
+    if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )
     {
-        favoriteStocks = [helper getAllStockValue:app.user.accountID];
-        app.user.favoriteStocks = self.favoriteStocks;
+    
+        reload = [[NSNumber alloc]initWithInt:0];
+       // favoriteStocks = app.user.oldFavorites;
+        DBHTTPClient *client = [DBHTTPClient sharedClient];
+        client.delegate = self;
+        [client getAllStockValue:app.user.accountID];
+        //favoriteStocks = [helper getAllStockValue:app.user.accountID];
+        //app.user.favoriteStocks = self.favoriteStocks;
     }
     
     
@@ -90,72 +162,7 @@
     
 }
 
--(void)viewDidLoad
-{
-    [super viewDidLoad];
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    
-    favoriteStocks = app.user.favoriteStocks;
-    
-    
-    NSLog(@"%i items in list", [favoriteStocks count]);
-    NSDate *start = [NSDate date];
-    if([self isLoggedIn] == FALSE)
-    {
-        [self setDefaultFavorites];
-        [self loadDefaultFavoriteStocks];
-    }
-    else
-    {
-        [self loadFavoriteStocks];
-           
-    }
-    
-    [self initImage];
-    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
-    NSLog(@"View Did Load: %0.2f", timeInterval);
-  
-}
 
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSDate *start = [NSDate date];
-    
-    // shadowPath, shadowOffset, and rotation is handled by ECSlidingViewController.
-    // You just need to set the opacity, radius, and color.
-    self.view.layer.shadowOpacity = 0.75f;
-    self.view.layer.shadowRadius = 10.0f;
-    self.view.layer.shadowColor = [UIColor blackColor].CGColor;
-    
-    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
-        self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
-    }
-    
-    if (![self.slidingViewController.underRightViewController isKindOfClass:[RightViewController class]]) {
-        self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UnderRight"];
-    }
-    if(self.slidingViewController == nil)
-    {
-        NSLog(@"NIL");
-        
-    }
-    
-    if(self.slidingViewController.panGesture == nil)
-    {
-        NSLog(@"pan gesture NIL");
-        
-    }
-    
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
-    NSLog(@"View Will Appear %0.2f", timeInterval);
-    
-    
-    
-}
 
 - (IBAction)revealMenu:(id)sender
 {
@@ -283,6 +290,9 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)quoteTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"StockCell";
+  
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
     
     UITableViewCell *cell = [quoteTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     // Set the data for this cell:
@@ -292,14 +302,17 @@
     }
 
     cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
-    if([self isLoggedIn])
+    NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
+    
+    if([self isLoggedIn] && [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks])
     {
-        cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row]valueForKey:@"summary"];
-        
+        //if (reload==[[NSNumber alloc]initWithInt:1] || [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks ])
+       // {
+            cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row]valueForKey:@"summary"];
+        //}
     }
     else
     {
-        NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
         if([favoriteStocks count] > 0 )
         {
             for(int i = 0; i < [favoriteStocks count]; i++)
@@ -337,6 +350,7 @@
         stockViewController.symbol = destinationTitle;
         stockViewController.originateFrom = @"QuoteView";
         [stockViewController setTitle:destinationTitle];
+               
         //StockViewController *destination = [segue destinationViewController];
         //NSLog(@"Everyday I'm segueing\n");
     }
@@ -350,5 +364,21 @@
     appDelegate.user.oldFavorites = self.favoriteStocks;
     
 }
+
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate.user.favoriteStocks = results;
+    appDelegate.user.oldFavorites = results;
+    appDelegate.user.accountValue = totalValue;
+    appDelegate.user.totalShares = totalShares;
+    appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:0];
+    favoriteStocks = results;
+    reload = [[NSNumber alloc]initWithInt:1];
+    //[self viewDidLoad];
+    [self initImage];
+    [self.quoteTableView reloadData];
+}
+
 
 @end

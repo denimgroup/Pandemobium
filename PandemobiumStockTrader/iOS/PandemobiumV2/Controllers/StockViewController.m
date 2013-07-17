@@ -171,8 +171,21 @@
 {
     self.originateFrom = @"QuoteView";
     
-    [self performSegueWithIdentifier:originateFrom sender:sender];
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
     
+    if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )
+    {
+        [SVProgressHUD show];
+        DBHTTPClient *client = [DBHTTPClient sharedClient];
+        client.delegate = self;
+        [client getAllStockValue:app.user.accountID];
+    }
+    else
+    {
+         [self performSegueWithIdentifier:originateFrom sender:sender];
+        
+    }
+
 }
 
 - (IBAction)favoriteButtonClicked:(id)sender
@@ -182,12 +195,11 @@
     if([self.favoriteButton.title isEqualToString:@"Favorite"])
     {
         [self addFavorite:symbol];
-        [self.favoriteButton setTitle:@"Remove"];
+      
     }
     else
     {
         [self removeFavorite:symbol];
-        [self.favoriteButton setTitle:@"Favorite"];
     }
     
 }
@@ -202,6 +214,8 @@
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     DBHelper *helper = [[DBHelper alloc]init] ;
+    DBHTTPClient *client = [DBHTTPClient sharedClient];
+    client.delegate = self;
     UIAlertView *alert;
     NSString *alertTitle;
     NSString *alertMessage;
@@ -212,11 +226,12 @@
         NSDictionary *results = [helper addFavoriteStock:appDelegate.user.accountID stockSymbol:stockSymbol];
         if([[results objectForKey:@"Result"]intValue]==1)
         { //Great success
+            appDelegate.user.reloadData = [[NSNumber alloc]initWithInt:1];
             alertTitle = @"Success";
             alertMessage=@"Added Stock to Favorites";
             buttonTitle=@"OK";
-            
-            [helper addHistory:appDelegate.user.userID forLog:[[NSString alloc]initWithFormat:@"Added %@ to Favorites in Account %i",
+            [self.favoriteButton setTitle:@"Remove"];
+            [client addHistory:appDelegate.user.userID forLog:[[NSString alloc]initWithFormat:@"Added %@ to Favorites in Account %i",
                                                                stockSymbol, [appDelegate.user.accountID intValue]]];
             
         }
@@ -263,6 +278,10 @@
     
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     DBHelper *helper = [[DBHelper alloc]init] ;
+    DBHTTPClient *client = [DBHTTPClient sharedClient];
+    client.delegate = self;
+    
+
     UIAlertView *alert;
     NSString *alertTitle;
     NSString *alertMessage;
@@ -277,8 +296,11 @@
             alertMessage=@"Removed Stock from Favorites";
             buttonTitle=@"OK";
             
-            [helper addHistory:appDelegate.user.userID forLog:[[NSString alloc]initWithFormat:@"Removed %@ from Favorites in Account %i",
+            [client addHistory:appDelegate.user.userID forLog:[[NSString alloc]initWithFormat:@"Removed %@ from Favorites in Account %i",
                                                                stockSymbol, [appDelegate.user.accountID intValue]]];
+            [self.favoriteButton setTitle:@"Favorite"];
+            appDelegate.user.reloadData = [[NSNumber alloc]initWithInt:1];
+            
         }
         else
         { //DB Error
@@ -326,6 +348,20 @@
         tradeViewController.symbol = symbol;
     }
     
+}
+
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate.user.favoriteStocks = results;
+    appDelegate.user.oldFavorites = results;
+    appDelegate.user.accountValue = totalValue;
+    appDelegate.user.totalShares = totalShares;
+    appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:0];
+    
+    [self performSegueWithIdentifier:originateFrom sender:self];
+    [SVProgressHUD dismiss];
+
 }
 
 

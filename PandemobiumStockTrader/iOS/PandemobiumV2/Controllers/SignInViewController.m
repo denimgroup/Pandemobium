@@ -185,6 +185,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     else
     {
+        [SVProgressHUD dismiss];
         UIAlertView *alert;
         NSString *message = @"Invalid Username or Password";
         alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
@@ -205,12 +206,21 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     AppDelegate * app = [UIApplication sharedApplication].delegate;
     app.user.accountID = results;
+    app.user.reloadData = [[NSNumber alloc]initWithInt:1];
     
-    [SVProgressHUD dismiss];
     
-    [client addHistory:app.user.userID forLog:
-     [[NSString alloc]initWithFormat:@"Logged in"]];
+    [client addHistory:app.user.userID forLog:[[NSString alloc]initWithFormat:@"Logged in"]];
+   
+    [client getAllStockValue:app.user.accountID];
     
+}
+
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares
+{
+ 
+    
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+
     UIAlertView *alert;
     NSString *message = [[NSString alloc] initWithFormat:@"Welcome back %@", app.user.userName];
     alert = [[UIAlertView alloc] initWithTitle:@"Welcome"
@@ -218,8 +228,17 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                       delegate:nil
                              cancelButtonTitle:@"OK"
                              otherButtonTitles:nil];
-    [alert show];
     
+    [alert show];
+
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate.user.favoriteStocks = results;
+    appDelegate.user.oldFavorites = results;
+    appDelegate.user.accountValue = totalValue;
+    appDelegate.user.totalShares = totalShares;
+    appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:0];
+    [SVProgressHUD dismiss];
     
     [self performSegueWithIdentifier:@"afterLogin" sender:self];
     
