@@ -26,16 +26,18 @@
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     self.slidingViewController.underRightViewController = nil;
-    
+
     
     /////////////////////webview container running, simple and not vulnerabilities implemented yet june 20th
     self.webView.delegate = self;
     NSURL *url = [NSURL URLWithString:@"http://www.finance.yahoo.com"];
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    
     [self.webView loadRequest:requestURL];
     
     /////////////////////
     
+     
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
 }
@@ -51,6 +53,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+ 
 }
 
 - (void)didReceiveMemoryWarning

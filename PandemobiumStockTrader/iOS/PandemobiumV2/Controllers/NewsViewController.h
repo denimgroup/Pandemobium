@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
+#import "AFJSONRequestOperation.h"
 
 @interface NewsViewController : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;

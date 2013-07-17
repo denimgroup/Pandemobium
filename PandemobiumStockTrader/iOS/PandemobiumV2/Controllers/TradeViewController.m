@@ -102,15 +102,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)revealMenu:(id)sender
 {
     NSLog(@"Reveal Menu Button has been pressed");
-    NSLog(@"Parent view Controller is : %@", self.parentViewController);
-    
-    if([self.parentViewController isEqual: @"Initial"]){
-        NSLog(@"coming from menu");
-        [self.slidingViewController anchorTopViewTo:ECRight];
-    }else if (self.parentViewController == nil){
-        NSLog(@"NOT coming from menu");
-        [self performSegueWithIdentifier:@"notTrading" sender:sender];
-    }
+
+    //[self.slidingViewController anchorTopViewTo:ECRight];
+
+    [self performSegueWithIdentifier:@"notTrading" sender:sender];
     
 }
 

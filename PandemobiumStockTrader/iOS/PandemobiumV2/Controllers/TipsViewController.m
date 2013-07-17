@@ -14,28 +14,12 @@
 
 @implementation TipsViewController
 
-@synthesize webView;
+@synthesize tips;
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    /*
-    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
-        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
-    }
-    self.slidingViewController.underRightViewController = nil;
-    
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-     */
-    
-    /////////////////////webview container running, simple and not vulnerabilities implemented yet june 20th
-    self.webView.delegate = self;
-    NSURL *url = [NSURL URLWithString:@"http://money.cnn.com/magazines/moneymag/money101/lesson5/index.htm"];
-    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:requestURL];
-    
-    /////////////////////
-    
+ 
 }
 
 - (IBAction)revealMenu:(id)sender
