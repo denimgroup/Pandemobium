@@ -17,6 +17,8 @@
 @synthesize password;
 @synthesize userID;
 @synthesize accountID;
+@synthesize oldFavorites;
+@synthesize favoriteStocks;
 
 
 @end

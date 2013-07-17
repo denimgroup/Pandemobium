@@ -9,6 +9,8 @@
 #import "SignInViewController.h"
 #import "AppDelegate.h"
 #import "DBHelper.h"
+#import "SVProgressHUD.h"
+#import "DBHTTPClient.h"
 
 
 @interface SignInViewController () <UITextFieldDelegate>
@@ -63,75 +65,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     NSLog(@"loginwas pressed");
     
-    DBHelper * dbhelper = [[DBHelper alloc] init];
-    
-    NSDictionary *results = [dbhelper logIn: usernameText.text forPassword: passwordText.text];
-    NSInteger userID = [[results valueForKey:@"userID"] intValue];
-    
-    UIAlertView *alert;
-    if(userID >= 1)
-    {
-        NSString *message = [[NSString alloc] initWithFormat:@"Welcome back %@", [results objectForKey:@"userName"]];
-        alert = [[UIAlertView alloc] initWithTitle:@"Welcome"
-                                            message:message
-                                            delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-        [alert show];
-        
-        AppDelegate * app = [UIApplication sharedApplication].delegate;
-        app.user.password = [results objectForKey:@"password"];
-        app.user.userID = [results objectForKey:@"userID"];
-        app.user.userName = [results objectForKey:@"userName"];
-        app.user.loggedIn = [[NSNumber alloc]initWithInt:1];
-        app.user.accountID = [dbhelper getAccountID:[results objectForKey:@"userID"]];
-        
-        [dbhelper addHistory:app.user.userID forLog:
-         [[NSString alloc]initWithFormat:@"Logged in"]];
-        
-        [self performSegueWithIdentifier:@"afterLogin" sender:sender];
-        
-        if(self.rememberloginSwitch.on)
-        {
-            NSLog(@"SET TO REMEMBER LOGIN");
-            
-            /*
-            for writing to a local file using keychain, need to import .h+.m files in order to work
-            KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
-            */
-             
-            NSMutableArray* accountArray = [[NSMutableArray alloc]init];
-            [accountArray addObject: usernameText.text];
-            [accountArray addObject: passwordText.text];
-            [accountArray writeToFile:[self saveFilePath] atomically:YES];
-            NSLog(@"after saving account info data to the file");
-            
-            /*
-            to get data back from file use
-            NSMutableArray* myArray = [NSMutableArray arrayWithContentsOfFile:[self saveFilePath]retain];
-            */
-            
-        }else
-        {
-            NSLog(@"not set to remmember your login");
-        }
-    }
-    else
-    {
-        NSString *message = @"Invalid Username or Password";
-        alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                           message:message
-                                         delegate:nil
-                                 cancelButtonTitle:@"Try Again"
-                                 otherButtonTitles:nil];
-        [alert show];
+    DBHTTPClient *client = [DBHTTPClient sharedClient];
+    client.delegate = self;
+    [client logIn:usernameText.text forPassword:passwordText.text];
+    [SVProgressHUD show];
 
-        
-    }
-    usernameText.text = @"";
-    passwordText.text = @"";
-    //To Do: Take to Quotes from here. 
-    
 }
 
 //for handling input text and keybaord behavior
@@ -201,6 +139,91 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     return YES;
 }
 //
+
+#pragma mark - DBHTTPClientDelegate
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithLogIn:(NSDictionary *)results
+{
+    
+    
+    NSInteger userID = [[results valueForKey:@"userID"] intValue];
+    
+    if(userID >= 1)
+    {
+                
+        AppDelegate * app = [UIApplication sharedApplication].delegate;
+        app.user.password = [results objectForKey:@"password"];
+        app.user.userID = [results objectForKey:@"userID"];
+        app.user.userName = [results objectForKey:@"userName"];
+        app.user.loggedIn = [[NSNumber alloc]initWithInt:1];
+        
+       [client getAccountID:[results objectForKey:@"userID"]];
+        
+        if(self.rememberloginSwitch.on)
+        {
+            NSLog(@"SET TO REMEMBER LOGIN");
+            
+            /*
+             for writing to a local file using keychain, need to import .h+.m files in order to work
+             KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+             */
+            
+            NSMutableArray* accountArray = [[NSMutableArray alloc]init];
+            [accountArray addObject: usernameText.text];
+            [accountArray addObject: passwordText.text];
+            [accountArray writeToFile:[self saveFilePath] atomically:YES];
+            NSLog(@"after saving account info data to the file");
+            
+            /*
+             to get data back from file use
+             NSMutableArray* myArray = [NSMutableArray arrayWithContentsOfFile:[self saveFilePath]retain];
+             */
+            
+        }else
+        {
+            NSLog(@"not set to remmember your login");
+        }
+    }
+    else
+    {
+        UIAlertView *alert;
+        NSString *message = @"Invalid Username or Password";
+        alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
+                                           message:message
+                                          delegate:nil
+                                 cancelButtonTitle:@"Try Again"
+                                 otherButtonTitles:nil];
+        [alert show];
+        
+        
+    }
+    usernameText.text = @"";
+    passwordText.text = @"";
+    
+}
+
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAccountID:(NSNumber *)results
+{
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    app.user.accountID = results;
+    
+    [SVProgressHUD dismiss];
+    
+    [client addHistory:app.user.userID forLog:
+     [[NSString alloc]initWithFormat:@"Logged in"]];
+    
+    UIAlertView *alert;
+    NSString *message = [[NSString alloc] initWithFormat:@"Welcome back %@", app.user.userName];
+    alert = [[UIAlertView alloc] initWithTitle:@"Welcome"
+                                       message:message
+                                      delegate:nil
+                             cancelButtonTitle:@"OK"
+                             otherButtonTitles:nil];
+    [alert show];
+    
+    
+    [self performSegueWithIdentifier:@"afterLogin" sender:self];
+    
+}
 
 
 @end

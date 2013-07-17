@@ -7,62 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE010DC11778D93800105CA6 /* fullStockList.plist */; };
-		BE03009B177DDF62005418C7 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03009A177DDF62005418C7 /* HistoryViewController.m */; };
-		BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE061B16177B95DF001D4166 /* SettingsViewController.m */; };
-		BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */; };
-		BE0C53FD177CC74B00C9346C /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0C53FC177CC74B00C9346C /* TradeViewController.m */; };
-		BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */; };
 		BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */; };
 		BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AFB1771F5F200A01190 /* libz.dylib */; };
 		BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */; };
-		BE0F91B71771FF0D00A01190 /* ClientStocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91B51771FF0D00A01190 /* ClientStocks.xcdatamodeld */; };
-		BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91B81772008A00A01190 /* defaultStocks.plist */; };
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
-		BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */; };
-		BE110023178743380087EB3F /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BE110022178743380087EB3F /* Stock.m */; };
-		BE110027178743FE0087EB3F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE110026178743FE0087EB3F /* User.m */; };
-		BE11002B178753610087EB3F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11002A178753610087EB3F /* DBHelper.m */; };
 		BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */; };
-		BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */; };
-		BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2017821A5B00DFC630 /* car.jpg */; };
-		BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE8B3F2217821E5A00DFC630 /* images.jpg */; };
-		BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BECEFDB9178C71E300BC1351 /* accounts.plist */; };
-		BED8B4671783362F00A19187 /* burg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BED8B4661783362F00A19187 /* burg.jpg */; };
-		BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */; };
+		BE9EAAF21794714B0079C57A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
+		BE9EAAF6179471DE0079C57A /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */; };
+		BE9EAAF9179471DE0079C57A /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E617944DE900B5C6C3 /* StockViewController.m */; };
+		BE9EAAFA179471DE0079C57A /* QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0DE17944D6A00B5C6C3 /* QuotesViewController.m */; };
+		BE9EAAFC179471DE0079C57A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0EE179453FD00B5C6C3 /* MenuViewController.m */; };
+		BE9EAAFF179471DE0079C57A /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E817944E1500B5C6C3 /* TipsViewController.m */; };
+		BE9EAB01179471DE0079C57A /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0EA17944E1500B5C6C3 /* TradeViewController.m */; };
+		BE9EAB02179471DE0079C57A /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E017944D8B00B5C6C3 /* RightViewController.m */; };
+		BE9EAB04179471DE0079C57A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E217944DC500B5C6C3 /* SettingsViewController.m */; };
+		BE9EAB07179471DE0079C57A /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0F21794543100B5C6C3 /* PortfolioViewController.m */; };
+		BE9EAB08179471DE0079C57A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E417944DC500B5C6C3 /* SignInViewController.m */; };
+		BE9EAB0A179471DE0079C57A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0F01794542000B5C6C3 /* HistoryViewController.m */; };
+		BE9EAB0C179471DE0079C57A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0F41794544600B5C6C3 /* NewsViewController.m */; };
+		BE9EAB0F179472480079C57A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF701E176F74DA00D63EB8 /* AppDelegate.m */; };
+		BE9EAB14179472B70079C57A /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D09417944CAA00B5C6C3 /* UIImage+ImageWithUIView.m */; };
+		BE9EAB15179473B60079C57A /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D07F17944C4000B5C6C3 /* DBHelper.m */; };
+		BE9EAB16179473BB0079C57A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D1031794583900B5C6C3 /* SVProgressHUD.m */; };
+		BE9EAB17179473D20079C57A /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D08617944C8A00B5C6C3 /* CoreDataInterface.m */; };
+		BE9EAB19179473E50079C57A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D08117944C4000B5C6C3 /* User.m */; };
+		BE9EAB1A179474200079C57A /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D09217944CAA00B5C6C3 /* ECSlidingViewController.m */; };
+		BE9EAB211794810A0079C57A /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB201794810A0079C57A /* Stock.m */; };
+		BE9EAB24179481C10079C57A /* ClientStocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB22179481C10079C57A /* ClientStocks.xcdatamodeld */; };
+		BE9EAB3917948F710079C57A /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB2717948F710079C57A /* AFHTTPClient.m */; };
+		BE9EAB3A17948F710079C57A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB2917948F710079C57A /* AFHTTPRequestOperation.m */; };
+		BE9EAB3B17948F710079C57A /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB2B17948F710079C57A /* AFImageRequestOperation.m */; };
+		BE9EAB3C17948F710079C57A /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB2D17948F710079C57A /* AFJSONRequestOperation.m */; };
+		BE9EAB3D17948F710079C57A /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB2F17948F710079C57A /* AFNetworkActivityIndicatorManager.m */; };
+		BE9EAB3E17948F710079C57A /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3217948F710079C57A /* AFPropertyListRequestOperation.m */; };
+		BE9EAB3F17948F710079C57A /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3417948F710079C57A /* AFURLConnectionOperation.m */; };
+		BE9EAB4017948F710079C57A /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3617948F710079C57A /* AFXMLRequestOperation.m */; };
+		BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */; };
+		BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BED22FC11795A785004EE171 /* DBHTTPClient.m */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
 		BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */; };
 		BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7017176F74DA00D63EB8 /* InfoPlist.strings */; };
-		BEEF701B176F74DA00D63EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF701A176F74DA00D63EB8 /* main.m */; };
-		BEEF701F176F74DA00D63EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF701E176F74DA00D63EB8 /* AppDelegate.m */; };
-		BEEF7021176F74DA00D63EB8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7020176F74DA00D63EB8 /* Default.png */; };
-		BEEF7023176F74DA00D63EB8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7022176F74DA00D63EB8 /* Default@2x.png */; };
-		BEEF7025176F74DA00D63EB8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */; };
-		BEEF703A176F756100D63EB8 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */; };
-		BEEF703B176F756100D63EB8 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7039176F756100D63EB8 /* UIImage+ImageWithUIView.m */; };
 		BEEF703D176F767600D63EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF703C176F767600D63EB8 /* QuartzCore.framework */; };
-		BEEF7071176FBE4100D63EB8 /* QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7070176FBE4100D63EB8 /* QuotesViewController.m */; };
-		BEF610DE1770B33600B82A5B /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610DD1770B33600B82A5B /* InitialViewController.m */; };
-		BEF610E11770B65900B82A5B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610E01770B65900B82A5B /* MenuViewController.m */; };
-		BEF610E41770C9CA00B82A5B /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610E31770C9CA00B82A5B /* RightViewController.m */; };
-		BEF610F01771006C00B82A5B /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610EF1771006C00B82A5B /* TipsViewController.m */; };
-		BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F21771007B00B82A5B /* NewsViewController.m */; };
-		BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF610F51771009900B82A5B /* SignInViewController.m */; };
-		BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF93FB617738C9C003A6810 /* StockViewController.m */; };
+		BEF0D08B17944C8A00B5C6C3 /* CompanySymbols.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08417944C8A00B5C6C3 /* CompanySymbols.sqlite */; };
+		BEF0D08D17944C8A00B5C6C3 /* defaultStocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08717944C8A00B5C6C3 /* defaultStocks.plist */; };
+		BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08817944C8A00B5C6C3 /* fullStockList.plist */; };
+		BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */; };
+		BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */; };
+		BEF0D10717945CCA00B5C6C3 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE010DC11778D93800105CA6 /* fullStockList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fullStockList.plist; path = PandemobiumV2/fullStockList.plist; sourceTree = "<group>"; };
-		BE030099177DDF62005418C7 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = PandemobiumV2/HistoryViewController.h; sourceTree = "<group>"; };
-		BE03009A177DDF62005418C7 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = PandemobiumV2/HistoryViewController.m; sourceTree = "<group>"; };
-		BE061B15177B95DF001D4166 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = PandemobiumV2/SettingsViewController.h; sourceTree = "<group>"; };
-		BE061B16177B95DF001D4166 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = PandemobiumV2/SettingsViewController.m; sourceTree = "<group>"; };
-		BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataInterface.h; path = PandemobiumV2/CoreDataInterface.h; sourceTree = "<group>"; };
-		BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataInterface.m; path = PandemobiumV2/CoreDataInterface.m; sourceTree = "<group>"; };
-		BE0C53FB177CC74B00C9346C /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = PandemobiumV2/TradeViewController.h; sourceTree = "<group>"; };
-		BE0C53FC177CC74B00C9346C /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TradeViewController.m; path = PandemobiumV2/TradeViewController.m; sourceTree = "<group>"; };
-		BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = CompanySymbols.sqlite; path = PandemobiumV2/CompanySymbols.sqlite; sourceTree = "<group>"; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -143,57 +138,90 @@
 		BE0F91B11771F72400A01190 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		BE0F91B21771F72400A01190 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "Supporting/CorePlot_1.2/Binaries/iOS/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
-		BE0F91B61771FF0D00A01190 /* ClientStocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientStocks.xcdatamodel; sourceTree = "<group>"; };
-		BE0F91B81772008A00A01190 /* defaultStocks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultStocks.plist; path = PandemobiumV2/defaultStocks.plist; sourceTree = "<group>"; };
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pandemobium-Info.plist"; sourceTree = "<group>"; };
-		BE0F91C217725B3200A01190 /* StockTrader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StockTrader-Info.plist"; sourceTree = "<group>"; };
-		BE110021178743380087EB3F /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = PandemobiumV2/Stock.h; sourceTree = "<group>"; };
-		BE110022178743380087EB3F /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = PandemobiumV2/Stock.m; sourceTree = "<group>"; };
-		BE110026178743FE0087EB3F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = PandemobiumV2/User.m; sourceTree = "<group>"; };
-		BE1100281787440D0087EB3F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = PandemobiumV2/User.h; sourceTree = "<group>"; };
-		BE110029178753610087EB3F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBHelper.h; path = PandemobiumV2/DBHelper.h; sourceTree = "<group>"; };
-		BE11002A178753610087EB3F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBHelper.m; path = PandemobiumV2/DBHelper.m; sourceTree = "<group>"; };
 		BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortfolioViewController.h; path = PandemobiumV2/PortfolioViewController.h; sourceTree = "<group>"; };
-		BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortfolioViewController.m; path = PandemobiumV2/PortfolioViewController.m; sourceTree = "<group>"; };
-		BE8B3F2017821A5B00DFC630 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
-		BE8B3F2217821E5A00DFC630 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
-		BECEFDB9178C71E300BC1351 /* accounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accounts.plist; sourceTree = "<group>"; };
-		BED8B4661783362F00A19187 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burg.jpg; sourceTree = "<group>"; };
+		BE9EAB1E17947DC60079C57A /* Pandemobium-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pandemobium-Prefix.pch"; sourceTree = "<group>"; };
+		BE9EAB1F1794810A0079C57A /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = PandemobiumV2/DB/Stock.h; sourceTree = "<group>"; };
+		BE9EAB201794810A0079C57A /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = PandemobiumV2/DB/Stock.m; sourceTree = "<group>"; };
+		BE9EAB23179481C10079C57A /* ClientStocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientStocks.xcdatamodel; sourceTree = "<group>"; };
+		BE9EAB2617948F710079C57A /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		BE9EAB2717948F710079C57A /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		BE9EAB2817948F710079C57A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		BE9EAB2917948F710079C57A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		BE9EAB2A17948F710079C57A /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		BE9EAB2B17948F710079C57A /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		BE9EAB2C17948F710079C57A /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		BE9EAB2D17948F710079C57A /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		BE9EAB2E17948F710079C57A /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		BE9EAB2F17948F710079C57A /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		BE9EAB3017948F710079C57A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		BE9EAB3117948F710079C57A /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		BE9EAB3217948F710079C57A /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		BE9EAB3317948F710079C57A /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		BE9EAB3417948F710079C57A /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		BE9EAB3517948F710079C57A /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		BE9EAB3617948F710079C57A /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		BE9EAB3717948F710079C57A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		BED22FC01795A785004EE171 /* DBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHTTPClient.h; sourceTree = "<group>"; };
+		BED22FC11795A785004EE171 /* DBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHTTPClient.m; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEEF7010176F74DA00D63EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BEEF7018176F74DA00D63EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEEF701A176F74DA00D63EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BEEF701C176F74DA00D63EB8 /* Pandemobium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pandemobium-Prefix.pch"; sourceTree = "<group>"; };
 		BEEF701D176F74DA00D63EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEEF701E176F74DA00D63EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BEEF7020176F74DA00D63EB8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BEEF7022176F74DA00D63EB8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BEEF7036176F756100D63EB8 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = PandemobiumV2/ECSlidingViewController.h; sourceTree = "<group>"; };
-		BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = PandemobiumV2/ECSlidingViewController.m; sourceTree = "<group>"; };
-		BEEF7038176F756100D63EB8 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageWithUIView.h"; path = "PandemobiumV2/UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
-		BEEF7039176F756100D63EB8 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageWithUIView.m"; path = "PandemobiumV2/UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		BEEF703C176F767600D63EB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BEEF706F176FBE4100D63EB8 /* QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesViewController.h; path = PandemobiumV2/QuotesViewController.h; sourceTree = "<group>"; };
-		BEEF7070176FBE4100D63EB8 /* QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesViewController.m; path = PandemobiumV2/QuotesViewController.m; sourceTree = "<group>"; };
-		BEF610DC1770B33600B82A5B /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = PandemobiumV2/InitialViewController.h; sourceTree = "<group>"; };
-		BEF610DD1770B33600B82A5B /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = PandemobiumV2/InitialViewController.m; sourceTree = "<group>"; };
-		BEF610DF1770B65900B82A5B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = PandemobiumV2/MenuViewController.h; sourceTree = "<group>"; };
-		BEF610E01770B65900B82A5B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = PandemobiumV2/MenuViewController.m; sourceTree = "<group>"; };
-		BEF610E21770C9CA00B82A5B /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = PandemobiumV2/RightViewController.h; sourceTree = "<group>"; };
-		BEF610E31770C9CA00B82A5B /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = PandemobiumV2/RightViewController.m; sourceTree = "<group>"; };
-		BEF610EE1771006C00B82A5B /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TipsViewController.h; path = PandemobiumV2/TipsViewController.h; sourceTree = "<group>"; };
-		BEF610EF1771006C00B82A5B /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TipsViewController.m; path = PandemobiumV2/TipsViewController.m; sourceTree = "<group>"; };
-		BEF610F11771007B00B82A5B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = PandemobiumV2/NewsViewController.h; sourceTree = "<group>"; };
-		BEF610F21771007B00B82A5B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = PandemobiumV2/NewsViewController.m; sourceTree = "<group>"; };
-		BEF610F41771009900B82A5B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = PandemobiumV2/SignInViewController.h; sourceTree = "<group>"; };
-		BEF610F51771009900B82A5B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = PandemobiumV2/SignInViewController.m; sourceTree = "<group>"; };
-		BEF93FB517738C9C003A6810 /* StockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockViewController.h; path = PandemobiumV2/StockViewController.h; sourceTree = "<group>"; };
-		BEF93FB617738C9C003A6810 /* StockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockViewController.m; path = PandemobiumV2/StockViewController.m; sourceTree = "<group>"; };
+		BEF0D07E17944C4000B5C6C3 /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		BEF0D07F17944C4000B5C6C3 /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		BEF0D08017944C4000B5C6C3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BEF0D08117944C4000B5C6C3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BEF0D08417944C8A00B5C6C3 /* CompanySymbols.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = CompanySymbols.sqlite; path = PandemobiumV2/DB/CompanySymbols.sqlite; sourceTree = "<group>"; };
+		BEF0D08517944C8A00B5C6C3 /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataInterface.h; path = PandemobiumV2/DB/CoreDataInterface.h; sourceTree = "<group>"; };
+		BEF0D08617944C8A00B5C6C3 /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataInterface.m; path = PandemobiumV2/DB/CoreDataInterface.m; sourceTree = "<group>"; };
+		BEF0D08717944C8A00B5C6C3 /* defaultStocks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultStocks.plist; path = PandemobiumV2/DB/defaultStocks.plist; sourceTree = "<group>"; };
+		BEF0D08817944C8A00B5C6C3 /* fullStockList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fullStockList.plist; path = PandemobiumV2/DB/fullStockList.plist; sourceTree = "<group>"; };
+		BEF0D09117944CAA00B5C6C3 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = PandemobiumV2/ECSlidingViewController/ECSlidingViewController.h; sourceTree = "<group>"; };
+		BEF0D09217944CAA00B5C6C3 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = PandemobiumV2/ECSlidingViewController/ECSlidingViewController.m; sourceTree = "<group>"; };
+		BEF0D09317944CAA00B5C6C3 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageWithUIView.h"; path = "PandemobiumV2/ECSlidingViewController/UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		BEF0D09417944CAA00B5C6C3 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageWithUIView.m"; path = "PandemobiumV2/ECSlidingViewController/UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		BEF0D0DD17944D6A00B5C6C3 /* QuotesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QuotesViewController.h; path = PandemobiumV2/Controllers/QuotesViewController.h; sourceTree = "<group>"; };
+		BEF0D0DE17944D6A00B5C6C3 /* QuotesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QuotesViewController.m; path = PandemobiumV2/Controllers/QuotesViewController.m; sourceTree = "<group>"; };
+		BEF0D0DF17944D8B00B5C6C3 /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = PandemobiumV2/Controllers/RightViewController.h; sourceTree = "<group>"; };
+		BEF0D0E017944D8B00B5C6C3 /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = PandemobiumV2/Controllers/RightViewController.m; sourceTree = "<group>"; };
+		BEF0D0E117944DC500B5C6C3 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = PandemobiumV2/Controllers/SettingsViewController.h; sourceTree = "<group>"; };
+		BEF0D0E217944DC500B5C6C3 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = PandemobiumV2/Controllers/SettingsViewController.m; sourceTree = "<group>"; };
+		BEF0D0E317944DC500B5C6C3 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = PandemobiumV2/Controllers/SignInViewController.h; sourceTree = "<group>"; };
+		BEF0D0E417944DC500B5C6C3 /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = PandemobiumV2/Controllers/SignInViewController.m; sourceTree = "<group>"; };
+		BEF0D0E517944DE900B5C6C3 /* StockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StockViewController.h; path = PandemobiumV2/Controllers/StockViewController.h; sourceTree = "<group>"; };
+		BEF0D0E617944DE900B5C6C3 /* StockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StockViewController.m; path = PandemobiumV2/Controllers/StockViewController.m; sourceTree = "<group>"; };
+		BEF0D0E717944E1500B5C6C3 /* TipsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TipsViewController.h; path = PandemobiumV2/Controllers/TipsViewController.h; sourceTree = "<group>"; };
+		BEF0D0E817944E1500B5C6C3 /* TipsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TipsViewController.m; path = PandemobiumV2/Controllers/TipsViewController.m; sourceTree = "<group>"; };
+		BEF0D0E917944E1500B5C6C3 /* TradeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = PandemobiumV2/Controllers/TradeViewController.h; sourceTree = "<group>"; };
+		BEF0D0EA17944E1500B5C6C3 /* TradeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TradeViewController.m; path = PandemobiumV2/Controllers/TradeViewController.m; sourceTree = "<group>"; };
+		BEF0D0EB179453E800B5C6C3 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = PandemobiumV2/Controllers/InitialViewController.h; sourceTree = "<group>"; };
+		BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = PandemobiumV2/Controllers/InitialViewController.m; sourceTree = "<group>"; };
+		BEF0D0ED179453FD00B5C6C3 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = PandemobiumV2/Controllers/MenuViewController.h; sourceTree = "<group>"; };
+		BEF0D0EE179453FD00B5C6C3 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = PandemobiumV2/Controllers/MenuViewController.m; sourceTree = "<group>"; };
+		BEF0D0EF1794542000B5C6C3 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = PandemobiumV2/Controllers/HistoryViewController.h; sourceTree = "<group>"; };
+		BEF0D0F01794542000B5C6C3 /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = PandemobiumV2/Controllers/HistoryViewController.m; sourceTree = "<group>"; };
+		BEF0D0F11794543100B5C6C3 /* PortfolioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PortfolioViewController.h; path = PandemobiumV2/Controllers/PortfolioViewController.h; sourceTree = "<group>"; };
+		BEF0D0F21794543100B5C6C3 /* PortfolioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PortfolioViewController.m; path = PandemobiumV2/Controllers/PortfolioViewController.m; sourceTree = "<group>"; };
+		BEF0D0F31794544600B5C6C3 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = PandemobiumV2/Controllers/NewsViewController.h; sourceTree = "<group>"; };
+		BEF0D0F41794544600B5C6C3 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = PandemobiumV2/Controllers/NewsViewController.m; sourceTree = "<group>"; };
+		BEF0D0F51794547500B5C6C3 /* accounts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = accounts.plist; path = Supporting_Files/accounts.plist; sourceTree = "<group>"; };
+		BEF0D0F61794547500B5C6C3 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = burg.jpg; path = Supporting_Files/burg.jpg; sourceTree = "<group>"; };
+		BEF0D0F71794547500B5C6C3 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = car.jpg; path = Supporting_Files/car.jpg; sourceTree = "<group>"; };
+		BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Supporting_Files/Default-568h@2x.png"; sourceTree = "<group>"; };
+		BEF0D0F91794547500B5C6C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Supporting_Files/Default.png; sourceTree = "<group>"; };
+		BEF0D0FA1794547500B5C6C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Supporting_Files/Default@2x.png"; sourceTree = "<group>"; };
+		BEF0D0FB1794547500B5C6C3 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = Supporting_Files/images.jpg; sourceTree = "<group>"; };
+		BEF0D0FC1794547500B5C6C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Supporting_Files/main.m; sourceTree = "<group>"; };
+		BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pandemobium-Info.plist"; path = "Supporting_Files/Pandemobium-Info.plist"; sourceTree = "<group>"; };
+		BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		BEF0D1021794583900B5C6C3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		BEF0D1031794583900B5C6C3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,14 +246,14 @@
 		BE0F6AF61771F5BE00A01190 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				BE0F91B51771FF0D00A01190 /* ClientStocks.xcdatamodeld */,
-				BE110021178743380087EB3F /* Stock.h */,
-				BE110022178743380087EB3F /* Stock.m */,
-				BE0F6AF71771F5CF00A01190 /* CompanySymbols.sqlite */,
-				BE0F91B81772008A00A01190 /* defaultStocks.plist */,
-				BE073C7B1774E5C9004B72AA /* CoreDataInterface.h */,
-				BE073C7C1774E5C9004B72AA /* CoreDataInterface.m */,
-				BE010DC11778D93800105CA6 /* fullStockList.plist */,
+				BE9EAB22179481C10079C57A /* ClientStocks.xcdatamodeld */,
+				BE9EAB1F1794810A0079C57A /* Stock.h */,
+				BE9EAB201794810A0079C57A /* Stock.m */,
+				BEF0D08417944C8A00B5C6C3 /* CompanySymbols.sqlite */,
+				BEF0D08517944C8A00B5C6C3 /* CoreDataInterface.h */,
+				BEF0D08617944C8A00B5C6C3 /* CoreDataInterface.m */,
+				BEF0D08717944C8A00B5C6C3 /* defaultStocks.plist */,
+				BEF0D08817944C8A00B5C6C3 /* fullStockList.plist */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -327,17 +355,49 @@
 		BE110017178727B50087EB3F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				BE1100281787440D0087EB3F /* User.h */,
-				BE110026178743FE0087EB3F /* User.m */,
-				BE110029178753610087EB3F /* DBHelper.h */,
-				BE11002A178753610087EB3F /* DBHelper.m */,
+				BEF0D07E17944C4000B5C6C3 /* DBHelper.h */,
+				BEF0D07F17944C4000B5C6C3 /* DBHelper.m */,
+				BEF0D08017944C4000B5C6C3 /* User.h */,
+				BEF0D08117944C4000B5C6C3 /* User.m */,
+				BED22FC01795A785004EE171 /* DBHTTPClient.h */,
+				BED22FC11795A785004EE171 /* DBHTTPClient.m */,
 			);
 			name = Helper;
+			path = PandemobiumV2/Helper;
+			sourceTree = "<group>";
+		};
+		BE9EAB2517948F700079C57A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				BE9EAB2617948F710079C57A /* AFHTTPClient.h */,
+				BE9EAB2717948F710079C57A /* AFHTTPClient.m */,
+				BE9EAB2817948F710079C57A /* AFHTTPRequestOperation.h */,
+				BE9EAB2917948F710079C57A /* AFHTTPRequestOperation.m */,
+				BE9EAB2A17948F710079C57A /* AFImageRequestOperation.h */,
+				BE9EAB2B17948F710079C57A /* AFImageRequestOperation.m */,
+				BE9EAB2C17948F710079C57A /* AFJSONRequestOperation.h */,
+				BE9EAB2D17948F710079C57A /* AFJSONRequestOperation.m */,
+				BE9EAB2E17948F710079C57A /* AFNetworkActivityIndicatorManager.h */,
+				BE9EAB2F17948F710079C57A /* AFNetworkActivityIndicatorManager.m */,
+				BE9EAB3017948F710079C57A /* AFNetworking.h */,
+				BE9EAB3117948F710079C57A /* AFPropertyListRequestOperation.h */,
+				BE9EAB3217948F710079C57A /* AFPropertyListRequestOperation.m */,
+				BE9EAB3317948F710079C57A /* AFURLConnectionOperation.h */,
+				BE9EAB3417948F710079C57A /* AFURLConnectionOperation.m */,
+				BE9EAB3517948F710079C57A /* AFXMLRequestOperation.h */,
+				BE9EAB3617948F710079C57A /* AFXMLRequestOperation.m */,
+				BE9EAB3717948F710079C57A /* UIImageView+AFNetworking.h */,
+				BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = PandemobiumV2/AFNetworking;
 			sourceTree = "<group>";
 		};
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
+				BE9EAB2517948F700079C57A /* AFNetworking */,
+				BEF0D1001794583900B5C6C3 /* SVProgressHUD */,
 				BE110017178727B50087EB3F /* Helper */,
 				BE0F91BD17721BEF00A01190 /* CoreData.framework */,
 				BE0F6AFD1771F69900A01190 /* CorePlot */,
@@ -385,18 +445,17 @@
 		BEEF7015176F74DA00D63EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BED8B4661783362F00A19187 /* burg.jpg */,
-				BE8B3F2217821E5A00DFC630 /* images.jpg */,
-				BE8B3F2017821A5B00DFC630 /* car.jpg */,
-				BE0F91C117725B3200A01190 /* Pandemobium-Info.plist */,
-				BE0F91C217725B3200A01190 /* StockTrader-Info.plist */,
+				BEF0D0F51794547500B5C6C3 /* accounts.plist */,
+				BEF0D0F61794547500B5C6C3 /* burg.jpg */,
+				BEF0D0F71794547500B5C6C3 /* car.jpg */,
+				BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */,
+				BEF0D0F91794547500B5C6C3 /* Default.png */,
+				BEF0D0FA1794547500B5C6C3 /* Default@2x.png */,
+				BEF0D0FB1794547500B5C6C3 /* images.jpg */,
+				BEF0D0FC1794547500B5C6C3 /* main.m */,
+				BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */,
+				BE9EAB1E17947DC60079C57A /* Pandemobium-Prefix.pch */,
 				BEEF7017176F74DA00D63EB8 /* InfoPlist.strings */,
-				BEEF701A176F74DA00D63EB8 /* main.m */,
-				BEEF701C176F74DA00D63EB8 /* Pandemobium-Prefix.pch */,
-				BEEF7020176F74DA00D63EB8 /* Default.png */,
-				BEEF7022176F74DA00D63EB8 /* Default@2x.png */,
-				BEEF7024176F74DA00D63EB8 /* Default-568h@2x.png */,
-				BECEFDB9178C71E300BC1351 /* accounts.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -404,30 +463,30 @@
 		BEEF7034176F752000D63EB8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF706F176FBE4100D63EB8 /* QuotesViewController.h */,
-				BEEF7070176FBE4100D63EB8 /* QuotesViewController.m */,
-				BEF610DC1770B33600B82A5B /* InitialViewController.h */,
-				BEF610DD1770B33600B82A5B /* InitialViewController.m */,
-				BEF610DF1770B65900B82A5B /* MenuViewController.h */,
-				BEF610E01770B65900B82A5B /* MenuViewController.m */,
-				BE0C53FB177CC74B00C9346C /* TradeViewController.h */,
-				BE0C53FC177CC74B00C9346C /* TradeViewController.m */,
-				BE030099177DDF62005418C7 /* HistoryViewController.h */,
-				BE03009A177DDF62005418C7 /* HistoryViewController.m */,
-				BE8B3F1D1782139E00DFC630 /* PortfolioViewController.h */,
-				BE8B3F1E1782139E00DFC630 /* PortfolioViewController.m */,
-				BEF610E21770C9CA00B82A5B /* RightViewController.h */,
-				BEF610E31770C9CA00B82A5B /* RightViewController.m */,
-				BEF610EE1771006C00B82A5B /* TipsViewController.h */,
-				BEF610EF1771006C00B82A5B /* TipsViewController.m */,
-				BEF610F11771007B00B82A5B /* NewsViewController.h */,
-				BEF610F21771007B00B82A5B /* NewsViewController.m */,
-				BEF610F41771009900B82A5B /* SignInViewController.h */,
-				BEF610F51771009900B82A5B /* SignInViewController.m */,
-				BE061B15177B95DF001D4166 /* SettingsViewController.h */,
-				BE061B16177B95DF001D4166 /* SettingsViewController.m */,
-				BEF93FB517738C9C003A6810 /* StockViewController.h */,
-				BEF93FB617738C9C003A6810 /* StockViewController.m */,
+				BEF0D0EF1794542000B5C6C3 /* HistoryViewController.h */,
+				BEF0D0F01794542000B5C6C3 /* HistoryViewController.m */,
+				BEF0D0EB179453E800B5C6C3 /* InitialViewController.h */,
+				BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */,
+				BEF0D0ED179453FD00B5C6C3 /* MenuViewController.h */,
+				BEF0D0EE179453FD00B5C6C3 /* MenuViewController.m */,
+				BEF0D0F31794544600B5C6C3 /* NewsViewController.h */,
+				BEF0D0F41794544600B5C6C3 /* NewsViewController.m */,
+				BEF0D0F11794543100B5C6C3 /* PortfolioViewController.h */,
+				BEF0D0F21794543100B5C6C3 /* PortfolioViewController.m */,
+				BEF0D0DD17944D6A00B5C6C3 /* QuotesViewController.h */,
+				BEF0D0DE17944D6A00B5C6C3 /* QuotesViewController.m */,
+				BEF0D0DF17944D8B00B5C6C3 /* RightViewController.h */,
+				BEF0D0E017944D8B00B5C6C3 /* RightViewController.m */,
+				BEF0D0E117944DC500B5C6C3 /* SettingsViewController.h */,
+				BEF0D0E217944DC500B5C6C3 /* SettingsViewController.m */,
+				BEF0D0E317944DC500B5C6C3 /* SignInViewController.h */,
+				BEF0D0E417944DC500B5C6C3 /* SignInViewController.m */,
+				BEF0D0E517944DE900B5C6C3 /* StockViewController.h */,
+				BEF0D0E617944DE900B5C6C3 /* StockViewController.m */,
+				BEF0D0E717944E1500B5C6C3 /* TipsViewController.h */,
+				BEF0D0E817944E1500B5C6C3 /* TipsViewController.m */,
+				BEF0D0E917944E1500B5C6C3 /* TradeViewController.h */,
+				BEF0D0EA17944E1500B5C6C3 /* TradeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -435,12 +494,23 @@
 		BEEF7035176F754300D63EB8 /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF7036176F756100D63EB8 /* ECSlidingViewController.h */,
-				BEEF7037176F756100D63EB8 /* ECSlidingViewController.m */,
-				BEEF7038176F756100D63EB8 /* UIImage+ImageWithUIView.h */,
-				BEEF7039176F756100D63EB8 /* UIImage+ImageWithUIView.m */,
+				BEF0D09117944CAA00B5C6C3 /* ECSlidingViewController.h */,
+				BEF0D09217944CAA00B5C6C3 /* ECSlidingViewController.m */,
+				BEF0D09317944CAA00B5C6C3 /* UIImage+ImageWithUIView.h */,
+				BEF0D09417944CAA00B5C6C3 /* UIImage+ImageWithUIView.m */,
 			);
 			name = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
+		BEF0D1001794583900B5C6C3 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */,
+				BEF0D1021794583900B5C6C3 /* SVProgressHUD.h */,
+				BEF0D1031794583900B5C6C3 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = PandemobiumV2/SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,19 +565,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECEFDBA178C71E300BC1351 /* accounts.plist in Resources */,
+				BEF0D10717945CCA00B5C6C3 /* main.m in Resources */,
 				BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */,
-				BEEF7021176F74DA00D63EB8 /* Default.png in Resources */,
-				BEEF7023176F74DA00D63EB8 /* Default@2x.png in Resources */,
-				BEEF7025176F74DA00D63EB8 /* Default-568h@2x.png in Resources */,
-				BE0F6AF81771F5CF00A01190 /* CompanySymbols.sqlite in Resources */,
-				BE0F91B91772008A00A01190 /* defaultStocks.plist in Resources */,
-				BE0F91C317725B3200A01190 /* Pandemobium-Info.plist in Resources */,
-				BE010DC21778D93800105CA6 /* fullStockList.plist in Resources */,
-				BE8B3F2117821A5B00DFC630 /* car.jpg in Resources */,
-				BE8B3F2317821E5A00DFC630 /* images.jpg in Resources */,
-				BED8B4671783362F00A19187 /* burg.jpg in Resources */,
 				BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */,
+				BEF0D08B17944C8A00B5C6C3 /* CompanySymbols.sqlite in Resources */,
+				BEF0D08D17944C8A00B5C6C3 /* defaultStocks.plist in Resources */,
+				BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */,
+				BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */,
+				BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,28 +583,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEE62C48178E0F6500440AE3 /* CorePlot-CocoaTouch.h in Sources */,
-				BEEF701B176F74DA00D63EB8 /* main.m in Sources */,
-				BEEF701F176F74DA00D63EB8 /* AppDelegate.m in Sources */,
-				BEEF703A176F756100D63EB8 /* ECSlidingViewController.m in Sources */,
-				BEEF703B176F756100D63EB8 /* UIImage+ImageWithUIView.m in Sources */,
-				BEEF7071176FBE4100D63EB8 /* QuotesViewController.m in Sources */,
-				BEF610DE1770B33600B82A5B /* InitialViewController.m in Sources */,
-				BEF610E11770B65900B82A5B /* MenuViewController.m in Sources */,
-				BEF610E41770C9CA00B82A5B /* RightViewController.m in Sources */,
-				BEF610F01771006C00B82A5B /* TipsViewController.m in Sources */,
-				BEF610F31771007B00B82A5B /* NewsViewController.m in Sources */,
-				BEF610F61771009A00B82A5B /* SignInViewController.m in Sources */,
-				BE0F91B71771FF0D00A01190 /* ClientStocks.xcdatamodeld in Sources */,
-				BEF93FB717738C9C003A6810 /* StockViewController.m in Sources */,
-				BE073C7D1774E5C9004B72AA /* CoreDataInterface.m in Sources */,
-				BE061B17177B95DF001D4166 /* SettingsViewController.m in Sources */,
-				BE0C53FD177CC74B00C9346C /* TradeViewController.m in Sources */,
-				BE03009B177DDF62005418C7 /* HistoryViewController.m in Sources */,
-				BE8B3F1F1782139E00DFC630 /* PortfolioViewController.m in Sources */,
-				BE110023178743380087EB3F /* Stock.m in Sources */,
-				BE110027178743FE0087EB3F /* User.m in Sources */,
-				BE11002B178753610087EB3F /* DBHelper.m in Sources */,
+				BE9EAB0F179472480079C57A /* AppDelegate.m in Sources */,
+				BE9EAB1A179474200079C57A /* ECSlidingViewController.m in Sources */,
+				BE9EAB19179473E50079C57A /* User.m in Sources */,
+				BE9EAB17179473D20079C57A /* CoreDataInterface.m in Sources */,
+				BE9EAB16179473BB0079C57A /* SVProgressHUD.m in Sources */,
+				BE9EAB15179473B60079C57A /* DBHelper.m in Sources */,
+				BE9EAB14179472B70079C57A /* UIImage+ImageWithUIView.m in Sources */,
+				BE9EAAF6179471DE0079C57A /* InitialViewController.m in Sources */,
+				BE9EAAF9179471DE0079C57A /* StockViewController.m in Sources */,
+				BE9EAAFA179471DE0079C57A /* QuotesViewController.m in Sources */,
+				BE9EAAFC179471DE0079C57A /* MenuViewController.m in Sources */,
+				BE9EAAFF179471DE0079C57A /* TipsViewController.m in Sources */,
+				BE9EAB01179471DE0079C57A /* TradeViewController.m in Sources */,
+				BE9EAB02179471DE0079C57A /* RightViewController.m in Sources */,
+				BE9EAB04179471DE0079C57A /* SettingsViewController.m in Sources */,
+				BE9EAB07179471DE0079C57A /* PortfolioViewController.m in Sources */,
+				BE9EAB08179471DE0079C57A /* SignInViewController.m in Sources */,
+				BE9EAB0A179471DE0079C57A /* HistoryViewController.m in Sources */,
+				BE9EAB0C179471DE0079C57A /* NewsViewController.m in Sources */,
+				BE9EAAF21794714B0079C57A /* main.m in Sources */,
+				BE9EAB211794810A0079C57A /* Stock.m in Sources */,
+				BE9EAB24179481C10079C57A /* ClientStocks.xcdatamodeld in Sources */,
+				BE9EAB3917948F710079C57A /* AFHTTPClient.m in Sources */,
+				BE9EAB3A17948F710079C57A /* AFHTTPRequestOperation.m in Sources */,
+				BE9EAB3B17948F710079C57A /* AFImageRequestOperation.m in Sources */,
+				BE9EAB3C17948F710079C57A /* AFJSONRequestOperation.m in Sources */,
+				BE9EAB3D17948F710079C57A /* AFNetworkActivityIndicatorManager.m in Sources */,
+				BE9EAB3E17948F710079C57A /* AFPropertyListRequestOperation.m in Sources */,
+				BE9EAB3F17948F710079C57A /* AFURLConnectionOperation.m in Sources */,
+				BE9EAB4017948F710079C57A /* AFXMLRequestOperation.m in Sources */,
+				BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */,
+				BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,10 +691,6 @@
 		BEEF7032176F74DA00D63EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Binaries/MacOS\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PandemobiumV2/Pandemobium-Prefix.pch";
 				INFOPLIST_FILE = "PandemobiumV2/StockTrader-Info.plist";
@@ -640,10 +711,6 @@
 		BEEF7033176F74DA00D63EB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Binaries/MacOS\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PandemobiumV2/Pandemobium-Prefix.pch";
 				INFOPLIST_FILE = "PandemobiumV2/StockTrader-Info.plist";
@@ -685,13 +752,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BE0F91B51771FF0D00A01190 /* ClientStocks.xcdatamodeld */ = {
+		BE9EAB22179481C10079C57A /* ClientStocks.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BE0F91B61771FF0D00A01190 /* ClientStocks.xcdatamodel */,
+				BE9EAB23179481C10079C57A /* ClientStocks.xcdatamodel */,
 			);
-			currentVersion = BE0F91B61771FF0D00A01190 /* ClientStocks.xcdatamodel */;
-			path = ClientStocks.xcdatamodeld;
+			currentVersion = BE9EAB23179481C10079C57A /* ClientStocks.xcdatamodel */;
+			name = ClientStocks.xcdatamodeld;
+			path = PandemobiumV2/DB/ClientStocks.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -11,7 +11,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface User : NSManagedObject
+@interface User : NSObject 
 
 @property (nonatomic, strong) NSString * firstName;
 @property (nonatomic, strong) NSString * lastName;
@@ -20,5 +20,10 @@
 @property (nonatomic, strong) NSString * password;
 @property (nonatomic, strong) NSNumber * userID;
 @property (nonatomic, strong) NSNumber * accountID;
+
+@property (nonatomic, strong) NSArray *favoriteStocks;
+@property (nonatomic, strong) NSArray *oldFavorites;
+
+
 
 @end

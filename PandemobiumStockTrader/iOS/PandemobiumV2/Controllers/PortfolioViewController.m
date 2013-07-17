@@ -66,7 +66,8 @@ CGFloat const CPDBarInitialX = 0.5f;
     // since the view bounds have not transformed for landscaepe until now
     if(appDelegate.user.loggedIn.intValue == 1)
     {
-        stockValues = [helper getStockValue:appDelegate.user.accountID];
+        //stockValues = [helper getStockValue:appDelegate.user.accountID];
+        stockValues = appDelegate.user.favoriteStocks;
         portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[[helper getAccountValue:appDelegate.user.accountID] doubleValue]];
         
         [self initPlot];
@@ -88,7 +89,8 @@ CGFloat const CPDBarInitialX = 0.5f;
     // since the view bounds have not transformed for landscaepe until now
     if(appDelegate.user.loggedIn.intValue == 1)
     {
-        stockValues = [helper getStockValue:appDelegate.user.accountID];
+        //stockValues = [helper getStockValue:appDelegate.user.accountID];
+        stockValues = appDelegate.user.favoriteStocks;
         portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[[helper getAccountValue:appDelegate.user.accountID] doubleValue]];
 
         [self initPlot];

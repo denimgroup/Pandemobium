@@ -2,7 +2,7 @@
 //  Stock.m
 //  Pandemobium
 //
-//  Created by Adrian Salazar on 7/5/13.
+//  Created by Adrian Salazar on 7/15/13.
 //  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
 
