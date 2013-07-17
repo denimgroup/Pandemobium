@@ -27,7 +27,7 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, strong) NSArray *favoriteStocks;
+@property (nonatomic, retain) NSArray *favoriteStocks;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)revealMenu:(id)sender;

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
+#import "DBHTTPClient.h"
 
-@interface SignInViewController : UIViewController <UITextFieldDelegate>
+@interface SignInViewController : UIViewController <UITextFieldDelegate, DBHTTPClientDelegate>
 
 - (IBAction)revealMenu:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *passwordText;

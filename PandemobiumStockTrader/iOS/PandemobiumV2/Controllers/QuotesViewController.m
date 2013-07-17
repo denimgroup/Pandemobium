@@ -10,6 +10,7 @@
 #import "Stock.h"
 #import "AppDelegate.h"
 #import "DBHelper.h"
+#import "SVProgressHUD.h"
 
 
 @interface QuotesViewController ()
@@ -46,9 +47,14 @@
     AppDelegate *app = [UIApplication sharedApplication].delegate;
     DBHelper *helper = [[DBHelper alloc] init];
     
-    favoriteStocks = [helper getAllStockValue:app.user.accountID];
+    if(!([favoriteStocks isEqualToArray:app.user.oldFavorites]))
+    {
+        favoriteStocks = [helper getAllStockValue:app.user.accountID];
+        app.user.favoriteStocks = self.favoriteStocks;
+    }
     
-                      
+    
+    
 }
 -(void)setDefaultFavorites
 {
@@ -87,7 +93,13 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
     
+    favoriteStocks = app.user.favoriteStocks;
+    
+    
+    NSLog(@"%i items in list", [favoriteStocks count]);
+    NSDate *start = [NSDate date];
     if([self isLoggedIn] == FALSE)
     {
         [self setDefaultFavorites];
@@ -100,7 +112,8 @@
     }
     
     [self initImage];
-    [SVProgressHUD dismiss];
+    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
+    NSLog(@"View Did Load: %0.2f", timeInterval);
   
 }
 
@@ -109,6 +122,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    NSDate *start = [NSDate date];
     
     // shadowPath, shadowOffset, and rotation is handled by ECSlidingViewController.
     // You just need to set the opacity, radius, and color.
@@ -136,7 +150,9 @@
     }
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-    NSLog(@"JERE");
+    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
+    NSLog(@"View Will Appear %0.2f", timeInterval);
+    
     
     
 }
@@ -171,18 +187,13 @@
 
 - (IBAction)leftButtonClicked:(id)sender {
    
-    [SVProgressHUD show];
     [self changeImage:@"left"];
-    [SVProgressHUD dismiss];
     
 }
 
 - (IBAction)rightButtonclicked:(id)sender
 {
-     [SVProgressHUD show];
-    
         [self changeImage:@"right"];
-    [SVProgressHUD dismiss];
 }
 
 -(void)changeImage:(NSString *)direction
@@ -329,6 +340,14 @@
         //StockViewController *destination = [segue destinationViewController];
         //NSLog(@"Everyday I'm segueing\n");
     }
+    
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate.user.oldFavorites = self.favoriteStocks;
     
 }
 

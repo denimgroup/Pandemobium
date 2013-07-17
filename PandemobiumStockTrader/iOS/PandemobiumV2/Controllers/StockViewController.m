@@ -169,7 +169,6 @@
 
 - (IBAction)backButtonClicked:(id)sender
 {
-    [SVProgressHUD show];
     self.originateFrom = @"QuoteView";
     
     [self performSegueWithIdentifier:originateFrom sender:sender];

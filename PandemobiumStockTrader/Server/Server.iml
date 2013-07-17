@@ -22,7 +22,7 @@
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="JAX-WS-Apache Axis" level="project" />
+    <orderEntry type="library" exported="" name="JAX-WS-Apache Axis" level="project" />
   </component>
 </module>
 
