@@ -72,6 +72,48 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 }
 
+-(BOOL)isLoggedIn
+{
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    if(app.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    {
+        return TRUE;
+    }
+    return FALSE;
+    
+}
+
+- (IBAction)logoutButtonPressed:(UIBarButtonItem *)sender
+{
+    NSLog(@"logout button was pressed");
+    //do something to remvoe account information from app delegate
+    if(![self isLoggedIn]){
+        
+        UIAlertView *alert;
+        NSString *message = [[NSString alloc] initWithFormat:@"You are not logged in."];
+        alert = [[UIAlertView alloc] initWithTitle:@"Just so you know..."
+                                           message:message
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        //do stuff to log user off
+        
+        UIAlertView *alert;
+        NSString *message = [[NSString alloc] initWithFormat:@"Come Again!"];
+        alert = [[UIAlertView alloc] initWithTitle:@"Thank You"
+                                           message:message
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
+
+}
+
 //for handling input text and keybaord behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
