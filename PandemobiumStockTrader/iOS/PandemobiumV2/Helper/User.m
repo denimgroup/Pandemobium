@@ -19,6 +19,11 @@
 @synthesize accountID;
 @synthesize oldFavorites;
 @synthesize favoriteStocks;
+@synthesize accountValue;
+@synthesize totalShares;
+@synthesize reloadData;
+
+
 
 
 @end

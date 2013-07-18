@@ -23,7 +23,8 @@
 
 @property (nonatomic, strong) NSArray *favoriteStocks;
 @property (nonatomic, strong) NSArray *oldFavorites;
-
-
+@property (nonatomic, strong) NSNumber *accountValue;
+@property (nonatomic, strong) NSNumber *totalShares;
+@property (nonatomic, strong) NSNumber *reloadData;
 
 @end

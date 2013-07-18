@@ -67,8 +67,12 @@ CGFloat const CPDBarInitialX = 0.5f;
     if(appDelegate.user.loggedIn.intValue == 1)
     {
         //stockValues = [helper getStockValue:appDelegate.user.accountID];
-        stockValues = appDelegate.user.favoriteStocks;
-        portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[[helper getAccountValue:appDelegate.user.accountID] doubleValue]];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"shares > 0"];
+        stockValues = [appDelegate.user.favoriteStocks filteredArrayUsingPredicate:pred];
+        
+        
+        //stockValues = appDelegate.user.favoriteStocks;
+        portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[appDelegate.user.accountValue doubleValue]];
         
         [self initPlot];
         [self initBarPlot];
@@ -90,9 +94,12 @@ CGFloat const CPDBarInitialX = 0.5f;
     if(appDelegate.user.loggedIn.intValue == 1)
     {
         //stockValues = [helper getStockValue:appDelegate.user.accountID];
-        stockValues = appDelegate.user.favoriteStocks;
-        portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[[helper getAccountValue:appDelegate.user.accountID] doubleValue]];
-
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"shares > 0"];
+        stockValues = [appDelegate.user.favoriteStocks filteredArrayUsingPredicate:pred];
+        
+       // stockValues = appDelegate.user.favoriteStocks;
+        portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[appDelegate.user.accountValue doubleValue]];
+        
         [self initPlot];
         [self initBarPlot];
     }
@@ -105,9 +112,9 @@ CGFloat const CPDBarInitialX = 0.5f;
     DBHelper * helper = [[DBHelper alloc]init];
     NSNumber *networth ;
     UIAlertView *alert;
-    listOfStocks = [[NSArray alloc]init];
     if(appDelegate.user.loggedIn.intValue == 1)
     {
+        /*
         accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
         networth = [helper getAccountValue:appDelegate.user.accountID];
         results = [helper getAccountInfo:appDelegate.user.accountID];
@@ -117,7 +124,10 @@ CGFloat const CPDBarInitialX = 0.5f;
         
         shares = [helper getShareTotal:appDelegate.user.accountID];
         numberShares.text = [[NSString alloc]initWithFormat:@"%i", [shares intValue]];
-        listOfStocks = [helper getPurchasedStocks:appDelegate.user.accountID];
+         */
+        accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
+        numberShares.text = [[NSString alloc]initWithFormat:@"%i", [appDelegate.user.totalShares intValue]];
+        netWorth.text = [[NSString alloc]initWithFormat:@"$%0.2f", [appDelegate.user.accountValue doubleValue]];
         
     }
     else
@@ -219,7 +229,6 @@ CGFloat const CPDBarInitialX = 0.5f;
     {
         //3 Calculate percentage value
         NSNumber *price = [[stockValues objectAtIndex:index]valueForKey:@"value"];
-        NSNumber *percent = [[NSNumber alloc]initWithDouble:([price doubleValue] / [portfolioSum doubleValue])];
         
         //4 Set up display label
         //labelValue = [NSString stringWithFormat:@"$%0.2f USD (%0.1f %%)", [price doubleValue], ([percent doubleValue] * 100.0f)];

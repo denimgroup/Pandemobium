@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBHTTPClient.h"
 
-@interface StockViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface StockViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, DBHTTPClientDelegate>
 
 @property (copy, nonatomic) NSDictionary *selection;
 @property (weak, nonatomic) id delegate;

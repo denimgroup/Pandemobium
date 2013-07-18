@@ -19,8 +19,8 @@
 -(void)logIn:(NSString *)username forPassword:(NSString *)password;
 -(void) getAccountID:(NSNumber *) userID;
 -(void) addHistory:(NSNumber *) userID forLog:(NSString *)log;
-
-
+-(void) getAllStockValue:(NSNumber *) accountID;
+-(void) addFavoriteStock:(NSNumber *) accountID stockSymbol:(NSString *)symbol;
 
 @end
 
@@ -30,6 +30,9 @@
 @optional
 -(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithLogIn:(NSDictionary *)results;
 -(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAccountID:(NSNumber *)results;
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares;
+-(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithLAddFavoriteStocks:(NSDictionary *)results;
+
 -(void)DBHTTPClient:(DBHTTPClient *)client didFailWithError:(NSError *)error;
 
 @end
