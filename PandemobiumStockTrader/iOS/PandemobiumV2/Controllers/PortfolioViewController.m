@@ -57,7 +57,6 @@ CGFloat const CPDBarInitialX = 0.5f;
 
     [self fetchData];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    DBHelper *helper = [[DBHelper alloc]init];
     
     stockValues = [[NSArray alloc]init];
     portfolioSum = [NSDecimalNumber zero];
@@ -83,7 +82,6 @@ CGFloat const CPDBarInitialX = 0.5f;
 -(void)viewDidAppear:(BOOL)animated
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    DBHelper *helper = [[DBHelper alloc]init];
     
     stockValues = [[NSArray alloc]init];
     portfolioSum = [NSDecimalNumber zero];
@@ -93,11 +91,8 @@ CGFloat const CPDBarInitialX = 0.5f;
     // since the view bounds have not transformed for landscaepe until now
     if(appDelegate.user.loggedIn.intValue == 1)
     {
-        //stockValues = [helper getStockValue:appDelegate.user.accountID];
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"shares > 0"];
         stockValues = [appDelegate.user.favoriteStocks filteredArrayUsingPredicate:pred];
-        
-       // stockValues = appDelegate.user.favoriteStocks;
         portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[appDelegate.user.accountValue doubleValue]];
         
         [self initPlot];
@@ -110,21 +105,10 @@ CGFloat const CPDBarInitialX = 0.5f;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSDictionary *results;
     DBHelper * helper = [[DBHelper alloc]init];
-    NSNumber *networth ;
     UIAlertView *alert;
     if(appDelegate.user.loggedIn.intValue == 1)
     {
-        /*
-        accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
-        networth = [helper getAccountValue:appDelegate.user.accountID];
         results = [helper getAccountInfo:appDelegate.user.accountID];
-        
-        networth = [[NSNumber alloc]initWithDouble:([networth doubleValue] + [[results objectForKey:@"balance"]doubleValue])];
-        netWorth.text = [[NSString alloc]initWithFormat:@"%.2f", [networth doubleValue] ];
-        
-        shares = [helper getShareTotal:appDelegate.user.accountID];
-        numberShares.text = [[NSString alloc]initWithFormat:@"%i", [shares intValue]];
-         */
         accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
         numberShares.text = [[NSString alloc]initWithFormat:@"%i", [appDelegate.user.totalShares intValue]];
         netWorth.text = [[NSString alloc]initWithFormat:@"$%0.2f", [appDelegate.user.accountValue doubleValue]];

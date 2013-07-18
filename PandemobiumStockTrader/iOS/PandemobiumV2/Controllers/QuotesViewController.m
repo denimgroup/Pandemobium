@@ -111,18 +111,14 @@
 -(void) loadFavoriteStocks
 {
     AppDelegate *app = [UIApplication sharedApplication].delegate;
-    DBHelper *helper = [[DBHelper alloc] init];
     
     if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )
     {
     
         reload = [[NSNumber alloc]initWithInt:0];
-       // favoriteStocks = app.user.oldFavorites;
         DBHTTPClient *client = [DBHTTPClient sharedClient];
         client.delegate = self;
         [client getAllStockValue:app.user.accountID];
-        //favoriteStocks = [helper getAllStockValue:app.user.accountID];
-        //app.user.favoriteStocks = self.favoriteStocks;
     }
     
     
@@ -251,25 +247,63 @@
     
 
         NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
-        
+    NSLog(@"%@", url);
         NSError *error;
         NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-        
-        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-        NSDictionary *query = [jsonData objectForKey:@"query"];
-        NSDictionary *results = [query objectForKey:@"results"];
-        NSDictionary *stockInfo = [results objectForKey:@"quote"];
+    NSDictionary * jsonData = [[NSDictionary alloc]init];
+    NSDictionary * query = [[NSDictionary alloc]init];
+    NSDictionary * results = [[NSDictionary alloc]init];
+    NSDictionary * stockInfo = [[NSDictionary alloc]init];
+    @try {
+        id object = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        //NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        if(error)
+        {
+            NSLog(@"Error parsing data");
+            
+        }
+        if([object isKindOfClass:[NSDictionary class]])
+        {
+            jsonData = object;
+            if([[ jsonData objectForKey:@"query" ] isKindOfClass:[NSDictionary class]])
+            {
+                query = [jsonData objectForKey:@"query"];
+                
+                if([[query objectForKey:@"results"] isKindOfClass:[NSDictionary class]])
+                {
+                    results = [query objectForKey:@"results"];
+               
+                    if([[results objectForKey:@"quote"] isKindOfClass:[NSDictionary class]])
+                    {
+                        stockInfo = [results objectForKey:@"quote"]; //error
+                        
+                        
+                        NSString *temp = [[NSString alloc] initWithFormat:@"%@ Change, %@, %@",
+                                          [stockInfo valueForKey:@"Change"],
+                                          [stockInfo valueForKey:@"DaysRange"],
+                                          [stockInfo valueForKey:@"Name"]];
+                        return temp;
+
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+    @catch (NSException *exception)
+    {
+        NSLog(@"%@", exception);
+    }
+    @finally {
+        NSLog(@"Finally");
+    }
+            
     
     
-    NSString *temp = [[NSString alloc] initWithFormat:@"%@ Change, %@, %@",
-                            [stockInfo valueForKey:@"Change"],
-                            [stockInfo valueForKey:@"DaysRange"],
-                            [stockInfo valueForKey:@"Name"]];
-    
-    
-    
-    
-    return temp;
+   
     
 }
 #pragma mark - Table View
@@ -302,26 +336,16 @@
     }
 
     cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
-    NSMutableArray * subtext = [[NSMutableArray alloc]initWithCapacity:[favoriteStocks count]];
     
     if([self isLoggedIn] && [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks])
     {
-        //if (reload==[[NSNumber alloc]initWithInt:1] || [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks ])
-       // {
-            cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row]valueForKey:@"summary"];
-        //}
+        cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row]valueForKey:@"summary"];
     }
     else
     {
         if([favoriteStocks count] > 0 )
         {
-            for(int i = 0; i < [favoriteStocks count]; i++)
-            {
-                [subtext addObject:[self fetchData:[[favoriteStocks objectAtIndex:i] valueForKey:@"symbol"]]];
-                
-            }
-            //cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"name"];
-            cell.detailTextLabel.text = [subtext objectAtIndex:indexPath.row] ;
+            cell.detailTextLabel.text = [self fetchData:[[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"] ];
         }
          // set the accessory view:
     }
@@ -331,10 +355,14 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)quoteTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
 {
 
-    [self performSegueWithIdentifier:@"StockView" sender:tableView];
+   // [self performSegueWithIdentifier:@"StockView" sender:tableView];
+    [self performSegueWithIdentifier:@"StockView" sender:quoteTableView];
+    
     
 }
 

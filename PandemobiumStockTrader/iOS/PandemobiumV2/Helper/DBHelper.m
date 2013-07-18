@@ -194,15 +194,56 @@
 {
     
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
     
+    NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
+    NSLog(@"%@", url);
     NSError *error;
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    
-    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    NSDictionary *query = [jsonData objectForKey:@"query"];
-    NSDictionary *results = [query objectForKey:@"results"];
-    return  [results objectForKey:@"quote"];
+    NSDictionary * jsonData = [[NSDictionary alloc]init];
+    NSDictionary * query = [[NSDictionary alloc]init];
+    NSDictionary * results = [[NSDictionary alloc]init];
+    NSDictionary * stockInfo = [[NSDictionary alloc]init];
+    @try {
+        id object = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        //NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        if(error)
+        {
+            NSLog(@"Error parsing data");
+            
+        }
+        if([object isKindOfClass:[NSDictionary class]])
+        {
+            jsonData = object;
+            if([[ jsonData objectForKey:@"query" ] isKindOfClass:[NSDictionary class]])
+            {
+                query = [jsonData objectForKey:@"query"];
+                
+                if([[query objectForKey:@"results"] isKindOfClass:[NSDictionary class]])
+                {
+                    results = [query objectForKey:@"results"];
+                    
+                    if([[results objectForKey:@"quote"] isKindOfClass:[NSDictionary class]])
+                    {
+                        stockInfo = [results objectForKey:@"quote"]; //error
+               
+                        return stockInfo;
+                        
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+    @catch (NSException *exception)
+    {
+        NSLog(@"%@", exception);
+    }
+    @finally {
+        NSLog(@"Finally");
+    }
     
     
 }
