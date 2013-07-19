@@ -55,6 +55,8 @@
 		BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */; };
 		BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */; };
 		BEF0D10717945CCA00B5C6C3 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
+		BEF7F55917998B4F00B1977D /* Pandemobium-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */; };
+		BEF7F55A17998B6600B1977D /* Pandemobium-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -565,6 +567,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF7F55A17998B6600B1977D /* Pandemobium-Info.plist in Resources */,
 				BEF0D10717945CCA00B5C6C3 /* main.m in Resources */,
 				BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */,
 				BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */,
@@ -583,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF7F55917998B4F00B1977D /* Pandemobium-Info.plist in Sources */,
 				BE9EAB0F179472480079C57A /* AppDelegate.m in Sources */,
 				BE9EAB1A179474200079C57A /* ECSlidingViewController.m in Sources */,
 				BE9EAB19179473E50079C57A /* User.m in Sources */,

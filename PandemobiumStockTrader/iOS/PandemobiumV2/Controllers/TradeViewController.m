@@ -24,10 +24,70 @@
 @synthesize accountNumber;
 @synthesize canInvest;
 @synthesize symbol;
+@synthesize shares;
 
 @synthesize activityIndicator;
 
 CGFloat animatedDistance;
+
+
+// ------- Handle OpenURL ---------
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    if([[url absoluteString] hasPrefix:@"trade"])
+    {
+        NSLog(@"Inside trade view controller");
+        
+        
+        NSArray *parameters = [[url query] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"=&"]];
+        NSMutableDictionary *keyValueParm = [NSMutableDictionary dictionary];
+        
+        for (int i = 0; i < [parameters count]; i=i+2) {
+            [keyValueParm setObject:[parameters objectAtIndex:i+1] forKey:[parameters objectAtIndex:i]];
+        }
+        
+        shares = [[NSNumber alloc] initWithInt:[[keyValueParm objectForKey:@"shares"] intValue]];
+        symbol = [[NSString alloc]initWithFormat:@"%@", [keyValueParm objectForKey:@"symbol"]];
+      
+        if([[url host] isEqualToString:@"buy"])
+        {
+            NSLog(@"will buy %i %@",[shares intValue], symbol);
+            [self tradebuttonPressed:self];
+            
+            
+        }
+        else if ([[url host]isEqualToString:@"sell"])
+        {
+            NSLog(@"will sell %i %@",[shares intValue], symbol);
+            [self sellButtonPressed:self];
+
+        }
+    
+        
+        
+        return YES;
+        
+    }
+    return NO;
+}
+
+
+- (NSDictionary *)parseQueryString:(NSString *)query {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:6] ;
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    
+    for (NSString *pair in pairs) {
+        NSArray *elements = [pair componentsSeparatedByString:@"="];
+        NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        [dict setObject:val forKey:key];
+    }
+    return dict;
+}
+
+// ---------------------------------
+
 
 //for animating keyboard
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
@@ -194,9 +254,25 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     UIAlertView * alert;
+   
+    NSString * stockSymbol; 
     
-    NSString * stockSymbol = companyCode.text;
-    NSNumber * shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+    if(companyCode.text == nil)
+    {
+        stockSymbol = symbol;
+        
+    }
+    else
+    {
+        stockSymbol = companyCode.text;
+        
+        
+    }
+    
+    if(shares == nil)
+    {
+        shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+    }
     NSDictionary * yahooQuery;
 
     if((![stockSymbol isEqualToString:@""]) && [shares intValue] > 0)
@@ -328,8 +404,27 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     UIAlertView * alert;
     
-    NSString * stockSymbol = companyCode.text;
-    NSNumber * shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+    
+    NSString * stockSymbol;
+    
+    if(companyCode.text == nil)
+    {
+        stockSymbol = symbol;
+        
+    }
+    else
+    {
+        stockSymbol = companyCode.text;
+        
+        
+    }
+    
+    if(shares == nil)
+    {
+        shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+    }
+    
+      
     NSDictionary * yahooQuery;
     
     if((![stockSymbol isEqualToString:@""]) && [shares intValue] > 0)
@@ -356,7 +451,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                 if([matched count] >= 1)
                 { //Stock Exists
                     
-                    if([[[matched objectAtIndex:0] valueForKey:@"shares"]intValue] <= [shares intValue])
+                    if([[[matched objectAtIndex:0] valueForKey:@"shares"]intValue] >= [shares intValue])
                     { //Has sufficient stock
                         
                         NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];

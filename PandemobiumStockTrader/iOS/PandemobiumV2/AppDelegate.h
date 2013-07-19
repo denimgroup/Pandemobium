@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TradeViewController.h"
+#import "TipsViewController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -17,6 +20,10 @@
 
 @property (strong, nonatomic) NSNumber *currentImageIndex;
 @property (strong, nonatomic) User * user;
+
+
+//@property (nonatomic, retain) TipsViewController *tips;
+//@property (nonatomic, retain) TradeViewController *trade;
 
 - (NSURL *) applicationDocumentsDirectory;
 

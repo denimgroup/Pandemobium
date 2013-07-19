@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSNumber *shares;
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *stockAnnotation;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) IBOutlet UILabel *accountValue;
 
 - (IBAction)revealMenu:(id)sender;
 @end

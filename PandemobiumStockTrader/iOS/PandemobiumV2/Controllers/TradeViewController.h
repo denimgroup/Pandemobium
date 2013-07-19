@@ -23,6 +23,9 @@
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (strong, nonatomic) NSString *symbol;
+@property (strong, nonatomic) NSNumber *shares;
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
 
 - (IBAction)revealMenu:(id)sender;
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
