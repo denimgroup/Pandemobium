@@ -55,6 +55,7 @@
 		BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */; };
 		BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */; };
 		BEF0D10717945CCA00B5C6C3 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
+		BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFF291D179868FE000F1FF3 /* ManageTipsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -222,6 +223,8 @@
 		BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		BEF0D1021794583900B5C6C3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		BEF0D1031794583900B5C6C3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		BEFF291C179868FE000F1FF3 /* ManageTipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManageTipsViewController.h; path = PandemobiumV2/Controllers/ManageTipsViewController.h; sourceTree = "<group>"; };
+		BEFF291D179868FE000F1FF3 /* ManageTipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManageTipsViewController.m; path = PandemobiumV2/Controllers/ManageTipsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +490,8 @@
 				BEF0D0E817944E1500B5C6C3 /* TipsViewController.m */,
 				BEF0D0E917944E1500B5C6C3 /* TradeViewController.h */,
 				BEF0D0EA17944E1500B5C6C3 /* TradeViewController.m */,
+				BEFF291C179868FE000F1FF3 /* ManageTipsViewController.h */,
+				BEFF291D179868FE000F1FF3 /* ManageTipsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 				BE9EAB4017948F710079C57A /* AFXMLRequestOperation.m in Sources */,
 				BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */,
 				BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */,
+				BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
