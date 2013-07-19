@@ -34,6 +34,7 @@ CGFloat const CPDBarInitialX = 0.5f;
 @synthesize shares;
 @synthesize stockAnnotation = stockAnnotation_;
 @synthesize activityIndicator;
+@synthesize accountValue;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -111,7 +112,8 @@ CGFloat const CPDBarInitialX = 0.5f;
         results = [helper getAccountInfo:appDelegate.user.accountID];
         accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
         numberShares.text = [[NSString alloc]initWithFormat:@"%i", [appDelegate.user.totalShares intValue]];
-        netWorth.text = [[NSString alloc]initWithFormat:@"$%0.2f", [appDelegate.user.accountValue doubleValue]];
+        accountValue.text = [[NSString alloc]initWithFormat:@"$%0.2f", [appDelegate.user.accountValue doubleValue]];
+        netWorth.text = [[NSString alloc]initWithFormat:@"$%0.2f", [[results valueForKey:@"balance"]doubleValue] ];
         
     }
     else
@@ -119,6 +121,7 @@ CGFloat const CPDBarInitialX = 0.5f;
         accountNumber.text = @"xxxx";
         numberShares.text = @"0";
         netWorth.text = @"$0.00";
+        accountValue.text=@"$0.00";
         accntImage.image = [UIImage imageNamed:@"burg.jpg"];
 
         alert = [[UIAlertView alloc] initWithTitle:@"Error!"

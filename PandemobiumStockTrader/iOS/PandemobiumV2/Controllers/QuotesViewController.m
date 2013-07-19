@@ -33,8 +33,6 @@
     favoriteStocks = app.user.oldFavorites;
     
     
-    NSLog(@"%i items in list", [favoriteStocks count]);
-    NSDate *start = [NSDate date];
     if([self isLoggedIn] == FALSE)
     {
         [self setDefaultFavorites];
@@ -47,8 +45,7 @@
     }
     
     [self initImage];
-    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
-    NSLog(@"View Did Load: %0.2f", timeInterval);
+    
     
 }
 
@@ -57,7 +54,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSDate *start = [NSDate date];
     
     // shadowPath, shadowOffset, and rotation is handled by ECSlidingViewController.
     // You just need to set the opacity, radius, and color.
@@ -85,9 +81,7 @@
     }
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-    NSTimeInterval timeInterval = [start timeIntervalSinceNow];
-    NSLog(@"View Will Appear %0.2f", timeInterval);
-}
+ }
 
 -(void)loadDefaultFavoriteStocks
 {
@@ -100,8 +94,6 @@
     [request setPredicate:predicate];
     
     favoriteStocks = [context executeFetchRequest:request error:&error];
-    NSLog(@"The number of favorite stocks = %d", [favoriteStocks count]);
-    
     
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"symbol" ascending:YES];
     favoriteStocks = [favoriteStocks sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
@@ -175,7 +167,7 @@
 
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSString *symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
-    NSLog(@"%@", symbol);
+   // NSLog(@"%@", symbol);
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     NSURL *imageurl = [NSURL URLWithString:path];
@@ -247,8 +239,10 @@
     
 
         NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
-    NSLog(@"%@", url);
+    //NSLog(@"%@", url);
         NSError *error;
+    //while(true)
+    //{
         NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * jsonData = [[NSDictionary alloc]init];
     NSDictionary * query = [[NSDictionary alloc]init];
@@ -298,8 +292,14 @@
         NSLog(@"%@", exception);
     }
     @finally {
-        NSLog(@"Finally");
+        //NSString *temp = @"Unable to retrieve stock information\n";
+       // return temp;
+
     }
+    //}
+    
+   // NSLog(@"I will fail");
+        
             
     
     

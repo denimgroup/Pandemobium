@@ -59,7 +59,7 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    NSLog(@"Begin Editing Search\n");
+   // NSLog(@"Begin Editing Search\n");
     [self.slidingViewController anchorTopViewOffScreenTo:ECLeft animations:^{
         CGRect frame = self.view.frame;
         frame.origin.x = 0.0f;
@@ -85,7 +85,7 @@
         self.view.frame = frame;
     } onComplete:nil];
     [self.searchBar resignFirstResponder];
-    NSLog(@"End Editing Search\n");
+   // NSLog(@"End Editing Search\n");
 }
 
 
@@ -94,7 +94,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    NSLog(@"Number of Sections in Right View\n");
+  //  NSLog(@"Number of Sections in Right View\n");
     return 1;
     
 }
@@ -103,7 +103,7 @@
     // Return the number of rows in the section.
 
     // If you're serving data from an array, return the length of the array:
-    NSLog(@"Number of rows %d\n", [self.filteredStockArray count]);
+    //NSLog(@"Number of rows %d\n", [self.filteredStockArray count]);
 
     if(tableView == self.searchDisplayController.searchResultsTableView)
     {
@@ -120,7 +120,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Setting up cells in Right View\n");
+    //NSLog(@"Setting up cells in Right View\n");
     
     static NSString *CellIdentifier = @"searchCell";
     
@@ -162,7 +162,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    NSLog(@"Preparing to segue");
+    //NSLog(@"Preparing to segue");
     [self performSegueWithIdentifier:@"StockView" sender:tableView];
     
 }
@@ -201,7 +201,7 @@
 #pragma mark Content Filtering
 -(void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
 {
-    NSLog(@"filterContentForSearch %@\n", searchText);
+   // NSLog(@"filterContentForSearch %@\n", searchText);
     
     [self.filteredStockArray removeAllObjects];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[cd] %@ OR symbol CONTAINS[cd] %@", searchText, searchText];

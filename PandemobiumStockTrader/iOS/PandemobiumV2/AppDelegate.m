@@ -18,42 +18,15 @@
 
 @synthesize user;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+-(void)applicationDidFinishLaunching:(UIApplication *)application
 {
-   
-    user = [[User alloc]init];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if(![defaults objectForKey:@"firstRun"])
-    {
-        [defaults setObject:[NSDate date] forKey:@"firstRun"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
-        [self loadDataFromPropertyList];
-        
-    }
-
-    self.currentImageIndex = [[NSNumber alloc]initWithInt:0];
+    NSLog(@"application did finish launching");
     
-//    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-//    QuotesViewController *controller = [[QuotesViewController alloc]init];
-//    self.window.rootViewController = controller;
-//    self.window.backgroundColor = [UIColor whiteColor];
-//  
-    //[self managedObjectContext];
-  
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Stock" inManagedObjectContext:[self managedObjectContext] ];
-//    [fetchRequest setEntity:entity];
-//    
-//    NSError *error;
-//    NSArray *result = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
-//    for( Stock *ent in result ){
-//        NSLog(@"Data: %@ %@ %@", ent.symbol, ent.name, ent.share);
-//    }
-
     
-    // Override point for customization after application launch.
-    return YES;
 }
+
+
+
 
 -(void)loadDataFromPropertyList
 {
@@ -76,6 +49,80 @@
     
 }
 
+//-----------for launching with URL ---------
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    user = [[User alloc]init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults objectForKey:@"firstRun"])
+    {
+        [defaults setObject:[NSDate date] forKey:@"firstRun"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        [self loadDataFromPropertyList];
+        
+    }
+    
+    self.currentImageIndex = [[NSNumber alloc]initWithInt:0];
+    
+    if(launchOptions != nil)
+    {
+//        NSLog(@"didFinishLaunching");
+//        NSURL *launchURL = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+//        NSLog(@"url recieved: %@", launchURL);
+//        NSLog(@"query string: %@", [launchURL query]);
+//        NSLog(@"host: %@", [launchURL host]);
+//        NSLog(@"url path: %@", [launchURL path]);
+//        NSDictionary *dict = [self parseQueryString:[launchURL query]];
+//        NSLog(@"query dict: %@", dict);
+        
+    }
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"handle Open URL");
+  //  NSLog(@"url recieved: %@", url);
+   // NSLog(@"query string: %@", [url query]);
+   // NSLog(@"host: %@", [url host]);
+   // NSLog(@"url path: %@", [url path]);
+  //  NSDictionary *dict = [self parseQueryString:[url query]];
+   // NSLog(@"query dict: %@", dict);
+    
+    if([[url absoluteString] hasPrefix:@"trade"])
+    {
+        
+        NSLog(@"something to do with trade");
+        
+        TradeViewController *trade = [[TradeViewController alloc]init];
+        [trade application:application handleOpenURL:url];
+        
+        
+    }
+    else if([[url absoluteString] hasPrefix:@"tips"])
+    {
+        
+        NSLog(@"something to do with tips");
+        
+    }
+    
+    
+    return YES;
+    
+    
+}
+
+
+
+// ----------------------------------------------------
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

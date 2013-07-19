@@ -63,7 +63,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
-    NSLog(@"loginwas pressed");
+    
+    NSLog(@"login was pressed");
     
     DBHTTPClient *client = [DBHTTPClient sharedClient];
     client.delegate = self;
@@ -82,6 +83,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     return FALSE;
     
 }
+
 
 - (IBAction)logoutButtonPressed:(UIBarButtonItem *)sender
 {

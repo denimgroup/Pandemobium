@@ -196,7 +196,7 @@
     
     
     NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
-    NSLog(@"%@", url);
+    //NSLog(@"%@", url);
     NSError *error;
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * jsonData = [[NSDictionary alloc]init];
@@ -296,7 +296,7 @@
     NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *firstParse;
    
-    if([[stock objectForKey:@"shares"]intValue] < [shares intValue])
+    if([[stock objectForKey:@"shares"]intValue] >= [shares intValue])
     { //update the stock
         NSNumber * newShareTotal = [[NSNumber alloc]initWithInt:([[stock objectForKey:@"shares"]intValue] - [shares intValue])];
         query = [[NSString alloc]initWithFormat:@"update stock set shares=%i where accountID=%i AND symbol=\"%@\";",
