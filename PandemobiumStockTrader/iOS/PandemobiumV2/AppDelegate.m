@@ -10,6 +10,18 @@
 #import "Stock.h"
 #import "QuotesViewController.h"
 
+@implementation NSURLRequest (NSURLRequestWithIgnoreSSL)
+
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host
+{
+    
+    NSLog(@"Allowing non SSL certificates");
+    return YES;
+}
+
+@end
+
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -73,14 +85,6 @@
     
     if(launchOptions != nil)
     {
-//        NSLog(@"didFinishLaunching");
-//        NSURL *launchURL = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
-//        NSLog(@"url recieved: %@", launchURL);
-//        NSLog(@"query string: %@", [launchURL query]);
-//        NSLog(@"host: %@", [launchURL host]);
-//        NSLog(@"url path: %@", [launchURL path]);
-//        NSDictionary *dict = [self parseQueryString:[launchURL query]];
-//        NSLog(@"query dict: %@", dict);
         
     }
     
@@ -90,12 +94,6 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     NSLog(@"handle Open URL");
-  //  NSLog(@"url recieved: %@", url);
-   // NSLog(@"query string: %@", [url query]);
-   // NSLog(@"host: %@", [url host]);
-   // NSLog(@"url path: %@", [url path]);
-  //  NSDictionary *dict = [self parseQueryString:[url query]];
-   // NSLog(@"query dict: %@", dict);
     
     if([[url absoluteString] hasPrefix:@"trade"])
     {
@@ -109,6 +107,7 @@
     }
     else if([[url absoluteString] hasPrefix:@"tips"])
     {
+        
         
         NSLog(@"something to do with tips");
         
