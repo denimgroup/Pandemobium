@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Stock.h"
 #import "QuotesViewController.h"
+#import "iVersion.h"
 
 @implementation NSURLRequest (NSURLRequestWithIgnoreSSL)
 
@@ -119,10 +120,37 @@
     
 }
 
-
-
 // ----------------------------------------------------
-							
+
+
++ (void)initialize
+{
+    //set the bundle ID. normally you wouldn't need to do this
+    //as it is picked up automatically from your Info.plist file
+    //but we want to test with an app that's actually on the store
+  //  iVersion *version = [[iVersion alloc]init];
+   // version.applicationBundleID = @"com.denimgroup.Pandemobium";
+    //version.remoteVersionsPlistURL=@"http://localhost:8080/versions.plist";
+   //[version checkForNewVersion];
+    
+    [iVersion sharedInstance].applicationBundleID = @"com.denimgroup.Pandemobium";
+    [iVersion sharedInstance].displayAppUsingStorekitIfAvailable = NO;
+    
+    //configure iVersion. These paths are optional - if you don't set
+    //them, iVersion will just get the release notes from iTunes directly (if your app is on the store)
+    [iVersion sharedInstance].remoteVersionsPlistURL = @"http://localhost:8080/versions.plist";
+    [iVersion sharedInstance].checkAtLaunch = YES;
+    [iVersion sharedInstance].updateURL = [[NSURL alloc]initWithString:@"http://localhost:8080/download.html"];
+    
+    [[iVersion sharedInstance] checkForNewVersion];
+   // iVersion.checkIfNewVersion();
+    //[iVersion sharedInstance].localVersionsPlistPath = @"versions.plist";
+}
+
+
+
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -217,6 +245,7 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
 
 
 @end

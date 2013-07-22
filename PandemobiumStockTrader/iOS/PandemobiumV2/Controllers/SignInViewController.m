@@ -25,7 +25,9 @@ CGFloat animatedDistance;
 @synthesize signinButton;
 @synthesize rememberloginSwitch;
 @synthesize activityIndicator;
-
+@synthesize locationManager;
+@synthesize originalLocation;
+@synthesize currentLocation;
 //for animating keyboard
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
@@ -49,6 +51,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    locationManager = [[CLLocationManager alloc]init];
 	// Do any additional setup after loading the view.
     
 }
@@ -191,9 +194,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     NSInteger userID = [[results valueForKey:@"userID"] intValue];
     
+       
     if(userID >= 1)
     {
-                
+       
+        [locationManager startUpdatingLocation];
         AppDelegate * app = [UIApplication sharedApplication].delegate;
         app.user.password = [results objectForKey:@"password"];
         app.user.userID = [results objectForKey:@"userID"];
@@ -284,8 +289,41 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:0];
     [SVProgressHUD dismiss];
     
-    [self performSegueWithIdentifier:@"afterLogin" sender:self];
+   
     
+    locationManager.delegate =self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    originalLocation = [[CLLocation alloc]initWithLatitude:29.51666667 longitude:-98.6];
+    
+     [self performSegueWithIdentifier:@"afterLogin" sender:self];
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    currentLocation = newLocation;
+    CLLocationDistance distance = ([currentLocation distanceFromLocation:originalLocation]) * 0.000621371192237;
+    if(distance > 250.0 && appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    {
+        UIAlertView *alert;
+        alert = [[UIAlertView alloc]initWithTitle:@"Location Unknown" message:@"Too far from original location. Signing Out" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        appDelegate.user = [[User alloc]init];
+        
+        
+    }
 }
 
 
