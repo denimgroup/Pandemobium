@@ -55,8 +55,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (NSString*) saveFilePath
 {
-    //NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist"];
-    NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/accounts.plist";
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist"];
+    //NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/Supporting_Files/accounts.plist";
     return path;
 }
 
