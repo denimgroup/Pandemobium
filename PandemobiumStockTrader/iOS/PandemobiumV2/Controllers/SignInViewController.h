@@ -10,10 +10,9 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 #import "DBHTTPClient.h"
-@class KeychainItemWrapper;
+#import <CoreLocation/CoreLocation.h>
 
-
-@interface SignInViewController : UIViewController <UITextFieldDelegate, DBHTTPClientDelegate>
+@interface SignInViewController : UIViewController <UITextFieldDelegate, DBHTTPClientDelegate, CLLocationManagerDelegate>
 
 - (IBAction)revealMenu:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *passwordText;
@@ -22,6 +21,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *signinButton;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *originalLocation;
+@property (strong, nonatomic) CLLocation *currentLocation;
 
 //managing text and keyboard behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
