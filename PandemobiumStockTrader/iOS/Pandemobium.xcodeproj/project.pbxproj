@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE05E6BF179D93A500A42EE2 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F51794547500B5C6C3 /* accounts.plist */; };
+		BE05E6C5179DE04A00A42EE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE05E6C0179DCA6800A42EE2 /* Security.framework */; };
 		BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */; };
 		BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AFB1771F5F200A01190 /* libz.dylib */; };
 		BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */; };
@@ -59,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE05E6C0179DCA6800A42EE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BE05E6C2179DCC0600A42EE2 /* libkeymgr.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libkeymgr.dylib; path = usr/lib/system/libkeymgr.dylib; sourceTree = SDKROOT; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE05E6C5179DE04A00A42EE2 /* Security.framework in Frameworks */,
 				BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */,
 				BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */,
 				BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */,
@@ -399,6 +404,8 @@
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
+				BE05E6C2179DCC0600A42EE2 /* libkeymgr.dylib */,
+				BE05E6C0179DCA6800A42EE2 /* Security.framework */,
 				BE9EAB2517948F700079C57A /* AFNetworking */,
 				BEF0D1001794583900B5C6C3 /* SVProgressHUD */,
 				BE110017178727B50087EB3F /* Helper */,
@@ -570,6 +577,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE05E6BF179D93A500A42EE2 /* accounts.plist in Resources */,
 				BEF0D10717945CCA00B5C6C3 /* main.m in Resources */,
 				BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */,
 				BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */,
@@ -704,6 +712,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Binaries/iOS\"",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Source/build/Debug-iphonesimulator\"",
+					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -724,6 +733,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Binaries/iOS\"",
 					"\"$(SRCROOT)/Supporting/CorePlot_1.2/Source/build/Debug-iphonesimulator\"",
+					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
