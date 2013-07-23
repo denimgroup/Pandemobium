@@ -10,6 +10,8 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 #import "DBHTTPClient.h"
+@class KeychainItemWrapper;
+
 
 @interface SignInViewController : UIViewController <UITextFieldDelegate, DBHTTPClientDelegate>
 

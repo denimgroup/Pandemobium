@@ -21,6 +21,7 @@
 -(void) addHistory:(NSNumber *) userID forLog:(NSString *)log;
 -(void) getAllStockValue:(NSNumber *) accountID;
 -(void) addFavoriteStock:(NSNumber *) accountID stockSymbol:(NSString *)symbol;
+//needs to be added to .m -(void) addTips:(NSNumber *) userID forlog:(NSString *)log;
 
 @end
 

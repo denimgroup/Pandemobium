@@ -38,6 +38,27 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //DBHelper * helper = [[DBHelper alloc]init];
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    UIAlertView * alert;
+    
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    if([app.user.loggedIn intValue] != 1)
+    {
+
+        alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                           message:@"Log-in to make Tips"
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,9 +74,60 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)submitReason:(id)sender
 {
+    //check if user is logged in otherwise dont do anything
     NSLog(@"submit reason is pressed");
-    
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    UIAlertView *alert;
+    if([app.user.loggedIn intValue] != 1)
+    {
+        NSLog(@"Log in before you can create a tip");
+        alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                           message:@"Log-In to make Tips"
+                                          delegate:nil
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles:nil, nil];
+        [alert show];
+        [self dismissViewControllerAnimated:YES completion:^(void){}];
+    }
+    else
+    {
+        if(![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]){
+        //submit a tip
+            alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                               message:@"Tip Sent Succesfully"
+                                              delegate:nil
+                                     cancelButtonTitle:@"OK"
+                                     otherButtonTitles: nil];
+            app.user.reloadData = [[NSNumber alloc] initWithInt:1];
+            DBHelper *client = [[DBHelper alloc]init];
+        
+            [client
+                    addTip:app.user.userID
+                forSymbol:[[NSString alloc] initWithFormat:@"%@",symbol.text]
+                    forLog:[[NSString alloc] initWithFormat:@"%@",reason.text]
+             ];
+        
+            [alert show];
+            [self viewDidLoad];
+        
+        //set strings back to nothing
+            self.symbol.text = @"";
+            self.reason.text = @"Reason: ";
+            
+        }
+        else
+        {
+            alert = [[UIAlertView alloc] initWithTitle:@"ALERT"
+                                               message:@"Fill Out Form With A Stock Symbol And A Reason."
+                                              delegate:nil
+                                     cancelButtonTitle:@"OK"
+                                     otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }
 }
+
+
 - (IBAction)clearTextView:(id)sender
 {
     NSLog(@"clear text button is pressed");
