@@ -11,6 +11,8 @@
 #import "DBHelper.h"
 #import "SVProgressHUD.h"
 #import "DBHTTPClient.h"
+#import "KeychainItemWrapper.h"
+
 
 
 @interface SignInViewController () <UITextFieldDelegate>
@@ -58,23 +60,46 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (NSString*) saveFilePath
 {
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist"];
-    //NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/Supporting_Files/accounts.plist";
+    //NSString* path = [[NSBundle mainBundle] pathForResource:@"/accounts" ofType:@"plist"];
+    NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/Supporting_Files/accounts.plist";
     return path;
 }
 
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
-    
+    UIAlertView *alert;
+    //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
     NSLog(@"login was pressed");
-    
-    DBHTTPClient *client = [DBHTTPClient sharedClient];
-    client.delegate = self;
-    [client logIn:usernameText.text forPassword:passwordText.text];
-    [SVProgressHUD show];
-
+    if (![self isLoggedIn]) {
+        
+        if(rememberloginSwitch.isEnabled){
+            DBHTTPClient *client = [DBHTTPClient sharedClient];
+            client.delegate = self;
+            [client logIn:usernameText.text forPassword:passwordText.text];
+            //do something to remember
+            
+            [SVProgressHUD show];
+        }
+        else
+        {
+            DBHTTPClient *client = [DBHTTPClient sharedClient];
+            client.delegate = self;
+            [client logIn:usernameText.text forPassword:passwordText.text];
+            [SVProgressHUD show];
+        }
+    }
+    else
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Just so you know..."
+                                           message:@"You are already logged in."
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
 }
+
 
 -(BOOL)isLoggedIn
 {
@@ -106,7 +131,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     else
     {
         //do stuff to log user off
-        
+        //app.user.isLoggedIn = 0;
         UIAlertView *alert;
         NSString *message = [[NSString alloc] initWithFormat:@"Come Again!"];
         alert = [[UIAlertView alloc] initWithTitle:@"Thank You"

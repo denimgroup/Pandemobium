@@ -466,5 +466,24 @@
     
 }
 
+- (NSDictionary *) addTip:(NSNumber *)userID forSymbol:(NSString *)symbol forLog:(NSString *)log
+{
+    @try {
+  
+    NSError *error;
+    NSString *query = [[NSString alloc]initWithFormat:@"insert into tips(userID, symbol, reason) values(%i,\"%@\",\"%@\");", [userID intValue],symbol ,log];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/tips.jsp?query=%@", query];
+    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    return firstParse;
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception);
+    }
+    
+        
+    }
+
 
 @end
