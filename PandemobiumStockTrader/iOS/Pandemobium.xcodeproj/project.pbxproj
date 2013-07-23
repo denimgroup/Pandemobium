@@ -12,6 +12,8 @@
 		BE099C13179DB67E002ED292 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE099C10179DB67E002ED292 /* iVersion.bundle */; };
 		BE099C14179DB67E002ED292 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BE099C12179DB67E002ED292 /* iVersion.m */; };
 		BE099C16179DB91F002ED292 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C15179DB91F002ED292 /* StoreKit.framework */; };
+		BE099C18179ECCCC002ED292 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C17179ECCCC002ED292 /* MobileCoreServices.framework */; };
+		BE099C1A179ECD07002ED292 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C19179ECD07002ED292 /* SystemConfiguration.framework */; };
 		BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */; };
 		BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AFB1771F5F200A01190 /* libz.dylib */; };
 		BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */; };
@@ -70,6 +72,8 @@
 		BE099C11179DB67E002ED292 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		BE099C12179DB67E002ED292 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		BE099C15179DB91F002ED292 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BE099C17179ECCCC002ED292 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BE099C19179ECD07002ED292 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE099C1A179ECD07002ED292 /* SystemConfiguration.framework in Frameworks */,
+				BE099C18179ECCCC002ED292 /* MobileCoreServices.framework in Frameworks */,
 				BE099C16179DB91F002ED292 /* StoreKit.framework in Frameworks */,
 				BE099C00179D8E5A002ED292 /* CoreLocation.framework in Frameworks */,
 				BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */,
@@ -423,16 +429,11 @@
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
-				BE099C15179DB91F002ED292 /* StoreKit.framework */,
 				BE099C0F179DB67E002ED292 /* iVersion */,
-				BE099BFF179D8E5A002ED292 /* CoreLocation.framework */,
 				BE9EAB2517948F700079C57A /* AFNetworking */,
 				BEF0D1001794583900B5C6C3 /* SVProgressHUD */,
 				BE110017178727B50087EB3F /* Helper */,
-				BE0F91BD17721BEF00A01190 /* CoreData.framework */,
 				BE0F6AFD1771F69900A01190 /* CorePlot */,
-				BE0F6AFB1771F5F200A01190 /* libz.dylib */,
-				BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */,
 				BE0F6AF61771F5BE00A01190 /* DB */,
 				BEEF7035176F754300D63EB8 /* ECSlidingViewController */,
 				BEEF7034176F752000D63EB8 /* Controllers */,
@@ -453,6 +454,13 @@
 		BEEF700D176F74DA00D63EB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE099C19179ECD07002ED292 /* SystemConfiguration.framework */,
+				BE099C17179ECCCC002ED292 /* MobileCoreServices.framework */,
+				BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */,
+				BE0F6AFB1771F5F200A01190 /* libz.dylib */,
+				BE0F91BD17721BEF00A01190 /* CoreData.framework */,
+				BE099BFF179D8E5A002ED292 /* CoreLocation.framework */,
+				BE099C15179DB91F002ED292 /* StoreKit.framework */,
 				BEEF703C176F767600D63EB8 /* QuartzCore.framework */,
 				BEEF700E176F74DA00D63EB8 /* UIKit.framework */,
 				BEEF7010176F74DA00D63EB8 /* Foundation.framework */,
