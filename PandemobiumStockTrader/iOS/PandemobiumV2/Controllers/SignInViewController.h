@@ -11,6 +11,7 @@
 #import "MenuViewController.h"
 #import "DBHTTPClient.h"
 #import <CoreLocation/CoreLocation.h>
+#import "iVersion.h"
 
 @interface SignInViewController : UIViewController <UITextFieldDelegate, DBHTTPClientDelegate, CLLocationManagerDelegate>
 
