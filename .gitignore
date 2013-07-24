@@ -11,6 +11,10 @@ Server/.idea
 
 Server/out/
 
+Server/.idea/vcs.xml
+
+Server/.idea/workspace.xml
+
 # Compiled source #
 ###################
 *.com

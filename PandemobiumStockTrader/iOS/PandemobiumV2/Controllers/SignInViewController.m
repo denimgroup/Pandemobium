@@ -12,8 +12,7 @@
 #import "SVProgressHUD.h"
 #import "DBHTTPClient.h"
 #import "KeychainItemWrapper.h"
-
-
+#import "iVersion.h"
 
 @interface SignInViewController () <UITextFieldDelegate>
 @end
@@ -41,12 +40,23 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewWillAppear:animated];
     
+    if(rememberloginSwitch.isEnabled){
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
+    NSString *username = [keychainItem objectForKey:CFBridgingRelease(kSecValueData)];
+    NSString *password = [keychainItem objectForKey:CFBridgingRelease(kSecAttrAccount)];
     
+    usernameText.text = username;
+    passwordText.text = password;
+    }else{
+    usernameText.text = @"";
+    passwordText.text = @"";
+    }
 }
 
 - (IBAction)revealMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
+
 }
 
 
@@ -54,8 +64,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
-	// Do any additional setup after loading the view.
-    
+
 }
 
 - (NSString*) saveFilePath
@@ -69,15 +78,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
     UIAlertView *alert;
-    //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
     NSLog(@"login was pressed");
+    
     if (![self isLoggedIn]) {
         
         if(rememberloginSwitch.isEnabled){
             DBHTTPClient *client = [DBHTTPClient sharedClient];
             client.delegate = self;
             [client logIn:usernameText.text forPassword:passwordText.text];
-            //do something to remember
+            [self saveCreds:usernameText.text :passwordText.text];
             
             [SVProgressHUD show];
         }
@@ -86,6 +95,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
             DBHTTPClient *client = [DBHTTPClient sharedClient];
             client.delegate = self;
             [client logIn:usernameText.text forPassword:passwordText.text];
+            
             [SVProgressHUD show];
         }
     }
@@ -98,6 +108,19 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                  otherButtonTitles:nil];
         [alert show];
     }
+}
+
+- (void)saveCreds:(NSString *)user :(NSString *)pswd
+{
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
+    [keychainItem setObject:user forKey:CFBridgingRelease(kSecValueData)];
+    [keychainItem setObject:pswd forKey:CFBridgingRelease(kSecAttrAccount)];
+}
+
+-(void)releaseCreds
+{
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
+    [keychainItem resetKeychainItem];
 }
 
 
@@ -116,7 +139,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)logoutButtonPressed:(UIBarButtonItem *)sender
 {
     NSLog(@"logout button was pressed");
-    //do something to remvoe account information from app delegate
+    AppDelegate * app = [UIApplication sharedApplication].delegate;
+    
     if(![self isLoggedIn]){
         
         UIAlertView *alert;
@@ -131,7 +155,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     else
     {
         //do stuff to log user off
-        //app.user.isLoggedIn = 0;
+        app.user = [[User alloc]init];
+        [self releaseCreds];
+        usernameText.text = @"";
+        passwordText.text = @"";
         UIAlertView *alert;
         NSString *message = [[NSString alloc] initWithFormat:@"Come Again!"];
         alert = [[UIAlertView alloc] initWithTitle:@"Thank You"
