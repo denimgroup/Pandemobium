@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE05E6BF179D93A500A42EE2 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F51794547500B5C6C3 /* accounts.plist */; };
+		BE05E6C5179DE04A00A42EE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE05E6C0179DCA6800A42EE2 /* Security.framework */; };
 		BE099C00179D8E5A002ED292 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099BFF179D8E5A002ED292 /* CoreLocation.framework */; };
-		BE099C02179DA025002ED292 /* SanAntonio.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BE099C01179DA025002ED292 /* SanAntonio.gpx */; };
-		BE099C13179DB67E002ED292 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE099C10179DB67E002ED292 /* iVersion.bundle */; };
-		BE099C14179DB67E002ED292 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BE099C12179DB67E002ED292 /* iVersion.m */; };
 		BE099C16179DB91F002ED292 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C15179DB91F002ED292 /* StoreKit.framework */; };
 		BE099C18179ECCCC002ED292 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C17179ECCCC002ED292 /* MobileCoreServices.framework */; };
 		BE099C1A179ECD07002ED292 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C19179ECD07002ED292 /* SystemConfiguration.framework */; };
-		BE05E6BF179D93A500A42EE2 /* accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F51794547500B5C6C3 /* accounts.plist */; };
-		BE05E6C5179DE04A00A42EE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE05E6C0179DCA6800A42EE2 /* Security.framework */; };
+		BE099C1F179ED17E002ED292 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE099C1C179ED17E002ED292 /* iVersion.bundle */; };
+		BE099C20179ED17E002ED292 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BE099C1E179ED17E002ED292 /* iVersion.m */; };
 		BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */; };
 		BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AFB1771F5F200A01190 /* libz.dylib */; };
 		BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */; };
@@ -68,16 +67,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE05E6C0179DCA6800A42EE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BE05E6C2179DCC0600A42EE2 /* libkeymgr.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libkeymgr.dylib; path = usr/lib/system/libkeymgr.dylib; sourceTree = SDKROOT; };
 		BE099BFF179D8E5A002ED292 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		BE099C01179DA025002ED292 /* SanAntonio.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SanAntonio.gpx; sourceTree = "<group>"; };
-		BE099C10179DB67E002ED292 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
-		BE099C11179DB67E002ED292 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
-		BE099C12179DB67E002ED292 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		BE099C15179DB91F002ED292 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BE099C17179ECCCC002ED292 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BE099C19179ECD07002ED292 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BE05E6C0179DCA6800A42EE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		BE05E6C2179DCC0600A42EE2 /* libkeymgr.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libkeymgr.dylib; path = usr/lib/system/libkeymgr.dylib; sourceTree = SDKROOT; };
+		BE099C1C179ED17E002ED292 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
+		BE099C1D179ED17E002ED292 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
+		BE099C1E179ED17E002ED292 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -261,8 +259,8 @@
 				BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */,
 				BEEF703D176F767600D63EB8 /* QuartzCore.framework in Frameworks */,
 				BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */,
-				BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */,
 				BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */,
+				BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */,
 				BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +268,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE099C1B179ED17E002ED292 /* iVersion */ = {
+			isa = PBXGroup;
+			children = (
+				BE099C1C179ED17E002ED292 /* iVersion.bundle */,
+				BE099C1D179ED17E002ED292 /* iVersion.h */,
+				BE099C1E179ED17E002ED292 /* iVersion.m */,
+			);
+			name = iVersion;
+			path = PandemobiumV2/iVersion;
+			sourceTree = "<group>";
+		};
 		BE0F6AF61771F5BE00A01190 /* DB */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,9 +432,7 @@
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
-				BE099C0F179DB67E002ED292 /* iVersion */,
-				BE05E6C2179DCC0600A42EE2 /* libkeymgr.dylib */,
-				BE05E6C0179DCA6800A42EE2 /* Security.framework */,
+				BE099C1B179ED17E002ED292 /* iVersion */,
 				BE9EAB2517948F700079C57A /* AFNetworking */,
 				BEF0D1001794583900B5C6C3 /* SVProgressHUD */,
 				BE110017178727B50087EB3F /* Helper */,
@@ -450,6 +457,8 @@
 		BEEF700D176F74DA00D63EB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE05E6C2179DCC0600A42EE2 /* libkeymgr.dylib */,
+				BE05E6C0179DCA6800A42EE2 /* Security.framework */,
 				BE099C19179ECD07002ED292 /* SystemConfiguration.framework */,
 				BE099C17179ECCCC002ED292 /* MobileCoreServices.framework */,
 				BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */,
@@ -610,6 +619,7 @@
 				BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */,
 				BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */,
 				BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */,
+				BE099C1F179ED17E002ED292 /* iVersion.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +663,7 @@
 				BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */,
 				BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */,
 				BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */,
+				BE099C20179ED17E002ED292 /* iVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
