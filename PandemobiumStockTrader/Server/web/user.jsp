@@ -25,6 +25,7 @@
                 pageEncoding="ISO-8859-1"%>
 
 <%@ page import="services.userService" %>
+<%@ page import="services.accountService" %>
 <%@ page import="JSON.JSONObject" %>
 <%@ page import="JSON.JSONArray" %>
 
@@ -55,6 +56,9 @@
 
         results.put(result);
         json.put("Results", results);
+        response.setContentType("application/json");
+        response.getWriter().write(json.toString());
+
 
     }
     else if(method.equals("addUser"))
@@ -80,6 +84,42 @@
         result.put("userID", id);
         results.put(result);
         json.put("Results", results);
+        if(id > 0)
+        {
+
+            accountService account = new accountService();
+            String query = "insert into account (userID, totalShares, balance) values(" + id + ", 0, 10000);";
+            String results2 = account.executeInsert(query);
+            if(results2.equalsIgnoreCase("{\"Result\":1}"))
+            {
+                %>
+                    <script> alert("User and Account Created"); </script>
+                     <h1 align="center"> Great Success!</h1>
+                <%
+
+            }
+            else
+            {
+                %>
+                    <script> alert("User and Account Created"); </script>
+                    <h1 align="center">Y U No Work?!</h1>
+                 <%
+
+
+            }
+        }
+         else
+         {
+
+                 %>
+                    <script> alert("Unable to Create User"); </script>
+
+                    <%
+
+
+
+          }
+
     }
     else if(method.equals("getUserInfo"))
     {
@@ -92,8 +132,9 @@
             result.put(column[i], info[i]);
         results.put(result);
         json.put("Results", results);
+        response.setContentType("application/json");
+        response.getWriter().write(json.toString());
+
     }
-    response.setContentType("application/json");
-    response.getWriter().write(json.toString());
 
 %>

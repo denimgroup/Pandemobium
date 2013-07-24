@@ -67,15 +67,30 @@
             var pass = form.password.value;
             var pass2 = form.password2.value;
 
-            if(pass == pass2)
+            if(firstName.isEqual("") || lastName.isEqual(""))
             {
-                 var txt = new String("firstName=" + firstName + "&lastName=" + lastName + "&email=" + eMail + "&phone=" + phone + "&userName=" + username + "&password="+ pass);
-                alert(""+ txt);
+                alert("Must be valid First and Last Name");
 
-                url="http://localhost:8080/user.jsp?method=addUser&" + txt;
-                window.location.href=url;
+            }
+            else
+            {
+
+                if(pass == pass2)
+                {
+                    var txt = new String("firstName=" + firstName + "&lastName=" + lastName + "&email=" + eMail + "&phone=" + phone + "&userName=" + username + "&password="+ pass);
+                    alert(""+ txt);
+
+                    url="http://localhost:8080/user.jsp?method=addUser&" + txt;
+                    window.location.href=url;
 
 
+                }
+                else
+                {
+                    alert("Passwords do not match");
+
+
+                }
             }
         }
     </script>
@@ -85,7 +100,7 @@
 
 <div class="newUser">
     <h1 align="center"> New User</h1>
-    <form width="100%" name="newUser" method="get" action="user.jsp" id="newUser">
+    <form width="100%" name="newUser" method="get" action="newAccount.jsp" id="newUser">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" placeholder="First" id="firstName"> <br>
         <label for="lastName">Last Name</label>
