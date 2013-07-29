@@ -29,12 +29,18 @@ CGFloat animatedDistance;
 @synthesize locationManager;
 @synthesize originalLocation;
 @synthesize currentLocation;
-//for animating keyboard
+
+/* for animating keyboard */
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
+
+
+
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -53,10 +59,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
+
 - (IBAction)revealMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
-
 }
 
 
@@ -67,6 +73,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 }
 
+
 - (NSString*) saveFilePath
 {
     //NSString* path = [[NSBundle mainBundle] pathForResource:@"/accounts" ofType:@"plist"];
@@ -75,47 +82,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
-- (IBAction)loginButtonPressed:(UIButton *)sender
-{
-    UIAlertView *alert;
-    NSLog(@"login was pressed");
-    
-    if (![self isLoggedIn]) {
-        
-        if(rememberloginSwitch.isEnabled){
-            DBHTTPClient *client = [DBHTTPClient sharedClient];
-            client.delegate = self;
-            [client logIn:usernameText.text forPassword:passwordText.text];
-            [self saveCreds:usernameText.text :passwordText.text];
-            
-            [SVProgressHUD show];
-        }
-        else
-        {
-            DBHTTPClient *client = [DBHTTPClient sharedClient];
-            client.delegate = self;
-            [client logIn:usernameText.text forPassword:passwordText.text];
-            
-            [SVProgressHUD show];
-        }
-    }
-    else
-    {
-        alert = [[UIAlertView alloc] initWithTitle:@"Just so you know..."
-                                           message:@"You are already logged in."
-                                          delegate:nil
-                                 cancelButtonTitle:@"OK"
-                                 otherButtonTitles:nil];
-        [alert show];
-    }
-}
-
 - (void)saveCreds:(NSString *)user :(NSString *)pswd
 {
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
     [keychainItem setObject:user forKey:CFBridgingRelease(kSecValueData)];
     [keychainItem setObject:pswd forKey:CFBridgingRelease(kSecAttrAccount)];
 }
+
 
 -(void)releaseCreds
 {
@@ -135,6 +108,79 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
 }
 
+
+
+
+
+
+
+
+#pragma ButtonPressed
+
+- (IBAction)loginButtonPressed:(UIButton *)sender
+{
+    UIAlertView *alert;
+    NSLog(@"login was pressed");
+    
+    if (![self isLoggedIn]) {
+        
+        if(rememberloginSwitch.isEnabled){
+            
+            if([usernameText.text isEqualToString:@""] || [passwordText.text isEqualToString:@""])
+            {
+                alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                   message:@"You did not enter anything into username and/or password"
+                                                  delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+                [alert show];
+            
+            }
+            else
+            {
+            
+            DBHTTPClient *client = [DBHTTPClient sharedClient];
+            client.delegate = self;
+            [client logIn:usernameText.text forPassword:passwordText.text];
+            [self saveCreds:usernameText.text :passwordText.text];
+            
+            [SVProgressHUD showWithStatus:@"Signing In"];
+            }
+        }
+        else
+        {
+            if([usernameText.text isEqualToString:@""] || [passwordText.text isEqualToString:@""])
+            {
+                alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                   message:@"You did not enter anything into username and/or password"
+                                                  delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+                [alert show];
+            
+            }
+            else
+            {
+            
+            DBHTTPClient *client = [DBHTTPClient sharedClient];
+            client.delegate = self;
+            [client logIn:usernameText.text forPassword:passwordText.text];
+            
+            [SVProgressHUD showWithStatus:@"Signing In"];
+                
+            }
+        }
+    }
+    else
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Just so you know..."
+                                           message:@"You are already logged in."
+                                          delegate:nil
+                                 cancelButtonTitle:@"OK"
+                                 otherButtonTitles:nil];
+        [alert show];
+    }
+}
 
 - (IBAction)logoutButtonPressed:(UIBarButtonItem *)sender
 {
@@ -170,6 +216,39 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 
 }
+
+
+- (IBAction)newAccount:(id)sender {
+    
+    NSLog(@"new Account button is pressed");
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/newAccount.jsp"];
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:requestURL delegate:self startImmediately:YES];
+    
+    if(connection)
+    {
+        NSLog(@"connection is established");
+        [[UIApplication sharedApplication] openURL:url];
+    }else
+    {
+        NSLog(@"user connection failed to %@", url);
+    }
+                                
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma TextFieldandKeyboard
 
 //for handling input text and keybaord behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -237,7 +316,16 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [textField resignFirstResponder];
     return YES;
 }
-//
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - DBHTTPClientDelegate
 -(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithLogIn:(NSDictionary *)results
@@ -350,6 +438,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
      [self performSegueWithIdentifier:@"afterLogin" sender:self];
 }
+
+
+
+
+
+
+
+
+
 
 #pragma mark - CLLocationManagerDelegate
 
