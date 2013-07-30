@@ -67,7 +67,7 @@
             var pass = form.password.value;
             var pass2 = form.password2.value;
 
-            if(firstName.isEqual("") || lastName.isEqual(""))
+            if(firstName =="" || lastName == "")
             {
                 alert("Must be valid First and Last Name");
 
@@ -75,19 +75,18 @@
             else
             {
 
-                if(pass == pass2)
+                if((pass == pass2) && pass != "")
                 {
                     var txt = new String("firstName=" + firstName + "&lastName=" + lastName + "&email=" + eMail + "&phone=" + phone + "&userName=" + username + "&password="+ pass);
-                    alert(""+ txt);
 
                     url="http://localhost:8080/user.jsp?method=addUser&" + txt;
-                    window.location.href=url;
+                    window.location=url;
 
 
                 }
                 else
                 {
-                    alert("Passwords do not match");
+                    alert("Password cannot be blank and must match");
 
 
                 }
@@ -100,7 +99,7 @@
 
 <div class="newUser">
     <h1 align="center"> New User</h1>
-    <form width="100%" name="newUser" method="get" action="newAccount.jsp" id="newUser">
+    <form width="100%" name="newUser" id="newUser" onsubmit="submitPressed(this.form); return false">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" placeholder="First" id="firstName"> <br>
         <label for="lastName">Last Name</label>
@@ -115,7 +114,7 @@
         <input type="password" name="password" placeholder="Password" id="password"> <br>
         <label for="password2">Re-Enter Password</label>
         <input type="password" name="password2" placeholder="Re-Enter Password" id="password2"> <br>
-        <button type="submit" name="submit" onclick="submitPressed(this.form); return false;">Submit</button><br>
+        <button type="submit" name="submit" onclick="submitPressed(this.form); return false; ">Submit</button><br>
     </form>
 
 </div>

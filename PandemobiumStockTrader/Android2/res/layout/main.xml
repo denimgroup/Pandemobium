@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sign In"
+                android:id="@+id/signInButton"
+                android:layout_weight="1"
+                android:onClick="signInPressed"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Settings"
+                android:id="@+id/settingsButton"
+                android:layout_weight="1" android:onClick="settingsPressed"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Quotes"
+                android:id="@+id/quotesButton"
+                android:layout_weight="1"
+                android:onClick="quotesPressed"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Search"
+                android:id="@+id/searchButton"
+                android:layout_weight="1"
+                android:onClick="searchPressed"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Trading"
+                android:id="@+id/tradingButton"
+                android:layout_weight="1"
+                android:onClick="tradingPressed"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Portfolio"
+                android:id="@+id/portfolioButton"
+                android:layout_weight="1"
+                android:onClick="portfolioPressed"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tips"
+                android:id="@+id/tipsButton"
+                android:layout_weight="1"
+                android:onClick="tipsPressed"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="History"
+                android:id="@+id/historyButton"
+                android:layout_weight="1"
+                android:onClick="historyPressed"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Manage Tips"
+                android:id="@+id/manageTipsButton"
+                android:layout_weight="1"
+                android:onClick="manageTipsPressed"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="News"
+                android:id="@+id/newsButton"
+                android:layout_weight="1"
+                android:onClick="newsPressed"/>
+    </LinearLayout>
+</LinearLayout>
