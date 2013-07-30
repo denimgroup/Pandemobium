@@ -28,6 +28,8 @@
 
 -(NSDictionary *) logIn:(NSString *)username forPassword:(NSString *)password;
 {
+    @try {
+    
     NSError *error;
     
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/user.jsp?method=logIn&username=%@&password=%@", username, password];
@@ -37,7 +39,11 @@
     NSArray *secondParse = [firstParse objectForKey:@"Results"];
   
     return [secondParse objectAtIndex:0];
-
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exeption Caught! : %@", exception);
+    }
+  
 }
 
 -(NSArray *) getFavoriteStocks:(NSNumber *)accountID
@@ -455,7 +461,6 @@
 
 -(NSDictionary *) addHistory:(NSNumber *) userID forLog:(NSString *)log
 {
-    
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, \"%@\");", [userID intValue], log];
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/history.jsp?query=%@", query];
@@ -463,17 +468,19 @@
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     return firstParse;
-    
 }
 
 - (NSDictionary *) addTip:(NSNumber *)userID forSymbol:(NSString *)symbol forLog:(NSString *)log
 {
     @try {
-  
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"insert into tips(userID, symbol, reason) values(%i,\"%@\",\"%@\");", [userID intValue],symbol ,log];
+        
+        NSLog(@"query = %@",  query);
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/tips.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        NSLog(@"url = %@", url); 
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     return firstParse;
