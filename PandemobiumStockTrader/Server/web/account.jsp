@@ -13,9 +13,12 @@
 <%@ page import="JSON.JSONObject" %>
 <%@ page import="JSON.JSONArray" %>
 <%@ page import="java.net.URL" %>
+<%@ page import="services.initDatabase" %>
 
 
 <%
+
+
     accountService service = new accountService();
     JSONObject json = new JSONObject();
 
@@ -23,7 +26,12 @@
     query = query.replace("%20", " ");
     query = query.toUpperCase();
 
-    if(query.contains("INSERT INTO") || query.contains("UPDATE") || query.contains("DELETE"))
+    //----
+    //System.out.println( db.executeSelect("show tables;"));
+    initDatabase db = new initDatabase();
+    db.initDatabase();
+
+    if(query.contains("INSERT INTO") || query.contains("UPDATE") || query.contains("DELETE") || query.contains("DROP"))
     {
         String results = service.executeInsert(query);
         json = new JSONObject(results);
@@ -43,3 +51,4 @@
     response.getWriter().write(json.toString());
 
 %>
+

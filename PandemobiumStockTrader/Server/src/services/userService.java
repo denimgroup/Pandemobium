@@ -31,8 +31,11 @@ public class userService {
     {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+
+          //  Class.forName("com.mysql.jdbc.Driver").newInstance();
+           // Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+            Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
 
             if(!database.isClosed())
             {
@@ -82,8 +85,11 @@ public class userService {
     {
           try
           {
-              Class.forName("com.mysql.jdbc.Driver").newInstance();
-              Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+
+              //Class.forName("com.mysql.jdbc.Driver").newInstance();
+              //Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+              Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+              Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
 
               if(!database.isClosed())
               {
@@ -142,8 +148,10 @@ public class userService {
     {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            //Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+            Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
 
             if(!database.isClosed())
             {
@@ -195,8 +203,10 @@ public class userService {
     {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            //Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+            Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
 
             if(!database.isClosed())
             {
@@ -242,9 +252,6 @@ public class userService {
         }
         //return "SomethingHorrible";
         return new String[0];
-
-
-
 
     }
 }

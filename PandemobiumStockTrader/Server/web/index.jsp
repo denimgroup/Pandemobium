@@ -23,10 +23,10 @@
                     <a href="http://localhost:8080/account.jsp?query=select%20*%20from%20account;"> Select * from account</a>
                 </td>
                 <td>
-                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20tips%20(symbol,%20reason,%20userID)%20values%20(%22GOOG%22,%20%22tesing%20this%20bitch%22,%201);"> Insert Tip</a>
+                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20tips%20(symbol,%20reason,%20userID)%20values%20('GOOG',%20'tesing',%201);"> Insert Tip</a>
                 </td>
                 <td>
-                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20history%20(log,%20userID)%20values%20(%22GOOG%22,%201);"> Insert History </a>
+                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20history%20(log,%20userID)%20values%20('GOOG',%201);"> Insert History </a>
                 </td>
 
             </tr>
@@ -40,6 +40,7 @@
                     <a href="http://localhost:8080/user.jsp?method=getUserInfo&userID=1"> Get user Information</a>
                 </td>
             </tr>
+
         </table>
 
 

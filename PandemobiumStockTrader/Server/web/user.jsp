@@ -28,6 +28,7 @@
 <%@ page import="services.accountService" %>
 <%@ page import="JSON.JSONObject" %>
 <%@ page import="JSON.JSONArray" %>
+<%@ page import="services.initDatabase" %>
 
 <%
     response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
@@ -36,6 +37,8 @@
 %>
 
 <%
+    initDatabase db = new initDatabase();
+    db.initDatabase();
 
     String method = request.getParameter("method");
     userService service = new userService();
