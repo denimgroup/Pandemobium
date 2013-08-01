@@ -134,7 +134,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
         
         results = [helper getAccountInfo:appDelegate.user.accountID];
-        canInvest.text = [[NSString alloc] initWithFormat:@"$%.2f", [[results objectForKey:@"balance"] floatValue]];
+        canInvest.text = [[NSString alloc] initWithFormat:@"$%.2f", [[results objectForKey:@"BALANCE"] floatValue]];
         
         stocks = [helper getPurchasedStocks:appDelegate.user.accountID];
 
@@ -289,7 +289,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                 
                 NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
                 NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
-                                         ([[accountInfo objectForKey:@"balance"] doubleValue] - [cost doubleValue])];
+                                         ([[accountInfo objectForKey:@"BALANCE"] doubleValue] - [cost doubleValue])];
                 
                 if([newBalance doubleValue] >= 0.0) // Has enough money to buy stocks
                 {
@@ -441,17 +441,17 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                 
                 NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
                 NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
-                                         ([[accountInfo objectForKey:@"balance"] doubleValue] + [cost doubleValue])];
+                                         ([[accountInfo objectForKey:@"BALANCE"] doubleValue] + [cost doubleValue])];
                 
                 
                 NSArray * listOfStocks = [helper getPurchasedStocks:appDelegate.user.accountID];
-                NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", stockSymbol];
+                NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", stockSymbol];
                 NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
                 
                 if([matched count] >= 1)
                 { //Stock Exists
                     
-                    if([[[matched objectAtIndex:0] valueForKey:@"shares"]intValue] >= [shares intValue])
+                    if([[[matched objectAtIndex:0] valueForKey:@"SHARES"]intValue] >= [shares intValue])
                     { //Has sufficient stock
                         
                         NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];

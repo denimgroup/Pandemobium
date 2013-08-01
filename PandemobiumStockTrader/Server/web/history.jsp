@@ -15,13 +15,20 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="services.initDatabase" %>
 
 <%
+    initDatabase db = new initDatabase();
+    db.initDatabase();
+
     JSONObject json = new JSONObject();
     JSONArray array;
 
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+    //Class.forName("com.mysql.jdbc.Driver").newInstance();
+   // Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+    Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+    Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
+
 
     String query = request.getParameter("query");
     query = query.replace("%20", " ");

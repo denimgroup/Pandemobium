@@ -13,14 +13,21 @@ import JSON.JSONObject;
 import java.util.*;
 import JSON.ResultSetConverter;
 import JSON.JSONArray;
+import services.initDatabase;
 
 public class accountService {
 
       public String executeSelect(String query) {
           try
           {
-              Class.forName("com.mysql.jdbc.Driver").newInstance();
-              Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+
+              //Class.forName("com.mysql.jdbc.Driver").newInstance();
+              //Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+
+              Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+              Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
+
+
 
               if(!database.isClosed())
               {
@@ -33,6 +40,7 @@ public class accountService {
                   JSONArray array ;
                   ResultSetConverter converter = new ResultSetConverter();
                   array = converter.convert(response);
+                 // System.out.println(array);
                   object.put("Results", array);
                   database.close();
                   return object.toString();
@@ -61,8 +69,12 @@ public class accountService {
     public String executeInsert(String query) {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            //Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+
+            Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+            Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
+
 
             if(!database.isClosed())
             {

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:id="@+id/userNameLabel"
+            android:layout_weight="2"
+            android:autoText="true"
+            android:textSize="17dp" android:gravity="bottom"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username" android:layout_weight="1"
+            android:singleLine="true" android:clickable="true" android:editable="true" android:lines="1"
+            android:textStyle="normal" android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:textColor="#000000"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:id="@+id/passwordLabel"
+            android:layout_weight="2" android:textSize="17dp"
+            android:textStyle="normal" android:gravity="bottom"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:layout_weight="1" android:textStyle="normal" android:password="true" android:singleLine="true"
+            android:background="@android:drawable/editbox_dropdown_light_frame" android:textColor="#000000"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" android:layout_weight="1"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/loginButton"
+            android:layout_weight="1" android:textColor="#000000"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:gravity="center_horizontal|bottom" android:layout_weight="1">
+        <Switch
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Remember Login"
+                android:id="@+id/rememberLogin" android:checked="false" android:gravity="center_horizontal|bottom"
+                android:enabled="true"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account yet?"
+            android:id="@+id/textView2"
+            android:layout_weight="10" android:gravity="center|bottom"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:id="@+id/signUpButton"
+            android:layout_weight="1"/>
+</LinearLayout>

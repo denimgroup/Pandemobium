@@ -67,7 +67,7 @@ CGFloat const CPDBarInitialX = 0.5f;
     if(appDelegate.user.loggedIn.intValue == 1)
     {
         //stockValues = [helper getStockValue:appDelegate.user.accountID];
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"shares > 0"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SHARES > 0"];
         stockValues = [appDelegate.user.favoriteStocks filteredArrayUsingPredicate:pred];
         
         
@@ -92,7 +92,7 @@ CGFloat const CPDBarInitialX = 0.5f;
     // since the view bounds have not transformed for landscaepe until now
     if(appDelegate.user.loggedIn.intValue == 1)
     {
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"shares > 0"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SHARES > 0"];
         stockValues = [appDelegate.user.favoriteStocks filteredArrayUsingPredicate:pred];
         portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[appDelegate.user.accountValue doubleValue]];
         
@@ -113,7 +113,7 @@ CGFloat const CPDBarInitialX = 0.5f;
         accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
         numberShares.text = [[NSString alloc]initWithFormat:@"%i", [appDelegate.user.totalShares intValue]];
         accountValue.text = [[NSString alloc]initWithFormat:@"$%0.2f", [appDelegate.user.accountValue doubleValue]];
-        netWorth.text = [[NSString alloc]initWithFormat:@"$%0.2f", [[results valueForKey:@"balance"]doubleValue] ];
+        netWorth.text = [[NSString alloc]initWithFormat:@"$%0.2f", [[results valueForKey:@"BALANCE"]doubleValue] ];
         
     }
     else
@@ -194,7 +194,7 @@ CGFloat const CPDBarInitialX = 0.5f;
         if(fieldEnum == CPTBarPlotFieldBarLocation)
             return [[NSNumber alloc]initWithInt:index];
         else if (fieldEnum == CPTBarPlotFieldBarTip)
-            return [[stockValues objectAtIndex:index]valueForKey:@"shares"];
+            return [[stockValues objectAtIndex:index]valueForKey:@"SHARES"];
     }
     
     return [NSDecimalNumber zero];
@@ -228,8 +228,8 @@ CGFloat const CPDBarInitialX = 0.5f;
         labelText.color = [CPTColor whiteColor];
         labelText.fontSize = 12.0f;
         
-        labelValue = [NSString stringWithFormat:@"%@: %i", [[stockValues objectAtIndex:index] valueForKey:@"symbol"],
-                      [[[stockValues objectAtIndex:index]valueForKey:@"shares"]intValue]];
+        labelValue = [NSString stringWithFormat:@"%@: %i", [[stockValues objectAtIndex:index] valueForKey:@"SYMBOL"],
+                      [[[stockValues objectAtIndex:index]valueForKey:@"SHARES"]intValue]];
     }
     return [[CPTTextLayer alloc] initWithText:labelValue style:labelText];
     
@@ -240,7 +240,7 @@ CGFloat const CPDBarInitialX = 0.5f;
 {
     if(index < [stockValues count])
     {
-        return [[stockValues objectAtIndex:index] valueForKey:@"symbol"];
+        return [[stockValues objectAtIndex:index] valueForKey:@"SYMBOL"];
     }
     return @"N/A";
 }
@@ -338,9 +338,9 @@ CGFloat const CPDBarInitialX = 0.5f;
     NSNumber *max = [[NSNumber alloc]initWithInt:0];
     for(int i = 0; i < [stockValues count]; i++)
     {
-        if([[[stockValues objectAtIndex:i] valueForKey:@"shares"] intValue] > [max intValue])
+        if([[[stockValues objectAtIndex:i] valueForKey:@"SHARES"] intValue] > [max intValue])
         {
-            max = [[stockValues objectAtIndex:i]valueForKey:@"shares"];
+            max = [[stockValues objectAtIndex:i]valueForKey:@"SHARES"];
             
         }
     }
@@ -525,7 +525,7 @@ CGFloat const CPDBarInitialX = 0.5f;
     
     
     // 5 - Create text later for annotation
-    NSString *stock = [[NSString alloc]initWithFormat:@"%@: %i Shares", [[stockValues objectAtIndex:index] valueForKey:@"symbol"],
+    NSString *stock = [[NSString alloc]initWithFormat:@"%@: %i Shares", [[stockValues objectAtIndex:index] valueForKey:@"SYMBOL"],
                             [share intValue]];
     CPTTextLayer *textLayer = [[CPTTextLayer alloc] initWithText:stock style:style];
     self.stockAnnotation.contentLayer = textLayer;

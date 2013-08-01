@@ -335,7 +335,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     NSInteger userID = [[results valueForKey:@"userID"] intValue];
     
        
-    if(userID >= 1)
+    if(userID > 0)
     {
        
         [locationManager startUpdatingLocation];

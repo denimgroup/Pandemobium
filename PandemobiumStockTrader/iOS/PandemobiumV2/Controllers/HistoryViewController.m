@@ -101,8 +101,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"time"];
-    cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"log"];
+    cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"TIME"];
+    cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"LOG"];
     
     // set the accessory view:
     //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
