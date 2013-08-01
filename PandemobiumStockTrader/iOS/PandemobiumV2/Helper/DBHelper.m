@@ -141,9 +141,9 @@
         
         NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
         [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"symbol"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"SYMBOL"];
         [temp setObject:value forKey:@"value"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"shares"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"SHARES"];
         
         NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
                              [stockInfo valueForKey:@"Change"],
@@ -177,9 +177,9 @@
         
         NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
         [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"symbol"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"SYMBOL"];
         [temp setObject:value forKey:@"value"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"shares"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"SHARES"];
         
         NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
                              [stockInfo valueForKey:@"Change"],
