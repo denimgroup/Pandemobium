@@ -90,8 +90,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.detailTextLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"reason"];
-    cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+    cell.detailTextLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"REASON"];
+    cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"SYMBOL"];
     
     // set the accessory view:
     //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;

@@ -166,8 +166,25 @@
 {
 
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSString *symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
-   // NSLog(@"%@", symbol);
+  
+    NSString *key;
+    if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    {
+        key=@"SYMBOL";
+        
+    }
+    else
+    {
+        key=@"symbol";
+    }
+    NSString *symbol ;
+   
+        symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:key];
+        
+        
+   
+        
+        // NSLog(@"%@", symbol);
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     NSURL *imageurl = [NSURL URLWithString:path];
@@ -221,7 +238,22 @@
         }
     }
     
-    NSString *symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:@"symbol"];
+    NSString *key;
+    if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    {
+        key=@"SYMBOL";
+        
+    }
+    else
+    {
+        key=@"symbol";
+    }
+    
+    NSString *symbol ;
+        symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:key];
+        
+        
+    
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     // NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=GOOG"];
@@ -335,7 +367,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    cell.textLabel.text = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+    NSString *symbol ;
+    NSString *key;
+    if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    {
+        key=@"SYMBOL";
+        
+    }
+    else
+    {
+        key=@"symbol";
+    }
+    
+    symbol = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key];
+        
+    
+    
+    cell.textLabel.text = symbol;
     
     if([self isLoggedIn] && [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks])
     {
@@ -345,7 +393,7 @@
     {
         if([favoriteStocks count] > 0 )
         {
-            cell.detailTextLabel.text = [self fetchData:[[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"] ];
+            cell.detailTextLabel.text = [self fetchData:[[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key] ];
         }
          // set the accessory view:
     }
@@ -373,7 +421,23 @@
     {
         StockViewController *stockViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.quoteTableView indexPathForSelectedRow];
-        NSString *destinationTitle = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+        
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+
+        NSString *symbol ;
+        NSString *key;
+        if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+        {
+            key=@"SYMBOL";
+            
+        }
+        else
+        {
+            key=@"symbol";
+        }
+        symbol = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key];
+        
+        NSString *destinationTitle = symbol;
         
         stockViewController.symbol = destinationTitle;
         stockViewController.originateFrom = @"QuoteView";

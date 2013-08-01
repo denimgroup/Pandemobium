@@ -86,9 +86,9 @@ NSString *const BaseURLString = @"http://localhost:8080/";
          NSDictionary *results = [secondParse objectAtIndex:0];
          
          if([self.delegate respondsToSelector:@selector(DBHTTPClient:didUpdateWithAccountID:)])
-             [self.delegate DBHTTPClient:self didUpdateWithAccountID:[results valueForKey:@"accountID"]];
+             [self.delegate DBHTTPClient:self didUpdateWithAccountID:[results valueForKey:@"ACCOUNTID"]];
          else if([self.delegate respondsToSelector:@selector(DBHTTPClient:didUpdateWithLogIn:)])
-             [self.delegate DBHTTPClient:self didUpdateWithAccountID:[results valueForKey:@"accountID"]];
+             [self.delegate DBHTTPClient:self didUpdateWithAccountID:[results valueForKey:@"ACCOUNTID"]];
      }
                                                     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
      {
@@ -104,7 +104,7 @@ NSString *const BaseURLString = @"http://localhost:8080/";
 -(void) addHistory:(NSNumber *) userID forLog:(NSString *)log
 {
     
-    NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, \"%@\");", [userID intValue], log];
+    NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, '%@');", [userID intValue], log];
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/history.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
@@ -152,7 +152,7 @@ NSString *const BaseURLString = @"http://localhost:8080/";
          {
 
              //Query yahoo's DB for stock info
-             NSString *yahooURL = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", [[listStocks objectAtIndex:i] valueForKey:@"symbol"]];
+             NSString *yahooURL = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", [[listStocks objectAtIndex:i] valueForKey:@"SYMBOL"]];
                                    
              
              NSError *error;
@@ -166,19 +166,19 @@ NSString *const BaseURLString = @"http://localhost:8080/";
              
                           
              NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
-             NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
+             NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"SHARES"] intValue]];
              NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
              
              
              NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
              [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
-             [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"symbol"] forKey:@"symbol"];
+             [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"SYMBOL"];
              [temp setObject:value forKey:@"value"];
-             [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"shares"] forKey:@"shares"];
+             [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"SHARES"];
              
              NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
                                   [stockInfo valueForKey:@"Change"],
-                                  [[[listStocks objectAtIndex:i] valueForKey:@"shares"]intValue],
+                                  [[[listStocks objectAtIndex:i] valueForKey:@"SHARES"]intValue],
                                   [value doubleValue]];
              [temp setObject:summary forKey:@"summary"];
              
@@ -228,21 +228,21 @@ NSString *const BaseURLString = @"http://localhost:8080/";
          
          if([listOfStocks count] == 0) // Just insert stock
          {
-             secondQuery = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values(\"%@\", %i, %i);", symbol, 0, [accountID intValue]];
+             secondQuery = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values('%@', %i, %i);", symbol, 0, [accountID intValue]];
          }
          else
          { // Check to see if stock is in favorites (watching or bought)
-             NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", symbol];
+             NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", symbol];
              NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
              if([matched count] > 0)
              { //Stock Exists
                  secondQuery = [[NSString alloc] initWithFormat:
-                                @"UPDATE stock SET favorite = %i WHERE accountID = %i AND symbol = \"%@\";",
+                                @"UPDATE stock SET favorite = %i WHERE accountID = %i AND symbol = '%@';",
                                 1, [accountID intValue], symbol ];
              }
              else
              { //Does not exist
-                 secondQuery = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values(\"%@\", %i, %i);", symbol, 0, [accountID intValue]];
+                 secondQuery = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values('%@', %i, %i);", symbol, 0, [accountID intValue]];
              }
          }
          secondUrl = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", secondQuery];

@@ -25,6 +25,10 @@
 @synthesize stockInfo;
 @synthesize originateFrom;
 @synthesize activityIndicator;
+@synthesize cellSubtitle;
+@synthesize cellTitle;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,15 +74,73 @@
 -(void) fetchData
 {
    
+//    NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
+//    
+//    NSError *error;
+//    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+//    
+//    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+//    NSDictionary *query = [jsonData objectForKey:@"query"];
+//    NSDictionary *results = [query objectForKey:@"results"];
+//    stockInfo = [results objectForKey:@"quote"];
+//    
+    
+    
+    
     NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
-    
+    //NSLog(@"%@", url);
     NSError *error;
+    //while(true)
+    //{
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary * jsonData = [[NSDictionary alloc]init];
+    NSDictionary * query = [[NSDictionary alloc]init];
+    NSDictionary * results = [[NSDictionary alloc]init];
+    //NSDictionary * stockInfo = [[NSDictionary alloc]init];
+    @try {
+        id object = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        //NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        if(error)
+        {
+            NSLog(@"Error parsing data");
+            
+        }
+        if([object isKindOfClass:[NSDictionary class]])
+        {
+            jsonData = object;
+            if([[ jsonData objectForKey:@"query" ] isKindOfClass:[NSDictionary class]])
+            {
+                query = [jsonData objectForKey:@"query"];
+                
+                if([[query objectForKey:@"results"] isKindOfClass:[NSDictionary class]])
+                {
+                    results = [query objectForKey:@"results"];
+                    
+                    if([[results objectForKey:@"quote"] isKindOfClass:[NSDictionary class]])
+                    {
+                        stockInfo = [results objectForKey:@"quote"]; //error
+                        cellTitle = [[stockInfo allKeys] mutableCopy];
+                        cellSubtitle = [[stockInfo allValues] mutableCopy];
+                        
+                        
+                                               
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+    @catch (NSException *exception)
+    {
+        NSLog(@"%@", exception);
+    }
+    @finally {
     
-    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    NSDictionary *query = [jsonData objectForKey:@"query"];
-    NSDictionary *results = [query objectForKey:@"results"];
-    stockInfo = [results objectForKey:@"quote"];
+    }
+    
+    
     
 }
 
@@ -93,11 +155,11 @@
     if([appDelegate.user.loggedIn intValue] == 1)
     {
         NSArray *dbStockInfo = [helper getAllUserStocks:appDelegate.user.accountID];
-        NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", stockSymbol];
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", stockSymbol];
         NSArray * matched = [dbStockInfo filteredArrayUsingPredicate:p];
         if([matched count] >= 1)
         {
-            if([[[matched objectAtIndex:0] objectForKey:@"favorite"]intValue] == 1)
+            if([[[matched objectAtIndex:0] objectForKey:@"FAVORITE"]intValue] == 1)
             {
                 [self.favoriteButton setTitle:@"Remove"];
             }
@@ -154,12 +216,25 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    NSArray *title = [stockInfo allKeys];
-    NSArray *subtitle = [stockInfo allValues];
+    if([cellTitle objectAtIndex:indexPath.row] == [NSNull null])
+    {
+        cell.textLabel.text = @"N/A";
+        
+        
+    }
+    else
+    {
+        cell.textLabel.text = [cellTitle objectAtIndex:indexPath.row];
+    }
     
-    cell.textLabel.text = [title objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [subtitle objectAtIndex:indexPath.row];
-    
+    if([cellSubtitle objectAtIndex:indexPath.row] == [NSNull null])
+    {
+        cell.detailTextLabel.text = @"N/A";
+    }
+    else
+    {
+        cell.detailTextLabel.text = [cellSubtitle objectAtIndex:indexPath.row];
+    }
     // set the accessory view:
     cell.accessoryType =  UITableViewCellAccessoryNone;
     

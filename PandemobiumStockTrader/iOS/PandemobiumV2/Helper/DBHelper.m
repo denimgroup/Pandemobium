@@ -29,21 +29,21 @@
 -(NSDictionary *) logIn:(NSString *)username forPassword:(NSString *)password;
 {
     @try {
-    
-    NSError *error;
-    
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/user.jsp?method=logIn&username=%@&password=%@", username, password];
-    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    NSArray *secondParse = [firstParse objectForKey:@"Results"];
-  
-    return [secondParse objectAtIndex:0];
+        
+        NSError *error;
+        
+        NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/user.jsp?method=logIn&username=%@&password=%@", username, password];
+        url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+        NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        NSArray *secondParse = [firstParse objectForKey:@"Results"];
+        
+        return [secondParse objectAtIndex:0];
     }
     @catch (NSException *exception) {
         NSLog(@"Exeption Caught! : %@", exception);
     }
-  
+    
 }
 
 -(NSArray *) getFavoriteStocks:(NSNumber *)accountID
@@ -110,9 +110,9 @@
     
     for (int i = 0; i < [listStocks count]; i++)
     {
-        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"symbol"]];
+        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"]];
         NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
-        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
+        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"SHARES"] intValue]];
         
         balance = [NSNumber numberWithDouble:([balance doubleValue] + ([listPrice doubleValue] * [shares intValue]))];
     }
@@ -133,21 +133,21 @@
     
     for (int i = 0; i < [listStocks count]; i++)
     {
-        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"symbol"]];
+        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"]];
         NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
-        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
+        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"SHARES"] intValue]];
         NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
         
         
         NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
         [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"symbol"] forKey:@"symbol"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"symbol"];
         [temp setObject:value forKey:@"value"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"shares"] forKey:@"shares"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"shares"];
         
         NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
                              [stockInfo valueForKey:@"Change"],
-                             [[[listStocks objectAtIndex:i] valueForKey:@"shares"]intValue],
+                             [[[listStocks objectAtIndex:i] valueForKey:@"SHARES"]intValue],
                              [value doubleValue]];
         [temp setObject:summary forKey:@"summary"];
         
@@ -169,21 +169,21 @@
     
     for (int i = 0; i < [listStocks count]; i++)
     {
-        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"symbol"]];
+        stockInfo = [self fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"]];
         NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
-        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"shares"] intValue]];
+        NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"SHARES"] intValue]];
         NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
         
         
         NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
         [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"symbol"] forKey:@"symbol"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"symbol"];
         [temp setObject:value forKey:@"value"];
-        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"shares"] forKey:@"shares"];
+        [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"shares"];
         
         NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
                              [stockInfo valueForKey:@"Change"],
-                             [[[listStocks objectAtIndex:i] valueForKey:@"shares"]intValue],
+                             [[[listStocks objectAtIndex:i] valueForKey:@"SHARES"]intValue],
                              [value doubleValue]];
         [temp setObject:summary forKey:@"summary"];
         
@@ -266,23 +266,23 @@
     
     if([listOfStocks count] == 0) // Just insert stock
     {
-        query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values(\"%@\", %i, %i);", symbol, [shares intValue], [accountID intValue]];
+        query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID, favorite) values('%@', %i, %i, 1);", symbol, [shares intValue], [accountID intValue]];
             }
     else
     { // Check to see if stock is in favorites (watching or bought)
-        NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", symbol];
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", symbol];
         NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
         if([matched count] > 0)
         { //Stock Exists
             NSNumber *currentShares = [[NSNumber alloc]initWithInt:[[[matched objectAtIndex:0]objectForKey:@"shares"] intValue]];
             NSNumber *newShares = [[NSNumber alloc]initWithInt:([currentShares intValue] + [shares intValue])];
             query = [[NSString alloc] initWithFormat:
-                     @"UPDATE stock SET shares = %i WHERE accountID = %i AND symbol = \"%@\";",
+                     @"UPDATE stock SET shares = %i WHERE accountID = %i AND symbol = '%@';",
                      [newShares intValue], [accountID intValue], symbol ];
         }
         else
         { //Does not exist
-            query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values(\"%@\", %i, %i);", symbol, [shares intValue], [accountID intValue]];
+            query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID, favorite) values('%@', %i, %i, 1);", symbol, [shares intValue], [accountID intValue]];
         }
     }
     url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
@@ -302,17 +302,17 @@
     NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *firstParse;
    
-    if([[stock objectForKey:@"shares"]intValue] >= [shares intValue])
+    if([[stock objectForKey:@"SHARES"]intValue] >= [shares intValue])
     { //update the stock
-        NSNumber * newShareTotal = [[NSNumber alloc]initWithInt:([[stock objectForKey:@"shares"]intValue] - [shares intValue])];
-        query = [[NSString alloc]initWithFormat:@"update stock set shares=%i where accountID=%i AND symbol=\"%@\";",
+        NSNumber * newShareTotal = [[NSNumber alloc]initWithInt:([[stock objectForKey:@"SHARES"]intValue] - [shares intValue])];
+        query = [[NSString alloc]initWithFormat:@"update stock set shares=%i where accountID=%i AND symbol='%@';",
                  [newShareTotal intValue],[accountID intValue], symbol];
         
     }
-    else if ([[stock objectForKey:@"shares"]intValue] == [shares intValue])
+    else if ([[stock objectForKey:@"SHARES"]intValue] == [shares intValue])
     {
         //delete stock
-        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol=\"%@\" AND accountID=%i;", symbol, [accountID intValue]];
+        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol='%@' AND accountID=%i;", symbol, [accountID intValue]];
     }
     
     url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
@@ -387,7 +387,7 @@
        
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:
-                       @"Select * from stock where symbol=\"%@\" AND accountID=%i;", symbol, [accountID intValue]];
+                       @"Select * from stock where symbol='%@' AND accountID=%i;", symbol, [accountID intValue]];
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
@@ -408,21 +408,21 @@
     
     if([listOfStocks count] == 0) // Just insert stock
     {
-        query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values(\"%@\", %i, %i);", symbol, 0, [accountID intValue]];
+        query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID, favorite) values('%@', %i, %i, %i);", symbol, 0, [accountID intValue], 1];
     }
     else
     { // Check to see if stock is in favorites (watching or bought)
-        NSPredicate *p = [NSPredicate predicateWithFormat:@"symbol = %@", symbol];
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", symbol];
         NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
         if([matched count] > 0)
         { //Stock Exists
             query = [[NSString alloc] initWithFormat:
-                     @"UPDATE stock SET favorite = %i WHERE accountID = %i AND symbol = \"%@\";",
+                     @"UPDATE stock SET favorite = %i WHERE accountID = %i AND symbol = '%@';",
                      1, [accountID intValue], symbol ];
         }
         else
         { //Does not exist
-            query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values(\"%@\", %i, %i);", symbol, 0, [accountID intValue]];
+            query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID, favorite) values('%@', %i, %i, %i);", symbol, 0, [accountID intValue], 1];
         }
     }
     url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
@@ -442,9 +442,9 @@
     NSDictionary *firstParse;
   
     NSDictionary *stock = [self getIndividualStock:accountID forStock:symbol];
-    if([[stock objectForKey:@"shares"]intValue] == 0)
+    if([[stock objectForKey:@"SHARES"]intValue] == 0)
     {
-        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol=\"%@\" AND accountID=%i;", symbol, [accountID intValue]];
+        query = [[NSString alloc] initWithFormat:@"delete from stock where symbol='%@' AND accountID=%i;", symbol, [accountID intValue]];
         url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
         url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
@@ -462,7 +462,7 @@
 -(NSDictionary *) addHistory:(NSNumber *) userID forLog:(NSString *)log
 {
     NSError *error;
-    NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, \"%@\");", [userID intValue], log];
+    NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, '%@');", [userID intValue], log];
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/history.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
@@ -474,7 +474,7 @@
 {
     @try {
     NSError *error;
-    NSString *query = [[NSString alloc]initWithFormat:@"insert into tips(userID, symbol, reason) values(%i,\"%@\",\"%@\");", [userID intValue],symbol ,log];
+    NSString *query = [[NSString alloc]initWithFormat:@"insert into tips(userID, symbol, reason) values(%i,'%@','%@');", [userID intValue],symbol ,log];
         
         NSLog(@"query = %@",  query);
     NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/tips.jsp?query=%@", query];

@@ -21,6 +21,7 @@
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
 		BE37290E17A02FB200FB84E7 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37290D17A02FB200FB84E7 /* KeychainItemWrapper.m */; };
 		BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */; };
+		BE8D435E17A9B24F0083149F /* SanAntonio.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BE8D435D17A9B24F0083149F /* SanAntonio.gpx */; };
 		BE9EAAF21794714B0079C57A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
 		BE9EAAF6179471DE0079C57A /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */; };
 		BE9EAAF9179471DE0079C57A /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E617944DE900B5C6C3 /* StockViewController.m */; };
@@ -161,6 +162,7 @@
 		BE37290C17A02FB200FB84E7 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		BE37290D17A02FB200FB84E7 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BE8D435D17A9B24F0083149F /* SanAntonio.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SanAntonio.gpx; sourceTree = "<group>"; };
 		BE9EAB1E17947DC60079C57A /* Pandemobium-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pandemobium-Prefix.pch"; sourceTree = "<group>"; };
 		BE9EAB1F1794810A0079C57A /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = PandemobiumV2/DB/Stock.h; sourceTree = "<group>"; };
 		BE9EAB201794810A0079C57A /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = PandemobiumV2/DB/Stock.m; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 				BEF0D0FA1794547500B5C6C3 /* Default@2x.png */,
 				BEF0D0FB1794547500B5C6C3 /* images.jpg */,
 				BEF0D0FC1794547500B5C6C3 /* main.m */,
+				BE8D435D17A9B24F0083149F /* SanAntonio.gpx */,
 				BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */,
 				BE9EAB1E17947DC60079C57A /* Pandemobium-Prefix.pch */,
 				BEEF7017176F74DA00D63EB8 /* InfoPlist.strings */,
@@ -625,6 +628,7 @@
 				BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */,
 				BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */,
 				BE099C1F179ED17E002ED292 /* iVersion.bundle in Resources */,
+				BE8D435E17A9B24F0083149F /* SanAntonio.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
