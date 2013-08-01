@@ -12,8 +12,8 @@
 #import "DBHelper.h"
 #import "AppDelegate.h"
 
-@interface TipsViewController : UIViewController <UIWebViewDelegate>
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@interface TipsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *tips;
 - (IBAction)revealMenu:(id)sender;
 @end

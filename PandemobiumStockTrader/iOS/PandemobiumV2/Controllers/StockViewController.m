@@ -41,10 +41,11 @@
     [self.view becomeFirstResponder];
     
 	// Do any additional setup after loading the view.
-   
+    
     [self initImage];
     [self fetchData];
     [self stockStatus:symbol];
+        
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +80,7 @@
     NSDictionary *query = [jsonData objectForKey:@"query"];
     NSDictionary *results = [query objectForKey:@"results"];
     stockInfo = [results objectForKey:@"quote"];
-    
+
 }
 
 -(void)stockStatus:(NSString *)stockSymbol
@@ -144,7 +145,7 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
     static NSString *CellIdentifier = @"stockInfoCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -154,9 +155,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    NSArray *title = [stockInfo allKeys];
-    NSArray *subtitle = [stockInfo allValues];
-    
+    NSMutableArray *title = [stockInfo allKeys].mutableCopy;
+    NSMutableArray *subtitle = [stockInfo allValues].mutableCopy;
+
+    if ([subtitle objectAtIndex:indexPath.row] ==[NSNull null]) {
+        NSString * NA = @"N/A";
+        [subtitle replaceObjectAtIndex:indexPath.row withObject:NA];
+    }
+
     cell.textLabel.text = [title objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = [subtitle objectAtIndex:indexPath.row];
     
@@ -164,6 +170,10 @@
     cell.accessoryType =  UITableViewCellAccessoryNone;
     
     return cell;
+  
+        
+    
+    
 }
 
 

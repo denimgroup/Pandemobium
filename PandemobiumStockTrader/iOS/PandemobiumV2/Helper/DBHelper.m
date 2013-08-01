@@ -41,7 +41,7 @@
     return [secondParse objectAtIndex:0];
     }
     @catch (NSException *exception) {
-        NSLog(@"Exeption Caught! : %@", exception);
+        NSLog(@"Exeption Caught! : %@", [exception description]);
     }
   
 }
@@ -245,7 +245,7 @@
     }
     @catch (NSException *exception)
     {
-        NSLog(@"%@", exception);
+        NSLog(@"EXCEPTION CAUGHT : %@", [exception description]);
     }
     @finally {
         NSLog(@"Finally");
@@ -486,7 +486,7 @@
     return firstParse;
     }
     @catch (NSException *exception) {
-        NSLog(@"%@", exception);
+        NSLog(@"EXCEPTION CAUGHT: %@", [exception description]);
     }
     
         
