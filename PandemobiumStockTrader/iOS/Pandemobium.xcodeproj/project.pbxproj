@@ -20,6 +20,7 @@
 		BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */; };
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
 		BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */; };
+		BE4E6E5417A020E400FC4F7B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E6E5317A020E400FC4F7B /* KeychainItemWrapper.m */; };
 		BE9EAAF21794714B0079C57A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
 		BE9EAAF6179471DE0079C57A /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */; };
 		BE9EAAF9179471DE0079C57A /* StockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E617944DE900B5C6C3 /* StockViewController.m */; };
@@ -158,6 +159,8 @@
 		BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "Supporting/CorePlot_1.2/Binaries/iOS/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BE4E6E5217A020E400FC4F7B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		BE4E6E5317A020E400FC4F7B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		BE9EAB1E17947DC60079C57A /* Pandemobium-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pandemobium-Prefix.pch"; sourceTree = "<group>"; };
 		BE9EAB1F1794810A0079C57A /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = PandemobiumV2/DB/Stock.h; sourceTree = "<group>"; };
 		BE9EAB201794810A0079C57A /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = PandemobiumV2/DB/Stock.m; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 			children = (
 				BEF0D07E17944C4000B5C6C3 /* DBHelper.h */,
 				BEF0D07F17944C4000B5C6C3 /* DBHelper.m */,
+				BE4E6E5217A020E400FC4F7B /* KeychainItemWrapper.h */,
+				BE4E6E5317A020E400FC4F7B /* KeychainItemWrapper.m */,
 				BEF0D08017944C4000B5C6C3 /* User.h */,
 				BEF0D08117944C4000B5C6C3 /* User.m */,
 				BED22FC01795A785004EE171 /* DBHTTPClient.h */,
@@ -664,6 +669,7 @@
 				BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */,
 				BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */,
 				BE099C20179ED17E002ED292 /* iVersion.m in Sources */,
+				BE4E6E5417A020E400FC4F7B /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
