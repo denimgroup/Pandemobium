@@ -45,7 +45,7 @@
     if([app.user.loggedIn intValue] == 1)
     {
         tips = [[NSArray alloc]initWithArray:[helper getTips]];
-        
+        NSLog(@"printed list of tips: %@", tips.debugDescription);
     }
     else
     {
@@ -90,8 +90,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.detailTextLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"REASON"];
-    cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"SYMBOL"];
+    cell.detailTextLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"reason"];
+    cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"symbol"];
+    NSLog(@"tips stuff: %@", [tips objectAtIndex:indexPath.row]);
     
     // set the accessory view:
     //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;

@@ -162,7 +162,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)revealMenu:(id)sender
 {
-    
+    [SVProgressHUD show];
     AppDelegate *app = [UIApplication sharedApplication].delegate;
     
     if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )

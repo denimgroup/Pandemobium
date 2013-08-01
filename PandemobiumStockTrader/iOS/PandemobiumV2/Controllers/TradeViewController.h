@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "DBHelper.h"
 #import "DBHTTPClient.h"
+#import "SVProgressHUD.h"
 
 @interface TradeViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, DBHTTPClientDelegate>
 

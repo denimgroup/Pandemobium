@@ -321,7 +321,7 @@
     }
     @catch (NSException *exception)
     {
-        NSLog(@"%@", exception);
+        NSLog(@"EXCEPTION CAUGHT %@", [exception description]);
     }
     @finally {
         //NSString *temp = @"Unable to retrieve stock information\n";
