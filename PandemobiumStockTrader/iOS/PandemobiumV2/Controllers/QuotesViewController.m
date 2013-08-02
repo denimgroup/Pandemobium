@@ -1,17 +1,28 @@
 //
-//  QuotesViewController.m
-//  PandemobiumV2
+// Pandemobium Stock Trader is a mobile app for Android and iPhone with
+// vulnerabilities included for security testing purposes.
+// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
 //
-//  Created by Thomas Salazar on 6/17/13.
-//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
+// This file is part of Pandemobium Stock Trader.
+//
+// Pandemobium Stock Trader is free software: you can redistribute it
+// and/or modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Pandemobium Stock Trader. If not, see
+// <http://www.gnu.org/licenses/>.
 //
 
+
+
 #import "QuotesViewController.h"
-#import "Stock.h"
-#import "AppDelegate.h"
-#import "DBHelper.h"
-#import "SVProgressHUD.h"
-#import "DBHTTPClient.h"
 
 @interface QuotesViewController ()
 
@@ -23,16 +34,22 @@
 @synthesize favoriteStocks;
 @synthesize activityIndicator;
 @synthesize reload;
+@synthesize appDelegate;
 
+#pragma mark - Initial Page Setup Methods
+
+//Initial function that gets called. Add anything that needs to be loaded when first loading page.
 -(void)viewDidLoad
 {
     [SVProgressHUD dismiss];
+    appDelegate = [UIApplication sharedApplication].delegate;
+    
     [super viewDidLoad];
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
+
     
-    favoriteStocks = app.user.oldFavorites;
-    
-    
+    //Initialize the previous list of stocks. This allows
+    //us to cutdown the number of times we load the data.
+    favoriteStocks = appDelegate.user.oldFavorites;
     if([self isLoggedIn] == FALSE)
     {
         [self setDefaultFavorites];
@@ -46,11 +63,10 @@
     
     [self initImage];
     
-    
 }
 
-
-
+// Loads the right view controller which is where a user can search through
+//a list of stocks if they do not know the companies stock symbol.
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -83,9 +99,40 @@
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
  }
 
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+- (IBAction)revealUnderRight:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECLeft];
+}
+
+
+
+#pragma mark - Load List of stocks
+
+// Load a logged in users list of stocks
+-(void) loadFavoriteStocks
+{
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    
+    if(appDelegate.user.reloadData == [[NSNumber alloc]initWithInt:1] )
+    {
+        
+        reload = [[NSNumber alloc]initWithInt:0];
+        DBHTTPClient *client = [DBHTTPClient sharedClient];
+        client.delegate = self;
+        [client getAllStockValue:app.user.accountID];
+    }
+}
+
+// If not logged in, load a default list of stocks. This list
+// is stored locally.
 -(void)loadDefaultFavoriteStocks
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
     
@@ -100,22 +147,21 @@
     
     
 }
--(void) loadFavoriteStocks
+
+// Check to see if the USER is logged in.
+-(BOOL)isLoggedIn
 {
-    AppDelegate *app = [UIApplication sharedApplication].delegate;
-    
-    if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )
+    if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
     {
-    
-        reload = [[NSNumber alloc]initWithInt:0];
-        DBHTTPClient *client = [DBHTTPClient sharedClient];
-        client.delegate = self;
-        [client getAllStockValue:app.user.accountID];
+        return TRUE;
     }
-    
-    
+    return FALSE;
     
 }
+
+// Always have Google, Microsoft, and Apple as favorite stocks.
+// This allows for there to always be content displayed on the stock
+// list as well as the graph plots.  
 -(void)setDefaultFavorites
 {
         [self addFavorite:@"GOOG"];
@@ -123,9 +169,10 @@
         [self addFavorite:@"AAPL"];
 }
 
+// Adds a stock "symbol" to the list of stocks that are "favorites" of the user.  
 -(void)addFavorite:(NSString *)symbol
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+   // AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
     
@@ -139,34 +186,16 @@
     [context save:&error];
 }
 
--(BOOL)isLoggedIn
-{
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    if(app.user.loggedIn == [[NSNumber alloc]initWithInt:1])
-    {
-        return TRUE;
-    }
-    return FALSE;
-    
-}
 
 
 
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewTo:ECRight];
-}
 
-- (IBAction)revealUnderRight:(id)sender
-{
-    [self.slidingViewController anchorTopViewTo:ECLeft];
-}
+#pragma mark - Image handlers
 
+// Initialize and set the image that is displayed at the top of the page
 - (void) initImage
 {
 
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-  
     NSString *key;
     if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
     {
@@ -177,14 +206,7 @@
     {
         key=@"symbol";
     }
-    NSString *symbol ;
-   
-        symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:key];
-        
-        
-   
-        
-        // NSLog(@"%@", symbol);
+    NSString *symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:key];
     NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
     
     NSURL *imageurl = [NSURL URLWithString:path];
@@ -196,6 +218,8 @@
     
 }
 
+// There are two buttons that are overlayed on top of the image to indicate
+// which direction to change the image. Left or Right
 
 - (IBAction)leftButtonClicked:(id)sender {
    
@@ -208,13 +232,12 @@
         [self changeImage:@"right"];
 }
 
+// Change the image based on the direction of the image. 
 -(void)changeImage:(NSString *)direction
 {
-    
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    
     if([direction isEqualToString:@"left"])
     {
+        //Wrap around to the left
         if(appDelegate.currentImageIndex.intValue == 0)
         {
             appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:[favoriteStocks count] - 1];
@@ -227,6 +250,7 @@
     }
     else
     {
+        //Wrap around to the right
         if(appDelegate.currentImageIndex.intValue == [favoriteStocks count] - 1)
         {
             appDelegate.currentImageIndex = [[NSNumber alloc]initWithInt:0];
@@ -238,128 +262,26 @@
         }
     }
     
-    NSString *key;
-    if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
-    {
-        key=@"SYMBOL";
-        
-    }
-    else
-    {
-        key=@"symbol";
-    }
-    
-    NSString *symbol ;
-        symbol = [[favoriteStocks objectAtIndex:appDelegate.currentImageIndex.intValue] valueForKey:key];
-        
-        
-    
-    NSString *path = [[NSString alloc]initWithFormat:@"http://chart.finance.yahoo.com/z?s=%@",symbol];
-    
-    // NSURL *imageurl = [NSURL URLWithString:@"http://chart.finance.yahoo.com/z?s=GOOG"];
-    NSURL *imageurl = [NSURL URLWithString:path];
-    NSData *imageData = [[NSData alloc]initWithContentsOfURL:imageurl];
-    
-    UIImage *image = [UIImage imageWithData:imageData];
-    // image.size = [CGSizeMake(self.topImage.bounds.size.width, self.topImage.bounds.size.height)];
-    
-    [self.topImage setImage:image];
+    //Load the image
+    [self initImage];
 }
 
--(NSString *)fetchData:(NSString *)symbol
-{
-    
-
-        NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
-    //NSLog(@"%@", url);
-        NSError *error;
-    //while(true)
-    //{
-        NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    NSDictionary * jsonData = [[NSDictionary alloc]init];
-    NSDictionary * query = [[NSDictionary alloc]init];
-    NSDictionary * results = [[NSDictionary alloc]init];
-    NSDictionary * stockInfo = [[NSDictionary alloc]init];
-    @try {
-        id object = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-        //NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-        if(error)
-        {
-            NSLog(@"Error parsing data");
-            
-        }
-        if([object isKindOfClass:[NSDictionary class]])
-        {
-            jsonData = object;
-            if([[ jsonData objectForKey:@"query" ] isKindOfClass:[NSDictionary class]])
-            {
-                query = [jsonData objectForKey:@"query"];
-                
-                if([[query objectForKey:@"results"] isKindOfClass:[NSDictionary class]])
-                {
-                    results = [query objectForKey:@"results"];
-               
-                    if([[results objectForKey:@"quote"] isKindOfClass:[NSDictionary class]])
-                    {
-                        stockInfo = [results objectForKey:@"quote"]; //error
-                        
-                        
-                        NSString *temp = [[NSString alloc] initWithFormat:@"%@ Change, %@, %@",
-                                          [stockInfo valueForKey:@"Change"],
-                                          [stockInfo valueForKey:@"DaysRange"],
-                                          [stockInfo valueForKey:@"Name"]];
-                        return temp;
-
-                        
-                    }
-                    
-                }
-                
-            }
-            
-        }
-    }
-    @catch (NSException *exception)
-    {
-        NSLog(@"EXCEPTION CAUGHT %@", [exception description]);
-    }
-    @finally {
-        //NSString *temp = @"Unable to retrieve stock information\n";
-       // return temp;
-
-    }
-    //}
-    
-   // NSLog(@"I will fail");
-        
-            
-    
-    
-   
-    
-}
 #pragma mark - Table View
 
+// Return the number of sections.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)quoteTableView {
-    // Return the number of sections.
     return 1;
 }
 
+// Return the number of rows in the section
 - (NSInteger)tableView:(UITableView *)quoteTableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    // If you're serving data from an array, return the length of the array:
-    
     return [favoriteStocks count];
-    //return 1;
 }
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)quoteTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)quoteTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *CellIdentifier = @"StockCell";
-  
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    
-    
     UITableViewCell *cell = [quoteTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     // Set the data for this cell:
     if(!cell)
@@ -379,42 +301,39 @@
         key=@"symbol";
     }
     
+    //Set the title of the cell.
     symbol = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key];
-        
-    
-    
     cell.textLabel.text = symbol;
     
+    //Set the subtitle of the cell
     if([self isLoggedIn] && [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks])
     {
+        //Retrieve it from the saved list
         cell.detailTextLabel.text = [[favoriteStocks objectAtIndex:indexPath.row]valueForKey:@"summary"];
     }
     else
     {
+        //Fetch the local data. 
         if([favoriteStocks count] > 0 )
         {
             cell.detailTextLabel.text = [self fetchData:[[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key] ];
         }
-         // set the accessory view:
     }
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+// Segue whenever a row is selected
 - (void)tableView:(UITableView *)quoteTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-
-   // [self performSegueWithIdentifier:@"StockView" sender:tableView];
     [self performSegueWithIdentifier:@"StockView" sender:quoteTableView];
-    
-    
 }
 
 
+// Prepare for a segue by initializing the page that we will transition to
+// 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier]isEqualToString:@"StockView"])
@@ -422,9 +341,7 @@
         StockViewController *stockViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.quoteTableView indexPathForSelectedRow];
         
-        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-
-        NSString *symbol ;
+        
         NSString *key;
         if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
         {
@@ -435,31 +352,112 @@
         {
             key=@"symbol";
         }
-        symbol = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key];
-        
+        NSString *symbol = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key];
         NSString *destinationTitle = symbol;
         
+        //Set what stock symbol we are going to view in the StockView controller
         stockViewController.symbol = destinationTitle;
         stockViewController.originateFrom = @"QuoteView";
         [stockViewController setTitle:destinationTitle];
-               
-        //StockViewController *destination = [segue destinationViewController];
-        //NSLog(@"Everyday I'm segueing\n");
     }
     
 }
 
+
+//fetch data from Yahoos database. Do some string processing and return a summary of what to display
+//for the lists title. 
+-(NSString *)fetchData:(NSString *)symbol
+{
+    
+    
+    NSString *url = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", symbol];
+    NSError *error;
+    NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary * jsonData = [[NSDictionary alloc]init];
+    NSDictionary * query = [[NSDictionary alloc]init];
+    NSDictionary * results = [[NSDictionary alloc]init];
+    NSDictionary * stockInfo = [[NSDictionary alloc]init];
+    @try
+    {
+        id object = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        if(error)
+        {
+            NSLog(@"Error parsing data");
+            
+        }
+        if([object isKindOfClass:[NSDictionary class]]) //Parse through the various layers
+        {
+            jsonData = object;
+            if([[ jsonData objectForKey:@"query" ] isKindOfClass:[NSDictionary class]])
+            {
+                query = [jsonData objectForKey:@"query"];
+                
+                if([[query objectForKey:@"results"] isKindOfClass:[NSDictionary class]])
+                {
+                    results = [query objectForKey:@"results"];
+                    
+                    if([[results objectForKey:@"quote"] isKindOfClass:[NSDictionary class]])
+                    {
+                        //If made it here, then the object was successfully parsed and is of right type
+                        
+                        stockInfo = [results objectForKey:@"quote"]; 
+                        
+                        
+                        //Ensure that there are no null objects, otherwise program can fail.
+                        NSString *temp =@"";
+                        if([stockInfo valueForKey:@"Change"] != [NSNull null])
+                        {
+                            temp = [[NSString alloc]initWithFormat:@"%@%@ Change, ", temp,[stockInfo valueForKey:@"Change"]];
+                           
+                        }
+                        if([stockInfo valueForKey:@"DaysRange"] != [NSNull null])
+                        {
+                            temp = [[NSString alloc]initWithFormat:@"%@%@, ", temp,[stockInfo valueForKey:@"DaysRange"]];
+                            
+                        }
+                        if([stockInfo valueForKey:@"Name"] != [NSNull null])
+                        {
+                            temp = [[NSString alloc]initWithFormat:@"%@%@", temp,[stockInfo valueForKey:@"Name"]];
+                            
+                        }
+                        
+                        //returns a short summary of the stock
+                        return temp;
+                        
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+    @catch (NSException *exception)
+    {
+        NSLog(@"EXCEPTION CAUGHT %@", [exception description]);
+    }
+   
+}
+
+
+#pragma mark - On Exit
+
+//When the view is going to dissapear, save the favorite stocks to reuse them the next time
+//the page is loaded
 -(void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     appDelegate.user.oldFavorites = self.favoriteStocks;
     
 }
 
+#pragma mark - DBHTTPClient delegate
+//Whenever the HTTP client is done fetching data, store the data locally
+//and reload the page with the fresh data. Usefull whenever user is logged in
+//or new changes are done to the remote database.
 -(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     appDelegate.user.favoriteStocks = results;
     appDelegate.user.oldFavorites = results;
     appDelegate.user.accountValue = totalValue;
@@ -467,10 +465,9 @@
     appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:0];
     favoriteStocks = results;
     reload = [[NSNumber alloc]initWithInt:1];
+
     //[self viewDidLoad];
     [self initImage];
     [self.quoteTableView reloadData];
 }
-
-
 @end

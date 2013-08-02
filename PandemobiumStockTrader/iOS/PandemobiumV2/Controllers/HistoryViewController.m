@@ -1,10 +1,23 @@
 //
-//  HistoryViewController.m
-//  Pandemobium
+// Pandemobium Stock Trader is a mobile app for Android and iPhone with
+// vulnerabilities included for security testing purposes.
+// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
 //
-//  Created by Thomas Salazar on 6/28/13.
-//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
+// This file is part of Pandemobium Stock Trader.
 //
+// Pandemobium Stock Trader is free software: you can redistribute it
+// and/or modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Pandemobium Stock Trader. If not, see
+// <http://www.gnu.org/licenses/>.
 
 #import "HistoryViewController.h"
 #import "AppDelegate.h"
@@ -35,15 +48,8 @@
     DBHelper * helper = [[DBHelper alloc]init];
     AppDelegate * app = [UIApplication sharedApplication].delegate;
     UIAlertView * alert;
-    
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     history = [[NSArray alloc]init];
-    
     if([app.user.loggedIn intValue] == 1)
     {
         history = [[NSArray alloc]initWithArray:[helper getHistory:app.user.userID]];
@@ -84,10 +90,7 @@
 
 - (NSInteger)tableView:(UITableView *)quoteTableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    // If you're serving data from an array, return the length of the array:
-    
     return [history count];
-    //return 1;
 }
 
 // Customize the appearance of table view cells.
@@ -104,19 +107,7 @@
     cell.detailTextLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"TIME"];
     cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"LOG"];
     
-    // set the accessory view:
-    //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
-    
     return cell;
 }
-
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    [self performSegueWithIdentifier:@"StockView" sender:tableView];
-//    
-//}
-
 
 @end

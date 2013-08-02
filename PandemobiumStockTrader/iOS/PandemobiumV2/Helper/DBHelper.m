@@ -211,7 +211,6 @@
     NSDictionary * stockInfo = [[NSDictionary alloc]init];
     @try {
         id object = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-        //NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
         if(error)
         {
             NSLog(@"Error parsing data");
