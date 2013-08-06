@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TradeViewController.h"
 #import "TipsViewController.h"
+#import "ManageTipsViewController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

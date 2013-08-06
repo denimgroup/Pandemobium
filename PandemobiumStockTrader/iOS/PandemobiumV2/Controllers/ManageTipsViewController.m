@@ -22,7 +22,57 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 @synthesize reason;
 @synthesize symbol;
+@synthesize reasonFromUrl;
+@synthesize symbolFromUrl;
 
+
+
+
+// ------- Handle OpenURL ---------
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    if([[url absoluteString] hasPrefix:@"tips"])
+    {
+        NSLog(@"Inside trade view controller");
+        
+        
+        NSArray *parameters = [[url query] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"=&"]];
+        NSMutableDictionary *keyValueParm = [NSMutableDictionary dictionary];
+        
+        for (int i = 0; i < [parameters count]; i=i+2) {
+            [keyValueParm setObject:[parameters objectAtIndex:i+1] forKey:[parameters objectAtIndex:i]];
+        }
+        
+        reasonFromUrl = [[NSString alloc]initWithFormat:@"%@", [keyValueParm objectForKey:@"reason"]];
+        symbolFromUrl = [[NSString alloc]initWithFormat:@"%@", [keyValueParm objectForKey:@"symbol"]];
+        
+        if([[url host] isEqualToString:@"share"])
+        {
+            [self submitReason:self];
+            return YES;
+        }
+        
+        
+    }
+    return NO;
+}
+
+
+- (NSDictionary *)parseQueryString:(NSString *)query {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:6] ;
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    
+    for (NSString *pair in pairs) {
+        NSArray *elements = [pair componentsSeparatedByString:@"="];
+        NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        [dict setObject:val forKey:key];
+    }
+    return dict;
+}
+
+// ---------------------------------
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,13 +91,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     //DBHelper * helper = [[DBHelper alloc]init];
     AppDelegate * app = [UIApplication sharedApplication].delegate;
     UIAlertView * alert;
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     if([app.user.loggedIn intValue] != 1)
     {
@@ -75,14 +118,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)submitReason:(id)sender
 {
     //check if user is logged in otherwise dont do anything
-    NSLog(@"submit reason is pressed");
     AppDelegate * app = [UIApplication sharedApplication].delegate;
     UIAlertView *alert;
-    
-    
     if([app.user.loggedIn intValue] != 1)
     {
-        NSLog(@"Log in before you can create a tip");
         alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                            message:@"Log-In to make Tips"
                                           delegate:nil
@@ -93,9 +132,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     else
     {
-        if((![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]) && (self.reason.text.length <= 512 && self.symbol.text.length <= 10))
-        {
-            //submit a tip
+        if(![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]){
+        //submit a tip
             alert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                message:@"Tip Sent Succesfully"
                                               delegate:nil
@@ -104,16 +142,28 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
             app.user.reloadData = [[NSNumber alloc] initWithInt:1];
             DBHelper *client = [[DBHelper alloc]init];
         
-            [client
+            if((reasonFromUrl != NULL) && (symbolFromUrl != NULL))
+            {
+                [client
+                 addTip:app.user.userID
+                 forSymbol:[[NSString alloc] initWithFormat:@"%@",symbolFromUrl]
+                 forLog:[[NSString alloc] initWithFormat:@"%@",reasonFromUrl]
+                 ];
+
+                
+            }
+            else
+            {
+                [client
                     addTip:app.user.userID
-                forSymbol:[[NSString alloc] initWithFormat:@"%@",symbol.text]
-                   forLog:[[NSString alloc] initWithFormat:@"%@",reason.text]
-             ];
-        
+                    forSymbol:[[NSString alloc] initWithFormat:@"%@",symbol.text]
+                    forLog:[[NSString alloc] initWithFormat:@"%@",reason.text]
+                 ];
+            }
             [alert show];
             [self viewDidLoad];
-            
-            //set strings back to nothing
+        
+        //set strings back to nothing
             self.symbol.text = @"";
             self.reason.text = @"Reason: ";
             
@@ -121,7 +171,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         else
         {
             alert = [[UIAlertView alloc] initWithTitle:@"ALERT"
-                                               message:@"Fill Out Form With:\nStock Symbol: <10char\nReason: <512char."
+                                               message:@"Fill Out Form With A Stock Symbol And A Reason."
                                               delegate:nil
                                      cancelButtonTitle:@"OK"
                                      otherButtonTitles:nil, nil];

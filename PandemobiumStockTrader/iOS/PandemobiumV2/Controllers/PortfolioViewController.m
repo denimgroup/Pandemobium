@@ -20,9 +20,7 @@
 // <http://www.gnu.org/licenses/>.
 
 #import "PortfolioViewController.h"
-#import "AppDelegate.h"
-#import "DBHelper.h"
-#import "CorePlot-CocoaTouch.h"
+
 
 
 @interface PortfolioViewController ()
@@ -48,7 +46,8 @@ CGFloat const CPDBarInitialX = 0.5f;
 @synthesize stockAnnotation = stockAnnotation_;
 @synthesize activityIndicator;
 @synthesize accountValue;
-
+@synthesize appDelegate;
+@synthesize helper;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -61,16 +60,9 @@ CGFloat const CPDBarInitialX = 0.5f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-
+    appDelegate = [UIApplication sharedApplication].delegate;
+    helper = [[DBHelper alloc]init];
     [self fetchData];
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
     stockValues = [[NSArray alloc]init];
     portfolioSum = [NSDecimalNumber zero];
@@ -79,12 +71,9 @@ CGFloat const CPDBarInitialX = 0.5f;
     // since the view bounds have not transformed for landscaepe until now
     if(appDelegate.user.loggedIn.intValue == 1)
     {
-        //stockValues = [helper getStockValue:appDelegate.user.accountID];
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SHARES > 0"];
         stockValues = [appDelegate.user.favoriteStocks filteredArrayUsingPredicate:pred];
         
-        
-        //stockValues = appDelegate.user.favoriteStocks;
         portfolioSum = [[NSDecimalNumber alloc]initWithDouble:[appDelegate.user.accountValue doubleValue]];
         
         [self initPlot];
@@ -95,7 +84,8 @@ CGFloat const CPDBarInitialX = 0.5f;
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate = [UIApplication sharedApplication].delegate;
+    helper = [[DBHelper alloc]init];
     
     stockValues = [[NSArray alloc]init];
     portfolioSum = [NSDecimalNumber zero];
@@ -116,12 +106,12 @@ CGFloat const CPDBarInitialX = 0.5f;
 
 -(void)fetchData
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSDictionary *results;
-    DBHelper * helper = [[DBHelper alloc]init];
+
     UIAlertView *alert;
     if(appDelegate.user.loggedIn.intValue == 1)
     {
+        //Set the data when the user is logged in
         results = [helper getAccountInfo:appDelegate.user.accountID];
         accountNumber.text = [[NSString alloc] initWithFormat:@"%i", appDelegate.user.accountID.intValue];
         numberShares.text = [[NSString alloc]initWithFormat:@"%i", [appDelegate.user.totalShares intValue]];
@@ -131,6 +121,8 @@ CGFloat const CPDBarInitialX = 0.5f;
     }
     else
     {
+        //User is not logged in so display placeholder data.
+        //Also notify uesr that they need to be logged in.
         accountNumber.text = @"xxxx";
         numberShares.text = @"0";
         netWorth.text = @"$0.00";
@@ -150,13 +142,11 @@ CGFloat const CPDBarInitialX = 0.5f;
 
 -(BOOL)isLoggedIn
 {
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    if(app.user.loggedIn == [[NSNumber alloc]initWithInt:1])
+    if(appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
     {
         return TRUE;
     }
     return FALSE;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -174,18 +164,11 @@ CGFloat const CPDBarInitialX = 0.5f;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+   //No rows are clickable
 }
 
 #pragma mark - CPTPlotDataSource methods
-
-
+//return the number of items in our list of stocks
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
     return [stockValues count];
@@ -194,6 +177,7 @@ CGFloat const CPDBarInitialX = 0.5f;
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
 {
    
+    //Determine the calling plot
     if([plot.identifier isEqual:@"Portfolio"])
     {
            
@@ -231,7 +215,6 @@ CGFloat const CPDBarInitialX = 0.5f;
         NSNumber *price = [[stockValues objectAtIndex:index]valueForKey:@"value"];
         
         //4 Set up display label
-        //labelValue = [NSString stringWithFormat:@"$%0.2f USD (%0.1f %%)", [price doubleValue], ([percent doubleValue] * 100.0f)];
         labelValue = [NSString stringWithFormat:@"$%0.2f", [price doubleValue]];
         
         
@@ -346,6 +329,8 @@ CGFloat const CPDBarInitialX = 0.5f;
 
 }
 
+//Determine the largest number of shares for any stock. Use this to determine
+//the range of the y axis in the bar plot
 -(NSNumber *)maxShares
 {
     NSNumber *max = [[NSNumber alloc]initWithInt:0];

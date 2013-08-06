@@ -52,8 +52,17 @@ public class initDatabase {
             if(!database.isClosed())
             {
                 System.out.println("Setting up Stocktrader DB");
+
+
+
                 Statement query = database.createStatement();
-                String statement = "CREATE TABLE IF NOT EXISTS users (\n" +
+
+                String statement="CREATE TABLE IF NOT EXISTS version (version int generated always as identity primary key, log varchar(512) not null);";
+                query.execute(statement);
+
+
+
+                statement = "CREATE TABLE IF NOT EXISTS users (\n" +
                         "        userID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n" +
                         "        firstName VARCHAR(20) NOT NULL,\n" +
                         "        lastName VARCHAR(20) NOT NULL,\n" +
@@ -109,6 +118,13 @@ public class initDatabase {
 
 
                 //Table does not exist, insert default username and password
+                statement = "insert into version(log) values('Created');";
+                insertRecord(database, "select version from version where version=0;", statement);
+
+                statement = "insert into version(log) values('Initial Release');";
+                insertRecord(database, "select version from version where version=1;", statement);
+
+
                 statement =  "INSERT INTO users (firstName, lastName, email, phone, userName, password)\n" +
                         "        VALUES ('john', 'doe', NULL, NULL, 'jdoe', 'password');";
 
@@ -138,9 +154,6 @@ public class initDatabase {
 
                 statement = "insert into tips (userID, symbol, reason) values(0, 'GOOG', 'Use google for all your searches');";
                 insertRecord(database, "select userID, symbol, reason from tips where userID=0 AND symbol='GOOG' AND reason='Use google for all your searches';", statement);
-
-
-
 
                 System.out.println("Adding default stocks");
 
