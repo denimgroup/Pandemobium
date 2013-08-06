@@ -23,7 +23,8 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 #import "CorePlot-CocoaTouch.h"
-
+#import "AppDelegate.h"
+#import "DBHelper.h"
 
 
 @interface PortfolioViewController : UITableViewController <CPTPlotDataSource, CPTBarPlotDataSource, CPTBarPlotDelegate>
@@ -42,6 +43,9 @@
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *stockAnnotation;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UILabel *accountValue;
+
+@property (strong, nonatomic) AppDelegate *appDelegate;
+@property (strong, nonatomic) DBHelper * helper;
 
 - (IBAction)revealMenu:(id)sender;
 @end

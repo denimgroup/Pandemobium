@@ -21,6 +21,12 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 @property (strong, nonatomic) IBOutlet UITextView *reason;
 @property (strong, nonatomic) IBOutlet UITextField *symbol;
+
+@property(strong, nonatomic) NSString *reasonFromUrl;
+@property(strong, nonatomic) NSString *symbolFromUrl;
 - (IBAction)submitReason:(id)sender;
 - (IBAction)clearTextView:(id)sender;
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
+
 @end

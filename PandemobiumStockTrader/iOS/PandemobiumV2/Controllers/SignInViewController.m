@@ -221,7 +221,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)newAccount:(id)sender {
     
     NSLog(@"new Account button is pressed");
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/newAccount.jsp"];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/web/newAccount.jsp"];
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
     NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:requestURL delegate:self startImmediately:YES];
     

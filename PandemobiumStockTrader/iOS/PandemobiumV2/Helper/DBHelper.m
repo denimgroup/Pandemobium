@@ -16,7 +16,7 @@
  
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"Select accountID from account where userID=%i", [userID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -32,7 +32,7 @@
         
         NSError *error;
         
-        NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/user.jsp?method=logIn&username=%@&password=%@", username, password];
+        NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/user.jsp?method=logIn&username=%@&password=%@", username, password];
         url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
         NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -52,7 +52,7 @@
     NSString *query = [[NSString alloc]initWithFormat:@"Select symbol from stock where favorite=1 AND accountID=%i;", [accountID intValue]];
  //   NSString *query = [[NSString alloc]initWithFormat:@"Select symbol from stock where favorite=1 AND accountID=1;"];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -66,7 +66,7 @@
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from stock where accountID=%i AND shares > 0;", [accountID intValue]];
     //NSString *query = [[NSString alloc]initWithFormat:@"Select * from stock where accountID=1 AND shares > 0;"];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -79,7 +79,7 @@
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from stock where accountID=%i;", [accountID intValue]];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -92,7 +92,7 @@
     
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -259,7 +259,7 @@
     
     NSError *error;
     NSString *query; // = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
-    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *firstParse;
     
@@ -284,7 +284,7 @@
             query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID, favorite) values('%@', %i, %i, 1);", symbol, [shares intValue], [accountID intValue]];
         }
     }
-    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -297,7 +297,7 @@
     NSDictionary * stock = [self getIndividualStock:accountID forStock:symbol];
     NSError *error;
     NSString *query; // = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
-    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *firstParse;
    
@@ -314,7 +314,7 @@
         query = [[NSString alloc] initWithFormat:@"delete from stock where symbol='%@' AND accountID=%i;", symbol, [accountID intValue]];
     }
     
-    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -330,7 +330,7 @@
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"update account set balance = %.2f where accountID=%i;", [balance doubleValue], [accountID intValue]];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -343,7 +343,7 @@
     
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"Select sum(shares) from stock where accountID=%i;", [accountID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -357,7 +357,7 @@
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from history where userID=%i order by time desc;", [userID intValue]];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/history.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/history.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -371,7 +371,7 @@
     //   NSString *query = [[NSString alloc]initWithFormat:@"Select symbol from stock where accountID=%i;", [accountID intValue]];
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from tips order by tipID desc;"];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/tips.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/tips.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -387,7 +387,7 @@
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:
                        @"Select * from stock where symbol='%@' AND accountID=%i;", symbol, [accountID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -401,7 +401,7 @@
     
     NSError *error;
     NSString *query; // = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
-    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *firstParse;
     
@@ -424,7 +424,7 @@
             query = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID, favorite) values('%@', %i, %i, %i);", symbol, 0, [accountID intValue], 1];
         }
     }
-    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -436,7 +436,7 @@
 {    
     NSError *error;
     NSString *query; // = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
-    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+    NSString *url; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
     NSData *responseData; // = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *firstParse;
   
@@ -444,7 +444,7 @@
     if([[stock objectForKey:@"SHARES"]intValue] == 0)
     {
         query = [[NSString alloc] initWithFormat:@"delete from stock where symbol='%@' AND accountID=%i;", symbol, [accountID intValue]];
-        url = [[NSString alloc]initWithFormat:@"http://localhost:8080/account.jsp?query=%@", query];
+        url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
         url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
         firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -462,7 +462,7 @@
 {
     NSError *error;
     NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, '%@');", [userID intValue], log];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/history.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/history.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary * firstParse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
@@ -476,7 +476,7 @@
     NSString *query = [[NSString alloc]initWithFormat:@"insert into tips(userID, symbol, reason) values(%i,'%@','%@');", [userID intValue],symbol ,log];
         
         NSLog(@"query = %@",  query);
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/tips.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/tips.jsp?query=%@", query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
         NSLog(@"url = %@", url); 

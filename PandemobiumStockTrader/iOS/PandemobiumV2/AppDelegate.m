@@ -16,7 +16,7 @@
 + (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host
 {
     
-    NSLog(@"Allowing non SSL certificates");
+  //  NSLog(@"Allowing non SSL certificates");
     return YES;
 }
 
@@ -111,6 +111,8 @@
         
         
         NSLog(@"something to do with tips");
+        ManageTipsViewController *tips = [[ManageTipsViewController alloc]init];
+        [tips application:application handleOpenURL:url];
         
     }
     
@@ -130,7 +132,7 @@
     //but we want to test with an app that's actually on the store
   //  iVersion *version = [[iVersion alloc]init];
    // version.applicationBundleID = @"com.denimgroup.Pandemobium";
-    //version.remoteVersionsPlistURL=@"http://localhost:8080/versions.plist";
+    //version.remoteVersionsPlistURL=@"http://localhost:8080/web/versions.plist";
    //[version checkForNewVersion];
     
     [iVersion sharedInstance].applicationBundleID = @"com.denimgroup.Pandemobium";
@@ -138,9 +140,11 @@
     
     //configure iVersion. These paths are optional - if you don't set
     //them, iVersion will just get the release notes from iTunes directly (if your app is on the store)
-    [iVersion sharedInstance].remoteVersionsPlistURL = @"http://localhost:8080/versions.plist";
+  //  [iVersion sharedInstance].remoteVersionsPlistURL = @"http://localhost:8080/web/versions.plist";
+    [iVersion sharedInstance].remoteVersionsPlistURL = @"http://localhost:8080/web/version.jsp";
+    
     [iVersion sharedInstance].checkAtLaunch = YES;
-    [iVersion sharedInstance].updateURL = [[NSURL alloc]initWithString:@"http://localhost:8080/download.html"];
+    [iVersion sharedInstance].updateURL = [[NSURL alloc]initWithString:@"http://localhost:8080/web/download.html"];
     
     [[iVersion sharedInstance] checkForNewVersion];
    // iVersion.checkIfNewVersion();
