@@ -78,6 +78,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     NSLog(@"submit reason is pressed");
     AppDelegate * app = [UIApplication sharedApplication].delegate;
     UIAlertView *alert;
+    
+    
     if([app.user.loggedIn intValue] != 1)
     {
         NSLog(@"Log in before you can create a tip");
@@ -91,8 +93,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     else
     {
-        if(![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]){
-        //submit a tip
+        if((![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]) && (self.reason.text.length <= 512 && self.symbol.text.length <= 10))
+        {
+            //submit a tip
             alert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                message:@"Tip Sent Succesfully"
                                               delegate:nil
@@ -104,13 +107,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
             [client
                     addTip:app.user.userID
                 forSymbol:[[NSString alloc] initWithFormat:@"%@",symbol.text]
-                    forLog:[[NSString alloc] initWithFormat:@"%@",reason.text]
+                   forLog:[[NSString alloc] initWithFormat:@"%@",reason.text]
              ];
         
             [alert show];
             [self viewDidLoad];
-        
-        //set strings back to nothing
+            
+            //set strings back to nothing
             self.symbol.text = @"";
             self.reason.text = @"Reason: ";
             
@@ -118,7 +121,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         else
         {
             alert = [[UIAlertView alloc] initWithTitle:@"ALERT"
-                                               message:@"Fill Out Form With A Stock Symbol And A Reason."
+                                               message:@"Fill Out Form With:\nStock Symbol: <10char\nReason: <512char."
                                               delegate:nil
                                      cancelButtonTitle:@"OK"
                                      otherButtonTitles:nil, nil];

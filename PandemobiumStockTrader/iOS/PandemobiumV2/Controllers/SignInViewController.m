@@ -25,7 +25,7 @@ CGFloat animatedDistance;
 @synthesize passwordText;
 @synthesize signinButton;
 @synthesize rememberloginSwitch;
-@synthesize activityIndicator;
+
 @synthesize locationManager;
 @synthesize originalLocation;
 @synthesize currentLocation;
@@ -46,6 +46,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewWillAppear:animated];
     
+    /*      setup for keychain Item to hold username and password
+            this is apples way of holding onto your username and password.
+            originally thought this would be best way but implementing a file to hold user login as well.
+     
     if(rememberloginSwitch.isEnabled){
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
     NSString *username = [keychainItem objectForKey:CFBridgingRelease(kSecValueData)];
@@ -56,8 +60,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }else{
     usernameText.text = @"";
     passwordText.text = @"";
-    }
+    }*/
+
+   
+     
 }
+
 
 
 - (IBAction)revealMenu:(id)sender
@@ -76,24 +84,38 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (NSString*) saveFilePath
 {
-    //NSString* path = [[NSBundle mainBundle] pathForResource:@"/accounts" ofType:@"plist"];
+    //NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist" inDirectory:@"Supporting_Files"];
     NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/Supporting_Files/accounts.plist";
+    NSLog(@"%@", path);
     return path;
 }
 
 
 - (void)saveCreds:(NSString *)user :(NSString *)pswd
 {
+    /*  keychain saving userinput from textfield
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
     [keychainItem setObject:user forKey:CFBridgingRelease(kSecValueData)];
     [keychainItem setObject:pswd forKey:CFBridgingRelease(kSecAttrAccount)];
+     */
+    NSMutableArray * userPass = [[NSMutableArray alloc] init];
+    [userPass setValue:@"user" forKey:user];
+    [userPass setValue:@"password" forKey:pswd];
+    
+    [userPass writeToFile:[self saveFilePath] atomically:YES];
 }
 
 
 -(void)releaseCreds
 {
+    /*
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
     [keychainItem resetKeychainItem];
+    */
+    NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:[self saveFilePath]];
+    NSLog(@"Array count: %d", [array count]);
+    [array removeAllObjects];
+    [array  writeToFile:[self saveFilePath] atomically:YES];
 }
 
 
@@ -105,10 +127,23 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         return TRUE;
     }
     return FALSE;
-    
 }
 
 
+-(IBAction) toggleButtonPressed
+{
+
+    if(rememberloginSwitch.on == YES)
+    {
+        [rememberloginSwitch setOn:YES animated:YES];
+    }
+    else
+    {
+        [rememberloginSwitch setOn:NO animated:YES];
+    }
+
+
+}
 
 
 
