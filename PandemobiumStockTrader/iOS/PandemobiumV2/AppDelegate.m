@@ -73,6 +73,13 @@
 {
     
     user = [[User alloc]init];
+    
+    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/index.jsp"];
+    [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+
+    
+    
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if(![defaults objectForKey:@"firstRun"])
     {

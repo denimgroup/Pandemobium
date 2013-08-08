@@ -25,7 +25,7 @@ CGFloat animatedDistance;
 @synthesize passwordText;
 @synthesize signinButton;
 @synthesize rememberloginSwitch;
-@synthesize accountButton;
+
 @synthesize locationManager;
 @synthesize originalLocation;
 @synthesize currentLocation;
@@ -38,6 +38,10 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
+
+
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -45,52 +49,24 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     /*      setup for keychain Item to hold username and password
             this is apples way of holding onto your username and password.
             originally thought this would be best way but implementing a file to hold user login as well.
-     */
-    [self setupButtonLayer:accountButton];
-    [self setupButtonLayer:signinButton];
-    
+     
     if(rememberloginSwitch.isEnabled){
-    NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:[self saveFilePath]];
-        if(array.count <1)
-        {
-            usernameText.text = @"";
-            passwordText.text = @"";
-        }
-        else
-        {
-            usernameText.text = [array objectAtIndex:0];
-            passwordText.text = [array objectAtIndex:1];
-        }
-    }
-    else
-    {
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"SignIn" accessGroup:nil];
+    NSString *username = [keychainItem objectForKey:CFBridgingRelease(kSecValueData)];
+    NSString *password = [keychainItem objectForKey:CFBridgingRelease(kSecAttrAccount)];
+    
+    usernameText.text = username;
+    passwordText.text = password;
+    }else{
     usernameText.text = @"";
     passwordText.text = @"";
-    }
+    }*/
 
    
      
 }
 
--(void)setupButtonLayer:(UIButton  *)button
-{
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = button.layer.bounds;
-    gradient.colors = [NSArray arrayWithObjects:
-                       (id)[UIColor colorWithWhite:1.0f alpha:0.1f].CGColor,
-                       (id)[UIColor colorWithWhite:0.4f alpha:0.5f].CGColor,
-                       nil];
-    gradient.locations =[NSArray arrayWithObjects:
-                         [NSNumber numberWithFloat:0.0f],
-                         [NSNumber numberWithFloat:1.0f],
-                         nil];
-    gradient.cornerRadius = button.layer.cornerRadius;
-    [button.layer setCornerRadius:9.0f];
-    [button.layer setMasksToBounds:YES];
-    [button.layer addSublayer:gradient];
-    
-    
-}
+
 
 - (IBAction)revealMenu:(id)sender
 {
@@ -528,11 +504,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         alert = [[UIAlertView alloc]initWithTitle:@"Location Unknown" message:@"Too far from original location. Signing Out" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         
-        appDelegate.user = [[User alloc]init];
-        
-        [self performSegueWithIdentifier:@"afterLogin" sender:self];
+        appDelegate.user.loggedIn = 0;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"outOfRange"
+                                                            object:self];
+       
     }
 }
+
 
 
 @end

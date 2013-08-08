@@ -1,15 +1,31 @@
 //
-//  TradeViewController.m
-//  Pandemobium
+// Pandemobium Stock Trader is a mobile app for Android and iPhone with
+// vulnerabilities included for security testing purposes.
+// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
 //
-//  Created by Thomas Salazar on 6/27/13.
-//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
+// This file is part of Pandemobium Stock Trader.
 //
+// Pandemobium Stock Trader is free software: you can redistribute it
+// and/or modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Pandemobium Stock Trader. If not, see
+// <http://www.gnu.org/licenses/>.
+
 
 #import "TradeViewController.h"
-#import "SVProgressHUD.h"
+#import "AppDelegate.h"
+
 
 @interface TradeViewController () <UITextFieldDelegate>
+
 
 @end
 
@@ -25,8 +41,13 @@
 @synthesize canInvest;
 @synthesize symbol;
 @synthesize shares;
+//@synthesize appDelegate;
 
 @synthesize activityIndicator;
+
+AppDelegate *appDelegate;
+BOOL *firstTime;
+NSString *stockSymbol;
 
 CGFloat animatedDistance;
 
@@ -36,7 +57,7 @@ CGFloat animatedDistance;
 {
     if([[url absoluteString] hasPrefix:@"trade"])
     {
-        NSLog(@"Inside trade view controller");
+      //  NSLog(@"Inside trade view controller");
         
         
         NSArray *parameters = [[url query] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"=&"]];
@@ -48,23 +69,20 @@ CGFloat animatedDistance;
         
         shares = [[NSNumber alloc] initWithInt:[[keyValueParm objectForKey:@"shares"] intValue]];
         symbol = [[NSString alloc]initWithFormat:@"%@", [keyValueParm objectForKey:@"symbol"]];
-      
+        firstTime = (BOOL *)1;
         if([[url host] isEqualToString:@"buy"])
         {
-            NSLog(@"will buy %i %@",[shares intValue], symbol);
+        //    NSLog(@"will buy %i %@",[shares intValue], symbol);
             [self tradebuttonPressed:self];
             
             
         }
         else if ([[url host]isEqualToString:@"sell"])
         {
-            NSLog(@"will sell %i %@",[shares intValue], symbol);
+        //    NSLog(@"will sell %i %@",[shares intValue], symbol);
             [self sellButtonPressed:self];
 
         }
-    
-        
-        
         return YES;
         
     }
@@ -109,7 +127,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+
  
+    appDelegate = [UIApplication sharedApplication].delegate;
+    
     if(![symbol isEqual:NULL])
     {
         companyCode.text = symbol;
@@ -124,7 +149,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 -(void)fetchData
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSDictionary *results;
     NSArray *stocks;
     DBHelper * helper = [[DBHelper alloc]init];
@@ -163,15 +187,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)revealMenu:(id)sender
 {
     [SVProgressHUD show];
-    AppDelegate *app = [UIApplication sharedApplication].delegate;
     
-    if(app.user.reloadData == [[NSNumber alloc]initWithInt:1] )
+    if(appDelegate.user.reloadData == [[NSNumber alloc]initWithInt:1] )
     {
         [SVProgressHUD show];
         // favoriteStocks = app.user.oldFavorites;
         DBHTTPClient *client = [DBHTTPClient sharedClient];
         client.delegate = self;
-        [client getAllStockValue:app.user.accountID];
+        [client getAllStockValue:appDelegate.user.accountID];
         //favoriteStocks = [helper getAllStockValue:app.user.accountID];
         //app.user.favoriteStocks = self.favoriteStocks;
     }
@@ -187,15 +210,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
-    
     CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
-    
     CGFloat midline= textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
-    
     CGFloat numerator = midline - viewRect.origin.y -MINIMUM_SCROLL_FRACTION * viewRect.size.height;
-    
     CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
-    
     CGFloat heightFraction = numerator / denominator;
     
     if(heightFraction < 0.0)
@@ -209,7 +227,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    
     if(orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown)
     {
         animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
@@ -250,338 +267,262 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     return YES;
 }
 
-- (IBAction)tradebuttonPressed:(id)sender
+-(BOOL) stockExists:(NSString *)stockSymbol
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    UIAlertView * alert;
-   
-    NSString * stockSymbol; 
     
-    if(companyCode.text == nil)
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Stock"];
+    NSError *error;
+    NSArray *stockArray = [context executeFetchRequest:request error:&error];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"symbol" ascending:YES];
+    stockArray = [stockArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"symbol CONTAINS[cd] %@", stockSymbol];
+    NSArray *tempArray = [stockArray filteredArrayUsingPredicate:predicate];
+    
+    if([tempArray count] == 1)
+    {
+        return YES;
+    }
+    return NO;
+    
+}
+
+-(BOOL) validateEntries
+{
+    UIAlertView * alert;
+    NSString *message;
+    
+    if((companyCode.text == nil) && (firstTime == (BOOL *)1))
     {
         stockSymbol = symbol;
-        
     }
     else
     {
         stockSymbol = companyCode.text;
-        
-        
     }
-    
-    if(shares == nil)
+    if(firstTime == (BOOL *)1)
+    {
+        firstTime = (BOOL *)0;
+    }
+    else //  if(shares == nil)
     {
         shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
+        firstTime = (BOOL *)0;
     }
-    NSDictionary * yahooQuery;
-
+    
+    
     if((![stockSymbol isEqualToString:@""]) && [shares intValue] > 0)
     {
-    
+        
         if([appDelegate.user.loggedIn intValue] == 1) //User logged in
         {
-            DBHelper *helper = [[DBHelper alloc]init];
-            yahooQuery = [helper fetchYahooData:stockSymbol];
-            if(![[yahooQuery objectForKey:@"Symbol"] isEqual:nil]) //Stock Exists
+            if([self stockExists:stockSymbol] == YES)
             {
-                NSNumber * cost = [[NSNumber alloc] initWithDouble:[[yahooQuery objectForKey:@"LastTradePriceOnly"] doubleValue ]];
-                cost = [[NSNumber alloc] initWithDouble:([cost doubleValue] * [shares doubleValue])];
                 
-                NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
-                NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
-                                         ([[accountInfo objectForKey:@"BALANCE"] doubleValue] - [cost doubleValue])];
-                
-                if([newBalance doubleValue] >= 0.0) // Has enough money to buy stocks
-                {
-                    
-                    NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
-                    if([[balanceResults objectForKey:@"Result"]intValue] == 1)
-                    {
-                    
-                        NSDictionary * buyResults = [helper buyStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
-                        
-                    
-                        if([[buyResults objectForKey:@"Result"]intValue] == 1)
-                        {
-                            alert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                               message:@"Stock Purchase Succesfully"
-                                                              delegate:nil
-                                                     cancelButtonTitle:@"OK"
-                                                     otherButtonTitles: nil];
-                            appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
-                            DBHTTPClient *client = [DBHTTPClient sharedClient];
-                            client.delegate = self;
-                            
-                            
-                            [client addHistory:appDelegate.user.userID forLog:
-                                [[NSString alloc]initWithFormat:@"Purchased %i shares of %@ in Account %i",
-                                 [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
-                            
-                            [alert show];
-                            [self viewDidLoad];
-                            
-                        }
-                        else
-                        {
-                            alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                                               message:@"Something went wrong with Purchasing stock."
-                                                              delegate:nil
-                                                     cancelButtonTitle:@"Try Again"
-                                                     otherButtonTitles: nil];
-                            [alert show];
-                            
-
-                            
-                        }
-                    }
-                    else
-                    {
-                        alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                                           message:@"Something went wrong with Account Balance."
-                                                          delegate:nil
-                                                 cancelButtonTitle:@"Try Again"
-                                                 otherButtonTitles: nil];
-                        [alert show];
-                        
-                        
-                        
-                    }
-
-                }
-                else
-                {
-                    alert = [[UIAlertView alloc] initWithTitle:@"Insufficient Funds"
-                                                       message:@"Not enough funds in you account"
-                                                      delegate:nil
-                                             cancelButtonTitle:@"Try Again"
-                                             otherButtonTitles: nil];
-                    [alert show];
-                    
-                    
-                }
-                
+                return YES;
             }
             else
             {
-                alert = [[UIAlertView alloc] initWithTitle:@"Invalid Stock"
-                                                   message:@"Stock does not exist"
-                                                  delegate:nil
-                                         cancelButtonTitle:@"Try Again"
-                                         otherButtonTitles: nil];
-                [alert show];
-
-                
+                message = @"Stock symbol does not exist";
             }
-            
         }
         else
         {
-            //User is not logged in, show an alert
-            alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                               message:@"Must be logged in to 'Trade'"
-                                              delegate:nil
-                                     cancelButtonTitle:@"OK"
-                                     otherButtonTitles: nil];
-            [alert show];
+            message=@"Must be logged in to Buy/Sell";
         }
     }
     else
     {
+        message=@"Shares or Company Symbol cannot be empty and must sell at least 1 share!";
+    }
+    
+    
+    alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
+                                       message:message
+                                      delegate:nil
+                             cancelButtonTitle:@"Try Again"
+                             otherButtonTitles: nil];
+    [alert show];
+    
+    
+    return NO;
+}
+
+- (IBAction)tradebuttonPressed:(id)sender
+{
+    UIAlertView * alert;
+    NSString *message;
+    
+    
+    if([self validateEntries] == YES)
+    {
+        DBHelper *helper = [[DBHelper alloc]init];
+        NSDictionary * yahooQuery = [helper fetchYahooData:stockSymbol];
+        stockSymbol = [yahooQuery valueForKey:@"Symbol"]; //Uses Yahoos API for the proper naming convention. 
         
+        NSNumber * cost = [[NSNumber alloc] initWithDouble:[[yahooQuery objectForKey:@"LastTradePriceOnly"] doubleValue ]];
+        cost = [[NSNumber alloc] initWithDouble:([cost doubleValue] * [shares doubleValue])];
+        
+        NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
+        NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
+                                 ([[accountInfo objectForKey:@"BALANCE"] doubleValue] - [cost doubleValue])];
+        
+        if([newBalance doubleValue] >= 0.0) // Has enough money to buy stocks
+        {
+            
+            NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
+            if([[balanceResults objectForKey:@"Result"]intValue] == 1)
+            {
+                
+                NSDictionary * buyResults = [helper buyStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
+                
+                if([[buyResults objectForKey:@"Result"]intValue] == 1)
+                {
+                    alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                       message:@"Stock Purchase Succesfully"
+                                                      delegate:nil
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles: nil];
+                    
+                    appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
+                    DBHTTPClient *client = [DBHTTPClient sharedClient];
+                    client.delegate = self;
+                    
+                    [client addHistory:appDelegate.user.userID forLog:
+                     [[NSString alloc]initWithFormat:@"Purchased %i shares of %@ in Account %i",
+                      [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
+                    
+                    [alert show];
+                    companyCode.text = @"";
+                    amountofShares.text =@"";
+
+                    [self viewDidLoad];
+                    return;
+                    
+                }
+                else
+                {
+                    //Put the money back into the account
+                    newBalance = [[NSNumber alloc]initWithDouble:[[accountInfo objectForKey:@"BALANCE"] doubleValue]];
+                    balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
+                    message = @"Purchasing Stock";
+                }
+            }
+            else
+            {
+                message = @"Updating Account Balance";
+                
+            }
+        }
+        else
+        {
+            message = @"Insufficient Funds";
+            
+        }
         alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                           message:@"Shares or Company Symbol cannot be empty and must buy at least 1 share!"
+                                           message:message
                                           delegate:nil
-                                 cancelButtonTitle:@"Try Again"
+                                 cancelButtonTitle:@"OK"
                                  otherButtonTitles: nil];
         [alert show];
-     }
-    
+        
+    }
     
 }
 
 - (IBAction)sellButtonPressed:(id)sender {
     
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     UIAlertView * alert;
+    NSString *message;
     
-    
-    NSString * stockSymbol;
-    
-    if(companyCode.text == nil)
+    if([self validateEntries] == YES)
     {
-        stockSymbol = symbol;
+        DBHelper *helper = [[DBHelper alloc]init];
+        NSDictionary * yahooQuery = [helper fetchYahooData:stockSymbol];
+        stockSymbol = [yahooQuery valueForKey:@"Symbol"];
         
-    }
-    else
-    {
-        stockSymbol = companyCode.text;
+        NSNumber * cost = [[NSNumber alloc] initWithDouble:[[yahooQuery objectForKey:@"LastTradePriceOnly"] doubleValue ]];
+        cost = [[NSNumber alloc] initWithDouble:([cost doubleValue] * [shares doubleValue])];
+        
+        NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
+        NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
+                                 ([[accountInfo objectForKey:@"BALANCE"] doubleValue] + [cost doubleValue])];
         
         
-    }
-    
-    if(shares == nil)
-    {
-        shares = [[NSNumber alloc]initWithInt:[amountofShares.text intValue]];
-    }
-    
-      
-    NSDictionary * yahooQuery;
-    
-    if((![stockSymbol isEqualToString:@""]) && [shares intValue] > 0)
-    {
+        NSArray * listOfStocks = [helper getPurchasedStocks:appDelegate.user.accountID];
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", stockSymbol];
+        NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
         
-        if([appDelegate.user.loggedIn intValue] == 1) //User logged in
-        {
-            DBHelper *helper = [[DBHelper alloc]init];
-            yahooQuery = [helper fetchYahooData:stockSymbol];
-            if(![[yahooQuery objectForKey:@"Symbol"] isEqual:nil]) //Stock Exists
-            {
-                NSNumber * cost = [[NSNumber alloc] initWithDouble:[[yahooQuery objectForKey:@"LastTradePriceOnly"] doubleValue ]];
-                cost = [[NSNumber alloc] initWithDouble:([cost doubleValue] * [shares doubleValue])];
+        if([matched count] >= 1)
+        { //Stock Exists
+            
+            if([[[matched objectAtIndex:0] valueForKey:@"SHARES"]intValue] >= [shares intValue])
+            { //Has sufficient stock
                 
-                NSDictionary * accountInfo = [helper getAccountInfo:appDelegate.user.accountID];
-                NSNumber * newBalance = [[NSNumber alloc]initWithDouble:
-                                         ([[accountInfo objectForKey:@"BALANCE"] doubleValue] + [cost doubleValue])];
-                
-                
-                NSArray * listOfStocks = [helper getPurchasedStocks:appDelegate.user.accountID];
-                NSPredicate *p = [NSPredicate predicateWithFormat:@"SYMBOL = %@", stockSymbol];
-                NSArray * matched = [listOfStocks filteredArrayUsingPredicate:p];
-                
-                if([matched count] >= 1)
-                { //Stock Exists
+                NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
+                if([[balanceResults objectForKey:@"Result"]intValue] == 1)
+                { //Updated Balance
                     
-                    if([[[matched objectAtIndex:0] valueForKey:@"SHARES"]intValue] >= [shares intValue])
-                    { //Has sufficient stock
+                    NSDictionary * sellResults = [helper sellStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
+                    
+                    
+                    if([[sellResults objectForKey:@"Result"]intValue] == 1)
+                    { //Sold the stock
+                        appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
+                        alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                           message:@"Stock Sold Succesfully"
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles: nil];
                         
-                        NSDictionary * balanceResults = [helper updateAccountBalance:appDelegate.user.accountID newBalance:newBalance];
-                        if([[balanceResults objectForKey:@"Result"]intValue] == 1)
-                        { //Updated Balance
-                            
-                            NSDictionary * sellResults = [helper sellStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
-                            
-                            
-                            if([[sellResults objectForKey:@"Result"]intValue] == 1)
-                            { //Sold the stock
-                                appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
-                                alert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                                   message:@"Stock Sold Succesfully"
-                                                                  delegate:nil
-                                                         cancelButtonTitle:@"OK"
-                                                         otherButtonTitles: nil];
-                                
-                                DBHTTPClient *client = [DBHTTPClient sharedClient];
-                                client.delegate = self;
-                                
-                                [client addHistory:appDelegate.user.userID forLog:
-                                 [[NSString alloc]initWithFormat:@"Sold %i shares of %@ in Account %i",
-                                  [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
-                                [alert show];
-                                companyCode.text = @"";
-                                amountofShares.text =@"";
-                                
-                                [self viewDidLoad];
-                                
-                            }
-                            else
-                            {
-                                alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                                                   message:@"Something went wrong with Selling Stock."
-                                                                  delegate:nil
-                                                         cancelButtonTitle:@"Try Again"
-                                                         otherButtonTitles: nil];
-                                [alert show];
-                                
-                                
-                                
-                            }
-                        }
-                        else
-                        {
-                            alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                                               message:@"Something went wrong with updating Account Balance"
-                                                              delegate:nil
-                                                     cancelButtonTitle:@"Try Again"
-                                                     otherButtonTitles: nil];
-                            [alert show];
-                            
-                            
-                            
-                        }
+                        DBHTTPClient *client = [DBHTTPClient sharedClient];
+                        client.delegate = self;
+                        [self viewDidLoad];
+                        [client addHistory:appDelegate.user.userID forLog:
+                         [[NSString alloc]initWithFormat:@"Sold %i shares of %@ in Account %i",
+                          [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
                         
-                        
+                        [alert show];
+                        companyCode.text = @"";
+                        amountofShares.text =@"";
+                        return;
                     }
                     else
                     {
-                        //Insufficient shares of the stock
-                        alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                                           message:@"Shares cannot exceed what you own"
-                                                          delegate:nil
-                                                 cancelButtonTitle:@"Try Again"
-                                                 otherButtonTitles: nil];
-                        [alert show];
+                        //put the money back
+                        newBalance = [[NSNumber alloc]initWithDouble:[[accountInfo objectForKey:@"BALANCE"] doubleValue]];
+                        [helper sellStock:shares forSymbol:stockSymbol fromAccountID:appDelegate.user.accountID];
                         
+                        message = @"Selling stock";
                     }
-                    
-                    
                 }
                 else
                 {
-                    //stock does not exist
-                    alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                                       message:@"You do not own this stock."
-                                                      delegate:nil
-                                             cancelButtonTitle:@"Try Again"
-                                             otherButtonTitles: nil];
-                    [alert show];
-                    
-                    
+                    message =@"Updating Account Balance";
                 }
-                    
-           }
+            }
             else
             {
-                alert = [[UIAlertView alloc] initWithTitle:@"Invalid Stock"
-                                                   message:@"Stock does not exist"
-                                                  delegate:nil
-                                         cancelButtonTitle:@"Try Again"
-                                         otherButtonTitles: nil];
-                [alert show];
-                
-                
+                message = @"Insufficient shares to sell";
             }
             
         }
         else
         {
-            //User is not logged in, show an alert
-            alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                               message:@"Must be logged in to 'Trade'"
-                                              delegate:nil
-                                     cancelButtonTitle:@"OK"
-                                     otherButtonTitles: nil];
-            [alert show];
+            message = @"You do not own this stock";
         }
-    }
-    else
-    {
         
         alert = [[UIAlertView alloc] initWithTitle:@"ERROR"
-                                           message:@"Shares or Company Symbol cannot be empty and must sell at least 1 share!"
+                                           message:message
                                           delegate:nil
-                                 cancelButtonTitle:@"Try Again"
+                                 cancelButtonTitle:@"OK"
                                  otherButtonTitles: nil];
         [alert show];
-        
-        
-        
     }
-    
 }
 
 -(void)DBHTTPClient:(DBHTTPClient *)client didUpdateWithAllStockValue:(NSArray *)results withTotalValue:(NSNumber *)totalValue withTotalShares:(NSNumber *)totalShares
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     appDelegate.user.favoriteStocks = results;
     appDelegate.user.oldFavorites = results;
     appDelegate.user.accountValue = totalValue;
@@ -591,6 +532,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self performSegueWithIdentifier:@"notTrading" sender:self];
     [SVProgressHUD dismiss];
     
+}
+
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
 }
 
 

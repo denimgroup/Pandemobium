@@ -7,6 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="JSON.JSONObject" %>
+<%@ page import="services.initDatabase" %>
+
+<%
+    response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+    response.setDateHeader("Expires", 0); //prevent caching at the proxy server
+%>
+<%
+    initDatabase db = new initDatabase();
+    db.initDatabase();
+%>
 
 <html>
   <head>

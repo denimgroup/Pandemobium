@@ -5,6 +5,13 @@
   Time: 2:34 PM
   To change this template use File | Settings | File Templates.
 --%>
+
+<%
+    response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+    response.setDateHeader("Expires", 0); //prevent caching at the proxy server
+%>
+
 <!DOCTYPE html>
 <html>
 <head>

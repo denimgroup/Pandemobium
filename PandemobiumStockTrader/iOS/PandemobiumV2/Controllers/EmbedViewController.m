@@ -1,15 +1,27 @@
 //
-//  EmbedViewController.m
-//  Pandemobium
+// Pandemobium Stock Trader is a mobile app for Android and iPhone with
+// vulnerabilities included for security testing purposes.
+// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
 //
-//  Created by Thomas Salazar on 8/8/13.
-//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
+// This file is part of Pandemobium Stock Trader.
 //
+// Pandemobium Stock Trader is free software: you can redistribute it
+// and/or modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Pandemobium Stock Trader. If not, see
+// <http://www.gnu.org/licenses/>.
 
 #import "EmbedViewController.h"
 
 @interface EmbedViewController ()
-
 @end
 
 @implementation EmbedViewController
@@ -29,6 +41,7 @@ CGFloat const CPDBarInitialX = 0.5f;
 @synthesize portfolioSum;
 @synthesize shares;
 @synthesize stockAnnotation = stockAnnotation_;
+
 @synthesize accountValue;
 @synthesize appDelegate;
 @synthesize helper;
@@ -46,6 +59,13 @@ CGFloat const CPDBarInitialX = 0.5f;
     [super viewDidLoad];
     appDelegate = [UIApplication sharedApplication].delegate;
     helper = [[DBHelper alloc]init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+    
+    
     [self fetchData];
     
     stockValues = [[NSArray alloc]init];
@@ -139,7 +159,10 @@ CGFloat const CPDBarInitialX = 0.5f;
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
 
 #pragma mark - Table view delegate
 
@@ -462,19 +485,19 @@ CGFloat const CPDBarInitialX = 0.5f;
     axisSet.xAxis.axisLabels = nil;
     
     // 4 - Configure the y-axis
-    axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
-    axisSet.yAxis.title = @"Shares";
-    axisSet.yAxis.titleTextStyle = axisTitleStyle;
-    axisSet.yAxis.titleOffset = 5.0f;
-    axisSet.yAxis.axisLineStyle = axisLineStyle;
+	axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
+	axisSet.yAxis.title = @"Shares";
+	axisSet.yAxis.titleTextStyle = axisTitleStyle;
+	axisSet.yAxis.titleOffset = 5.0f;
+	axisSet.yAxis.axisLineStyle = axisLineStyle;
     axisSet.yAxis.axisLabels = nil;
 }
 
 -(void)hideAnnotation:(CPTGraph *)graph {
-    if ((graph.plotAreaFrame.plotArea) && (self.stockAnnotation)) {
-        [graph.plotAreaFrame.plotArea removeAnnotation:self.stockAnnotation];
-        self.stockAnnotation = nil;
-    }
+	if ((graph.plotAreaFrame.plotArea) && (self.stockAnnotation)) {
+		[graph.plotAreaFrame.plotArea removeAnnotation:self.stockAnnotation];
+		self.stockAnnotation = nil;
+	}
 }
 #pragma mark - CPTBarPlotDelegate methods
 - (void)barPlot: (CPTBarPlot *)plot barWasSelectedAtRecordIndex:(NSUInteger)index
@@ -525,6 +548,10 @@ CGFloat const CPDBarInitialX = 0.5f;
     
 }
 
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
+}
 
 
 @end
