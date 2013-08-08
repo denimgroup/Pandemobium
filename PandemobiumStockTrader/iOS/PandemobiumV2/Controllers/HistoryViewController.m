@@ -25,7 +25,6 @@
 
 @interface HistoryViewController ()
 
-
 @end
 
 @implementation HistoryViewController
@@ -47,6 +46,12 @@
     [super viewDidLoad];
     DBHelper * helper = [[DBHelper alloc]init];
     AppDelegate * app = [UIApplication sharedApplication].delegate;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+
     UIAlertView * alert;
 
     history = [[NSArray alloc]init];
@@ -108,6 +113,11 @@
     cell.textLabel.text = [[history objectAtIndex:indexPath.row] valueForKey:@"LOG"];
     
     return cell;
+}
+
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
 }
 
 @end

@@ -25,8 +25,8 @@
     response.setHeader("Pragma", "no-cache"); //HTTP 1.0
     response.setDateHeader("Expires", 0); //prevent caching at the proxy server
 
-    initDatabase db = new initDatabase();
-    db.initDatabase();
+  //  initDatabase db = new initDatabase();
+  //  db.initDatabase();
 
     JSONObject json = new JSONObject();
     JSONArray array;

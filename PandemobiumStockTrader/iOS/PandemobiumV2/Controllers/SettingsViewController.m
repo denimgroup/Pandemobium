@@ -29,6 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+
 
     // Uncomment the following line to preserve selection between presentations.
      //self.clearsSelectionOnViewWillAppear = NO;
@@ -71,6 +76,11 @@
 - (IBAction)revealMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
 }
 
 @end

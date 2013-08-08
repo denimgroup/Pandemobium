@@ -44,12 +44,17 @@
     [SVProgressHUD dismiss];
     appDelegate = [UIApplication sharedApplication].delegate;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+    
+    
     [super viewDidLoad];
 
     
     //Initialize the previous list of stocks. This allows
     //us to cutdown the number of times we load the data.
-    favoriteStocks = appDelegate.user.oldFavorites;
     if([self isLoggedIn] == FALSE)
     {
         [self setDefaultFavorites];
@@ -57,6 +62,8 @@
     }
     else
     {
+        favoriteStocks = appDelegate.user.oldFavorites;
+       
         [self loadFavoriteStocks];
         
     }
@@ -275,7 +282,14 @@
 
 // Return the number of rows in the section
 - (NSInteger)tableView:(UITableView *)quoteTableView numberOfRowsInSection:(NSInteger)section {
-    return [favoriteStocks count];
+    
+    if(favoriteStocks != NULL)
+    {
+    
+        return [favoriteStocks count];
+    }
+    return 0;
+
 }
 
 // Customize the appearance of table view cells.
@@ -303,7 +317,9 @@
     
     //Set the title of the cell.
     symbol = [[favoriteStocks objectAtIndex:indexPath.row] valueForKey:key];
-    cell.textLabel.text = symbol;
+    
+    if (![symbol isEqualToString:@""])
+    {cell.textLabel.text = symbol;
     
     //Set the subtitle of the cell
     if([self isLoggedIn] && [favoriteStocks isEqualToArray:appDelegate.user.favoriteStocks])
@@ -320,7 +336,7 @@
         }
     }
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
-    
+    }
     return cell;
 }
 
@@ -470,4 +486,11 @@
     [self initImage];
     [self.quoteTableView reloadData];
 }
+
+-(void)handleUpdatedData:(NSNotification *)notification {
+  //  NSLog(@"recieved");
+    [self viewDidLoad];
+    [self.quoteTableView reloadData];
+}
+
 @end

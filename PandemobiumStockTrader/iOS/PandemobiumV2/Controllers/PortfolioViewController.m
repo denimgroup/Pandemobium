@@ -21,10 +21,7 @@
 
 #import "PortfolioViewController.h"
 
-
-
 @interface PortfolioViewController ()
-
 @end
 
 @implementation PortfolioViewController
@@ -62,6 +59,13 @@ CGFloat const CPDBarInitialX = 0.5f;
     [super viewDidLoad];
     appDelegate = [UIApplication sharedApplication].delegate;
     helper = [[DBHelper alloc]init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+
+    
     [self fetchData];
     
     stockValues = [[NSArray alloc]init];
@@ -544,6 +548,10 @@ CGFloat const CPDBarInitialX = 0.5f;
     
 }
 
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
+}
 
 
 @end

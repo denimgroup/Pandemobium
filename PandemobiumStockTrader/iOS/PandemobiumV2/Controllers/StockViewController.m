@@ -59,12 +59,18 @@
     //Initialize appDelegate and DB Helper
     appDelegate = [UIApplication sharedApplication].delegate;
     helper = [[DBHelper alloc]init] ;
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+
     
     [self initImage];
     [self fetchData];
     [self stockStatus:symbol];
+   
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -140,6 +146,7 @@
 //This is to allow the user to Add/Remove from favotires
 -(void)stockStatus:(NSString *)stockSymbol
 {
+    
     if([appDelegate.user.loggedIn intValue] == 1)
     {
         NSArray *dbStockInfo = [helper getAllUserStocks:appDelegate.user.accountID];
@@ -419,4 +426,10 @@
     [SVProgressHUD dismiss];
 
 }
+
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
+}
+
 @end

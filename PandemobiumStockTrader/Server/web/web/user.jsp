@@ -37,8 +37,8 @@
 %>
 
 <%
-    initDatabase db = new initDatabase();
-    db.initDatabase();
+   // initDatabase db = new initDatabase();
+   // db.initDatabase();
 
     String method = request.getParameter("method");
     userService service = new userService();

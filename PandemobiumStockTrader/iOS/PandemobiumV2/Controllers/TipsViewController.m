@@ -46,6 +46,13 @@
     [super viewDidLoad];
     DBHelper * helper = [[DBHelper alloc]init];
     AppDelegate * app = [UIApplication sharedApplication].delegate;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUpdatedData:)
+                                                 name:@"outOfRange"
+                                               object:nil];
+
+    
     UIAlertView * alert;
     
     if([app.user.loggedIn intValue] == 1)
@@ -96,6 +103,11 @@
     cell.textLabel.text = [[tips objectAtIndex:indexPath.row] valueForKey:@"SYMBOL"];
     
     return cell;
+}
+
+-(void)handleUpdatedData:(NSNotification *)notification {
+    //  NSLog(@"recieved");
+    [self viewDidLoad];
 }
 
 

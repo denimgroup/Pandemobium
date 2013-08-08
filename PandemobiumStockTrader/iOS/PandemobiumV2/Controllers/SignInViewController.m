@@ -469,11 +469,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         alert = [[UIAlertView alloc]initWithTitle:@"Location Unknown" message:@"Too far from original location. Signing Out" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         
-        appDelegate.user = [[User alloc]init];
-        
-        
+        appDelegate.user.loggedIn = 0;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"outOfRange"
+                                                            object:self];
+       
     }
 }
+
 
 
 @end

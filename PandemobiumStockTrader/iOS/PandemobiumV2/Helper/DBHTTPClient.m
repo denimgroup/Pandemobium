@@ -1,13 +1,28 @@
 //
-//  DBHTTPClient.m
-//  Pandemobium
+// Pandemobium Stock Trader is a mobile app for Android and iPhone with
+// vulnerabilities included for security testing purposes.
+// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
 //
-//  Created by Adrian Salazar on 7/16/13.
-//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
+// This file is part of Pandemobium Stock Trader.
 //
+// Pandemobium Stock Trader is free software: you can redistribute it
+// and/or modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Pandemobium Stock Trader. If not, see
+// <http://www.gnu.org/licenses/>.
 
 #import "DBHTTPClient.h"
 #import "SVProgressHUD.h"
+#import "DBHelper.h"
+
 @implementation DBHTTPClient
 
 NSString *const BaseURLString = @"http://localhost:8080/web/";
@@ -139,6 +154,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
     [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
      {
+         DBHelper *helper = [[DBHelper alloc]init];
          NSDictionary * firstParse = (NSDictionary *)JSON;
          NSArray * listStocks = [firstParse objectForKey:@"Results"];
          
@@ -148,37 +164,68 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
          NSNumber *totalValue = [[NSNumber alloc]initWithDouble:0.0f];
          NSNumber *totalShares = [[NSNumber alloc]initWithInt:0];
          
+         
+         NSNumber *listPrice;
+         NSNumber *shares;
+         NSNumber *value;
+         NSString *change;
+         
          for (int i = 0; i < [listStocks count]; i++)
          {
 
              //Query yahoo's DB for stock info
-             NSString *yahooURL = [[NSString alloc]initWithFormat:@"http://query.yahooapis.com/v1/public/yql?q=SELECT%%20*%%20FROM%%20yahoo.finance.quote%%20WHERE%%20symbol%%3D%%27%@%%27&format=json&diagnostics=false&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=", [[listStocks objectAtIndex:i] valueForKey:@"SYMBOL"]];
-                                   
+
+             stockInfo = [helper fetchYahooData:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"]];
+           
+             if([stockInfo valueForKey:@"LastTradePriceOnly"] != [NSNull null])
+             {
+                 listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
+             }
+             else
+             {
+                 listPrice = [[NSNumber alloc]initWithFloat:0.0];
+             }
              
-             NSError *error;
-             NSData *responseData = [NSData dataWithContentsOfURL:[NSURL URLWithString:yahooURL]];
+             if(([[listStocks objectAtIndex:i] valueForKey:@"SHARES"] != [NSNull null]) &&
+                ([[[listStocks objectAtIndex:i] valueForKey:@"SHARES"] intValue] > 0))
+             {
+                 shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"SHARES"] intValue]];
+                 
+             }
+             else
+             {
+                 shares = [[NSNumber alloc]initWithInt:0];
+             }
              
-             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-             NSDictionary *query = [jsonData objectForKey:@"query"];
-             NSDictionary *results = [query objectForKey:@"results"];
-             stockInfo =  [results objectForKey:@"quote"];
-             //End Yahoo's query. For improvements make this run in the background.
              
-                          
-             NSNumber * listPrice = [[NSNumber alloc]initWithFloat:[[stockInfo valueForKey:@"LastTradePriceOnly"] floatValue]];
-             NSNumber * shares = [[NSNumber alloc] initWithInt:[[[listStocks objectAtIndex:i ]valueForKey:@"SHARES"] intValue]];
-             NSNumber * value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
+            value = [[NSNumber alloc]initWithDouble:([listPrice doubleValue] * [shares intValue])];
              
              
              NSMutableDictionary * temp = [[NSMutableDictionary alloc] initWithCapacity:5];
-             [temp setObject:[stockInfo valueForKey:@"Change"] forKey:@"Change"];
-             [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"SYMBOL"];
+             if([stockInfo valueForKey:@"Change"] != [NSNull null])
+             {
+                 change = [stockInfo valueForKey:@"Change"];
+             }
+             else
+             {
+                 change= @"N/A";
+             }
+             [temp setObject:change forKey:@"Change"];
+             
+             if([[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] != [NSNull null])
+             {
+                 [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SYMBOL"] forKey:@"SYMBOL"];
+             }
+             else
+             {
+                 [temp setObject:@"N/A" forKey:@"SYMBOL"];
+             }
              [temp setObject:value forKey:@"value"];
-             [temp setObject:[[listStocks objectAtIndex:i]valueForKey:@"SHARES"] forKey:@"SHARES"];
+             [temp setObject:shares forKey:@"SHARES"];
              
              NSString *summary = [[NSString alloc] initWithFormat:@"%@ Change, %i Owned, $%0.2f Value",
                                   [stockInfo valueForKey:@"Change"],
-                                  [[[listStocks objectAtIndex:i] valueForKey:@"SHARES"]intValue],
+                                  [shares intValue],
                                   [value doubleValue]];
              [temp setObject:summary forKey:@"summary"];
              
