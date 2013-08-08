@@ -31,9 +31,7 @@
 		BE9EAB01179471DE0079C57A /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0EA17944E1500B5C6C3 /* TradeViewController.m */; };
 		BE9EAB02179471DE0079C57A /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E017944D8B00B5C6C3 /* RightViewController.m */; };
 		BE9EAB04179471DE0079C57A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E217944DC500B5C6C3 /* SettingsViewController.m */; };
-		BE9EAB07179471DE0079C57A /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0F21794543100B5C6C3 /* PortfolioViewController.m */; };
 		BE9EAB08179471DE0079C57A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0E417944DC500B5C6C3 /* SignInViewController.m */; };
-		BE9EAB0A179471DE0079C57A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0F01794542000B5C6C3 /* HistoryViewController.m */; };
 		BE9EAB0C179471DE0079C57A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0F41794544600B5C6C3 /* NewsViewController.m */; };
 		BE9EAB0F179472480079C57A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF701E176F74DA00D63EB8 /* AppDelegate.m */; };
 		BE9EAB14179472B70079C57A /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D09417944CAA00B5C6C3 /* UIImage+ImageWithUIView.m */; };
@@ -54,16 +52,23 @@
 		BE9EAB4017948F710079C57A /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3617948F710079C57A /* AFXMLRequestOperation.m */; };
 		BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */; };
 		BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BED22FC11795A785004EE171 /* DBHTTPClient.m */; };
+		BEE5A10A17B2AA0D003F6956 /* appButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10917B2AA0D003F6956 /* appButton.png */; };
+		BEE5A10C17B2AA16003F6956 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10B17B2AA16003F6956 /* Default.png */; };
+		BEE5A10E17B2AA1E003F6956 /* Defualt-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */; };
+		BEE5A11017B2AB00003F6956 /* appButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10F17B2AB00003F6956 /* appButton.png */; };
+		BEE5A11217B2AB23003F6956 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A11117B2AB23003F6956 /* Default-568h@2x.png */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
 		BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */; };
 		BEEF7019176F74DA00D63EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7017176F74DA00D63EB8 /* InfoPlist.strings */; };
 		BEEF703D176F767600D63EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF703C176F767600D63EB8 /* QuartzCore.framework */; };
+		BEEFE2A117B427680085EA16 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEFE2A017B427680085EA16 /* HistoryViewController.m */; };
+		BEEFE2A417B43F5A0085EA16 /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEFE2A317B43F5A0085EA16 /* PortfolioViewController.m */; };
+		BEEFE2A717B44D5F0085EA16 /* EmbedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEFE2A617B44D5F0085EA16 /* EmbedViewController.m */; };
 		BEF0D08B17944C8A00B5C6C3 /* CompanySymbols.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08417944C8A00B5C6C3 /* CompanySymbols.sqlite */; };
 		BEF0D08D17944C8A00B5C6C3 /* defaultStocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08717944C8A00B5C6C3 /* defaultStocks.plist */; };
 		BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08817944C8A00B5C6C3 /* fullStockList.plist */; };
 		BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */; };
-		BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */; };
 		BEF0D10717945CCA00B5C6C3 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
 		BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFF291D179868FE000F1FF3 /* ManageTipsViewController.m */; };
 /* End PBXBuildFile section */
@@ -188,6 +193,11 @@
 		BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		BED22FC01795A785004EE171 /* DBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHTTPClient.h; sourceTree = "<group>"; };
 		BED22FC11795A785004EE171 /* DBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DBHTTPClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BEE5A10917B2AA0D003F6956 /* appButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appButton.png; sourceTree = "<group>"; };
+		BEE5A10B17B2AA16003F6956 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Defualt-568h@2x.png"; sourceTree = "<group>"; };
+		BEE5A10F17B2AB00003F6956 /* appButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appButton.png; sourceTree = "<group>"; };
+		BEE5A11117B2AB23003F6956 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEEF7010176F74DA00D63EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,6 +206,12 @@
 		BEEF701D176F74DA00D63EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEEF701E176F74DA00D63EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BEEF703C176F767600D63EB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BEEFE29F17B427680085EA16 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = PandemobiumV2/Controllers/HistoryViewController.h; sourceTree = "<group>"; };
+		BEEFE2A017B427680085EA16 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = PandemobiumV2/Controllers/HistoryViewController.m; sourceTree = "<group>"; };
+		BEEFE2A217B43F590085EA16 /* PortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortfolioViewController.h; path = PandemobiumV2/Controllers/PortfolioViewController.h; sourceTree = "<group>"; };
+		BEEFE2A317B43F5A0085EA16 /* PortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortfolioViewController.m; path = PandemobiumV2/Controllers/PortfolioViewController.m; sourceTree = "<group>"; };
+		BEEFE2A517B44D5E0085EA16 /* EmbedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmbedViewController.h; path = PandemobiumV2/Controllers/EmbedViewController.h; sourceTree = "<group>"; };
+		BEEFE2A617B44D5F0085EA16 /* EmbedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmbedViewController.m; path = PandemobiumV2/Controllers/EmbedViewController.m; sourceTree = "<group>"; };
 		BEF0D07E17944C4000B5C6C3 /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
 		BEF0D07F17944C4000B5C6C3 /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DBHelper.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BEF0D08017944C4000B5C6C3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -227,17 +243,11 @@
 		BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = PandemobiumV2/Controllers/InitialViewController.m; sourceTree = "<group>"; };
 		BEF0D0ED179453FD00B5C6C3 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = PandemobiumV2/Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		BEF0D0EE179453FD00B5C6C3 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = PandemobiumV2/Controllers/MenuViewController.m; sourceTree = "<group>"; };
-		BEF0D0EF1794542000B5C6C3 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = PandemobiumV2/Controllers/HistoryViewController.h; sourceTree = "<group>"; };
-		BEF0D0F01794542000B5C6C3 /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = PandemobiumV2/Controllers/HistoryViewController.m; sourceTree = "<group>"; };
-		BEF0D0F11794543100B5C6C3 /* PortfolioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PortfolioViewController.h; path = PandemobiumV2/Controllers/PortfolioViewController.h; sourceTree = "<group>"; };
-		BEF0D0F21794543100B5C6C3 /* PortfolioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PortfolioViewController.m; path = PandemobiumV2/Controllers/PortfolioViewController.m; sourceTree = "<group>"; };
 		BEF0D0F31794544600B5C6C3 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = PandemobiumV2/Controllers/NewsViewController.h; sourceTree = "<group>"; };
 		BEF0D0F41794544600B5C6C3 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = PandemobiumV2/Controllers/NewsViewController.m; sourceTree = "<group>"; };
 		BEF0D0F51794547500B5C6C3 /* accounts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = accounts.plist; path = Supporting_Files/accounts.plist; sourceTree = "<group>"; };
 		BEF0D0F61794547500B5C6C3 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = burg.jpg; path = Supporting_Files/burg.jpg; sourceTree = "<group>"; };
 		BEF0D0F71794547500B5C6C3 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = car.jpg; path = Supporting_Files/car.jpg; sourceTree = "<group>"; };
-		BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Supporting_Files/Default-568h@2x.png"; sourceTree = "<group>"; };
-		BEF0D0F91794547500B5C6C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Supporting_Files/Default.png; sourceTree = "<group>"; };
 		BEF0D0FA1794547500B5C6C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Supporting_Files/Default@2x.png"; sourceTree = "<group>"; };
 		BEF0D0FB1794547500B5C6C3 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = Supporting_Files/images.jpg; sourceTree = "<group>"; };
 		BEF0D0FC1794547500B5C6C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Supporting_Files/main.m; sourceTree = "<group>"; };
@@ -439,6 +449,8 @@
 		BEEF7002176F74DA00D63EB8 = {
 			isa = PBXGroup;
 			children = (
+				BEE5A11117B2AB23003F6956 /* Default-568h@2x.png */,
+				BEE5A10F17B2AB00003F6956 /* appButton.png */,
 				BE099C1B179ED17E002ED292 /* iVersion */,
 				BE9EAB2517948F700079C57A /* AFNetworking */,
 				BEF0D1001794583900B5C6C3 /* SVProgressHUD */,
@@ -498,10 +510,11 @@
 				BE0B0E8B17AAF8FD004DE409 /* SanAntonio.gpx */,
 				BEF0D0F51794547500B5C6C3 /* accounts.plist */,
 				BEF0D0F61794547500B5C6C3 /* burg.jpg */,
+				BEE5A10917B2AA0D003F6956 /* appButton.png */,
 				BEF0D0F71794547500B5C6C3 /* car.jpg */,
-				BEF0D0F81794547500B5C6C3 /* Default-568h@2x.png */,
-				BEF0D0F91794547500B5C6C3 /* Default.png */,
+				BEE5A10B17B2AA16003F6956 /* Default.png */,
 				BEF0D0FA1794547500B5C6C3 /* Default@2x.png */,
+				BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */,
 				BEF0D0FB1794547500B5C6C3 /* images.jpg */,
 				BEF0D0FC1794547500B5C6C3 /* main.m */,
 				BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */,
@@ -514,16 +527,18 @@
 		BEEF7034176F752000D63EB8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEF0D0EF1794542000B5C6C3 /* HistoryViewController.h */,
-				BEF0D0F01794542000B5C6C3 /* HistoryViewController.m */,
 				BEF0D0EB179453E800B5C6C3 /* InitialViewController.h */,
 				BEF0D0EC179453E800B5C6C3 /* InitialViewController.m */,
+				BEEFE29F17B427680085EA16 /* HistoryViewController.h */,
+				BEEFE2A017B427680085EA16 /* HistoryViewController.m */,
+				BEEFE2A217B43F590085EA16 /* PortfolioViewController.h */,
+				BEEFE2A317B43F5A0085EA16 /* PortfolioViewController.m */,
+				BEEFE2A517B44D5E0085EA16 /* EmbedViewController.h */,
+				BEEFE2A617B44D5F0085EA16 /* EmbedViewController.m */,
 				BEF0D0ED179453FD00B5C6C3 /* MenuViewController.h */,
 				BEF0D0EE179453FD00B5C6C3 /* MenuViewController.m */,
 				BEF0D0F31794544600B5C6C3 /* NewsViewController.h */,
 				BEF0D0F41794544600B5C6C3 /* NewsViewController.m */,
-				BEF0D0F11794543100B5C6C3 /* PortfolioViewController.h */,
-				BEF0D0F21794543100B5C6C3 /* PortfolioViewController.m */,
 				BEF0D0DD17944D6A00B5C6C3 /* QuotesViewController.h */,
 				BEF0D0DE17944D6A00B5C6C3 /* QuotesViewController.m */,
 				BEF0D0DF17944D8B00B5C6C3 /* RightViewController.h */,
@@ -626,9 +641,13 @@
 				BEF0D08D17944C8A00B5C6C3 /* defaultStocks.plist in Resources */,
 				BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */,
 				BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */,
-				BEF0D106179458B400B5C6C3 /* Default-568h@2x.png in Resources */,
 				BE099C1F179ED17E002ED292 /* iVersion.bundle in Resources */,
 				BE0B0E8C17AAF8FD004DE409 /* SanAntonio.gpx in Resources */,
+				BEE5A10A17B2AA0D003F6956 /* appButton.png in Resources */,
+				BEE5A10C17B2AA16003F6956 /* Default.png in Resources */,
+				BEE5A10E17B2AA1E003F6956 /* Defualt-568h@2x.png in Resources */,
+				BEE5A11017B2AB00003F6956 /* appButton.png in Resources */,
+				BEE5A11217B2AB23003F6956 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,9 +673,7 @@
 				BE9EAB01179471DE0079C57A /* TradeViewController.m in Sources */,
 				BE9EAB02179471DE0079C57A /* RightViewController.m in Sources */,
 				BE9EAB04179471DE0079C57A /* SettingsViewController.m in Sources */,
-				BE9EAB07179471DE0079C57A /* PortfolioViewController.m in Sources */,
 				BE9EAB08179471DE0079C57A /* SignInViewController.m in Sources */,
-				BE9EAB0A179471DE0079C57A /* HistoryViewController.m in Sources */,
 				BE9EAB0C179471DE0079C57A /* NewsViewController.m in Sources */,
 				BE9EAAF21794714B0079C57A /* main.m in Sources */,
 				BE9EAB211794810A0079C57A /* Stock.m in Sources */,
@@ -674,6 +691,9 @@
 				BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */,
 				BE099C20179ED17E002ED292 /* iVersion.m in Sources */,
 				BE4E6E5417A020E400FC4F7B /* KeychainItemWrapper.m in Sources */,
+				BEEFE2A117B427680085EA16 /* HistoryViewController.m in Sources */,
+				BEEFE2A417B43F5A0085EA16 /* PortfolioViewController.m in Sources */,
+				BEEFE2A717B44D5F0085EA16 /* EmbedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

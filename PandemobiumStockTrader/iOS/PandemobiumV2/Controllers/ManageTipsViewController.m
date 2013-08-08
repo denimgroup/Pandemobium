@@ -24,6 +24,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 @synthesize symbol;
 @synthesize reasonFromUrl;
 @synthesize symbolFromUrl;
+@synthesize clearButton;
+@synthesize submitButton;
 
 
 
@@ -87,6 +89,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupButtonLayer:submitButton];
+    [self setupButtonLayer:clearButton];
 	// Do any additional setup after loading the view.
     //DBHelper * helper = [[DBHelper alloc]init];
     AppDelegate * app = [UIApplication sharedApplication].delegate;
@@ -102,6 +106,30 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                  otherButtonTitles:nil];
         [alert show];
     }
+}
+
+
+-(void)setupButtonLayer:(UIButton*)button
+{
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = button.layer.bounds;
+    
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[UIColor colorWithWhite:1.0f alpha:0.1f].CGColor,
+                       (id)[UIColor colorWithWhite:0.4f alpha:0.5f].CGColor,
+                       nil];
+    
+    gradient.locations =[NSArray arrayWithObjects:
+                         [NSNumber numberWithFloat:0.0f],
+                         [NSNumber numberWithFloat:1.0f],
+                         nil];
+    
+    gradient.cornerRadius = button.layer.cornerRadius;
+    
+    [button.layer setCornerRadius:9.0f];
+    [button.layer setMasksToBounds:YES];
+    [button.layer addSublayer:gradient];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,7 +160,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     else
     {
-        if(![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]){
+        if((![self.reason.text isEqual:@"Reason: "] && ![self.symbol.text isEqual:@""]) && (self.reason.text.length <= 512 && self.symbol.text.length <= 10)){
         //submit a tip
             alert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                message:@"Tip Sent Succesfully"
@@ -170,8 +198,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         }
         else
         {
-            alert = [[UIAlertView alloc] initWithTitle:@"ALERT"
-                                               message:@"Fill Out Form With A Stock Symbol And A Reason."
+            alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                               message:@"Fill Out Form With:\nStock Symbol: less than 10 chars\nA Reason: less than 512 chars."
                                               delegate:nil
                                      cancelButtonTitle:@"OK"
                                      otherButtonTitles:nil, nil];

@@ -1,23 +1,10 @@
 //
-// Pandemobium Stock Trader is a mobile app for Android and iPhone with
-// vulnerabilities included for security testing purposes.
-// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
+//  HistoryViewController.m
+//  Pandemobium
 //
-// This file is part of Pandemobium Stock Trader.
+//  Created by Thomas Salazar on 8/8/13.
+//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
-// Pandemobium Stock Trader is free software: you can redistribute it
-// and/or modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 3
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Pandemobium Stock Trader. If not, see
-// <http://www.gnu.org/licenses/>.
 
 #import "HistoryViewController.h"
 #import "AppDelegate.h"
@@ -25,17 +12,17 @@
 
 @interface HistoryViewController ()
 
-
 @end
 
 @implementation HistoryViewController
+
 @synthesize history;
 @synthesize tips;
 @synthesize activityIndicator;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -45,10 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	// Do any additional setup after loading the view.
     DBHelper * helper = [[DBHelper alloc]init];
     AppDelegate * app = [UIApplication sharedApplication].delegate;
     UIAlertView * alert;
-
+    
     history = [[NSArray alloc]init];
     if([app.user.loggedIn intValue] == 1)
     {
@@ -66,7 +54,6 @@
         [alert show];
     }
     
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +66,6 @@
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
-
 
 #pragma mark - Table View
 
@@ -109,5 +95,4 @@
     
     return cell;
 }
-
 @end

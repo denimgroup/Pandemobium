@@ -171,22 +171,19 @@
         {
             [self.favoriteButton setTitle:@"Remove"];
         }
-        
     }
-    
 }
+
 #pragma mark - Table View
 // Return the number of sections.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
-    
 }
 
 // Return the number of rows in the section.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [stockInfo count];
 }
-
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -228,6 +225,7 @@
 #pragma mark - Action Listeners
 - (IBAction)backButtonClicked:(id)sender
 {
+    [SVProgressHUD show];
     self.originateFrom = @"QuoteView";
     
     if(appDelegate.user.reloadData == [[NSNumber alloc]initWithInt:1] )

@@ -26,6 +26,8 @@
 @property(strong, nonatomic) NSString *symbolFromUrl;
 - (IBAction)submitReason:(id)sender;
 - (IBAction)clearTextView:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *clearButton;
+@property (strong, nonatomic) IBOutlet UIButton *submitButton;
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
 

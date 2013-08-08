@@ -1,28 +1,17 @@
 //
-// Pandemobium Stock Trader is a mobile app for Android and iPhone with
-// vulnerabilities included for security testing purposes.
-// Copyright (c) 2013 Denim Group, Ltd. All rights reserved worldwide.
+//  HistoryViewController.h
+//  Pandemobium
 //
-// This file is part of Pandemobium Stock Trader.
+//  Created by Thomas Salazar on 8/8/13.
+//  Copyright (c) 2013 Thomas Salazar. All rights reserved.
 //
-// Pandemobium Stock Trader is free software: you can redistribute it
-// and/or modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 3
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Pandemobium Stock Trader. If not, see
-// <http://www.gnu.org/licenses/>.
+
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface HistoryViewController : UITableViewController < UITableViewDataSource, UITableViewDelegate>
+
+@interface HistoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *history;
