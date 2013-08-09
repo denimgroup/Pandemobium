@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="stocktrader2" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="980ee8cd-1d66-4421-9e40-6e1cdc74051d">
+    <synchronize>true</synchronize>
+    <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
+    <jdbc-url>jdbc://</jdbc-url>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/hsqldb-2.2.9.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/hsqldb-license.txt</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

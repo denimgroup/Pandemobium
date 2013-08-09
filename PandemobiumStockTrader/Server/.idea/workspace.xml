@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5ac98ed-004d-4d4e-8588-f1380531ef4a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/DefaultDefault-568h@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../iOS/Default-568h@2x.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/Pandemobium.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../iOS/Pandemobium.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/AppDelegate.h" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/AppDelegate.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Helper/DBHTTPClient.h" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Helper/DBHTTPClient.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Helper/DBHelper.h" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Helper/DBHelper.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Helper/DBHelper.m" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Helper/DBHelper.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Default.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/ManageTipsViewController.m" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/ManageTipsViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Supporting_Files/accounts.plist" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Supporting_Files/accounts.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Supporting_Files/main.m" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Supporting_Files/main.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/Pandemobium.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../iOS/Pandemobium.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/SignInViewController.h" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/SignInViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/SignInViewController.m" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/SignInViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/StockViewController.m" afterPath="$PROJECT_DIR$/../iOS/PandemobiumV2/Controllers/StockViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Server.iws" />
@@ -31,7 +32,7 @@
     <file path="/Decompressor.java" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372778499753" ignored="false" />
     <file path="/ResultSetConverter.java" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372869531131" ignored="false" />
     <file path="/tips.jsp" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1372875472080" ignored="false" />
-    <file path="/Dummy.txt" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1374588516925" ignored="false" />
+    <file path="/Dummy.txt" changelist="d5ac98ed-004d-4d4e-8588-f1380531ef4a" time="1375886218162" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -51,6 +57,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -87,7 +94,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -96,40 +102,13 @@
     <favorites_list name="Server" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.4984448">
       <split-first>
         <leaf>
-          <file leaf-file-name="userService.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="userService.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/services/userService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="account.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/account.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="32" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tips.jsp" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/tips.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="20" selection-start="611" selection-end="611" vertical-scroll-proportion="0.34994698">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="history.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/history.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="67" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+                <state line="18" column="13" selection-start="370" selection-end="370" vertical-scroll-proportion="0.014807503">
                   <folding />
                 </state>
               </provider>
@@ -151,23 +130,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/user.jsp">
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="13" selection-start="942" selection-end="1193" vertical-scroll-proportion="0.0">
+                <state line="1144" column="0" selection-start="44322" selection-end="44322" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="account.jsp" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/account.jsp">
+          <file leaf-file-name="initDatabase.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/services/initDatabase.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="40" column="7" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.6066734">
+                <state line="25" column="9" selection-start="697" selection-end="697" vertical-scroll-proportion="0.014807503">
                   <folding />
                 </state>
               </provider>
@@ -176,16 +155,7 @@
           <file leaf-file-name="accountService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/services/accountService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="75" column="3" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/index.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="23" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
+                <state line="86" column="3" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -238,7 +208,6 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="22" />
     <option name="width" value="1600" />
     <option name="height" value="1174" />
@@ -271,6 +240,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,6 +272,64 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maliciousweb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,21 +381,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.18-bin.jar" />
+    <property name="last_opened_file_path" value="/Library/Tomcat/lib/servlet-api.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -659,11 +686,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="22" width="1600" height="1174" extended-state="7" />
+    <frame x="0" y="22" width="1600" height="1174" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.6712963" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.670778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.66318786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -680,9 +707,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17245817" sideWeight="0.6712963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922202" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17245817" sideWeight="0.6907021" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30929792" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -755,14 +782,37 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/JSON/zip/MapKeep.java">
+    <entry file="file://$PROJECT_DIR$/src/services/userService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" />
+        <state line="18" column="13" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JSON/zip/TrieKeep.java">
+    <entry file="file://$PROJECT_DIR$/src/JSON/ResultSetConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="2" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
+        <state line="15" column="24" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/userService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JSON/ResultSetConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="24" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JSON/README">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JSON/JSONTokener.java">
@@ -782,11 +832,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JSON/JSONArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="663" column="28" selection-start="21764" selection-end="21767" vertical-scroll-proportion="0.32724506">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="663" column="28" selection-start="21764" selection-end="21767" vertical-scroll-proportion="0.32724506" />
       </provider>
     </entry>
     <entry file="uml://JAVA/services.userService">
@@ -807,23 +853,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/userService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/history.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="67" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JSON/ResultSetConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="24" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/userService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="370" selection-end="370" vertical-scroll-proportion="0.014807503">
           <folding />
         </state>
       </provider>
@@ -838,37 +877,23 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/tips.jsp">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="611" selection-end="611" vertical-scroll-proportion="0.34994698">
+        <state line="1144" column="0" selection-start="44322" selection-end="44322" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/user.jsp">
+    <entry file="file://$PROJECT_DIR$/src/services/initDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="942" selection-end="1193" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.6066734">
+        <state line="25" column="9" selection-start="697" selection-end="697" vertical-scroll-proportion="0.014807503">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/accountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="3" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
+        <state line="86" column="3" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -915,7 +940,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
