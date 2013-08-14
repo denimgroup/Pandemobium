@@ -58,6 +58,7 @@ CGFloat animatedDistance;
     if([[url absoluteString] hasPrefix:@"trade"])
     {
       //  NSLog(@"Inside trade view controller");
+        appDelegate = [UIApplication sharedApplication].delegate;
         
         
         NSArray *parameters = [[url query] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"=&"]];
@@ -474,10 +475,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                                           delegate:nil
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles: nil];
-                        
                         DBHTTPClient *client = [DBHTTPClient sharedClient];
                         client.delegate = self;
-                        [self viewDidLoad];
                         [client addHistory:appDelegate.user.userID forLog:
                          [[NSString alloc]initWithFormat:@"Sold %i shares of %@ in Account %i",
                           [shares intValue], stockSymbol, [appDelegate.user.accountID intValue]]];
@@ -485,6 +484,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                         [alert show];
                         companyCode.text = @"";
                         amountofShares.text =@"";
+                        [self viewDidLoad];
+                        
                         return;
                     }
                     else

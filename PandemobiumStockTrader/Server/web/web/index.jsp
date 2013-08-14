@@ -86,6 +86,10 @@
                   <h2>Malicious Web</h2>
                   <p class="desc">Where nightmares come from</p>
               </li></a>
+              <a href="http://localhost:8080/web/walkthrough.jsp"><li class="clearfix">
+                  <h2>iOS</h2>
+                  <p class="desc">iOS App walkthough</p>
+              </li></a>
 
           </ul>
       </div>
