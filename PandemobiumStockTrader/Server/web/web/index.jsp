@@ -21,40 +21,82 @@
 
 <html>
   <head>
-    <title></title>
+      <title>Pandemobium Stock Trader</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="author" content="Jake Rocheleau">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="HandheldFriendly" content="true">
+      <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+
   </head>
   <body>
-        <table border="1">
-            <tr><th> User Service</th> <th> Account Service</th> <th> Tips </th> <th> History </th></tr>
-            <tr>
-                <td>
-                    <a href="http://localhost:8080/user.jsp?method=logIn&username=user&password=password"> Login with username and password</a>
-                </td>
-                <td>
-                    <a href="http://localhost:8080/account.jsp?query=select%20*%20from%20account;"> Select * from account</a>
-                </td>
-                <td>
-                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20tips%20(symbol,%20reason,%20userID)%20values%20('GOOG',%20'tesing',%201);"> Insert Tip</a>
-                </td>
-                <td>
-                    <a href="http://localhost:8080/tips.jsp?query=insert%20into%20history%20(log,%20userID)%20values%20('GOOG',%201);"> Insert History </a>
-                </td>
+  <div id="view">
+      <header>
+          <h1>Pandemobium Stock Trader</h1>
+      </header>
 
-            </tr>
-            <tr>
-                <td>
-                    <a href="http://localhost:8080/user.jsp?method=addUser&firstName=first&lastName=last&email=NULL&phone=NULL&userName=user&password=password"> Add User </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="http://localhost:8080/user.jsp?method=getUserInfo&userID=1"> Get user Information</a>
-                </td>
-            </tr>
-
-        </table>
+      <div id="container">
+          <ul>
+              <a href="http://localhost:8080/web/about.jsp#about"><li class="clearfix">
+                  <h2>About Pandemobium</h2>
+                  <p class="desc">Purpose and Use of Pandemobium </p>
+              </li></a>
 
 
+              <a href="http://localhost:8080/web/about.jsp#UserService"><li class="clearfix">
+                  <h2>User Service</h2>
+                  <p class="desc">Access and retrieve users information</p>
 
+              </li></a>
+              <a href="http://localhost:8080/web/about.jsp#AccountService"><li class="clearfix">
+                  <h2>Account Service</h2>
+                  <p class="desc">Access and retrieve users account and stocks</p>
+               </li></a>
+
+              <a href="http://localhost:8080/web/newAccount.jsp"><li class="clearfix">
+                  <h2>Create New Account</h2>
+                  <p class="desc">Register a user and create a new accountr</p>
+
+              </li></a>
+              <a href="http://finance.yahoo.com"><li class="clearfix">
+                  <h2>Financial News</h2>
+                  <p class="desc">View Yahoo! Financial News</p>
+
+              </li></a>
+
+              <a href="http://localhost:8080/web/about.jsp#Tips"><li class="clearfix">
+                  <h2>Tips</h2>
+                  <p class="desc">Access and retrieve tips</p>
+
+              </li></a>
+              <a href="http://localhost:8080/web/about.jsp#History"><li class="clearfix">
+                  <h2>History</h2>
+                  <p class="desc">Access and retrieve history</p>
+
+              </li></a>
+
+              <a href="http://localhost:8080/maliciousweb/index.jsp"><li class="clearfix">
+                  <h2>Malicious Web</h2>
+                  <p class="desc">Where nightmares come from</p>
+              </li></a>
+
+          </ul>
+      </div>
+  </div>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $("a").on("click", function(e){
+
+          });
+      });
+  </script>
   </body>
+
 </html>
