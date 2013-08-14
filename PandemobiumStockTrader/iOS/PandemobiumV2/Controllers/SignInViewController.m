@@ -25,6 +25,7 @@ CGFloat animatedDistance;
 @synthesize passwordText;
 @synthesize signinButton;
 @synthesize rememberloginSwitch;
+@synthesize accountButton;
 
 @synthesize locationManager;
 @synthesize originalLocation;
@@ -61,11 +62,45 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     usernameText.text = @"";
     passwordText.text = @"";
     }*/
+    [self setupButtonLayer:accountButton];
+    [self setupButtonLayer:signinButton];
 
-   
-     
+    
+    if(rememberloginSwitch.isEnabled){
+        NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:[self saveFilePath]];
+        if(array.count <1)
+        {
+            usernameText.text = @"";
+            passwordText.text = @"";
+        }
+        else
+        {
+            usernameText.text = [array objectAtIndex:0];
+            passwordText.text = [array objectAtIndex:1];
+        }
+    }
 }
 
+
+-(void)setupButtonLayer:(UIButton  *)button
+{
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = button.layer.bounds;
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[UIColor colorWithWhite:1.0f alpha:0.1f].CGColor,
+                       (id)[UIColor colorWithWhite:0.4f alpha:0.5f].CGColor,
+                       nil];
+    gradient.locations =[NSArray arrayWithObjects:
+                         [NSNumber numberWithFloat:0.0f],
+                         [NSNumber numberWithFloat:1.0f],
+                         nil];
+    gradient.cornerRadius = button.layer.cornerRadius;
+    [button.layer setCornerRadius:9.0f];
+    [button.layer setMasksToBounds:YES];
+    [button.layer addSublayer:gradient];
+    
+    
+}
 
 
 - (IBAction)revealMenu:(id)sender
@@ -154,6 +189,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
+    //timestamp for timeout setting
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
+    NSLog(@"%@", timeStampObj);
+    //
     UIAlertView *alert;
     NSLog(@"login was pressed");
     
@@ -498,6 +538,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     currentLocation = newLocation;
     CLLocationDistance distance = ([currentLocation distanceFromLocation:originalLocation]) * 0.000621371192237;
+ 
     if(distance > 250.0 && appDelegate.user.loggedIn == [[NSNumber alloc]initWithInt:1])
     {
         UIAlertView *alert;
@@ -511,6 +552,17 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
+
+#pragma mark - Timechecking
+-(void) checkTime{
+
+    
+    SettingsViewController* settings;
+
+    float min = settings.slider.value;
+    NSLog(@"myNumber is : %f", min);
+    
+}
 
 
 @end
