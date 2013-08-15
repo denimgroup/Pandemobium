@@ -87,6 +87,12 @@
 
             </p>
         </a>
+        <a name="DB">
+            <h2 class="about"> Database Scheme</h2>
+            <p class="about">
+                <img src="../images/DBSchema.png" width="100%">
+            </p>
+        </a>
 
    </div>
 </div>

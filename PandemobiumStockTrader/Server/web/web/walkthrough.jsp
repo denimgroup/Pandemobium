@@ -28,21 +28,95 @@
     <header>
         <h1>iOS Tutorial</h1>
     </header>
-
     <div id="container">
-        <a name="about">
-                <img src="../images/ios/quotes.png" >
-                <img src="../images/ios/search.png" >
-                <img src="../images/ios/stocks.png">
-                <img src="../images/ios/menu.png">
-                <img src="../images/ios/signin.png">
-                <img src="../images/ios/settings.png">
-                <img src="../images/ios/trading.png">
-                <img src="../images/ios/managetips.png">
-                <img src="../images/ios/history.png">
-                <img src="../images/ios/portfolio.png">
-                <img src="../images/ios/tips.png">
-                <img src="../images/ios/news.png">
+        <ul>
+            <a href="#quotes"><li class="clearfix">
+                <h2>Quotes</h2>
+                </li></a>
+            <a href="#search"><li class="clearfix">
+                <h2>Search</h2>
+                </li></a>
+            <a href="#stocks"><li class="clearfix">
+                <h2>Stocks</h2>
+                </li></a>
+            <a href="#menu"><li class="clearfix">
+                <h2>Menu</h2>
+                </li></a>
+            <a href="#signin"><li class="clearfix">
+                <h2>Sign In</h2>
+                </li></a>
+            <a href="#settings"><li class="clearfix">
+                <h2>Settings</h2>
+                </li></a>
+            <a href="#trading"><li class="clearfix">
+                <h2>Trading</h2>
+                </li></a>
+            <a href="#managetips"><li class="clearfix">
+                <h2>Manage Tips</h2>
+                </li></a>
+            <a href="#history"><li class="clearfix">
+                <h2>History</h2>
+                </li></a>
+            <a href="#portfolio"><li class="clearfix">
+                <h2>Portfolio</h2>
+                </li></a>
+            <a href="#tips"><li class="clearfix">
+                <h2>Tips</h2>
+                </li></a>
+            <a href="#news"><li class="clearfix">
+                <h2>News</h2>
+                </li></a>
+        </ul>
+    </div>
+
+    <div id="container2">
+        <a name="quotes">
+            <h2 class="tutorial">Quotes</h2>
+            <img src="../images/ios/quotes.png" width="100%">
+         </a>
+        <a name="search">
+            <h2 class="tutorial"> Search </h2>
+            <img src="../images/ios/search.png" width="100%">
+        </a>
+        <a name="stocks">
+            <h2 class="tutorial">Stocks</h2>
+            <img src="../images/ios/stocks.png">
+        </a>
+        <a name="menu">
+            <h2 class="tutorial">Menu</h2>
+            <img src="../images/ios/menu.png">
+        </a>
+        <a name="signin">
+            <h2 class="tutorial">Sign In</h2>
+            <img src="../images/ios/signin.png">
+        </a>
+        <a name="settings">
+            <h2 class="tutorial">Settings</h2>
+            <img src="../images/ios/settings.png">
+        </a>
+        <a name="trading">
+            <h2 class="tutorial">Trading</h2>
+            <img src="../images/ios/trading.png">
+        </a>
+        <a name="managetips">
+            <h2 class="tutorial">Manage Tips</h2>
+            <img src="../images/ios/managetips.png">
+         </a>
+        <a name="history">
+            <h2 class="tutorial">History</h2>
+            <img src="../images/ios/history.png">
+        </a>
+        <a name="portfolio">
+            <h2 class="tutorial">Portfolio</h2>
+            <img src="../images/ios/portfolio.png">
+        </a>
+        <a name="tips">
+            <h2 class="tutorial">Tips</h2>
+            <img src="../images/ios/tips.png">
+        </a>
+        <a name="news">
+            <h2 class="tutorial">News</h2>
+            <img src="../images/ios/news.png">
         </a>
     </div>
 </div>
