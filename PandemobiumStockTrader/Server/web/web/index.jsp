@@ -81,11 +81,17 @@
                   <p class="desc">Access and retrieve history</p>
 
               </li></a>
+              <a href="http://localhost:8080/web/about.jsp#DB"><li class="clearfix">
+                  <h2>Database</h2>
+                  <p class="desc">Database Schema</p>
 
+              </li></a>
+              <!--
               <a href="http://localhost:8080/maliciousweb/index.jsp"><li class="clearfix">
                   <h2>Malicious Web</h2>
                   <p class="desc">Where nightmares come from</p>
               </li></a>
+              -->
               <a href="http://localhost:8080/web/walkthrough.jsp"><li class="clearfix">
                   <h2>iOS</h2>
                   <p class="desc">iOS App walkthough</p>

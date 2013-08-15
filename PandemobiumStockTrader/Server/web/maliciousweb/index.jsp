@@ -56,6 +56,23 @@
                 <h2>Update App</h2>
                 <p class="desc">Update to malicious version of Pandemobium </p>
             </li></a>
+            <a href=""><li class="clearfix">
+                <h2>SQL Injection</h2>
+                <p class="desc">Inject Malicious SQL Query</p>
+            </li></a>
+            <a href=""><li class="clearfix">
+                <h2>XSS</h2>
+                <p class="desc">Cross Scripting - Server Side</p>
+            </li></a>
+
+            <a href=""><li class="clearfix">
+                <h2>Location Service Exploit</h2>
+                <p class="desc">Use GPS coordinates</p>
+            </li></a>
+            <a href=""><li class="clearfix">
+                <h2>SSL Certificate</h2>
+                <p class="desc">Allow non SSL pages</p>
+            </li></a>
         </ul>
     </div>
 </div>
