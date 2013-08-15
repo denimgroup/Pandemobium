@@ -12,6 +12,7 @@
 #import "DBHTTPClient.h"
 #import <CoreLocation/CoreLocation.h>
 #import "iVersion.h"
+#import "SettingsViewController.h"
 
 @interface SignInViewController : UIViewController <UITextFieldDelegate, DBHTTPClientDelegate, CLLocationManagerDelegate>
 
@@ -22,7 +23,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (strong, nonatomic) IBOutlet UISwitch *rememberloginSwitch;
 @property (strong, nonatomic) IBOutlet UIButton *accountButton;
-
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *originalLocation;
 @property (strong, nonatomic) CLLocation *currentLocation;

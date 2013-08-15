@@ -17,6 +17,7 @@
 @synthesize sliderLabel;
 @synthesize slider;
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -46,6 +47,57 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)forgotPassword:(id)sender {
+    
+    NSLog(@"forgotpassword button is pressed");
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/web/forgotpassword.jsp"];     //finish making the forgotpassword page
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:requestURL delegate:self startImmediately:YES];
+    
+    if(connection)
+    {
+        NSLog(@"connection is established");
+        [[UIApplication sharedApplication] openURL:url];
+    }else
+    {
+        NSLog(@"user connection failed to %@", url);
+    }
+}
+
+- (IBAction)enableWalkthrough:(id)sender {
+    
+    NSLog(@"walkthrough button is pressed");
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/web/"];       //update with page that contains slides from powerpoint
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:requestURL delegate:self startImmediately:YES];
+    
+    if(connection)
+    {
+        NSLog(@"connection is established");
+        [[UIApplication sharedApplication] openURL:url];
+    }else
+    {
+        NSLog(@"user connection failed to %@", url);
+    }
+}
+
+- (IBAction)aboutButton:(id)sender {
+    
+    NSLog(@"about button is pressed");
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/web/"];       //update with url that goes to the about pandemobium page 
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:requestURL delegate:self startImmediately:YES];
+    
+    if(connection)
+    {
+        NSLog(@"connection is established");
+        [[UIApplication sharedApplication] openURL:url];
+    }else
+    {
+        NSLog(@"user connection failed to %@", url);
+    }
 }
 
 - (IBAction)sliderChanged:(id)sender
