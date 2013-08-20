@@ -39,7 +39,7 @@
     
 
     
-    self.menuItems = [NSArray arrayWithObjects:@"Sign In",@"Settings",@"Quotes", @"Trade", @"Manage Tips", @"History", @"Portfolio", @"Tips", @"News", nil];
+    self.menuItems = [NSArray arrayWithObjects:@"Sign In",@"Settings", @"Quotes", @"Portfolio", @"Trade", @"Manage Tips", @"Tips", @"History",  @"News", nil];
 }
 
 - (void)viewDidLoad

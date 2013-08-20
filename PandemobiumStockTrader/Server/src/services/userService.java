@@ -254,5 +254,62 @@ public class userService {
         return new String[0];
 
     }
+
+    public String [] forgotPassword(String username, String email, String phone)
+    {
+        try
+        {
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            //Connection database = DriverManager.getConnection("jdbc:mysql://localhost/stocktrader", "root", "");
+            Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+            Connection database = DriverManager.getConnection("jdbc:hsqldb:mem:stocktrader", "SA", "");
+
+            if(!database.isClosed())
+            {
+                ResultSet response;
+                Statement statement = database.createStatement();
+                String query = "SELECT * from users where userName ='" + username + "' AND eMail='" + email + "' AND phone=" + phone + ";" ;
+                System.out.println(query);
+                response = statement.executeQuery(query);
+                //response = statement.e
+                String [] column = {"userID", "firstName", "lastName", "email", "phone", "userName", "password"};
+                String [] results = new String[column.length];
+                if(response.next())
+                {
+                    for(int i = 0; i < column.length; i++)
+                    {
+                        if(response.getString(column[i]) == null)
+                            results[i]="NULL";
+                        else
+                            results[i]=response.getString(column[i]);
+                            System.out.println(response.getString(column[i]));
+                    }
+                }
+                database.close();
+                return results;
+
+            } else {
+                //return "SQLConnection";
+            }
+        } catch (SQLException ex)
+        {
+            ex.printStackTrace();
+            //return "SQLException";
+
+        } catch(ClassNotFoundException e)
+        {
+            e.printStackTrace();
+            //return "ClassNotFound";
+        } catch (InstantiationException e)
+        {   e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            //return "InstantiationFail";
+
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+
+        }
+        //return "SomethingHorrible";
+        return new String[0];
+    }
 }
 

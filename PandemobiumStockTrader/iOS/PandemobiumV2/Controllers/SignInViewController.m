@@ -26,6 +26,7 @@ CGFloat animatedDistance;
 @synthesize signinButton;
 @synthesize rememberloginSwitch;
 @synthesize accountButton;
+@synthesize logoutButton;
 
 @synthesize locationManager;
 @synthesize originalLocation;
@@ -113,7 +114,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
-
+    
+    if([self isLoggedIn] == 1)
+    {
+        [signinButton setHidden:YES];
+    }
+    else
+    {
+        [signinButton setHidden:NO];
+    }
 }
 
 
@@ -272,6 +281,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                  cancelButtonTitle:@"OK"
                                  otherButtonTitles:nil];
         [alert show];
+        
     }
     else
     {
@@ -288,6 +298,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
                                  cancelButtonTitle:@"OK"
                                  otherButtonTitles:nil];
         [alert show];
+        [self viewDidLoad];
     }
 
 }
