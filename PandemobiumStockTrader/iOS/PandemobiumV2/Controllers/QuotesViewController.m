@@ -191,7 +191,7 @@
     stock.favorite = [[NSNumber alloc]initWithBool:YES];
     
     [context save:&error];
-}
+} 
 
 
 

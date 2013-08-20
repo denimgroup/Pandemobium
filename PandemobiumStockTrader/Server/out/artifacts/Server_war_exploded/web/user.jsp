@@ -22,7 +22,8 @@
 
 <%@ page        language="java"
                 contentType="text/html; charset=ISO-8859-1"
-                pageEncoding="ISO-8859-1"%>
+                pageEncoding="ISO-8859-1"
+%>
 
 <%@ page import="services.userService" %>
 <%@ page import="services.accountService" %>
@@ -37,8 +38,8 @@
 %>
 
 <%
-    initDatabase db = new initDatabase();
-    db.initDatabase();
+   // initDatabase db = new initDatabase();
+   // db.initDatabase();
 
     String method = request.getParameter("method");
     userService service = new userService();
@@ -137,6 +138,27 @@
         json.put("Results", results);
         response.setContentType("application/json");
         response.getWriter().write(json.toString());
+
+    }
+    else if(method.equals("forgotPassword"))
+    {
+        String [] column = {"userID", "firstName", "lastName", "email", "phone", "userName", "password"};
+        String username = request.getParameter("userName");
+        String eMail = request.getParameter("eMail");
+        String phone = request.getParameter("phone");
+
+        String [] info = service.forgotPassword(username, eMail, phone);
+
+        result = new JSONObject();
+        for(int i = 0; i < info.length; i++)
+            result.put(column[i], info[i]);
+        results.put(result);
+        json.put("Results", results);
+        response.setContentType("application/json");
+        response.getWriter().write(json.toString());
+
+
+
 
     }
 
