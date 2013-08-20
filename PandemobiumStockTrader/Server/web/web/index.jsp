@@ -44,23 +44,23 @@
 
       <div id="container">
           <ul>
-              <a href="http://localhost:8080/web/about.jsp#about"><li class="clearfix">
+              <a href="about.jsp#about"><li class="clearfix">
                   <h2>About Pandemobium</h2>
                   <p class="desc">Purpose and Use of Pandemobium </p>
               </li></a>
 
 
-              <a href="http://localhost:8080/web/about.jsp#UserService"><li class="clearfix">
+              <a href="about.jsp#UserService"><li class="clearfix">
                   <h2>User Service</h2>
                   <p class="desc">Access and retrieve users information</p>
 
               </li></a>
-              <a href="http://localhost:8080/web/about.jsp#AccountService"><li class="clearfix">
+              <a href="about.jsp#AccountService"><li class="clearfix">
                   <h2>Account Service</h2>
                   <p class="desc">Access and retrieve users account and stocks</p>
                </li></a>
 
-              <a href="http://localhost:8080/web/newAccount.jsp"><li class="clearfix">
+              <a href="newAccount.jsp"><li class="clearfix">
                   <h2>Create New Account</h2>
                   <p class="desc">Register a user and create a new accountr</p>
 
@@ -71,17 +71,17 @@
 
               </li></a>
 
-              <a href="http://localhost:8080/web/about.jsp#Tips"><li class="clearfix">
+              <a href="about.jsp#Tips"><li class="clearfix">
                   <h2>Tips</h2>
                   <p class="desc">Access and retrieve tips</p>
 
               </li></a>
-              <a href="http://localhost:8080/web/about.jsp#History"><li class="clearfix">
+              <a href="about.jsp#History"><li class="clearfix">
                   <h2>History</h2>
                   <p class="desc">Access and retrieve history</p>
 
               </li></a>
-              <a href="http://localhost:8080/web/about.jsp#DB"><li class="clearfix">
+              <a href="about.jsp#DB"><li class="clearfix">
                   <h2>Database</h2>
                   <p class="desc">Database Schema</p>
 
@@ -92,7 +92,7 @@
                   <p class="desc">Where nightmares come from</p>
               </li></a>
               -->
-              <a href="http://localhost:8080/web/walkthrough.jsp"><li class="clearfix">
+              <a href="walkthrough.jsp"><li class="clearfix">
                   <h2>iOS</h2>
                   <p class="desc">iOS App walkthough</p>
               </li></a>
