@@ -76,7 +76,7 @@ p.about{
     height: 95%;
     border-bottom: 1px solid #b9b9b9;
     border-top: 1px solid #f7f7f7;
-    font-size: 1.25em; font-family: Tahoma, Arial, sans-serif;  line-height: 1.2em; text-align: justify; color: #000;
+    font-size: 1.25em; font-family: Tahoma, Arial, sans-serif;  line-height: 1.2em; color: #000;
     background: #ebebeb;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff) to(#ebebeb));
     background-image: -webkit-linear-gradient(top, #ffffff, #ebebeb);

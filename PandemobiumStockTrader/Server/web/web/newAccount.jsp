@@ -86,7 +86,7 @@
                 {
                     var txt = new String("firstName=" + firstName + "&lastName=" + lastName + "&email=" + eMail + "&phone=" + phone + "&userName=" + username + "&password="+ pass);
 
-                    url="http://localhost:8080/web/user.jsp?method=addUser&" + txt;
+                    url="user.jsp?method=addUser&" + txt;
                     window.location=url;
 
 

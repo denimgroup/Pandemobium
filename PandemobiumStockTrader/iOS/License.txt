@@ -1,0 +1,22 @@
+Copyright (C) 2013 EdgeCase
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-------------------------------------------------
+Libraries that are used as part of the project include:
+
+iVersion- Library for dynamically checking for updates to Mac/iPhone App Store apps from within the application and notifying users about the new release. Can also notify users about new features in the app the first time they launch after an upgrade. Source: https://github.com/nicklockwood/iVersion
+
+AFNetworking - Networking library for iOS and Mac OS X that is built on top of Foundation URL loading System. Source: https://github.com/AFNetworking/AFNetworking
+
+SVProgressHUD - A clean and lightweight progress HUD for iOS apps. Source: https://github.com/samvermette/SVProgressHUD
+
+CorePlot - Core Plot is a plotting framework for OS X and iOS. It provides 2D visualization of data, and is tightly integrated with Apple technologies like Core Animation, Core Data, and Cocoa Bindings. Source:
+
+
+ECSlidingViewController - A view controller container for iOS that presents its child view controllers in two layers. It provides functionality for sliding the top view to reveal the views underneath it. This functionality is inspired by the Path 2.0 and Facebook iPhone apps. Source: https://github.com/edgecase/ECSlidingViewController/blob/master/README.md
+

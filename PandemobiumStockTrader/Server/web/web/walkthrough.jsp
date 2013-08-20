@@ -80,43 +80,43 @@
         </a>
         <a name="stocks">
             <h2 class="tutorial">Stocks</h2>
-            <img src="../images/ios/stocks.png">
+            <img src="../images/ios/stocks.png" width="100%">
         </a>
         <a name="menu">
             <h2 class="tutorial">Menu</h2>
-            <img src="../images/ios/menu.png">
+            <img src="../images/ios/menu.png" width="100%">
         </a>
         <a name="signin">
             <h2 class="tutorial">Sign In</h2>
-            <img src="../images/ios/signin.png">
+            <img src="../images/ios/signin.png" width="100%">
         </a>
         <a name="settings">
             <h2 class="tutorial">Settings</h2>
-            <img src="../images/ios/settings.png">
+            <img src="../images/ios/settings.png" width="100%">
         </a>
         <a name="trading">
             <h2 class="tutorial">Trading</h2>
-            <img src="../images/ios/trading.png">
+            <img src="../images/ios/trading.png" width="100%">
         </a>
         <a name="managetips">
             <h2 class="tutorial">Manage Tips</h2>
-            <img src="../images/ios/managetips.png">
+            <img src="../images/ios/managetips.png" width="100%">
          </a>
         <a name="history">
             <h2 class="tutorial">History</h2>
-            <img src="../images/ios/history.png">
+            <img src="../images/ios/history.png" width="100%">
         </a>
         <a name="portfolio">
             <h2 class="tutorial">Portfolio</h2>
-            <img src="../images/ios/portfolio.png">
+            <img src="../images/ios/portfolio.png" width="100%">
         </a>
         <a name="tips">
             <h2 class="tutorial">Tips</h2>
-            <img src="../images/ios/tips.png">
+            <img src="../images/ios/tips.png" width="100%">
         </a>
         <a name="news">
             <h2 class="tutorial">News</h2>
-            <img src="../images/ios/news.png">
+            <img src="../images/ios/news.png" width="100%">
         </a>
     </div>
 </div>
