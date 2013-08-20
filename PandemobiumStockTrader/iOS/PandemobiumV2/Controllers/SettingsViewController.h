@@ -13,12 +13,9 @@
 
 @interface SettingsViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet UISlider *slider;
-@property (strong, nonatomic) IBOutlet UILabel *sliderLabel;
+
 - (IBAction)forgotPassword:(id)sender;
 - (IBAction)enableWalkthrough:(id)sender;
 - (IBAction)aboutButton:(id)sender;
-
-- (IBAction)sliderChanged:(id)sender;
 - (IBAction)revealMenu:(id)sender;
 @end

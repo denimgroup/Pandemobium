@@ -14,8 +14,7 @@
 
 @implementation SettingsViewController
 
-@synthesize sliderLabel;
-@synthesize slider;
+
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -103,17 +102,7 @@
     }
 }
 
-- (IBAction)sliderChanged:(id)sender
-{
-    self.slider = (UISlider *) sender;
-    
-    int progressAsInt = (int)(slider.value + 0.5f);
-    
-    NSString *newText = [[NSString alloc] initWithFormat:@"%d", progressAsInt];
-    
-    self.sliderLabel.text = newText;
-    NSLog(@"%d", progressAsInt);
-}
+
 
 #pragma mark - Table view delegate
 

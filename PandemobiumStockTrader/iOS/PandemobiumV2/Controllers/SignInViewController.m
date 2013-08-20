@@ -564,16 +564,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
-#pragma mark - Timechecking
--(void) checkTime{
 
-    
-    SettingsViewController* settings;
-
-    float min = settings.slider.value;
-    NSLog(@"myNumber is : %f", min);
-    
-}
 
 
 @end
