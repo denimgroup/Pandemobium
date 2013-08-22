@@ -13,7 +13,7 @@
 
 @interface SettingsViewController : UITableViewController
 
-
+@property (strong, nonatomic) NSString *baseURL;
 - (IBAction)forgotPassword:(id)sender;
 - (IBAction)enableWalkthrough:(id)sender;
 - (IBAction)aboutButton:(id)sender;

@@ -26,6 +26,7 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *originalLocation;
 @property (strong, nonatomic) CLLocation *currentLocation;
+@property (strong, nonatomic) NSString *baseURL;
 -(IBAction) toggleButtonPressed;
 //managing text and keyboard behavior
 - (void)textFieldDidBeginEditing:(UITextField *)textField;

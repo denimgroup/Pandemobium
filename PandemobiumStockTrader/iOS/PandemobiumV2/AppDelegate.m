@@ -25,17 +25,19 @@
 
 @implementation AppDelegate
 
+
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 @synthesize user;
+@synthesize baseURL;
 
 -(void)applicationDidFinishLaunching:(UIApplication *)application
 {
     NSLog(@"application did finish launching");
     
-    
+      
 }
 
 
@@ -69,12 +71,63 @@
     return YES;
 }
 
+
+- (void)determineServer
+{
+    
+    //Whenever the index gets called, it automatically populates the tables. This allows for two things,
+    //1) it ensures that the tables exist when the app gets launched.
+    //2) when you break the app, and have to restart it, any damage that was caused is restored to default.
+    
+    
+    
+    NSString *localURL = @"http://localhost:8080/web/index.jsp";
+    NSString *localBaseURL = @"http://localhost:8080/web/";
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:localURL]];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data=[[NSData alloc] initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]];
+    NSInteger httpStatus = [((NSHTTPURLResponse *)response) statusCode];
+    NSLog(@"responsecode:%d", httpStatus);
+    // there will be various HTTP response code (status)
+    // you might concern with 404
+    if(httpStatus != 200)
+    {
+        localURL = @"http://localhost:8080/StockTrader/web/index.jsp";
+        localBaseURL = @"http://localhost:8080/StockTrader/web/";
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:localURL]];
+        data=[[NSData alloc] initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]];
+        httpStatus = [((NSHTTPURLResponse *)response) statusCode];
+        if(httpStatus != 200)
+        {
+           
+            UIAlertView *alert;
+            alert = [[UIAlertView alloc]initWithTitle:@"Server Unreachable"
+                                              message:@"Please try again later"
+                                             delegate:self cancelButtonTitle:@"OK"
+                                    otherButtonTitles:nil];
+            [alert show];
+        }
+        
+        
+    }
+    baseURL = localBaseURL;
+    
+}
+
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
     user = [[User alloc]init];
+    [self determineServer];
     
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/index.jsp"];
+    
+    
+    NSString *url = [[NSString alloc]initWithFormat:@"%@index.jsp", baseURL];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
 
     
@@ -101,32 +154,19 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    NSLog(@"handle Open URL");
-    
     if([[url absoluteString] hasPrefix:@"trade"])
     {
-        
-        NSLog(@"something to do with trade");
-        
         TradeViewController *trade = [[TradeViewController alloc]init];
         [trade application:application handleOpenURL:url];
-        
         
     }
     else if([[url absoluteString] hasPrefix:@"tips"])
     {
-        
-        
-        NSLog(@"something to do with tips");
         ManageTipsViewController *tips = [[ManageTipsViewController alloc]init];
         [tips application:application handleOpenURL:url];
-        
+       
     }
-    
-    
     return YES;
-    
-    
 }
 
 // ----------------------------------------------------
@@ -134,27 +174,58 @@
 
 + (void)initialize
 {
+    
+    
+    //Determine the servers URL address. Not the best way to do it,
+    //but it works.
+    
+    NSString *localURL = @"http://localhost:8080/web/index.jsp";
+    NSString *localBaseURL = @"http://localhost:8080/web/";
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:localURL]];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data=[[NSData alloc] initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]];
+    NSInteger httpStatus = [((NSHTTPURLResponse *)response) statusCode];
+    NSLog(@"responsecode:%d", httpStatus);
+    // there will be various HTTP response code (status)
+    // you might concern with 404
+    if(httpStatus != 200)
+    {
+        localURL = @"http://localhost:8080/StockTrader/web/index.jsp";
+        localBaseURL = @"http://localhost:8080/StockTrader/web/";
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:localURL]];
+        data=[[NSData alloc] initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]];
+        httpStatus = [((NSHTTPURLResponse *)response) statusCode];
+        if(httpStatus != 200)
+        {
+            NSLog(@"Web Service unreachable!");
+   
+        }
+        
+        
+    }
+    
+
     //set the bundle ID. normally you wouldn't need to do this
     //as it is picked up automatically from your Info.plist file
     //but we want to test with an app that's actually on the store
-  //  iVersion *version = [[iVersion alloc]init];
-   // version.applicationBundleID = @"com.denimgroup.Pandemobium";
-    //version.remoteVersionsPlistURL=@"http://localhost:8080/web/versions.plist";
-   //[version checkForNewVersion];
+    //iVersion *version = [[iVersion alloc]init];
+    //version.applicationBundleID = @"com.denimgroup.Pandemobium";
+    //[version checkForNewVersion];
     
     [iVersion sharedInstance].applicationBundleID = @"com.denimgroup.Pandemobium";
     [iVersion sharedInstance].displayAppUsingStorekitIfAvailable = NO;
     
     //configure iVersion. These paths are optional - if you don't set
     //them, iVersion will just get the release notes from iTunes directly (if your app is on the store)
-  //  [iVersion sharedInstance].remoteVersionsPlistURL = @"http://localhost:8080/web/versions.plist";
-    [iVersion sharedInstance].remoteVersionsPlistURL = @"http://localhost:8080/web/version.jsp";
+    [iVersion sharedInstance].remoteVersionsPlistURL = [[NSString alloc]initWithFormat:@"%@version.jsp", localBaseURL];
     
     [iVersion sharedInstance].checkAtLaunch = YES;
-    [iVersion sharedInstance].updateURL = [[NSURL alloc]initWithString:@"http://localhost:8080/web/download.html"];
+    [iVersion sharedInstance].updateURL = [[NSURL alloc]initWithString:[[NSString alloc]initWithFormat:@"%@download.html", localBaseURL]];
     
     [[iVersion sharedInstance] checkForNewVersion];
-   // iVersion.checkIfNewVersion();
+    //iVersion.checkIfNewVersion();
     //[iVersion sharedInstance].localVersionsPlistPath = @"versions.plist";
 }
 

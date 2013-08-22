@@ -30,95 +30,45 @@
     </header>
     <div id="container">
         <ul>
-            <a href="#quotes"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/quotes.png"><li class="clearfix">
                 <h2>Quotes</h2>
                 </li></a>
-            <a href="#search"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/search.png"><li class="clearfix">
                 <h2>Search</h2>
                 </li></a>
-            <a href="#stocks"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/stocks.png"><li class="clearfix">
                 <h2>Stocks</h2>
                 </li></a>
-            <a href="#menu"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/menu.png"><li class="clearfix">
                 <h2>Menu</h2>
                 </li></a>
-            <a href="#signin"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/signin.png"><li class="clearfix">
                 <h2>Sign In</h2>
                 </li></a>
-            <a href="#settings"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/settings.png"><li class="clearfix">
                 <h2>Settings</h2>
                 </li></a>
-            <a href="#trading"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/trading.png"><li class="clearfix">
                 <h2>Trading</h2>
                 </li></a>
-            <a href="#managetips"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/managetips.png"><li class="clearfix">
                 <h2>Manage Tips</h2>
                 </li></a>
-            <a href="#history"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/history.png"><li class="clearfix">
                 <h2>History</h2>
                 </li></a>
-            <a href="#portfolio"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/portfolio.png"><li class="clearfix">
                 <h2>Portfolio</h2>
                 </li></a>
-            <a href="#tips"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/tips.png"><li class="clearfix">
                 <h2>Tips</h2>
                 </li></a>
-            <a href="#news"><li class="clearfix">
+            <a href="viewImage.jsp?image=../images/ios/news.png"><li class="clearfix">
                 <h2>News</h2>
                 </li></a>
         </ul>
     </div>
 
-    <div id="container2">
-        <a name="quotes">
-            <h2 class="tutorial">Quotes</h2>
-            <img src="../images/ios/quotes.png" width="100%">
-         </a>
-        <a name="search">
-            <h2 class="tutorial"> Search </h2>
-            <img src="../images/ios/search.png" width="100%">
-        </a>
-        <a name="stocks">
-            <h2 class="tutorial">Stocks</h2>
-            <img src="../images/ios/stocks.png" width="100%">
-        </a>
-        <a name="menu">
-            <h2 class="tutorial">Menu</h2>
-            <img src="../images/ios/menu.png" width="100%">
-        </a>
-        <a name="signin">
-            <h2 class="tutorial">Sign In</h2>
-            <img src="../images/ios/signin.png" width="100%">
-        </a>
-        <a name="settings">
-            <h2 class="tutorial">Settings</h2>
-            <img src="../images/ios/settings.png" width="100%">
-        </a>
-        <a name="trading">
-            <h2 class="tutorial">Trading</h2>
-            <img src="../images/ios/trading.png" width="100%">
-        </a>
-        <a name="managetips">
-            <h2 class="tutorial">Manage Tips</h2>
-            <img src="../images/ios/managetips.png" width="100%">
-         </a>
-        <a name="history">
-            <h2 class="tutorial">History</h2>
-            <img src="../images/ios/history.png" width="100%">
-        </a>
-        <a name="portfolio">
-            <h2 class="tutorial">Portfolio</h2>
-            <img src="../images/ios/portfolio.png" width="100%">
-        </a>
-        <a name="tips">
-            <h2 class="tutorial">Tips</h2>
-            <img src="../images/ios/tips.png" width="100%">
-        </a>
-        <a name="news">
-            <h2 class="tutorial">News</h2>
-            <img src="../images/ios/news.png" width="100%">
-        </a>
-    </div>
 </div>
 
 </body>

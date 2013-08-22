@@ -21,16 +21,23 @@
 
 #import "DBHelper.h"
 #import "SVProgressHUD.h"
+#import "AppDelegate.h"
 @implementation DBHelper
 
 
 
-static NSString *baseURL = @"http://localhost:8080/web/";
+NSString *baseURL = @"http://localhost:8080/web/";
 static NSString *accountPage = @"account.jsp";
 static NSString *historyPage = @"history.jsp";
 static NSString *tipsPage = @"tips.jsp";
 static NSString *userPage = @"user.jsp";
 
++(void)initialize
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    baseURL = appDelegate.baseURL;
+    
+}
 
 -(NSDictionary *) urlCall:(NSString *)query fromPage:(NSString *)page
 {

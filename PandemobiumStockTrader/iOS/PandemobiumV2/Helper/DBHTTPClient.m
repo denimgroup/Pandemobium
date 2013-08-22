@@ -22,13 +22,21 @@
 #import "DBHTTPClient.h"
 #import "SVProgressHUD.h"
 #import "DBHelper.h"
+#import "AppDelegate.h"
 
 @implementation DBHTTPClient
 
-NSString *const BaseURLString = @"http://localhost:8080/web/";
+NSString * BaseURLString = @"http://localhost:8080/web/";
+static NSString *accountPage = @"account.jsp";
+static NSString *historyPage = @"history.jsp";
+static NSString *tipsPage = @"tips.jsp";
+static NSString *userPage = @"user.jsp";
 
 +(DBHTTPClient *) sharedClient
 {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    BaseURLString = appDelegate.baseURL;
+    
     static dispatch_once_t pred;
     static DBHTTPClient *_sharedDBHTTPClient = nil;
     dispatch_once(&pred, ^{_sharedDBHTTPClient = [[self alloc]initWithBaseURL:[NSURL URLWithString:BaseURLString]]; });
@@ -58,7 +66,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
     */
    
     NSString *urlString = [[NSString alloc]initWithFormat:
-                           @"%@user.jsp?method=logIn&username=%@&password=%@", BaseURLString, username, password];
+                           @"%@%@?method=logIn&username=%@&password=%@", BaseURLString, userPage, username, password];
     //NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     
@@ -88,7 +96,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
 {
     
     NSString *query = [[NSString alloc]initWithFormat:@"Select accountID from account where userID=%i", [userID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"%@%@?query=%@", BaseURLString, accountPage, query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -120,7 +128,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
 {
     
     NSString *query = [[NSString alloc]initWithFormat:@"insert into history(userID, log) values(%i, '%@');", [userID intValue], log];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/history.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"%@%@?query=%@",BaseURLString, historyPage, query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -146,7 +154,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
 {
     
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from stock where accountID=%i;", [accountID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"%@%@?query=%@",BaseURLString, accountPage, query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -259,7 +267,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
     
     
     NSString *query = [[NSString alloc]initWithFormat:@"Select * from stock where accountID=%i;", [accountID intValue]];
-    NSString *url = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
+    NSString *url = [[NSString alloc]initWithFormat:@"%@%@?query=%@", BaseURLString, accountPage, query];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -270,8 +278,8 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
          NSDictionary * firstParse = (NSDictionary *)JSON;
          NSArray * listOfStocks = [firstParse objectForKey:@"Results"];
          
-         NSString *secondQuery; // = [[NSString alloc]initWithFormat:@"Select * from account where accountID=%i", [accountID intValue]];
-         NSString *secondUrl; // = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", query];
+         NSString *secondQuery; 
+         NSString *secondUrl;
          
          if([listOfStocks count] == 0) // Just insert stock
          {
@@ -292,7 +300,7 @@ NSString *const BaseURLString = @"http://localhost:8080/web/";
                  secondQuery = [[NSString alloc] initWithFormat:@"INSERT INTO stock (symbol, shares, accountID) values('%@', %i, %i);", symbol, 0, [accountID intValue]];
              }
          }
-         secondUrl = [[NSString alloc]initWithFormat:@"http://localhost:8080/web/account.jsp?query=%@", secondQuery];
+         secondUrl = [[NSString alloc]initWithFormat:@"%@%@?query=%@", BaseURLString, accountPage, secondQuery];
          secondUrl = [secondUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
          [self addStock:secondUrl];

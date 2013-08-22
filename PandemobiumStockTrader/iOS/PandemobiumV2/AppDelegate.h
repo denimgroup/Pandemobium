@@ -22,7 +22,7 @@
 
 @property (strong, nonatomic) NSNumber *currentImageIndex;
 @property (strong, nonatomic) User * user;
-
+@property (strong, nonatomic) NSString * baseURL;
 
 //@property (nonatomic, retain) TipsViewController *tips;
 //@property (nonatomic, retain) TradeViewController *trade;

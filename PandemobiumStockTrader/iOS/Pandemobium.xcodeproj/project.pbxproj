@@ -52,11 +52,7 @@
 		BE9EAB4017948F710079C57A /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3617948F710079C57A /* AFXMLRequestOperation.m */; };
 		BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */; };
 		BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BED22FC11795A785004EE171 /* DBHTTPClient.m */; };
-		BED2C5D517C3BFE40006F56C /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = BED2C5D417C3BFE40006F56C /* LICENCE.md */; };
-		BED2C5D717C3C0F40006F56C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BED2C5D617C3C0F40006F56C /* LICENSE */; };
-		BED2C5D917C3C3DE0006F56C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = BED2C5D817C3C3DE0006F56C /* LICENSE.txt */; };
 		BED2C5DB17C3C4F20006F56C /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = BED2C5DA17C3C4F20006F56C /* License.txt */; };
-		BED2C5DD17C3C75A0006F56C /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = BED2C5DC17C3C75A0006F56C /* License.txt */; };
 		BEE5A10C17B2AA16003F6956 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10B17B2AA16003F6956 /* Default.png */; };
 		BEE5A10E17B2AA1E003F6956 /* Defualt-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */; };
 		BEE5A11017B2AB00003F6956 /* appButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10F17B2AB00003F6956 /* appButton.png */; };
@@ -197,11 +193,7 @@
 		BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		BED22FC01795A785004EE171 /* DBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHTTPClient.h; sourceTree = "<group>"; };
 		BED22FC11795A785004EE171 /* DBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DBHTTPClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		BED2C5D417C3BFE40006F56C /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
-		BED2C5D617C3C0F40006F56C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		BED2C5D817C3C3DE0006F56C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BED2C5DA17C3C4F20006F56C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = Supporting/CorePlot_1.2/License.txt; sourceTree = "<group>"; };
-		BED2C5DC17C3C75A0006F56C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		BEE5A10B17B2AA16003F6956 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Defualt-568h@2x.png"; sourceTree = "<group>"; };
 		BEE5A10F17B2AB00003F6956 /* appButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appButton.png; path = ../appButton.png; sourceTree = "<group>"; };
@@ -294,7 +286,6 @@
 		BE099C1B179ED17E002ED292 /* iVersion */ = {
 			isa = PBXGroup;
 			children = (
-				BED2C5D417C3BFE40006F56C /* LICENCE.md */,
 				BE099C1C179ED17E002ED292 /* iVersion.bundle */,
 				BE099C1D179ED17E002ED292 /* iVersion.h */,
 				BE099C1E179ED17E002ED292 /* iVersion.m */,
@@ -432,7 +423,6 @@
 		BE9EAB2517948F700079C57A /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				BED2C5D617C3C0F40006F56C /* LICENSE */,
 				BE9EAB2617948F710079C57A /* AFHTTPClient.h */,
 				BE9EAB2717948F710079C57A /* AFHTTPClient.m */,
 				BE9EAB2817948F710079C57A /* AFHTTPRequestOperation.h */,
@@ -576,7 +566,6 @@
 				BEF0D09217944CAA00B5C6C3 /* ECSlidingViewController.m */,
 				BEF0D09317944CAA00B5C6C3 /* UIImage+ImageWithUIView.h */,
 				BEF0D09417944CAA00B5C6C3 /* UIImage+ImageWithUIView.m */,
-				BED2C5DC17C3C75A0006F56C /* License.txt */,
 			);
 			name = ECSlidingViewController;
 			sourceTree = "<group>";
@@ -584,7 +573,6 @@
 		BEF0D1001794583900B5C6C3 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				BED2C5D817C3C3DE0006F56C /* LICENSE.txt */,
 				BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */,
 				BEF0D1021794583900B5C6C3 /* SVProgressHUD.h */,
 				BEF0D1031794583900B5C6C3 /* SVProgressHUD.m */,
@@ -659,11 +647,7 @@
 				BEE5A10E17B2AA1E003F6956 /* Defualt-568h@2x.png in Resources */,
 				BEE5A11017B2AB00003F6956 /* appButton.png in Resources */,
 				BEFEB18C17B53C25004619FD /* Default-568h@2x.png in Resources */,
-				BED2C5D517C3BFE40006F56C /* LICENCE.md in Resources */,
-				BED2C5D717C3C0F40006F56C /* LICENSE in Resources */,
-				BED2C5D917C3C3DE0006F56C /* LICENSE.txt in Resources */,
 				BED2C5DB17C3C4F20006F56C /* License.txt in Resources */,
-				BED2C5DD17C3C75A0006F56C /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

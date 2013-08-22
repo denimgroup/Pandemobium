@@ -39,7 +39,8 @@ static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
-
+@synthesize baseURL;
+//NSString *baseURL = @"http://localhost:8080/web/";
 
 
 
@@ -112,6 +113,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (void)viewDidLoad
 {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    baseURL = appDelegate.baseURL;
+
+    
+    
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
     
@@ -307,7 +313,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)newAccount:(id)sender {
     
     NSLog(@"new Account button is pressed");
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/web/newAccount.jsp"];
+    NSString * stringURL = [[NSString alloc]initWithFormat:@"%@newAccount.jsp", baseURL ];
+    NSURL *url = [NSURL URLWithString:stringURL];
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
     NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:requestURL delegate:self startImmediately:YES];
     
@@ -494,10 +501,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
  
     
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
     UIAlertView *alert;
-    NSString *message = [[NSString alloc] initWithFormat:@"Welcome back %@", app.user.userName];
+    NSString *message = [[NSString alloc] initWithFormat:@"Welcome back %@", appDelegate.user.userName];
     alert = [[UIAlertView alloc] initWithTitle:@"Welcome"
                                        message:message
                                       delegate:nil
@@ -506,8 +514,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     [alert show];
 
-    
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     appDelegate.user.favoriteStocks = results;
     appDelegate.user.oldFavorites = results;
     appDelegate.user.accountValue = totalValue;
