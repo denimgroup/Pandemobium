@@ -29,7 +29,7 @@
 NSString * BaseURLString = @"http://localhost:8080/web/";
 static NSString *accountPage = @"account.jsp";
 static NSString *historyPage = @"history.jsp";
-static NSString *tipsPage = @"tips.jsp";
+//static NSString *tipsPage = @"tips.jsp";
 static NSString *userPage = @"user.jsp";
 
 +(DBHTTPClient *) sharedClient
