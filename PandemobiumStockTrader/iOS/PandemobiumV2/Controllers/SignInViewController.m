@@ -134,6 +134,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (NSString*) saveFilePath
 {
+    //add filepath to directory with accounts.plist for local file storage of userinfo
+    
     //NSString* path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"plist" inDirectory:@"Supporting_Files"];
     NSString* path = @"/Users/denimgroup/PandemobiumV2/PandemobiumStockTrader/iOS/PandemobiumV2/Supporting_Files/accounts.plist";
     NSLog(@"%@", path);

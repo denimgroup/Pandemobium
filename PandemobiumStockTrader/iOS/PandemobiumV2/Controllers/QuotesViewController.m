@@ -32,9 +32,9 @@
 
 //@synthesize managedObjectContext;
 @synthesize favoriteStocks;
-@synthesize activityIndicator;
 @synthesize reload;
 @synthesize appDelegate;
+@synthesize timer;
 
 #pragma mark - Initial Page Setup Methods
 
@@ -69,6 +69,7 @@
     }
     
     [self initImage];
+  
     
 }
 
@@ -99,12 +100,21 @@
     
     if(self.slidingViewController.panGesture == nil)
     {
-        NSLog(@"pan gesture NIL");
-        
+        NSLog(@"pan gesture NIL"); 
     }
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(autoUpdateData) userInfo:nil repeats:YES];
  }
+
+-(void)autoUpdateData
+{
+    appDelegate.user.reloadData = [[NSNumber alloc] initWithInt:1];
+
+    [self viewDidLoad];
+}
+
 
 - (IBAction)revealMenu:(id)sender
 {
@@ -485,6 +495,8 @@
     //[self viewDidLoad];
     [self initImage];
     [self.quoteTableView reloadData];
+    
+    
 }
 
 -(void)handleUpdatedData:(NSNotification *)notification {
@@ -492,5 +504,6 @@
     [self viewDidLoad];
     [self.quoteTableView reloadData];
 }
+
 
 @end

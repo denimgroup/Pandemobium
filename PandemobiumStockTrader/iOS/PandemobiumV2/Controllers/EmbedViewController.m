@@ -60,10 +60,13 @@ CGFloat const CPDBarInitialX = 0.5f;
     appDelegate = [UIApplication sharedApplication].delegate;
     helper = [[DBHelper alloc]init];
     
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUpdatedData:)
                                                  name:@"outOfRange"
                                                object:nil];
+    
+
     
     
     [self fetchData];
@@ -84,13 +87,18 @@ CGFloat const CPDBarInitialX = 0.5f;
         [self initBarPlot];
     }
     
+
+    
 }
+
+
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
     appDelegate = [UIApplication sharedApplication].delegate;
     helper = [[DBHelper alloc]init];
-    
+
     stockValues = [[NSArray alloc]init];
     portfolioSum = [NSDecimalNumber zero];
     
@@ -106,6 +114,7 @@ CGFloat const CPDBarInitialX = 0.5f;
         [self initPlot];
         [self initBarPlot];
     }
+    
 }
 
 -(void)fetchData
@@ -522,7 +531,7 @@ CGFloat const CPDBarInitialX = 0.5f;
         NSNumber *x = [NSNumber numberWithInt:0];
         NSNumber *y = [NSNumber numberWithInt:0];
         NSArray *anchorPoint = [NSArray arrayWithObjects:x, y, nil];
-        self.stockAnnotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:plot.plotSpace anchorPlotPoint:anchorPoint] ;
+        self.stockAnnotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:plot.plotSpace anchorPlotPoint:anchorPoint];
     }
     
     
@@ -549,9 +558,11 @@ CGFloat const CPDBarInitialX = 0.5f;
 }
 
 -(void)handleUpdatedData:(NSNotification *)notification {
-    //  NSLog(@"recieved");
+      NSLog(@"recieved");
     [self viewDidLoad];
 }
+
+
 
 
 @end

@@ -40,13 +40,12 @@
 @property (strong, nonatomic) IBOutlet UIImageView *topImage;
 @property (strong, nonatomic) IBOutlet UITableView *quoteTableView;
 @property (strong, nonatomic) IBOutlet UIButton *leftButton;
-
+@property (strong, nonatomic) IBOutlet NSTimer *timer;
 @property (strong, nonatomic) IBOutlet UIButton *rightButton;
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, retain) NSArray *favoriteStocks;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) NSNumber * reload;
 @property (strong, nonatomic) AppDelegate *appDelegate;
 

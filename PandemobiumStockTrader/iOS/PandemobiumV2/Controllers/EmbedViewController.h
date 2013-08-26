@@ -30,6 +30,7 @@
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *stockAnnotation;
 @property (strong, nonatomic) IBOutlet UILabel *accountValue;
 
+
 @property (strong, nonatomic) AppDelegate *appDelegate;
 @property (strong, nonatomic) DBHelper * helper;
 @end
