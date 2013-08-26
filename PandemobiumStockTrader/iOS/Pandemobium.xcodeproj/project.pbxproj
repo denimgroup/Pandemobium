@@ -15,11 +15,14 @@
 		BE099C1A179ECD07002ED292 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE099C19179ECD07002ED292 /* SystemConfiguration.framework */; };
 		BE099C1F179ED17E002ED292 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE099C1C179ED17E002ED292 /* iVersion.bundle */; };
 		BE099C20179ED17E002ED292 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BE099C1E179ED17E002ED292 /* iVersion.m */; };
-		BE0B0E8C17AAF8FD004DE409 /* SanAntonio.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BE0B0E8B17AAF8FD004DE409 /* SanAntonio.gpx */; };
 		BE0F6AFA1771F5E500A01190 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */; };
 		BE0F6AFC1771F5F300A01190 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F6AFB1771F5F200A01190 /* libz.dylib */; };
 		BE0F91B41771F72400A01190 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */; };
 		BE0F91BE17721BF000A01190 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0F91BD17721BEF00A01190 /* CoreData.framework */; };
+		BE3336A517CC069900463DB7 /* appButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3336A217CC069900463DB7 /* appButton.png */; };
+		BE3336A617CC069900463DB7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3336A317CC069900463DB7 /* Default.png */; };
+		BE3336AB17CC08B300463DB7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3336AA17CC08B300463DB7 /* Default-568h@2x.png */; };
+		BE3336AD17CC0B5000463DB7 /* SanAntonio.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BE3336AC17CC0B5000463DB7 /* SanAntonio.gpx */; };
 		BE3B96A8178DFA300000CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */; };
 		BE4E6E5417A020E400FC4F7B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E6E5317A020E400FC4F7B /* KeychainItemWrapper.m */; };
 		BE9EAAF21794714B0079C57A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
@@ -53,9 +56,6 @@
 		BE9EAB4117948F710079C57A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9EAB3817948F710079C57A /* UIImageView+AFNetworking.m */; };
 		BED22FC21795A785004EE171 /* DBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BED22FC11795A785004EE171 /* DBHTTPClient.m */; };
 		BED2C5DB17C3C4F20006F56C /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = BED2C5DA17C3C4F20006F56C /* License.txt */; };
-		BEE5A10C17B2AA16003F6956 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10B17B2AA16003F6956 /* Default.png */; };
-		BEE5A10E17B2AA1E003F6956 /* Defualt-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */; };
-		BEE5A11017B2AB00003F6956 /* appButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE5A10F17B2AB00003F6956 /* appButton.png */; };
 		BEEF700F176F74DA00D63EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF700E176F74DA00D63EB8 /* UIKit.framework */; };
 		BEEF7011176F74DA00D63EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7010176F74DA00D63EB8 /* Foundation.framework */; };
 		BEEF7013176F74DA00D63EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF7012176F74DA00D63EB8 /* CoreGraphics.framework */; };
@@ -69,7 +69,6 @@
 		BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D08817944C8A00B5C6C3 /* fullStockList.plist */; };
 		BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */; };
 		BEF0D10717945CCA00B5C6C3 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = BEF0D0FC1794547500B5C6C3 /* main.m */; };
-		BEFEB18C17B53C25004619FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFEB18B17B53C25004619FD /* Default-568h@2x.png */; };
 		BEFF291E179868FE000F1FF3 /* ManageTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFF291D179868FE000F1FF3 /* ManageTipsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		BE099C1C179ED17E002ED292 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		BE099C1D179ED17E002ED292 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		BE099C1E179ED17E002ED292 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
-		BE0B0E8B17AAF8FD004DE409 /* SanAntonio.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SanAntonio.gpx; sourceTree = "<group>"; };
 		BE0F6AF91771F5E500A01190 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE0F6AFB1771F5F200A01190 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE0F91661771F72400A01190 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -165,6 +163,10 @@
 		BE0F91B21771F72400A01190 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		BE0F91B31771F72400A01190 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "Supporting/CorePlot_1.2/Binaries/iOS/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		BE0F91BD17721BEF00A01190 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE3336A217CC069900463DB7 /* appButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appButton.png; path = Supporting_Files/appButton.png; sourceTree = "<group>"; };
+		BE3336A317CC069900463DB7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Supporting_Files/Default.png; sourceTree = "<group>"; };
+		BE3336AA17CC08B300463DB7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Supporting_Files/Default-568h@2x.png"; sourceTree = "<group>"; };
+		BE3336AC17CC0B5000463DB7 /* SanAntonio.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SanAntonio.gpx; sourceTree = "<group>"; };
 		BE3B96A7178DFA300000CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BE4E6E5217A020E400FC4F7B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		BE4E6E5317A020E400FC4F7B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
@@ -194,9 +196,6 @@
 		BED22FC01795A785004EE171 /* DBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHTTPClient.h; sourceTree = "<group>"; };
 		BED22FC11795A785004EE171 /* DBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DBHTTPClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BED2C5DA17C3C4F20006F56C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = Supporting/CorePlot_1.2/License.txt; sourceTree = "<group>"; };
-		BEE5A10B17B2AA16003F6956 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Defualt-568h@2x.png"; sourceTree = "<group>"; };
-		BEE5A10F17B2AB00003F6956 /* appButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appButton.png; path = ../appButton.png; sourceTree = "<group>"; };
 		BEEF700B176F74DA00D63EB8 /* Pandemobium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pandemobium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF700E176F74DA00D63EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEEF7010176F74DA00D63EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -245,16 +244,12 @@
 		BEF0D0F31794544600B5C6C3 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = PandemobiumV2/Controllers/NewsViewController.h; sourceTree = "<group>"; };
 		BEF0D0F41794544600B5C6C3 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = PandemobiumV2/Controllers/NewsViewController.m; sourceTree = "<group>"; };
 		BEF0D0F51794547500B5C6C3 /* accounts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = accounts.plist; path = Supporting_Files/accounts.plist; sourceTree = "<group>"; };
-		BEF0D0F61794547500B5C6C3 /* burg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = burg.jpg; path = Supporting_Files/burg.jpg; sourceTree = "<group>"; };
-		BEF0D0F71794547500B5C6C3 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = car.jpg; path = Supporting_Files/car.jpg; sourceTree = "<group>"; };
 		BEF0D0FA1794547500B5C6C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Supporting_Files/Default@2x.png"; sourceTree = "<group>"; };
-		BEF0D0FB1794547500B5C6C3 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = Supporting_Files/images.jpg; sourceTree = "<group>"; };
 		BEF0D0FC1794547500B5C6C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Supporting_Files/main.m; sourceTree = "<group>"; };
 		BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pandemobium-Info.plist"; path = "Supporting_Files/Pandemobium-Info.plist"; sourceTree = "<group>"; };
 		BEF0D1011794583900B5C6C3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		BEF0D1021794583900B5C6C3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		BEF0D1031794583900B5C6C3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		BEFEB18B17B53C25004619FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		BEFF291C179868FE000F1FF3 /* ManageTipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManageTipsViewController.h; path = PandemobiumV2/Controllers/ManageTipsViewController.h; sourceTree = "<group>"; };
 		BEFF291D179868FE000F1FF3 /* ManageTipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManageTipsViewController.m; path = PandemobiumV2/Controllers/ManageTipsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -507,19 +502,15 @@
 			isa = PBXGroup;
 			children = (
 				BEF0D0F51794547500B5C6C3 /* accounts.plist */,
-				BEE5A10F17B2AB00003F6956 /* appButton.png */,
-				BEF0D0F61794547500B5C6C3 /* burg.jpg */,
-				BEF0D0F71794547500B5C6C3 /* car.jpg */,
-				BEFEB18B17B53C25004619FD /* Default-568h@2x.png */,
-				BEE5A10B17B2AA16003F6956 /* Default.png */,
+				BE3336A217CC069900463DB7 /* appButton.png */,
+				BE3336AC17CC0B5000463DB7 /* SanAntonio.gpx */,
+				BE3336A317CC069900463DB7 /* Default.png */,
+				BE3336AA17CC08B300463DB7 /* Default-568h@2x.png */,
 				BEF0D0FA1794547500B5C6C3 /* Default@2x.png */,
-				BEE5A10D17B2AA1E003F6956 /* Defualt-568h@2x.png */,
-				BEF0D0FB1794547500B5C6C3 /* images.jpg */,
 				BEEF7017176F74DA00D63EB8 /* InfoPlist.strings */,
 				BEF0D0FC1794547500B5C6C3 /* main.m */,
 				BEF0D0FD1794547500B5C6C3 /* Pandemobium-Info.plist */,
 				BE9EAB1E17947DC60079C57A /* Pandemobium-Prefix.pch */,
-				BE0B0E8B17AAF8FD004DE409 /* SanAntonio.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -642,12 +633,11 @@
 				BEF0D08E17944C8A00B5C6C3 /* fullStockList.plist in Resources */,
 				BEF0D1041794583900B5C6C3 /* SVProgressHUD.bundle in Resources */,
 				BE099C1F179ED17E002ED292 /* iVersion.bundle in Resources */,
-				BE0B0E8C17AAF8FD004DE409 /* SanAntonio.gpx in Resources */,
-				BEE5A10C17B2AA16003F6956 /* Default.png in Resources */,
-				BEE5A10E17B2AA1E003F6956 /* Defualt-568h@2x.png in Resources */,
-				BEE5A11017B2AB00003F6956 /* appButton.png in Resources */,
-				BEFEB18C17B53C25004619FD /* Default-568h@2x.png in Resources */,
 				BED2C5DB17C3C4F20006F56C /* License.txt in Resources */,
+				BE3336A517CC069900463DB7 /* appButton.png in Resources */,
+				BE3336A617CC069900463DB7 /* Default.png in Resources */,
+				BE3336AB17CC08B300463DB7 /* Default-568h@2x.png in Resources */,
+				BE3336AD17CC0B5000463DB7 /* SanAntonio.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
