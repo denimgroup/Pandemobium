@@ -1,0 +1,33 @@
+--- Pandemobium ---
+
+Pandemobium is a collection of open source intentionally-flawed mobile
+applications that are intended to be used by developers and security analysts
+to explore mobile application security topics.
+
+Current Projects:
+* PandemobiumStockTrader/ - Pandemobium Stock Trader is an application for
+    tracking and sharing stock tips as well as trading stocks. It is available
+    for both Android and iOS and comes with associated Java-based back-end
+    web services
+
+Copyright (c) 2011-2013 Denim Group, Ltd.
+http://www.denimgroup.com/
+http://blog.denimgroup.com/
+Please send any comments or questions to Dan Cornell (dan _at_ denimgroup.com)
+
+
+PANDEMOBIU SERVER FOR IOS APP SUMMER 2013
+
+*****************************************
+
+THE SERVER HAS BE COFIGURED AND REQUIRES:
+
+1. FOR THE USER TO HAVE A RUNNING TOMCAT SERVER APPLICATION.
+
+2. FOR THE USER TO COPY STOCKTRADER SERVER FROM GITHUB TO 'CatalinaHome/webapps'
+
+3. RUN TOMCAT
+
+4. OPEN PANDEMOBIUM IOS APP
+
+5. RUN IOS APP
